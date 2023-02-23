@@ -14,14 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('components.users.home');
+    return view('users.home');
 });
 Route::get('/gallery', function () {
-    return view('components.users.gallery');
+    return view('users.gallery');
 });
 Route::get('/contact', function () {
-    return view('components.users.contact');
+    return view('users.contact');
 });
 Route::get('/about', function () {
-    return view('components.users.about');
+    return view('users.about');
 });

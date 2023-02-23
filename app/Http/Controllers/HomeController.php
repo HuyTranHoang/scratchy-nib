@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ScratchyNib;
+use App\Models\Home;
 use Illuminate\Http\Request;
 
-class ScratchyNibController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class ScratchyNibController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(ScratchyNib $scratchyNib)
+    public function show(Home $scratchyNib)
     {
         //
     }
@@ -42,7 +42,7 @@ class ScratchyNibController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(ScratchyNib $scratchyNib)
+    public function edit(Home $scratchyNib)
     {
         //
     }
@@ -50,7 +50,7 @@ class ScratchyNibController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, ScratchyNib $scratchyNib)
+    public function update(Request $request, Home $scratchyNib)
     {
         //
     }
@@ -58,7 +58,7 @@ class ScratchyNibController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ScratchyNib $scratchyNib)
+    public function destroy(Home $scratchyNib)
     {
         //
     }
