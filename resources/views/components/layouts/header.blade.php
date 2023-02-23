@@ -5,7 +5,7 @@
         </a>
 
         <ul class="nav nav-pills">
-            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Home</a></li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Categories
@@ -17,9 +17,9 @@
                     <li><a class="dropdown-item" href="#">Modern Calligraphy</a></li>
                 </ul>
             </li>
-            <li class="nav-item"><a href="#" class="nav-link">Gallery </a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="/gallery" class="nav-link">Gallery </a></li>
+            <li class="nav-item"><a href="/contact" class="nav-link">Contact Us</a></li>
+            <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
         </ul>
     </header>
 </div>
