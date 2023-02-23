@@ -1,13 +1,4 @@
-// Fonts
-@import url('https://fonts.bunny.net/css?family=Nunito');
-
-// Variables
-@import 'variables';
-
-// Bootstrap
-@import 'bootstrap/scss/bootstrap';
-
-
+// For footer to be in the bottom
 html,body {
     height: 100%;
 }
@@ -15,3 +6,36 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+// Variables
+@import 'variables';
+
+// Fonts
+@import "fonts";
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// Header, Navbar section
+.navbar-title {
+    font-family: Regista, serif;
+}
+
+header > ul {
+    text-transform: uppercase;
+    font-family: Arial, serif;
+    font-size: 1.125rem;
+
+    .nav-link {
+        color: $text-color;
+    }
+
+    .dropdown-menu {
+        text-transform: capitalize;
+    }
+}
+
+
+
+
+
