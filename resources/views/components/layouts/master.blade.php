@@ -15,7 +15,7 @@
 
     <x-layouts.header />
 
-    <div class="container">
+    <div class="container-fluid">
         <main class="row">
             {{$slot}}
         </main>

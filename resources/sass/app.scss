@@ -35,6 +35,32 @@ header > ul {
     }
 }
 
+// Section Overlay
+.bg-primary-color {
+    background-color: $primary-bg;
+}
+
+.bg-secondary-color {
+    background-color: $secondary-bg;
+}
+
+.overlay-top {
+    background-image: url('../images/overlay-top.png');
+    background-position: top center;
+    background-repeat: repeat-x;
+    background-size: 100% auto;
+    height: 200px;
+}
+
+.overlay-bottom {
+    background-image: url('../images/overlay-bottom.png');
+    background-position: bottom center;
+    background-repeat: repeat-x;
+    background-size: 100% auto;
+    height: 200px;
+}
+
+
 
 
 
