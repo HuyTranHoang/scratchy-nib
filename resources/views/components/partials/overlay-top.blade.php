@@ -1,1 +1,4 @@
-<div class="overlay-top"></div>
+@props(['color' => ''])
+
+<div class="overlay-top {{$color}}"></div>
+
