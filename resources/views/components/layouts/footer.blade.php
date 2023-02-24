@@ -1,49 +1,71 @@
-<section class="bg-secondary-color">
-<div class="container mt-auto">
-    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
-        <div class="col mb-3">
-            <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-            </a>
-            <p class="text-muted">© 2023</p>
-        </div>
 
-        <div class="col mb-3">
-
+<footer class="text-center text-lg-start bg-secondary-color text-muted ">
+    <section class="">
+        <div class="container text-center text-md-start mt-5 ">
+            <div class="row mt-3">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <h4 class="text-uppercase fw-bold navbar-title text-center" style="color: #BF994F;">
+                        Scratchy Nip
+                    </h4>
+                    <p class="fw-lighter" style="font-size: 0.8rem;">You are welcome to link to my content using one picture and sharing a link back to the original source, always
+                        <a class="text-decoration-none" href="#">giving proper credit</a>.
+                        You may NOT use any of my projects to create items for sale without a&nbsp;<a class="text-decoration-none" href="#">commercial license</a>.
+                    </p>
+                    <div>
+                        <a href="" class="me-4 text-reset">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="" class="me-4 text-reset">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="" class="me-4 text-reset">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="" class="me-4 text-reset">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="" class="me-4 text-reset">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="" class="me-4 text-reset">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 text-uppercase fw-light" style="color: #BF994F;">
+                    <p class="border-bottom border-white">
+                        <a href="#" class="text-reset text-decoration-none"><i class="fa-solid fa-arrow-right"></i> About</a>
+                    </p>
+                    <p class="border-bottom border-white">
+                        <a href="#" class="text-reset text-decoration-none"><i class="fa-solid fa-arrow-right"></i> Contact</a>
+                    </p>
+                    <p class="border-bottom border-white">
+                        <a href="#" class="text-reset text-decoration-none"><i class="fa-solid fa-arrow-right"></i> FAQ</a>
+                    </p>
+                    <p class="border-bottom border-white">
+                        <a href="#" class="text-reset text-decoration-none"><i class="fa-solid fa-arrow-right"></i> License</a>
+                    </p>
+                    <p class="border-bottom border-white">
+                        <a href="#" class="text-reset text-decoration-none"><i class="fa-solid fa-arrow-right"></i> Privacy Policy</a>
+                    </p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <p class="text-uppercase fw-bold mb-4 border-bottom border-white" style="color: #BF994F;">Address</p>
+                    <p><i class="fas fa-home me-3" style="color: #BF994F;"></i> HO CHI MINH, ZIP 70000, VN</p>
+                    <p class="border-bottom border-white">
+                        <i class="fas fa-envelope me-3" style="color: #BF994F;"></i>
+                        scratchynib@gmail.com
+                    </p>
+                    <p class="border-bottom border-white"><i class="fas fa-phone me-3" style="color: #BF994F;"></i> +84 999 999 99</p>
+                    <p class="border-bottom border-white"><i class="fas fa-print me-3" style="color: #BF994F;"></i> +84 888 888 88</p>
+                </div>
+            </div>
+            <div class="text-center p-4">
+                © 2023 Copyright: ScrartchyNib By Group 4
+            </div>
         </div>
+    </section>
+</footer>
 
-        <div class="col mb-3">
-            <h5>Section</h5>
-            <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-            </ul>
-        </div>
 
-        <div class="col mb-3">
-            <h5>Section</h5>
-            <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-            </ul>
-        </div>
 
-        <div class="col mb-3">
-            <h5>Section</h5>
-            <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-            </ul>
-        </div>
-    </footer>
-</div>
-</section>
