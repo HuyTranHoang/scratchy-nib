@@ -7,6 +7,7 @@ body {
     flex-direction: column;
 }
 
+
 // Variables
 @import 'variables';
 
@@ -15,6 +16,11 @@ body {
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+//Utilities
+.text-primary-color {
+    color: $text-color;
+}
 
 // Header, Navbar section
 .navbar-title {

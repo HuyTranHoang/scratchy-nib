@@ -6,7 +6,7 @@
             <h1 class="mb-3 text-center">Sum cuti gura for main section placeholder</h1>
             <div class="row">
                 <div class="col-8 d-flex align-items-center">
-                    <p class="">
+                    <p class="text-primary-color">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Mauris cursus metus at sagittis porta. Fusce vel interdum magna.
                         Etiam congue mauris vitae tincidunt pretium. Nulla sollicitudin ex et nisl lacinia,
