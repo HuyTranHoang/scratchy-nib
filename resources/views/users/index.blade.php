@@ -1,5 +1,4 @@
 <x-layouts.master>
-
     <section class="bg-primary-color">
         <x-partials.overlay-top />
         <div class="container text-secondary ">
