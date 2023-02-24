@@ -10,16 +10,13 @@
     @vite(['resources/sass/app.scss'])
     {{-- Font Awesome --}}
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
+
 </head>
 <body>
 
     <x-layouts.header />
 
-    <div class="container-fluid">
-        <main class="row">
-            {{$slot}}
-        </main>
-    </div>
+    {{$slot}}
 
     <x-layouts.footer />
 

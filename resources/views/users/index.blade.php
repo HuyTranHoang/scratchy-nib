@@ -1,11 +1,9 @@
 <x-layouts.master>
 
     <section class="bg-primary-color">
-        <div class="overlay-top"></div>
+        <x-partials.overlay-top />
         <div class="container text-secondary ">
-
             <h1 class="mb-3 text-center">Sum cuti gura for main section placeholder</h1>
-
             <div class="row">
                 <div class="col-8 d-flex align-items-center">
                     <p class="">
@@ -25,9 +23,8 @@
                     <img class="img-fluid" src="https://i.kym-cdn.com/photos/images/original/002/348/324/517.jpg" alt="Cuti Gura">
                 </div>
             </div>
-
         </div>
-        <div class="overlay-bottom"></div>
+        <x-partials.overlay-bottom />
     </section>
 
 </x-layouts.master>
