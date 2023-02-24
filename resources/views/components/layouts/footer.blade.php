@@ -32,32 +32,41 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 text-uppercase fw-light" style="color: #BF994F;">
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 text-uppercase fw-light footer-text-color">
                     <p class="border-bottom border-white">
-                        <a href="#" class="text-reset text-decoration-none"><i class="fa-solid fa-arrow-right"></i> About</a>
+                        <a href="#" class="text-reset text-decoration-none">
+                            <i class="fa-light fa-arrow-right"></i>
+                            About</a>
                     </p>
                     <p class="border-bottom border-white">
-                        <a href="#" class="text-reset text-decoration-none"><i class="fa-solid fa-arrow-right"></i> Contact</a>
+                        <a href="#" class="text-reset text-decoration-none">
+                            <i class="fa-light fa-arrow-right"></i>
+                            Contact</a>
                     </p>
                     <p class="border-bottom border-white">
-                        <a href="#" class="text-reset text-decoration-none"><i class="fa-solid fa-arrow-right"></i> FAQ</a>
+                        <a href="#" class="text-reset text-decoration-none">
+                            <i class="fa-light fa-arrow-right"></i>
+                            FAQ</a>
                     </p>
                     <p class="border-bottom border-white">
-                        <a href="#" class="text-reset text-decoration-none"><i class="fa-solid fa-arrow-right"></i> License</a>
+                        <a href="#" class="text-reset text-decoration-none">
+                            <i class="fa-light fa-arrow-right"></i>
+                            License</a>
                     </p>
                     <p class="border-bottom border-white">
-                        <a href="#" class="text-reset text-decoration-none"><i class="fa-solid fa-arrow-right"></i> Privacy Policy</a>
+                        <a href="#" class="text-reset text-decoration-none">
+                            <i class="fa-light fa-arrow-right"></i>
+                            Privacy Policy</a>
                     </p>
                 </div>
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 ">
-                    <p class="text-uppercase fw-bold mb-4 border-bottom border-white " style="color: #BF994F;">Address</p>
-                    <p class="border-bottom border-white text-primary-color"><i class="fas fa-home me-3" style="color: #BF994F;"></i> HO CHI MINH, ZIP 70000, VN</p>
-                    <p class="border-bottom border-white text-primary-color">
-                        <i class="fas fa-envelope me-3" style="color: #BF994F;"></i>
-                        scratchynib@gmail.com
-                    </p>
-                    <p class="border-bottom border-white text-primary-color"><i class="fas fa-phone me-3" style="color: #BF994F;"></i> +84 999 999 99</p>
-                    <p class="border-bottom border-white text-primary-color"><i class="fas fa-print me-3" style="color: #BF994F;"></i> +84 888 888 88</p>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-primary-color">
+                    <p class="text-uppercase fw-bold mb-4 border-bottom border-white">Address</p>
+                    <p class="border-bottom border-white">
+                        <i class="fas fa-home me-3"></i> HO CHI MINH, ZIP 70000, VN</p>
+                    <p class="border-bottom border-white">
+                        <i class="fas fa-envelope me-3"></i> scratchynib@gmail.com</p>
+                    <p class="border-bottom border-white"><i class="fas fa-phone me-3"></i> +84 999 999 99</p>
+                    <p class="border-bottom border-white"><i class="fas fa-print me-3"></i> +84 888 888 88</p>
                 </div>
             </div>
             <div class="text-center p-4">
