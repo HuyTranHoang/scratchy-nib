@@ -45,6 +45,17 @@ body {
     }
 }
 
+.header-title {
+    margin-top: 5rem;
+    font-size: 5rem;
+    font-family: 'Babylone Script', serif;
+    color: #d37171;
+}
+
+.header-text-color {
+    color: #d37171;
+}
+
 // Section Overlay
 .bg-primary-color {
     background-color: $primary-bg;
