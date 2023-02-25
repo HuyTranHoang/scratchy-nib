@@ -96,10 +96,30 @@ body {
         height: 175px;
     }
 }
-@media (max-width: 1024px) {
-    .tab-content>.tab-pane {
-        display: block;
-        opacity: 1;
+
+// Footer
+//@media (max-width: 1024px) {
+//    .tab-content>.tab-pane {
+//        display: block;
+//        opacity: 1;
+//    }
+//}
+
+.footer-icon {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    li:nth-child(1) {
+        color: cornflowerblue;
+    }
+    li:nth-child(2) {
+        color: #1DA1F2;
+    }
+    li:nth-child(3) {
+        color: #DE4032;
+    }
+    li:nth-child(4) {
+        color: #F2C442;
     }
 }
 
