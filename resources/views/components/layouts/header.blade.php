@@ -26,7 +26,7 @@
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <span class="fs-1 navbar-title">Scratchy Nip</span>
         </a>
 
@@ -36,9 +36,6 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a href="/" class="nav-link active" aria-current="page"><i class="fa-solid fa-house-heart"></i> Home</a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-bars"></i> Categories</a>
