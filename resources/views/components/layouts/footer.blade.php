@@ -1,6 +1,5 @@
-
 <footer class="text-center text-lg-start bg-secondary-color text-muted text-primary-color">
-    <section class="">
+    <section class="bao">
         <div class="container text-center text-md-start mt-5 ">
             <div class="row mt-3">
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
@@ -75,6 +74,3 @@
         </div>
     </section>
 </footer>
-
-
-
