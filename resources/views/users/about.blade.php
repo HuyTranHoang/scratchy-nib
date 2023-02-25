@@ -1,6 +1,6 @@
 <x-layouts.master>
     <section class="bg-secondary-color">
-            <div class="row">
+            <div class="row m-0">
                 <div class="col-md-12">
                     <h1 class="text-center text-uppercase text-primary mt-5">About Us</h1>
                 </div>
@@ -29,5 +29,4 @@
         </div>
         <x-partials.overlay-top color="bg-secondary-color"/>
     </section>
-
 </x-layouts.master>
