@@ -35,13 +35,16 @@
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse d-lg-block" data-bs-parent="#myTabContent" >
                     <div class="accordion-body" id="myTabContent">
+                        <h6 class="text-uppercase fw-bold text-center footer-text-color">
+                            Site Map
+                        </h6>
                             <p class="border-bottom border-white">
-                                <a href="#" class="text-reset text-decoration-none">
+                                <a href="/about" class="text-reset text-decoration-none">
                                     <i class="fa-light fa-arrow-right"></i>
                                     About</a>
                             </p>
                             <p class="border-bottom border-white">
-                                <a href="#" class="text-reset text-decoration-none">
+                                <a href="/contact" class="text-reset text-decoration-none">
                                     <i class="fa-light fa-arrow-right"></i>
                                     Contact Us</a>
                             </p>
@@ -71,6 +74,9 @@
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse d-lg-block" data-bs-parent="#myTabContent" >
                     <div class="accordion-body">
+                        <h6 class="text-uppercase fw-bold text-center footer-text-color">
+                            Contact
+                        </h6>
                         <p class="border-bottom border-white"><i class="fas fa-home me-3 footer-text-color "></i>HO CHI MINH, ZIP 70000, VN</p>
                         <p class="border-bottom border-white"><i class="fas fa-envelope me-3 footer-text-color"></i>scratchynib@gmail.com</p>
                         <p class="border-bottom border-white"><i class="fas fa-phone me-3 footer-text-color"></i>+84 999 999 99</p>
