@@ -85,8 +85,11 @@ body {
         height: 175px;
     }
 }
-
-
+@media (max-width:768px) {
+    .bao {
+        display: none;
+    }
+}
 
 
 
