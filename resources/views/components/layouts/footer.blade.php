@@ -2,10 +2,10 @@
     <div class="container text-center text-md-start">
         <div class="tab-content accordion row mt-3 bg-secondary-color" id="footerContent">
             <div class="col-md-4 col-lg-4 col-xl-3 mx-auto pt-3">
-                <h4 class="text-uppercase fw-bold navbar-title text-center footer-text-color">
-                    Important
+                <h4 class="text-uppercas footer-text-color">
+                    Content Disclaimer
                 </h4>
-                <p class="fw-lighter text-primary-color" style="font-size: 0.8rem;">You are welcome to link to my content using one picture and sharing a link back to the original source, always
+                <p class="fw-lighter text-primary-color" style="font-size: 0.8rem;">You are welcome to link to our content using one picture and sharing a link back to the original source, always
                     <a class="text-decoration-none" href="#">giving proper credit</a>.
                     You may NOT use any of my projects to create items for sale without a&nbsp;<a class="text-decoration-none" href="#">commercial license</a>.
                 </p>
