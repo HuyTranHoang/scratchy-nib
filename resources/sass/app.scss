@@ -14,7 +14,11 @@ body {
 // Fonts
 @import "fonts";
 
-// Bootstrap
+// Custom bootstrap
+$accordion-button-active-bg: $secondary-bg;
+$accordion-button-active-color: $secondary-color;
+
+    // Bootstrap
 @import 'bootstrap/scss/bootstrap';
 
 //Utilities
