@@ -3,7 +3,7 @@
     <section class="bg-secondary-color position-relative pb-5">
         <div class="container">
             <div class="row">
-                <div class="col-8">
+                <div class="col-md-12 col-xl-8">
                     <h1 class="header-title">Mastering Calligraphy</h1>
 
                     <span>[Image or Illustration of Calligraphic Artwork]</span>
@@ -62,7 +62,7 @@
                 </div>
             </div>
         </div>
-        <img class="position-absolute bottom-0 end-0" style="height: 600px" src="{{asset('storage/images/header-cover.png')}}" alt="">
+        <img class="position-absolute bottom-0 end-0" style="height: 35vw" src="{{asset('storage/images/header-cover.png')}}" alt="">
     </section>
 
     <section class="bg-primary-color">

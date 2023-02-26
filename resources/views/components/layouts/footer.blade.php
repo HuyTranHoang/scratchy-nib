@@ -1,40 +1,33 @@
 <footer class="text-center text-lg-start bg-secondary-color text-muted text-primary-color">
     <div class="container text-center text-md-start mt-5">
         <div class="tab-content accordion row mt-3 bg-secondary-color" id="myTabContent">
-            <div class="tab-pane active col-md-3 col-lg-4 col-xl-3 mx-auto" id="important-tab-pane" role="tabpanel" aria-labelledby="important-tab" tabindex="0">
-                <h2 class="accordion-header d-lg-none">
-                    <button class="accordion-button border-bottom collapsed bg-secondary-color footer-text-color" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Important</button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse d-lg-block" data-bs-parent="#myTabContent" >
-                    <div class="accordion-body">
-                            <h4 class="text-uppercase fw-bold navbar-title text-center" style="color: #BF994F;">
-                                Important
-                            </h4>
-                            <p class="fw-lighter text-primary-color" style="font-size: 0.8rem;">You are welcome to link to my content using one picture and sharing a link back to the original source, always
-                                <a class="text-decoration-none" href="#">giving proper credit</a>.
-                                You may NOT use any of my projects to create items for sale without a&nbsp;<a class="text-decoration-none" href="#">commercial license</a>.
-                            </p>
-                            <div>
-                                <a href="" class="me-4 text-reset">
-                                    <i class="fab fa-facebook-f" style="color: cornflowerblue"></i>
-                                </a>
-                                <a href="" class="me-4 text-reset">
-                                    <i class="fab fa-twitter" style="color: #1DA1F2"></i>
-                                </a>
-                                <a href="" class="me-4 text-reset">
-                                    <i class="fab fa-google" style="color: #DE4032"></i>
-                                </a>
-                                <a href="" class="me-4 text-reset">
-                                    <i class="fab fa-instagram" style="color: #F2C442"></i>
-                                </a>
-                                <a href="" class="me-4 text-reset">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                </div>
+            <div class="col-md-4 col-lg-4 col-xl-3 mx-auto">
+                <h4 class="text-uppercase fw-bold navbar-title text-center footer-text-color">
+                    Important
+                </h4>
+                <p class="fw-lighter text-primary-color" style="font-size: 0.8rem;">You are welcome to link to my content using one picture and sharing a link back to the original source, always
+                    <a class="text-decoration-none" href="#">giving proper credit</a>.
+                    You may NOT use any of my projects to create items for sale without a&nbsp;<a class="text-decoration-none" href="#">commercial license</a>.
+                </p>
+                <ul class="footer-icon">
+                    <li><a href="#" class="me-4 text-reset">
+                            <i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li><a href="#" class="me-4 text-reset">
+                            <i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li><a href="#" class="me-4 text-reset">
+                            <i class="fab fa-google"></i></a>
+                    </li>
+                    <li><a href="#" class="me-4 text-reset">
+                            <i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li><a href="#" class="me-4 text-reset">
+                            <i class="fab fa-github"></i></a>
+                    </li>
+                </ul>
             </div>
-            <div class="tab-pane active col-md-2 col-lg-2 col-xl-2 mx-auto text-uppercase fw-light footer-text-color" id="sitemap-tab-pane" role="tabpanel" aria-labelledby="sitemap-tab" tabindex="0">
+            <div class="col-md-4 col-lg-2 col-xl-2 mx-auto tab-pane active text-uppercase footer-text-color" id="sitemap-tab-pane" role="tabpanel" aria-labelledby="sitemap-tab" tabindex="0">
                 <h2 class="accordion-header d-lg-none">
                     <button class="accordion-button border-bottom collapsed bg-secondary-color footer-text-color" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         Site Map
@@ -73,7 +66,7 @@
                         </div>
                 </div>
             </div>
-            <div class="tab-pane active col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto tab-pane active mb-md-0" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
                 <h2 class="accordion-header d-lg-none">
                     <button class="accordion-button border-bottom collapsed bg-secondary-color footer-text-color" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Contact Us
