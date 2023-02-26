@@ -60,6 +60,30 @@ $accordion-button-active-color: $secondary-color;
     color: #d37171;
 }
 
+.btn-primary-color {
+    border-radius: 1.25rem;
+    padding: 0.5rem 0.8rem;
+    font-weight: 500;
+    color: white;
+    background-color: #d37272;
+    &:hover {
+        color: rgb(242, 242, 242);
+        background-color: #e07979;
+    }
+}
+
+.btn-secondary-color {
+    border-radius: 1.25rem;
+    padding: 0.5rem 0.8rem;
+    font-weight: 500;
+    color: white;
+    background-color: #bf994f;
+    &:hover {
+        color: rgb(242, 242, 242);
+        background-color: #c7a052;
+    }
+}
+
 // Section Overlay
 .bg-primary-color {
     background-color: $primary-bg;
