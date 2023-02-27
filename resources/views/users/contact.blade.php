@@ -51,7 +51,7 @@
                                     </div>
                                 </div>
 
-                                <div class="text-center text-md-left">
+                                <div class="text-center text-md-left mt-3">
                                     <input type="submit" class="btn btn-primary-color">
                                 </div>
                             </form>
