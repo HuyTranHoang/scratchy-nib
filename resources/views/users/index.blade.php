@@ -33,29 +33,22 @@
                     </p>
 
                     <div class="row">
-                        <div class="col-8">
-                            <h6 class="fw-semibold text-primary"><i class="fa-duotone fa-sparkles"></i> Browse our collection of stunning calligraphic artwork, created by some of the world's most talented calligraphers.</h6>
-                        </div>
-                        <div class="col-4">
-                            <a class="btn btn-primary">Explore Our Gallery</a>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-8">
-                            <h6 class="fw-semibold text-primary"><i class="fa-duotone fa-sparkles"></i> Check out our blog for tips, tutorials, and advice on mastering the art of calligraphy, from basic techniques to advanced skills.</h6>
-                        </div>
-                        <div class="col-4">
-                            <a class="btn btn-primary">Learn Calligraphy</a>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-8">
+                        <div class="col-6 mt-3">
                             <h6 class="fw-semibold text-primary"><i class="fa-duotone fa-sparkles"></i> Visit our online store to find a wide selection of calligraphy supplies, including pens, ink, paper, and more.</h6>
+                            <a class="btn btn-primary-color">Shop Calligraphy Supplies</a>
                         </div>
-                        <div class="col-4">
-                            <a class="btn btn-primary">Shop Calligraphy Supplies</a>
+
+                        <div class="col-6 mt-3">
+                            <h6 class="fw-semibold text-primary"><i class="fa-duotone fa-sparkles"></i> Check out our blog for tips, tutorials, and advice on mastering the art of calligraphy, from basic techniques to advanced skills.</h6>
+                            <a class="btn btn-primary-color">Learn Calligraphy</a>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 mt-3">
+                            <h6 class="fw-semibold text-primary"><i class="fa-duotone fa-sparkles"></i> Browse our collection of stunning calligraphic artwork, created by some of the world's most talented calligraphers.</h6>
+                            <a class="btn btn-primary-color">Explore Our Gallery</a>
                         </div>
                     </div>
 
@@ -66,8 +59,8 @@
     </section>
 
     <section class="bg-primary-color">
-        <div class="container text-secondary">
-            <h1 class="mb-3 text-center">Sum cuti gura for main section placeholder</h1>
+        <div class="container text-primary">
+            <h1 class="my-3 text-center">Sum cuti gura for Traditional Calligraphy section placeholder</h1>
             <div class="row">
                 <div class="col-8 d-flex align-items-center">
                     <p class="text-primary-color">
@@ -90,5 +83,100 @@
         </div>
         <x-partials.overlay-bottom />
     </section>
+
+    <section class="">
+        <div class="container text-primary">
+            <h1 class="mb-3 text-center">Sum cuti gura for Contemporary Calligraphy section placeholder</h1>
+            <div class="row">
+                <div class="col-4">
+                    <img class="img-fluid" src="https://i.kym-cdn.com/photos/images/original/002/348/324/517.jpg" alt="Cuti Gura">
+                </div>
+                <div class="col-8 d-flex align-items-center">
+                    <p class="text-primary-color">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Mauris cursus metus at sagittis porta. Fusce vel interdum magna.
+                        Etiam congue mauris vitae tincidunt pretium. Nulla sollicitudin ex et nisl lacinia,
+                        vitae cursus lorem dapibus. Mauris tincidunt massa elit, sed ornare erat volutpat quis.
+                        Fusce faucibus vestibulum odio, in placerat tortor lobortis quis.
+                        Donec rhoncus accumsan sapien sed porta. Nulla eget pellentesque ligula.
+                        Morbi venenatis volutpat ultrices. Nam et metus ante. Orci varius natoque penatibus et magnis dis
+                        parturient montes, nascetur ridiculus mus. Sed nisl augue, facilisis sit amet magna ut, facilisis
+                        tincidunt tortor. Donec id aliquam enim. Vestibulum finibus ut enim eget tincidunt. Cras eget pulvinar mi.
+                        Aenean id nunc sodales, lobortis dolor at, scelerisque magna.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <img src="https://www.howjoyful.com/wp-content/uploads/2020/11/brush-pens-735x268.png.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-secondary-color">
+        <x-partials.overlay-top />
+        <div class="container text-secondary">
+            <h1 class="mb-3 text-center">Sum cuti gura for Hand-lettering & Design section placeholder</h1>
+            <div class="row">
+                <div class="col-8 d-flex align-items-center">
+                    <p class="text-primary-color">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Mauris cursus metus at sagittis porta. Fusce vel interdum magna.
+                        Etiam congue mauris vitae tincidunt pretium. Nulla sollicitudin ex et nisl lacinia,
+                        vitae cursus lorem dapibus. Mauris tincidunt massa elit, sed ornare erat volutpat quis.
+                        Fusce faucibus vestibulum odio, in placerat tortor lobortis quis.
+                        Donec rhoncus accumsan sapien sed porta. Nulla eget pellentesque ligula.
+                        Morbi venenatis volutpat ultrices. Nam et metus ante. Orci varius natoque penatibus et magnis dis
+                        parturient montes, nascetur ridiculus mus. Sed nisl augue, facilisis sit amet magna ut, facilisis
+                        tincidunt tortor. Donec id aliquam enim. Vestibulum finibus ut enim eget tincidunt. Cras eget pulvinar mi.
+                        Aenean id nunc sodales, lobortis dolor at, scelerisque magna.
+                    </p>
+                </div>
+                <div class="col-4">
+                    <img class="img-fluid" src="https://i.kym-cdn.com/photos/images/original/002/348/324/517.jpg" alt="Cuti Gura">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-secondary-color">More about Hand-lettering & Design</button>
+                </div>
+            </div>
+        </div>
+        <x-partials.overlay-bottom />
+    </section>
+
+    <section class="">
+        <div class="container text-primary">
+            <h1 class="mb-3 text-center">Sum cuti gura for Modern Calligraphy section placeholder</h1>
+            <div class="row">
+                <div class="col-4">
+                    <img class="img-fluid" src="https://i.kym-cdn.com/photos/images/original/002/348/324/517.jpg" alt="Cuti Gura">
+                </div>
+                <div class="col-8 d-flex align-items-center">
+                    <p class="text-primary-color">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Mauris cursus metus at sagittis porta. Fusce vel interdum magna.
+                        Etiam congue mauris vitae tincidunt pretium. Nulla sollicitudin ex et nisl lacinia,
+                        vitae cursus lorem dapibus. Mauris tincidunt massa elit, sed ornare erat volutpat quis.
+                        Fusce faucibus vestibulum odio, in placerat tortor lobortis quis.
+                        Donec rhoncus accumsan sapien sed porta. Nulla eget pellentesque ligula.
+                        Morbi venenatis volutpat ultrices. Nam et metus ante. Orci varius natoque penatibus et magnis dis
+                        parturient montes, nascetur ridiculus mus. Sed nisl augue, facilisis sit amet magna ut, facilisis
+                        tincidunt tortor. Donec id aliquam enim. Vestibulum finibus ut enim eget tincidunt. Cras eget pulvinar mi.
+                        Aenean id nunc sodales, lobortis dolor at, scelerisque magna.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <img src="https://www.howjoyful.com/wp-content/uploads/2020/05/pencils-tools-750x279.png.webp" alt="">
+            </div>
+        </div>
+        <x-partials.overlay-top color="bg-secondary-color"/>
+    </section>
+
+
 
 </x-layouts.master>
