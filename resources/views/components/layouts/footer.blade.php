@@ -23,7 +23,7 @@
                 </ul>
             </div>
 
-            <x-partials.footer-accordion-list title="Navigate" id="footer_navigate" class="col-md-4 col-lg-4">
+            <x-partials.footer-accordion-list title="Navigate" id="footer_navigate">
                 <ul class="list-unstyled">
                     <li>
                         <a href="/about" class="link-secondary text-decoration-none">
@@ -48,7 +48,7 @@
                 </ul>
             </x-partials.footer-accordion-list>
 
-            <x-partials.footer-accordion-list title="Contact" id="footer_contact" class="col-md-4 col-lg-4">
+            <x-partials.footer-accordion-list title="Contact" id="footer_contact">
                 <ul class="list-unstyled">
                     <li class="text-primary-color">HO CHI MINH, ZIP 70000, VN</li>
                     <li><a class="link-secondary text-decoration-none" href = "mailto: scratchynib@gmail.com">scratchynib@gmail.com</a></li>
