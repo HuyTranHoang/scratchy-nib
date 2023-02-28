@@ -26,7 +26,8 @@ Route::get('/about', [HomeController::class,'about']);
 // Admin Page
 Route::prefix('admin')->group(function () {
     Route::get('/', function () {
-        return view('components.admin.layouts.master');
+        return view('admin.index');
     });
+
     Route::resource('category', CalligraphyCategoriesController::class);
 });
