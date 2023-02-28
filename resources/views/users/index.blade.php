@@ -1,4 +1,4 @@
-<x-layouts.master>
+<x-users.layouts.master>
 
     <section class="bg-secondary-color position-relative pb-5">
         <div class="container">
@@ -81,7 +81,7 @@
                 </div>
             </div>
         </div>
-        <x-partials.overlay-bottom />
+        <x-users.partials.overlay-bottom />
     </section>
 
     <section class="">
@@ -115,7 +115,7 @@
     </section>
 
     <section class="bg-secondary-color">
-        <x-partials.overlay-top />
+        <x-users.partials.overlay-top />
         <div class="container text-secondary">
             <h1 class="mb-3 text-center">Sum cuti gura for Hand-lettering & Design section placeholder</h1>
             <div class="row">
@@ -143,7 +143,7 @@
                 </div>
             </div>
         </div>
-        <x-partials.overlay-bottom />
+        <x-users.partials.overlay-bottom />
     </section>
 
     <section class="">
@@ -168,15 +168,15 @@
                     </p>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col d-flex justify-content-center">
-                <img src="https://www.howjoyful.com/wp-content/uploads/2020/05/pencils-tools-750x279.png.webp" alt="">
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <img src="https://www.howjoyful.com/wp-content/uploads/2020/05/pencils-tools-750x279.png.webp" alt="">
+                </div>
             </div>
         </div>
-        <x-partials.overlay-top color="bg-secondary-color"/>
+        <x-users.partials.overlay-top color="bg-secondary-color"/>
     </section>
 
 
 
-</x-layouts.master>
+</x-users.layouts.master>

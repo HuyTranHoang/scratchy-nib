@@ -14,6 +14,6 @@ class GalleryImage extends Model
 
     public function calligraphyStyle(): BelongsTo
     {
-        return $this->belongsTo(CalliraphyStyle::class,'style_id');
+        return $this->belongsTo(Calligraphy::class,'calligraphy_id');
     }
 }

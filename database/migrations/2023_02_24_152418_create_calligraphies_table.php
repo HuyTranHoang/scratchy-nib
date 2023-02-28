@@ -11,7 +11,8 @@ return new class extends Migration {
             $table->id('calligraphy_id');
             $table->string('calligraphy_name',50);
             $table->text('calligraphy_description')->nullable();
-            $table->foreignId('style_id')->references('style_id')->on('calliraphy_styles');
+            $table->foreignId('style_id')->references('style_id')->on('calliraphy_styles')
+                ->onDelete('cascade');;
             $table->timestamps();
         });
     }

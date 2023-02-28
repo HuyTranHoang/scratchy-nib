@@ -15,7 +15,12 @@ class Calligraphy extends Model
 
     public function calligraphyStyle(): BelongsTo
     {
-        return $this->belongsTo(CalliraphyStyle::class,'style_id');
+        return $this->belongsTo(CalligraphyStyle::class,'style_id');
+    }
+
+    public function galleryImage(): HasMany
+    {
+        return $this->hasMany(GalleryImage::class,'calligraphy_id');
     }
 
     public function feedback(): HasMany
