@@ -58,10 +58,9 @@
         <img class="position-absolute bottom-0 end-0" style="height: 35vw" src="{{asset('storage/images/header-cover.png')}}" alt="">
     </section>
 
-    <section class="bg-secondary-color">
-        <x-users.partials.overlay-bottom />
+    <section class="bg-primary-color">
         <div class="container text-primary">
-            <h1 class="my-3 text-center">Sum cuti gura for Traditional Calligraphy section placeholder</h1>
+            <h1 class="my-3 text-center">Sum cuti gura for Image section placeholder</h1>
             <div class="row">
                 <div class="col-8 d-flex align-items-center">
                     <p class="text-primary-color">
@@ -82,7 +81,7 @@
                 </div>
             </div>
         </div>
-        <x-users.partials.overlay-top color="bg-secondary-color" />
+        <x-users.partials.overlay-bottom color="bg-secondary-color" />
 
     </section>
 
@@ -127,25 +126,12 @@
     <section class="bg-secondary-color">
         <x-users.partials.overlay-top />
         <div class="container text-secondary">
-            <h1 class="mb-3 text-center">Sum cuti gura for Hand-lettering & Design section placeholder</h1>
-            <div class="row">
-                <div class="col-8 d-flex align-items-center">
-                    <p class="text-primary-color">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Mauris cursus metus at sagittis porta. Fusce vel interdum magna.
-                        Etiam congue mauris vitae tincidunt pretium. Nulla sollicitudin ex et nisl lacinia,
-                        vitae cursus lorem dapibus. Mauris tincidunt massa elit, sed ornare erat volutpat quis.
-                        Fusce faucibus vestibulum odio, in placerat tortor lobortis quis.
-                        Donec rhoncus accumsan sapien sed porta. Nulla eget pellentesque ligula.
-                        Morbi venenatis volutpat ultrices. Nam et metus ante. Orci varius natoque penatibus et magnis dis
-                        parturient montes, nascetur ridiculus mus. Sed nisl augue, facilisis sit amet magna ut, facilisis
-                        tincidunt tortor. Donec id aliquam enim. Vestibulum finibus ut enim eget tincidunt. Cras eget pulvinar mi.
-                        Aenean id nunc sodales, lobortis dolor at, scelerisque magna.
-                    </p>
-
+            <h1 class="mb-3 text-center">Contemporary Calligraphy</h1>
+            <div class="row mb-3">
+                <div class="col-2 offset-1">
+                    <img class="img-fluid" src="{{asset('storage/images/divider-pink.png')}}" alt="divider">
                 </div>
             </div>
-
             <div class="row text-primary-color">
                 <div class="col-4 offset-1 text-center">
                     <img class="img-fluid" src="https://i.pinimg.com/564x/4d/ec/20/4dec201059f0f7ae894a189453a9f2e9.jpg" alt="">

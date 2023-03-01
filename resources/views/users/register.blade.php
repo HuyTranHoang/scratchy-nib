@@ -1,4 +1,4 @@
-<x-layouts.master>
+<x-users.layouts.master>
     <section>
         <div class="container mt-5">
             <div class="row justify-content-center">
@@ -43,6 +43,6 @@
                 </div>
             </div>
         </div>
-        <x-partials.overlay-top color="bg-secondary-color"/>
+        <x-users.partials.overlay-top color="bg-secondary-color"/>
     </section>
-</x-layouts.master>
+</x-users.layouts.master>

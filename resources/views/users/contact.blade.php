@@ -16,16 +16,23 @@
                         <h4 class="text-uppercase text-primary"><i class="fa-light fa-message-question"></i> Have Questions?</h4>
                         <p>Simply fill the form below, and we will try our best to get back to you as soon as possible =]</p>
                         <div>
-                            <form action="" method="POST">
+                            <form action="{{route('home.send-email')}}" method="POST">
+                                @csrf
                                 <div class="row mt-3">
                                     <div class="col-md-12 col-lg-6">
                                         <label for="name" class="mb-2">Your name</label>
                                         <input type="text" id="name" name="name" class="form-control">
+                                        @error('name')
+                                        <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
+                                        @enderror
                                     </div>
 
                                     <div class="col-md-12 col-lg-6 mt-md-3 mb-md-2 my-lg-0">
                                         <label for="email" class="mb-2">Your email</label>
                                         <input type="text" id="email" name="email" class="form-control">
+                                        @error('email')
+                                        <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -33,6 +40,9 @@
                                     <div class="col-md-12">
                                         <label for="subject" class="mb-2">Subject</label>
                                         <input type="text" id="subject" name="subject" class="form-control">
+                                        @error('subject')
+                                        <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -40,6 +50,9 @@
                                     <div class="col-md-12">
                                         <label for="message" class="mb-2">Your message</label>
                                         <textarea type="text" id="message" name="message" rows="2" class="form-control"></textarea>
+                                        @error('message')
+                                        <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
+                                        @enderror
                                     </div>
                                 </div>
 
