@@ -22,17 +22,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Home Page
-Route::get('/test', function () {
-    return view('welcome');
-});
 
-Route::get('/', [HomeController::class,'index']);
-Route::get('/gallery', [HomeController::class,'gallery']);
-Route::get('/contact', [HomeController::class,'contact']);
-Route::get('/about', [HomeController::class,'about']);
 
-Route::get('/login', [HomeController::class,'login']);
-Route::get('/signup', [HomeController::class,'signup']);
+Route::get('/', [HomeController::class,'index'])->name('home.index');
+Route::get('/gallery', [HomeController::class,'gallery'])->name('home.gallery');
+Route::get('/contact', [HomeController::class,'contact'])->name('home.contact');
+Route::post('/send-email', [HomeController::class,'sendEmail'])->name('home.send-email');
+Route::get('/about', [HomeController::class,'about'])->name('home.about');
+
+Route::get('/login', [HomeController::class,'login'])->name('home.login');
+Route::get('/signup', [HomeController::class,'register'])->name('home.register');
+
+
 
 
 
