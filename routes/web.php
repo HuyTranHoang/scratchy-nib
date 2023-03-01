@@ -31,6 +31,10 @@ Route::get('/gallery', [HomeController::class,'gallery']);
 Route::get('/contact', [HomeController::class,'contact']);
 Route::get('/about', [HomeController::class,'about']);
 
+Route::get('/login', [HomeController::class,'login']);
+Route::get('/signup', [HomeController::class,'signup']);
+
+
 
 // Admin Page
 Route::prefix('admin')->group(function () {
@@ -46,3 +50,4 @@ Route::prefix('admin')->group(function () {
     Route::resource('users', UserController::class);
 
 });
+

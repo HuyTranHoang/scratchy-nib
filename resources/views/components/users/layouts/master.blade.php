@@ -20,7 +20,6 @@
 
     <x-users.layouts.footer />
 
-
     @vite(['resources/js/app.js'])
 
 
