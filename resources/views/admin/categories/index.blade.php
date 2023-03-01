@@ -22,6 +22,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Categories Name</th>
                 <th scope="col">Categories Description</th>
+                <th scope="col">Action</th>
             </tr>
             </thead>
             <tbody>
@@ -30,6 +31,7 @@
                     <td>{{$category -> category_id}}</td>
                     <td>{{$category -> category_name}}</td>
                     <td>{{$category -> category_description}}</td>
+                    <td><a href="#"><i class="fa-solid fa-pen">&emsp;</i><i class="fa-solid fa-trash"></i></a></td>
                 </tr>
             @endforeach
             </tbody>

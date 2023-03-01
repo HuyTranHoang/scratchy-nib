@@ -21,6 +21,7 @@
                 <th scope="col">Image Name</th>
                 <th scope="col">Image Description</th>
                 <th scope="col">Calligraphy</th>
+                <th scope="col">Action</th>
             </tr>
             </thead>
             <tbody>
@@ -30,6 +31,7 @@
                     <td>{{$image ->image_name}}</td>
                     <td>{{$image ->image_description}}</td>
                     <td>{{$image ->calligraphy_id}}</td>
+                    <td><a href="#"><i class="fa-solid fa-pen">&emsp;</i><i class="fa-solid fa-trash"></i></a></td>
                 </tr>
             @endforeach
             </tbody>

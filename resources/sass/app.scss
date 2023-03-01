@@ -201,6 +201,8 @@ $accordion-button-active-color: $secondary-color;
 // Gallery Image
 .card{
     transition: 1s transform;
+    object-fit: cover;
+    object-position: center top;
 }
 .card:hover{
     transform: scale(1.05);
