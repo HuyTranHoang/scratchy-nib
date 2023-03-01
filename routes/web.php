@@ -22,6 +22,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Home Page
+Route::get('/test', function () {
+    return view('welcome');
+});
+
 Route::get('/', [HomeController::class,'index']);
 Route::get('/gallery', [HomeController::class,'gallery']);
 Route::get('/contact', [HomeController::class,'contact']);

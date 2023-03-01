@@ -70,6 +70,10 @@ $accordion-button-active-color: $secondary-color;
         color: rgb(242, 242, 242);
         background-color: #e07979;
     }
+    &:active {
+        color: rgb(242, 242, 242) !important;
+        background-color: #db7676 !important;
+    }
 }
 
 .btn-secondary-color {
@@ -81,6 +85,10 @@ $accordion-button-active-color: $secondary-color;
     &:hover {
         color: rgb(242, 242, 242);
         background-color: #c7a052;
+    }
+    &:active {
+        color: rgb(242, 242, 242) !important;
+        background-color: #c29c4f !important;
     }
 }
 
@@ -124,6 +132,24 @@ $accordion-button-active-color: $secondary-color;
         height: 175px;
     }
 }
+
+//Section content
+.btn-more-about{
+    position: relative;
+    i {
+        top: 55%;
+        right: 30px;
+        transform: translateY(-50%);
+        position: absolute;
+        transition: 0.1s all ease-in;
+        opacity: 0;
+    }
+    &:hover i {
+        right: 5px;
+        opacity: 1;
+    }
+}
+
 // Footer
 
 .footer-icon {
@@ -171,6 +197,8 @@ $accordion-button-active-color: $secondary-color;
         color: $text-color;
     }
 }
+
+// Gallery Image
 .card{
     transition: 1s transform;
 }
