@@ -21,6 +21,7 @@
                 <th scope="col">Message</th>
                 <th scope="col">User</th>
                 <th scope="col">Calligraphy</th>
+                <th scope="col">Action</th>
             </tr>
             </thead>
             <tbody>
@@ -30,6 +31,7 @@
                     <td>{{$feed -> feedback_message}}</td>
                     <td>{{$feed -> user_id}}</td>
                     <td>{{$feed -> calligraphy_id}}</td>
+                    <td><a href="#"><i class="fa-solid fa-pen">&emsp;</i><i class="fa-solid fa-trash"></i></a></td>
                 </tr>
             @endforeach
             </tbody>
