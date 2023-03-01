@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Home;
+use App\Http\Requests\EmailPostRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
 
 class HomeController extends Controller
@@ -34,9 +35,20 @@ class HomeController extends Controller
         return view('users.login');
     }
 
-    public function signup()
+    public function register()
     {
-        return view('users.signup');
+        return view('users.register');
+    }
+
+    public function sendEmail(EmailPostRequest $request)
+    {
+        $validated = $request->validated();
+        Mail::send('emails.contact',compact('validated'), function ($email) use($validated) {
+            $email->subject($validated['subject']);
+            $email->to('huy.th878@aptechlearning.edu.vn',$validated['name']);
+        });
+
+        return redirect()->back();
     }
 
 }
