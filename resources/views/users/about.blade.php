@@ -1,11 +1,11 @@
-<x-layouts.master>
+<x-users.layouts.master>
     <section class="bg-secondary-color">
             <div class="row m-0">
                 <div class="col-md-12">
                     <h1 class="text-center text-uppercase text-primary mt-5">About Us</h1>
                 </div>
             </div>
-        <x-partials.overlay-bottom />
+        <x-users.partials.overlay-bottom />
     </section>
     <section>
         <div class="container">
@@ -27,6 +27,6 @@
                 </div>
             </div>
         </div>
-        <x-partials.overlay-top color="bg-secondary-color"/>
+        <x-users.partials.overlay-top color="bg-secondary-color"/>
     </section>
-</x-layouts.master>
+</x-users.layouts.master>

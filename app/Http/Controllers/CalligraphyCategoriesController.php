@@ -9,7 +9,9 @@ class CalligraphyCategoriesController extends Controller
 {
     public function index()
     {
-
+        return view('admin.categories.index',[
+            'categories' => CalligraphyCategory::all()
+        ]);
     }
 
     public function create()

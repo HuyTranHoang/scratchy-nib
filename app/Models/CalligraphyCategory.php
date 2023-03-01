@@ -14,7 +14,7 @@ class CalligraphyCategory extends Model
 
     public function calligraphyStyle(): HasMany
     {
-        return $this->hasMany(CalliraphyStyle::class,'category_id');
+        return $this->hasMany(CalligraphyStyle::class,'category_id');
     }
 
 }

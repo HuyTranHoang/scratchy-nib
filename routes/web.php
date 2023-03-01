@@ -1,6 +1,13 @@
 <?php
 
+use App\Http\Controllers\CalligraphyCategoriesController;
+use App\Http\Controllers\CalligraphyStylesController;
+use App\Http\Controllers\CalligraphiesController;
+use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\GalleryImagesController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
+use App\Models\CalligraphyCategory;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,5 +26,24 @@ Route::get('/', [HomeController::class,'index']);
 Route::get('/gallery', [HomeController::class,'gallery']);
 Route::get('/contact', [HomeController::class,'contact']);
 Route::get('/about', [HomeController::class,'about']);
+<<<<<<< HEAD
 Route::get('/login', [HomeController::class,'login']);
 Route::get('/signup', [HomeController::class,'signup']);
+=======
+
+
+// Admin Page
+Route::prefix('admin')->group(function () {
+    Route::get('/', function () {
+        return view('admin.index');
+    });
+
+    Route::resource('categories', CalligraphyCategoriesController::class);
+    Route::resource('styles', CalligraphyStylesController::class);
+    Route::resource('calligraphies', CalligraphiesController::class);
+    Route::resource('feedback', FeedbackController::class);
+    Route::resource('gallery', GalleryImagesController::class);
+    Route::resource('users', UserController::class);
+
+});
+>>>>>>> 0fb7bb1ee18c6410af35d81cbb1be1f3f411218f

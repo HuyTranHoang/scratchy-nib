@@ -14,11 +14,11 @@
 </head>
 <body>
 
-    <x-layouts.header />
+    <x-users.layouts.header />
 
     {{$slot}}
 
-    <x-layouts.footer />
+    <x-users.layouts.footer />
 
     @vite(['resources/js/app.js'])
 </body>
