@@ -24,9 +24,9 @@
             </tr>
             </thead>
             <tbody>
-            @foreach($gallery as $image)
+            @foreach($gallery as $index => $image)
                 <tr>
-                    <td>{{$image ->image_id}}</td>
+                    <td>{{$index+1}}</td>
                     <td>{{$image ->image_name}}</td>
                     <td>{{$image ->image_description}}</td>
                     <td>{{$image ->calligraphy_id}}</td>
