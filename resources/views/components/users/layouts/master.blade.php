@@ -19,7 +19,6 @@
     {{$slot}}
 
     <x-users.layouts.footer />
-
     @vite(['resources/js/app.js'])
 </body>
 </html>

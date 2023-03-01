@@ -22,6 +22,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Calligraphy Name</th>
                 <th scope="col">Calligraphy Description</th>
+                <th scope="col">Action</th>
             </tr>
             </thead>
             <tbody>
@@ -30,6 +31,7 @@
                     <td>{{$calligraphy -> calligraphy_id}}</td>
                     <td>{{$calligraphy-> calligraphy_name}}</td>
                     <td>{{$calligraphy -> calligraphy_description}}</td>
+                    <td><a href="#"><i class="fa-solid fa-pen">&emsp;</i><i class="fa-solid fa-trash"></i></a></td>
                 </tr>
             @endforeach
             </tbody>

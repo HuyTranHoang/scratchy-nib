@@ -22,6 +22,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Styles Name</th>
                 <th scope="col">Styles Description</th>
+                <th scope="col">Action</th>
             </tr>
             </thead>
             <tbody>
@@ -30,6 +31,7 @@
                     <td>{{$style -> style_id}}</td>
                     <td>{{$style -> style_name}}</td>
                     <td>{{$style -> style_description}}</td>
+                    <td><a href="#"><i class="fa-solid fa-pen">&emsp;</i><i class="fa-solid fa-trash"></i></a></td>
                 </tr>
             @endforeach
             </tbody>
