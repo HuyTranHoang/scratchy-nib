@@ -22,6 +22,6 @@
     <x-users.layouts.footer />
 
     @vite(['resources/js/app.js'])
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
 </body>
 </html>

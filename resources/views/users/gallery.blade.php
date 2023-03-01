@@ -1,4 +1,37 @@
 <x-users.layouts.master>
+    <style>
+
+        /* ---- grid ---- */
+
+        .grid {
+            background: #DDD;
+        }
+
+        /* clear fix */
+        .grid:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* ---- .grid-item ---- */
+
+        .grid-sizer,
+        .grid-item {
+            width: 33.333%;
+        }
+
+        .grid-item {
+            float: left;
+        }
+
+        .grid-item img {
+            display: block;
+            max-width: 100%;
+        }
+
+
+    </style>
     <header class="bg-secondary-color">
         <x-users.partials.overlay-bottom />
     </header>
@@ -28,41 +61,56 @@
                     </form>
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                    <div class="row text-center text-lg-start gy-3 my-3" data-masonry='{"percentPosition": true }'>
-                        <div class="col-lg-3 col-md-4 mt-2 mb-2 ">
-                            <a href=""><img src="{{asset('storage/images/header-cover.png')}}" alt="" class="img-thumbnail"></a>
-                        </div>
-                        <div class="col-lg-3 col-md-4  mt-2 mb-2 ">
-                            <a href=""><img src="{{asset('storage/images/header-cover.png')}}" alt="" class="img-thumbnail"></a>
-                        </div>
-                        <div class="col-lg-3 col-md-4  mt-2 mb-2 ">
-                            <a href=""><img src="{{asset('storage/images/header-cover.png')}}" alt="" class="img-thumbnail"></a>
-                        </div> <div class="col-lg-3 col-md-4  mt-2 mb-2 ">
-                            <a href=""><img src="{{asset('storage/images/header-cover.png')}}" alt="" class="img-thumbnail"></a>
-                        </div>
-                        <div class="col-lg-3 col-md-4  mt-2 mb-2 ">
-                            <a href=""><img src="{{asset('storage/images/header-cover.png')}}" alt="" class="img-thumbnail"></a>
-                        </div>
-                        <div class="col-lg-3 col-md-4  mt-2 mb-2 ">
-                            <a href=""><img src="{{asset('storage/images/header-cover.png')}}" alt="" class="img-thumbnail"></a>
-                        </div>
-                        <div class="col-lg-3 col-md-4  mt-2 mb-2 ">
-                            <a href=""><img src="{{asset('storage/images/header-cover.png')}}" alt="" class="img-thumbnail"></a>
-                        </div>
-                        <div class="col-lg-3 col-md-4  mt-2 mb-2 ">
-                            <a href=""><img src="{{asset('storage/images/header-cover.png')}}" alt="" class="img-thumbnail"></a>
-                        </div>
-                        <div class="col-lg-3 col-md-4  mt-2 mb-2 ">
-                            <a href=""><img src="{{asset('storage/images/header-cover.png')}}" alt="" class="img-thumbnail"></a>
-                        </div>
-                        <div class="col-lg-3 col-md-4  mt-2 mb-2 ">
-                            <a href=""><img src="{{asset('storage/images/header-cover.png')}}" alt="" class="img-thumbnail"></a>
-                        </div>
-                    </div>
+
+
+            <div class="grid">
+                <div class="grid-sizer"></div>
+                <div class="grid-item">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
                 </div>
+                <div class="grid-item">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />
+                </div>
+                <div class="grid-item">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
+                </div>
+                <div class="grid-item">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
+                </div>
+                <div class="grid-item">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
+                </div>
+                <div class="grid-item">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
+                </div>
+                <div class="grid-item">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
+                </div>
+                <div class="grid-item">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
+                </div>
+                <div class="grid-item">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
+                </div>
+                <div class="grid-item">
+                    <img src="https://api.lorem.space/image/movie" />
+                </div>
+                <div class="grid-item">
+                    <img src="https://api.lorem.space/image/game" />
+                </div>
+                <div class="grid-item">
+                    <img src="https://api.lorem.space/image/book" />
+                </div>
+                <div class="grid-item">
+                    <img src="https://api.lorem.space/image/album" />
+                </div>
+                <div class="grid-item">
+                    <img src="https://api.lorem.space/image/face" />
+                </div>
+
             </div>
+
+
         </div>
     </section>
     <footer class="bg-secondary-color">
