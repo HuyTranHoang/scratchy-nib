@@ -4,7 +4,7 @@
     </header>
     <section>
         <div class="container">
-            <div class="row mb-2 bg-secondary-color border-bottom rounded">
+            <div class="row mb-2 rounded">
                 <div class="col-6 d-flex">
                     <select class="form-select" aria-label="SelectClass">
                         <option>Select a Class</option>
@@ -28,47 +28,38 @@
                     </form>
                 </div>
             </div>
-            <div class="row bg-secondary-color">
+            <div class="row">
                 <div class="col">
-                    <div class="row text-center text-lg-start ">
-
-                        <div class="col-lg-3 col-md-4 col-6 mt-2 mb-2 ">
-                            <div class="card bg-secondary-color">
-                                <a href="/contact" data-toggle="lightbox" data-caption="This describes the image">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGfhKhwHAPyQPON31y4bYbPOOfSrfYJhNrrQ&usqp=CAU" class="img-fluid" alt="error">
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title">Name</h5>
-                                    <p class="card-text">Decription</p>
-                                    <p>Date</p>
-                                </div>
-                            </div>
+                    <div class="row text-center text-lg-start gy-3 my-3" data-masonry='{"percentPosition": true }'>
+                        <div class="col-lg-3 col-md-4 mt-2 mb-2 ">
+                            <a href=""><img src="{{asset('storage/images/header-cover.png')}}" alt="" class="img-thumbnail"></a>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-6 mt-2 mb-2 ">
-                            <div class="card bg-secondary-color">
-                                <a href="/contact" data-toggle="lightbox" data-caption="This describes the image">
-                                    <img src="https://i.kym-cdn.com/photos/images/original/002/348/324/517.jpg" class="img-fluid" alt="error">
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title">Name</h5>
-                                    <p class="card-text">Decription</p>
-                                    <p>Date</p>
-                                </div>
-                            </div>
+                        <div class="col-lg-3 col-md-4  mt-2 mb-2 ">
+                            <a href=""><img src="{{asset('storage/images/header-cover.png')}}" alt="" class="img-thumbnail"></a>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-6 mt-2 mb-2 ">
-                            <div class="card bg-secondary-color">
-                                <a href="/contact" data-toggle="lightbox" data-caption="This describes the image">
-                                    <img src="https://i0.wp.com/befonts.com/wp-content/uploads/2020/01/bellany-modern-script-font.jpg?fit=801%2C534&ssl=1" class="img-fluid" alt="error">
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title">Name</h5>
-                                    <p class="card-text">Decription</p>
-                                    <p>Date</p>
-                                </div>
-                            </div>
+                        <div class="col-lg-3 col-md-4  mt-2 mb-2 ">
+                            <a href=""><img src="{{asset('storage/images/header-cover.png')}}" alt="" class="img-thumbnail"></a>
+                        </div> <div class="col-lg-3 col-md-4  mt-2 mb-2 ">
+                            <a href=""><img src="{{asset('storage/images/header-cover.png')}}" alt="" class="img-thumbnail"></a>
                         </div>
-
+                        <div class="col-lg-3 col-md-4  mt-2 mb-2 ">
+                            <a href=""><img src="{{asset('storage/images/header-cover.png')}}" alt="" class="img-thumbnail"></a>
+                        </div>
+                        <div class="col-lg-3 col-md-4  mt-2 mb-2 ">
+                            <a href=""><img src="{{asset('storage/images/header-cover.png')}}" alt="" class="img-thumbnail"></a>
+                        </div>
+                        <div class="col-lg-3 col-md-4  mt-2 mb-2 ">
+                            <a href=""><img src="{{asset('storage/images/header-cover.png')}}" alt="" class="img-thumbnail"></a>
+                        </div>
+                        <div class="col-lg-3 col-md-4  mt-2 mb-2 ">
+                            <a href=""><img src="{{asset('storage/images/header-cover.png')}}" alt="" class="img-thumbnail"></a>
+                        </div>
+                        <div class="col-lg-3 col-md-4  mt-2 mb-2 ">
+                            <a href=""><img src="{{asset('storage/images/header-cover.png')}}" alt="" class="img-thumbnail"></a>
+                        </div>
+                        <div class="col-lg-3 col-md-4  mt-2 mb-2 ">
+                            <a href=""><img src="{{asset('storage/images/header-cover.png')}}" alt="" class="img-thumbnail"></a>
+                        </div>
                     </div>
                 </div>
             </div>

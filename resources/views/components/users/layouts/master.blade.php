@@ -11,6 +11,7 @@
     {{-- Font Awesome --}}
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
 
+
 </head>
 <body>
 
@@ -21,7 +22,6 @@
     <x-users.layouts.footer />
 
     @vite(['resources/js/app.js'])
-
-
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 </body>
 </html>

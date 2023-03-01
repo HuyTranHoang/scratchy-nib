@@ -189,33 +189,18 @@ $accordion-button-active-color: $secondary-color;
     }
 }
 
-#footer_contact{
+#footer_contact {
     i {
         margin-right: 0.75rem;
     }
+
     li {
         color: $text-color;
     }
 }
-.card{
-    transition: 1s transform;
-}
-.card:hover{
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
-}
 
 
 // Gallery Image
-.card{
-    transition: 1s transform;
-    object-fit: cover;
-    object-position: center top;
-}
-.card:hover{
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
-}
 
 
 
