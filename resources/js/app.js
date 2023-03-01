@@ -1,13 +1,19 @@
-import './bootstrap';
+import './bootstrap'
 import $ from 'jquery'
+import Masonry from 'masonry-layout'
+import ImagesLoaded from 'imagesloaded'
 window.jQuery = window.$ = $
 
 
 $(function() {
-    $('.grid').masonry({
-        // options
-        itemSelector: '.grid-item',
-        columnWidth: 200
+    const grid = document.querySelector('.grid')
+    let msnry
+    ImagesLoaded( grid, function() {
+        msnry = new Masonry( grid, {
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-sizer',
+            percentPosition: true
+        });
     });
 
 });
