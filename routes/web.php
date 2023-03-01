@@ -1,7 +1,12 @@
 <?php
 
 use App\Http\Controllers\CalligraphyCategoriesController;
+use App\Http\Controllers\CalligraphyStylesController;
+use App\Http\Controllers\CalligraphiesController;
+use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\GalleryImagesController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\Models\CalligraphyCategory;
 use Illuminate\Support\Facades\Route;
 
@@ -29,5 +34,11 @@ Route::prefix('admin')->group(function () {
         return view('admin.index');
     });
 
-    Route::resource('category', CalligraphyCategoriesController::class);
+    Route::resource('categories', CalligraphyCategoriesController::class);
+    Route::resource('styles', CalligraphyStylesController::class);
+    Route::resource('calligraphies', CalligraphiesController::class);
+    Route::resource('feedback', FeedbackController::class);
+    Route::resource('gallery', GalleryImagesController::class);
+    Route::resource('users', UserController::class);
+
 });

@@ -58,7 +58,8 @@
         <img class="position-absolute bottom-0 end-0" style="height: 35vw" src="{{asset('storage/images/header-cover.png')}}" alt="">
     </section>
 
-    <section class="bg-primary-color">
+    <section class="bg-secondary-color">
+        <x-users.partials.overlay-bottom />
         <div class="container text-primary">
             <h1 class="my-3 text-center">Sum cuti gura for Traditional Calligraphy section placeholder</h1>
             <div class="row">
@@ -81,7 +82,7 @@
                 </div>
             </div>
         </div>
-        <x-users.partials.overlay-bottom />
+        <x-users.partials.overlay-top color="bg-secondary-color" />
     </section>
 
     <section class="">
