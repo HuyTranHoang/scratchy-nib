@@ -29,4 +29,14 @@ class HomeController extends Controller
         return view('users.about');
     }
 
+    public function login()
+    {
+        return view('users.login');
+    }
+
+    public function signup()
+    {
+        return view('users.signup');
+    }
+
 }

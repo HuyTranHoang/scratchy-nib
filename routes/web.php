@@ -19,3 +19,5 @@ Route::get('/', [HomeController::class,'index']);
 Route::get('/gallery', [HomeController::class,'gallery']);
 Route::get('/contact', [HomeController::class,'contact']);
 Route::get('/about', [HomeController::class,'about']);
+Route::get('/login', [HomeController::class,'login']);
+Route::get('/signup', [HomeController::class,'signup']);
