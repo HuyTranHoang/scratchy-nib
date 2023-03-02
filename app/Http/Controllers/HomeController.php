@@ -30,14 +30,9 @@ class HomeController extends Controller
         return view('users.about');
     }
 
-    public function login()
+    public function authenticate()
     {
-        return view('users.login');
-    }
-
-    public function register()
-    {
-        return view('users.register');
+        return view('users.authenticate');
     }
 
     public function sendEmail(EmailPostRequest $request)

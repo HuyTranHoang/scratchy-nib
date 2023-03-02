@@ -30,8 +30,7 @@ Route::get('/contact', [HomeController::class,'contact'])->name('home.contact');
 Route::post('/send-email', [HomeController::class,'sendEmail'])->name('home.send-email');
 Route::get('/about', [HomeController::class,'about'])->name('home.about');
 
-Route::get('/login', [HomeController::class,'login'])->name('home.login');
-Route::get('/signup', [HomeController::class,'register'])->name('home.register');
+Route::get('/authenticate', [HomeController::class,'authenticate'])->name('home.authenticate');
 
 
 
