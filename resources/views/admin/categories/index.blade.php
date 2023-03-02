@@ -4,11 +4,10 @@
         <h1 class="h2">Calligraphy Categories</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
-                <button type="button" class="btn btn-sm btn-outline-primary">Add New Categories</button>
+                <a href="{{route('categories.create')}}" class="btn btn-sm btn-outline-primary">Add New Categories</a>
             </div>
         </div>
     </div>
-
 
     <h3>Categories List</h3>
     <div class="table-responsive">
@@ -23,14 +22,18 @@
             </tr>
             </thead>
             <tbody>
-            @foreach($categories as $category)
+            @foreach($categories as $index => $category)
                 <tr>
                     <td>{{$category -> category_id}}</td>
                     <td>{{$category -> category_name}}</td>
                     <td>{{$category -> category_description}}</td>
-                    <td class="table-action text-center">
-                        <a href="#"><i class="fa-solid fa-pen"></i></a>
-                        <a href="#"><i class="fa-solid fa-trash"></i></a>
+                    <td class="table-action text-center d-flex justify-content-center">
+                        <a href="{{route('categories.edit', $category -> category_id)}}"><i class="fa-solid fa-pen"></i></a>
+                        <form method="post" action="{{route('categories.destroy', $category -> category_id)}}">
+                            @csrf
+                            @method('delete')
+                            <button class="ms-3 border-0 {{$index % 2 != 0 ? 'bg-white' : ''}}"><i class="text-primary fa-solid fa-trash"></i></button>
+                        </form>
                     </td>
                     <td>{{date('d-m-Y', strtotime($category -> created_at))}}</td>
                 </tr>
