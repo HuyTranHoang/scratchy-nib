@@ -10,8 +10,10 @@ return new class extends Migration {
         Schema::create('feedback', function (Blueprint $table) {
             $table->id('feedback_id');
             $table->text('feedback_message');
-            $table->foreignId('user_id')->references('user_id')->on('users');
-            $table->foreignId('calligraphy_id')->references('calligraphy_id')->on('calligraphies');
+            $table->foreignId('user_id')->references('user_id')->on('users')
+                ->onDelete('cascade');;
+            $table->foreignId('calligraphy_id')->references('calligraphy_id')->on('calligraphies')
+                ->onDelete('cascade');;
             $table->timestamps();
         });
     }

@@ -23,7 +23,7 @@
                 </ul>
             </div>
 
-            <x-partials.footer-accordion-list title="Navigate" id="footer_navigate" class="col-md-4 col-lg-4">
+            <x-users.partials.footer-accordion-list title="Navigate" id="footer_navigate">
                 <ul class="list-unstyled">
                     <li>
                         <a href="/about" class="link-secondary text-decoration-none">
@@ -46,16 +46,16 @@
                             Privacy Policy</a>
                     </li>
                 </ul>
-            </x-partials.footer-accordion-list>
+            </x-users.partials.footer-accordion-list>
 
-            <x-partials.footer-accordion-list title="Contact" id="footer_contact" class="col-md-4 col-lg-4">
+            <x-users.partials.footer-accordion-list title="Contact" id="footer_contact">
                 <ul class="list-unstyled">
                     <li class="text-primary-color">HO CHI MINH, ZIP 70000, VN</li>
                     <li><a class="link-secondary text-decoration-none" href = "mailto: scratchynib@gmail.com">scratchynib@gmail.com</a></li>
                     <li><a class="link-secondary text-decoration-none" href="tel:+8499999999">+84 999 999 99</a></li>
                     <li><a class="link-secondary text-decoration-none" href="tel:+8488888888">+84 888 888 88</a></li>
                 </ul>
-            </x-partials.footer-accordion-list>
+            </x-users.partials.footer-accordion-list>
 
             <div class="text-center p-4">
                 Sitemap | ©2023 Scratchy Nib | All rights reserved.

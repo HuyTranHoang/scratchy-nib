@@ -70,6 +70,10 @@ $accordion-button-active-color: $secondary-color;
         color: rgb(242, 242, 242);
         background-color: #e07979;
     }
+    &:active {
+        color: rgb(242, 242, 242) !important;
+        background-color: #db7676 !important;
+    }
 }
 
 .btn-secondary-color {
@@ -81,6 +85,10 @@ $accordion-button-active-color: $secondary-color;
     &:hover {
         color: rgb(242, 242, 242);
         background-color: #c7a052;
+    }
+    &:active {
+        color: rgb(242, 242, 242) !important;
+        background-color: #c29c4f !important;
     }
 }
 
@@ -124,6 +132,24 @@ $accordion-button-active-color: $secondary-color;
         height: 175px;
     }
 }
+
+//Section content
+.btn-more-about{
+    position: relative;
+    i {
+        top: 55%;
+        right: 30px;
+        transform: translateY(-50%);
+        position: absolute;
+        transition: 0.1s all ease-in;
+        opacity: 0;
+    }
+    &:hover i {
+        right: 5px;
+        opacity: 1;
+    }
+}
+
 // Footer
 
 .footer-icon {
@@ -163,12 +189,128 @@ $accordion-button-active-color: $secondary-color;
     }
 }
 
-#footer_contact{
+#footer_contact {
     i {
         margin-right: 0.75rem;
     }
+
     li {
         color: $text-color;
+    }
+}
+
+
+// Gallery Image
+@import "gallery";
+
+
+// Login
+
+#loginForm {
+    .img {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url("../images/login.png");
+    }
+
+    .wrap {
+        width: 100%;
+        overflow: hidden;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 10px 34px -15px rgba(0, 0, 0, 0.24);
+        .img {
+            height: 200px;
+        }
+    }
+
+    .login-wrap {
+        position: relative;
+        h3 {
+            font-weight: 300;
+        }
+    }
+
+    .form-group {
+        position: relative;
+        z-index: 0;
+        margin-bottom: 20px !important;
+        a {
+            color: gray; }
+    }
+
+    .form-control {
+        height: 48px;
+        background: #fff;
+        color: #000;
+        font-size: 16px;
+        border-radius: 5px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        &:focus, &:active {
+            outline: none !important;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: 1px solid #01d28e;
+        }
+    }
+
+
+    .form-control-placeholder {
+        position: absolute;
+        top: 2px;
+        padding: 7px 0 0 15px;
+        -webkit-transition: all 400ms;
+        -o-transition: all 400ms;
+        transition: all 400ms;
+        opacity: .6;
+    }
+
+    .form-control:focus, .form-control:valid  {
+        & + .form-control-placeholder {
+            -webkit-transform: translate3d(0, -120%, 0);
+            transform: translate3d(0, -120%, 0);
+            padding: 7px 0 0 0;
+            opacity: 1;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: #01d28e;
+            font-weight: 700;
+        }
+    }
+
+    .btn {
+        cursor: pointer;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        font-size: 15px;
+        padding: 10px 20px;
+        &:hover, &:active, &:focus {
+            outline: none;
+        }
+        &.btn-primary {
+            background: #01d28e !important;
+            border: 1px solid #01d28e !important;
+            color: #fff !important;
+        }
+        &.btn-primary:hover {
+            border: 1px solid #01d28e;
+            background: transparent;
+            color: #01d28e;
+        }
+        &.btn-primary.btn-outline-primary {
+            border: 1px solid #01d28e;
+            background: transparent;
+            color: #01d28e;
+        }
+        &.btn-primary.btn-outline-primary:hover {
+            border: 1px solid transparent;
+            background: #01d28e;
+            color: #fff;
+        }
     }
 }
 
