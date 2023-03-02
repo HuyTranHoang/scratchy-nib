@@ -12,7 +12,7 @@ class GalleryImage extends Model
     protected $primaryKey = 'image_id';
     protected $table = 'gallery_images';
 
-    public function calligraphyStyle(): BelongsTo
+    public function calligraphy(): BelongsTo
     {
         return $this->belongsTo(Calligraphy::class,'calligraphy_id');
     }

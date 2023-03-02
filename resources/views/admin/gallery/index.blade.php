@@ -1,18 +1,14 @@
 <x-admin.layouts.master>
 
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Gallery-Image</h1>
+        <h1 class="h2">Gallery Images</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Add New Gallery-Image</button>
+                <button type="button" class="btn btn-sm btn-outline-primary">Add New Gallery-Image</button>
             </div>
-            <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar align-text-bottom" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                This Week
-            </button>
         </div>
     </div>
-    <h3>List Gallery-Image</h3>
+    <h3>Gallery Images List</h3>
     <div class="table-responsive">
         <table class="table table-striped table-sm">
             <thead>
@@ -20,18 +16,23 @@
                 <th scope="col">#</th>
                 <th scope="col">Image Name</th>
                 <th scope="col">Image Description</th>
-                <th scope="col">Calligraphy</th>
-                <th scope="col">Action</th>
+                <th scope="col">Calligraphy Name</th>
+                <th scope="col" class="text-center">Action</th>
+                <th scope="col">Created At</th>
             </tr>
             </thead>
             <tbody>
             @foreach($gallery as $index => $image)
                 <tr>
                     <td>{{$index+1}}</td>
-                    <td>{{$image ->image_name}}</td>
-                    <td>{{$image ->image_description}}</td>
-                    <td>{{$image ->calligraphy_id}}</td>
-                    <td><a href="#"><i class="fa-solid fa-pen">&emsp;</i><i class="fa-solid fa-trash"></i></a></td>
+                    <td>{{$image -> image_name}}</td>
+                    <td>{{$image -> image_description}}</td>
+                    <td>{{$image -> calligraphy -> calligraphy_name}}</td>
+                    <td class="table-action text-center">
+                        <a href="#"><i class="fa-solid fa-pen"></i></a>
+                        <a href="#"><i class="fa-solid fa-trash"></i></a>
+                    </td>
+                    <td>{{date('d-m-Y', strtotime($image -> created_at))}}</td>
                 </tr>
             @endforeach
             </tbody>
