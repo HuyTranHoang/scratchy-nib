@@ -10,7 +10,8 @@
     @vite(['resources/sass/app.scss'])
     {{-- Font Awesome --}}
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
-
+    {{-- Js and library --}}
+    @vite(['resources/js/app.js'])
 
 </head>
 <body>
@@ -20,8 +21,6 @@
     {{$slot}}
 
     <x-users.layouts.footer />
-
-    @vite(['resources/js/app.js'])
 
 </body>
 </html>

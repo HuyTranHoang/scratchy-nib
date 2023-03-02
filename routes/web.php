@@ -41,7 +41,7 @@ Route::get('/signup', [HomeController::class,'register'])->name('home.register')
 Route::prefix('admin')->group(function () {
     Route::get('/', function () {
         return view('admin.index');
-    });
+    })->name('admin.index');
 
     Route::resource('categories', CalligraphyCategoriesController::class);
     Route::resource('styles', CalligraphyStylesController::class);

@@ -12,12 +12,15 @@
     @vite(['resources/sass/admin.scss'])
     {{-- Font Awesome --}}
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
+    {{-- Js and library --}}
+    @vite(['resources/js/app.js'])
+
 
 </head>
 <body>
 
-<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap py-2 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Scratchy Nib</a>
+<header class="navbar navbar-dark sticky-top bg-primary flex-md-nowrap py-2 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="{{route('admin.index')}}">Scratchy<b>Nib</b></a>
     <button class="navbar-toggler d-md-none me-3" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -32,6 +35,5 @@
         </main>
     </div>
 </div>
-    @vite(['resources/js/app.js'])
 </body>
 </html>
