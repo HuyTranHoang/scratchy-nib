@@ -5,23 +5,26 @@
     <section>
         <div class="container">
             <div class="row mb-2 rounded">
-                <div class="col-6 d-flex">
+                <div class="col-lg-6 col-md-6 col-sm-8 d-lg-flex d-md-flex d-flex mb-3">
                     <select class="form-select" aria-label="SelectClass">
                         <option>Select a Class</option>
                         <option value="">HTML</option>
                         <option value="">CSS</option>
                         <option value="">JavaScript</option>
                     </select>
+
+{{--                    Hiện Khi Chọn 1 Class (backend)--}}
                     <select class="form-select" aria-label="SelectSection">
                         <option>Select Section</option>
                         <option value="GFG1">HTML</option>
                         <option value="GFG2">CSS</option>
                         <option value="GFG3">JavaScript</option>
                     </select>
+
                 </div>
-                <div class="col-6 d-flex justify-content-end">
+                <div class="col-lg-6 col-md-6 col-sm-4 d-lg-flex d-md-flex justify-content-lg-end justify-content-md-end mb-3">
                     <form action="" class="d-flex form-outline">
-                        <input class="form-control  rounded-start rounded-0" id="" name="" type="text" placeholder="Search" aria-label="search">
+                        <input class="form-control rounded-start rounded-0" id="" name="" type="text" placeholder="Search" aria-label="search">
                         <button class="btn rounded-end rounded-0 btn-primary" type="submit">
                             <i class="fas fa-search"></i>
                         </button>
