@@ -14,7 +14,9 @@ class HomeController extends Controller
     {
         return view('users.index');
     }
-
+    public function categories(){
+        return view('users.calligraphy');
+    }
     public function gallery()
     {
         return view('users.gallery');
@@ -29,7 +31,6 @@ class HomeController extends Controller
     {
         return view('users.about');
     }
-
     public function authenticate()
     {
         return view('users.authenticate');
