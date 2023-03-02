@@ -20,7 +20,7 @@
             color: whitesmoke;
             flex-direction: column;
             justify-content: center;
-            transition: .3s;
+            transition: .2s;
         }
 
         .card-gallery:hover .card-body-gallery{
