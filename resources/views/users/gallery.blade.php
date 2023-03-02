@@ -4,7 +4,7 @@
     </header>
     <section>
         <div class="container">
-            <div class="row mb-2 bg-secondary-color border-bottom rounded">
+            <div class="row mb-2 rounded">
                 <div class="col-6 d-flex">
                     <select class="form-select" aria-label="SelectClass">
                         <option>Select a Class</option>
@@ -21,57 +21,158 @@
                 </div>
                 <div class="col-6 d-flex justify-content-end">
                     <form action="" class="d-flex form-outline">
-                        <input class="form-control" id="" name="" type="text" placeholder="Search" aria-label="search">
-                        <button class="btn btn-primary-color" type="submit">
+                        <input class="form-control  rounded-start rounded-0" id="" name="" type="text" placeholder="Search" aria-label="search">
+                        <button class="btn rounded-end rounded-0 btn-primary" type="submit">
                             <i class="fas fa-search"></i>
                         </button>
                     </form>
                 </div>
             </div>
-            <div class="row bg-secondary-color">
-                <div class="col">
-                    <div class="row text-center text-lg-start ">
 
-                        <div class="col-lg-3 col-md-4 col-6 mt-2 mb-2 ">
-                            <div class="card bg-secondary-color">
-                                <a href="/contact" data-toggle="lightbox" data-caption="This describes the image">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGfhKhwHAPyQPON31y4bYbPOOfSrfYJhNrrQ&usqp=CAU" class="img-fluid" alt="error">
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title">Name</h5>
-                                    <p class="card-text">Decription</p>
-                                    <p>Date</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6 mt-2 mb-2 ">
-                            <div class="card bg-secondary-color">
-                                <a href="/contact" data-toggle="lightbox" data-caption="This describes the image">
-                                    <img src="https://i.kym-cdn.com/photos/images/original/002/348/324/517.jpg" class="img-fluid" alt="error">
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title">Name</h5>
-                                    <p class="card-text">Decription</p>
-                                    <p>Date</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6 mt-2 mb-2 ">
-                            <div class="card bg-secondary-color">
-                                <a href="/contact" data-toggle="lightbox" data-caption="This describes the image">
-                                    <img src="https://i0.wp.com/befonts.com/wp-content/uploads/2020/01/bellany-modern-script-font.jpg?fit=801%2C534&ssl=1" class="img-fluid" alt="error">
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title">Name</h5>
-                                    <p class="card-text">Decription</p>
-                                    <p>Date</p>
-                                </div>
-                            </div>
-                        </div>
-
+            <div class="grid">
+                <div class="grid-sizer"></div>
+                <div class="grid-item rounded">
+                    <div class="card-gallery">
+                        <img class="card-img-gallery rounded" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg"  alt="Error"/>
+                        <a class="card-body-gallery" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" data-lightbox="gallery">
+                            <h6 class="card-title-gallery">Name Nhu Quan Que Vay Do Hieu Hong Con Quy</h6>
+                            <p class="card-category">Category</p>
+                            <a class="card-btn text-decoration-none" href="/about">Detail</a>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-item rounded">
+                    <div class="card-gallery ">
+                        <img class="card-img-gallery rounded" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg"  alt="Error"/>
+                        <a class="card-body-gallery" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" data-lightbox="gallery">
+                            <h6 class="card-title-gallery">Name</h6>
+                            <p class="card-category">Category</p>
+                            <a class="card-btn text-decoration-none" href="/about">Detail</a>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-item rounded">
+                    <div class="card-gallery ">
+                        <img class="card-img-gallery rounded" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg"  alt="Error"/>
+                        <a class="card-body-gallery" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" data-lightbox="gallery">
+                            <h6 class="card-title-gallery">Name</h6>
+                            <p class="card-category">Category</p>
+                            <a class="card-btn text-decoration-none" href="/about">Detail</a>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-item rounded">
+                    <div class="card-gallery">
+                        <img class="card-img-gallery rounded" src="https://api.lorem.space/image/face"  alt="Error"/>
+                        <a class="card-body-gallery" href="https://api.lorem.space/image/face" data-lightbox="gallery">
+                            <h6 class="card-title-gallery">Name</h6>
+                            <p class="card-category">Category</p>
+                            <a class="card-btn text-decoration-none" href="/about">Detail</a>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-item rounded">
+                    <div class="card-gallery">
+                        <img class="card-img-gallery rounded" src="https://api.lorem.space/image/album"  alt="Error"/>
+                        <a class="card-body-gallery" href="https://api.lorem.space/image/album" data-lightbox="gallery">
+                            <h6 class="card-title-gallery">Name</h6>
+                            <p class="card-category">Category</p>
+                            <a class="card-btn text-decoration-none" href="/about">Detail</a>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-item rounded">
+                    <div class="card-gallery">
+                        <img class="card-img-gallery rounded" src="https://api.lorem.space/image/book"  alt="Error"/>
+                        <a class="card-body-gallery" href="https://api.lorem.space/image/book" data-lightbox="gallery">
+                            <h6 class="card-title-gallery">Name</h6>
+                            <p class="card-category">Category</p>
+                            <a class="card-btn text-decoration-none" href="/about">Detail</a>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-item rounded">
+                    <div class="card-gallery">
+                        <img class="card-img-gallery rounded" src="https://api.lorem.space/image/game"  alt="Error"/>
+                        <a class="card-body-gallery" href="https://api.lorem.space/image/game" data-lightbox="gallery">
+                            <h6 class="card-title-gallery">Name</h6>
+                            <p class="card-category">Category</p>
+                            <a class="card-btn text-decoration-none" href="/about">Detail</a>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-item rounded">
+                    <div class="card-gallery">
+                        <img class="card-img-gallery rounded" src="https://api.lorem.space/image/movie"  alt="Error"/>
+                        <a class="card-body-gallery" href="https://api.lorem.space/image/movie" data-lightbox="gallery">
+                            <h6 class="card-title-gallery">Name</h6>
+                            <p class="card-category">Category</p>
+                            <a class="card-btn text-decoration-none" href="/about">Detail</a>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-item rounded">
+                    <div class="card-gallery">
+                        <img class="card-img-gallery rounded" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg"  alt="Error"/>
+                        <a class="card-body-gallery" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" data-lightbox="gallery">
+                            <h6 class="card-title-gallery">Name</h6>
+                            <p class="card-category">Category</p>
+                            <a class="card-btn text-decoration-none" href="/about">Detail</a>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-item rounded">
+                    <div class="card-gallery">
+                        <img class="card-img-gallery rounded" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg"  alt="Error"/>
+                        <a class="card-body-gallery" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" data-lightbox="gallery">
+                            <h6 class="card-title-gallery">Name</h6>
+                            <p class="card-category">Category</p>
+                            <a class="card-btn text-decoration-none" href="/about">Detail</a>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-item rounded">
+                    <div class="card-gallery">
+                        <img class="card-img-gallery rounded" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg"  alt="Error"/>
+                        <a class="card-body-gallery" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" data-lightbox="gallery">
+                            <h6 class="card-title-gallery">Name</h6>
+                            <p class="card-category">Category</p>
+                            <a class="card-btn text-decoration-none" href="/about">Detail</a>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-item rounded">
+                    <div class="card-gallery">
+                        <img class="card-img-gallery rounded" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg"  alt="Error"/>
+                        <a class="card-body-gallery" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" data-lightbox="gallery">
+                            <h6 class="card-title-gallery">Name</h6>
+                            <p class="card-category">Category</p>
+                            <a class="card-btn text-decoration-none" href="/about">Detail</a>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-item rounded">
+                    <div class="card-gallery">
+                        <img class="card-img-gallery rounded" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg"  alt="Error"/>
+                        <a class="card-body-gallery" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" data-lightbox="gallery">
+                            <h6 class="card-title-gallery">Name</h6>
+                            <p class="card-category">Category</p>
+                            <a class="card-btn text-decoration-none" href="/about">Detail</a>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-item rounded">
+                    <div class="card-gallery">
+                        <img class="card-img-gallery rounded" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg"  alt="Error"/>
+                        <a class="card-body-gallery" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" data-lightbox="gallery">
+                            <h6 class="card-title-gallery">Name</h6>
+                            <p class="card-category">Category</p>
+                            <a class="card-btn text-decoration-none" href="/about">Detail</a>
+                        </a>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
     <footer class="bg-secondary-color">
