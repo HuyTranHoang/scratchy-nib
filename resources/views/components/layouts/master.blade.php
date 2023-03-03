@@ -16,11 +16,11 @@
 </head>
 <body>
 
-    <x-users.layouts.header />
+    <x-layouts.header />
 
     {{$slot}}
 
-    <x-users.layouts.footer />
+    <x-layouts.footer />
 
 </body>
 </html>

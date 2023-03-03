@@ -1,0 +1,31 @@
+// Variables
+@use '../abstracts/variables';
+
+.navbar-title {
+    font-family: Regista, serif;
+}
+
+#navbarSupportedContent {
+    text-transform: uppercase;
+    font-family: Arial, serif;
+    font-size: 1.125rem;
+
+    .nav-link {
+        color: variables.$text-color;
+    }
+
+    .dropdown-menu {
+        text-transform: capitalize;
+    }
+}
+
+.header-title {
+    margin-top: 5rem;
+    font-size: 5rem;
+    font-family: 'Babylone Script', serif;
+    color: #d37171;
+}
+
+.header-text-color {
+    color: #d37171;
+}

@@ -6,34 +6,35 @@ use App\Http\Requests\EmailPostRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class HomeController extends Controller
 {
 
     public function index()
     {
-        return view('users.index');
+        return view('home.index');
     }
     public function categories(){
-        return view('users.calligraphy');
+        return view('home.calligraphy');
     }
     public function gallery()
     {
-        return view('users.gallery');
+        return view('home.gallery');
     }
 
     public function contact()
     {
-        return view('users.contact');
+        return view('home.contact');
     }
 
     public function about()
     {
-        return view('users.about');
+        return view('home.about');
     }
     public function authenticate()
     {
-        return view('users.authenticate');
+        return view('home.authenticate');
     }
 
     public function sendEmail(EmailPostRequest $request)
@@ -43,6 +44,8 @@ class HomeController extends Controller
             $email->subject($validated['subject']);
             $email->to('huy.th878@aptechlearning.edu.vn',$validated['name']);
         });
+
+        Alert::success('Success', 'Your email sent successfully!')->autoClose(1500);
 
         return redirect()->back();
     }

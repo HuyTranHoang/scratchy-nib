@@ -1,6 +1,6 @@
-<x-users.layouts.master>
+<x-layouts.master>
     <header class="bg-secondary-color">
-        <x-users.partials.overlay-bottom />
+        <x-partials.overlay-bottom />
     </header>
     <section>
         <div class="container ">
@@ -179,6 +179,6 @@
         </div>
     </section>
     <footer class="bg-secondary-color">
-        <x-users.partials.overlay-top />
+        <x-partials.overlay-top />
     </footer>
-</x-users.layouts.master>
+</x-layouts.master>
