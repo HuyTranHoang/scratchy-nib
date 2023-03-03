@@ -1,0 +1,31 @@
+.overlay-top {
+    background-image: url('../images/overlay-top.png');
+    background-position: top center;
+    background-repeat: repeat-x;
+    background-size: 100% auto;
+    @media (max-width: 767px) {
+        height: 75px;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        height: 125px;
+    }
+    @media (min-width:1024px) {
+        height: 175px;
+    }
+}
+
+.overlay-bottom {
+    background-image: url('../images/overlay-bottom.png');
+    background-position: bottom center;
+    background-repeat: repeat-x;
+    background-size: 100% auto;
+    @media (max-width: 767px) {
+        height: 75px;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        height: 125px;
+    }
+    @media (min-width:1025px) {
+        height: 175px;
+    }
+}

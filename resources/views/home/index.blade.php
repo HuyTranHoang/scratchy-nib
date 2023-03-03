@@ -1,4 +1,4 @@
-<x-users.layouts.master>
+<x-layouts.master>
 
     <section class="bg-secondary-color position-relative pb-5">
         <div class="container">
@@ -81,7 +81,7 @@
                 </div>
             </div>
         </div>
-        <x-users.partials.overlay-bottom color="bg-secondary-color" />
+        <x-partials.overlay-bottom color="bg-secondary-color" />
 
     </section>
 
@@ -124,7 +124,7 @@
     </section>
 
     <section class="bg-secondary-color">
-        <x-users.partials.overlay-top />
+        <x-partials.overlay-top />
         <div class="container text-secondary">
             <h1 class="mb-3 text-center">Contemporary Calligraphy</h1>
             <div class="row mb-3">
@@ -168,7 +168,7 @@
                 </div>
             </div>
         </div>
-        <x-users.partials.overlay-bottom />
+        <x-partials.overlay-bottom />
     </section>
 
     <section class="">
@@ -199,9 +199,9 @@
                 </div>
             </div>
         </div>
-        <x-users.partials.overlay-top color="bg-secondary-color"/>
+        <x-partials.overlay-top color="bg-secondary-color"/>
     </section>
 
 
 
-</x-users.layouts.master>
+</x-layouts.master>

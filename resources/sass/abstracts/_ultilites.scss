@@ -1,0 +1,51 @@
+// Variables
+@use '../abstracts/variables';
+
+//Utilities
+.text-primary-color {
+    color: variables.$text-color;
+}
+
+.footer-text-color {
+    color: variables.$footer-text-color;
+}
+
+.bg-primary-color {
+    background-color: variables.$primary-bg;
+}
+
+.bg-secondary-color {
+    background-color: variables.$secondary-bg;
+}
+
+.btn-primary-color {
+    border-radius: 1.25rem;
+    padding: 0.5rem 0.8rem;
+    font-weight: 500;
+    color: white;
+    background-color: #d37272;
+    &:hover {
+        color: rgb(242, 242, 242);
+        background-color: #e07979;
+    }
+    &:active {
+        color: rgb(242, 242, 242) !important;
+        background-color: #db7676 !important;
+    }
+}
+
+.btn-secondary-color {
+    border-radius: 1.25rem;
+    padding: 0.5rem 0.8rem;
+    font-weight: 500;
+    color: white;
+    background-color: #bf994f;
+    &:hover {
+        color: rgb(242, 242, 242);
+        background-color: #c7a052;
+    }
+    &:active {
+        color: rgb(242, 242, 242) !important;
+        background-color: #c29c4f !important;
+    }
+}
