@@ -3,35 +3,41 @@
         <x-partials.overlay-bottom />
     </header>
     <section>
-        <div class="container ">
+        <div class="container">
             <div class="row mb-2 rounded">
-                <div class="col-lg-6 col-md-6 col-sm-8 d-lg-flex d-md-flex d-flex mb-3">
-                    <select class="form-select rounded-pill" aria-label="SelectClass">
-                        <option>Select a Class</option>
-                        <option value="">HTML</option>
-                        <option value="">CSS</option>
-                        <option value="">JavaScript</option>
-                    </select>
+                <div class="d-sm-block col-md-6 d-md-flex">
+                    <div class="field me-4">
+                        <label for="SelectClass" class="label">Class</label>
+                        <select class="select mt-2" id="SelectClass">
+                            <option>Select a Class</option>
+                            <option value="">HTML</option>
+                            <option value="">CSS</option>
+                            <option value="">JavaScript</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="SelectSection" class="label">Section</label>
+                        <select class="select mt-2" id="SelectSection">
+                            <option>Select Section</option>
+                            <option value="GFG1">HTML</option>
+                            <option value="GFG2">CSS</option>
+                            <option value="GFG3">JavaScript</option>
+                        </select>
+                    </div>
 
-{{--                    Hiện Khi Chọn 1 Class (backend)--}}
-                    <select class="form-select rounded-pill" aria-label="SelectSection">
-                        <option>Select Section</option>
-                        <option value="GFG1">HTML</option>
-                        <option value="GFG2">CSS</option>
-                        <option value="GFG3">JavaScript</option>
-                    </select>
+                    {{--                    Hiện Khi Chọn 1 Class (backend)--}}
 
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-4 d-lg-flex d-md-flex justify-content-lg-end justify-content-md-end mb-3">
+                <div class="d-sm-block col-md-6 d-md-flex justify-content-md-end mt-2">
                     <form action="" class="d-flex form-outline">
-                        <input class="form-control  rounded-pill rounded-end" id="" name="" type="text" placeholder="Search" aria-label="search">
-                        <button class="btn rounded-pill rounded-start btn-primary-color" type="submit">
+                        <input class="form-control rounded-start rounded-0" id="" name="" type="text" placeholder="Search" aria-label="search">
+                        <button class="btn rounded-end rounded-0 btn-primary-color" type="submit">
                             <i class="fas fa-search"></i>
                         </button>
                     </form>
                 </div>
             </div>
-
+{{--                    Hiện Khi Chọn 1 Class (backend)--}}
             <div class="grid">
                 <div class="grid-sizer"></div>
                 <div class="grid-item rounded">
@@ -175,7 +181,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
     <footer class="bg-secondary-color">
