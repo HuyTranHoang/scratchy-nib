@@ -1,0 +1,15 @@
+@use "breakpoints";
+
+// Small devices
+@mixin mobile {
+    @media (max-width: #{breakpoints.$screen-sm-max}) {
+        @content;
+    }
+}
+
+// Medium devices
+@mixin tablet {
+    @media (max-width: #{breakpoints.$screen-md-max}) {
+        @content;
+    }
+}
