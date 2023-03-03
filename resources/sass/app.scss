@@ -1,63 +1,41 @@
+// Variables
+@use 'partials/variables';
+// Fonts
+@use "partials/fonts";
+// Bootstrap 5.3 & Custom
+@use "partials/bootstrap";
+// Section Overlay
+@use "overlay";
+// Header Navbar
+@use "header";
+// Footer
+@use "footer";
+
 // For footer to be in the bottom
 html,body {
     height: 100%;
 }
+
 body {
     display: flex;
     flex-direction: column;
 }
 
-
-// Variables
-@import 'variables';
-
-// Fonts
-@import "fonts";
-
-// Custom bootstrap
-$accordion-button-active-bg: $secondary-bg;
-$accordion-button-active-color: $secondary-color;
-
-    // Bootstrap
-@import 'bootstrap/scss/bootstrap';
-
 //Utilities
 .text-primary-color {
-    color: $text-color;
+    color: variables.$text-color;
 }
 
 .footer-text-color {
-    color: $footer-text-color;
+    color: variables.$footer-text-color;
 }
 
-// Header, Navbar section
-.navbar-title {
-    font-family: Regista, serif;
+.bg-primary-color {
+    background-color: variables.$primary-bg;
 }
 
-#navbarSupportedContent {
-    text-transform: uppercase;
-    font-family: Arial, serif;
-    font-size: 1.125rem;
-
-    .nav-link {
-        color: $text-color;
-    }
-
-    .dropdown-menu {
-        text-transform: capitalize;
-    }
-}
-
-.header-title {
-    margin-top: 5rem;
-    font-size: 5rem;
-    font-family: 'Babylone Script', serif;
-    color: #d37171;
-}
-
-.header-text-color {
-    color: #d37171;
+.bg-secondary-color {
+    background-color: variables.$secondary-bg;
 }
 
 .btn-primary-color {
@@ -92,47 +70,6 @@ $accordion-button-active-color: $secondary-color;
     }
 }
 
-// Section Overlay
-.bg-primary-color {
-    background-color: $primary-bg;
-}
-
-.bg-secondary-color {
-    background-color: $secondary-bg;
-}
-
-.overlay-top {
-    background-image: url('../images/overlay-top.png');
-    background-position: top center;
-    background-repeat: repeat-x;
-    background-size: 100% auto;
-    @media (max-width: 767px) {
-        height: 75px;
-    }
-    @media (min-width: 768px) and (max-width: 1024px) {
-        height: 125px;
-    }
-    @media (min-width:1024px) {
-        height: 175px;
-    }
-}
-
-.overlay-bottom {
-    background-image: url('../images/overlay-bottom.png');
-    background-position: bottom center;
-    background-repeat: repeat-x;
-    background-size: 100% auto;
-    @media (max-width: 767px) {
-        height: 75px;
-    }
-    @media (min-width: 768px) and (max-width: 1024px) {
-        height: 125px;
-    }
-    @media (min-width:1025px) {
-        height: 175px;
-    }
-}
-
 //Section content
 .btn-more-about{
     position: relative;
@@ -150,168 +87,7 @@ $accordion-button-active-color: $secondary-color;
     }
 }
 
-// Footer
-
-.footer-icon {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    @media (max-width: 767px) {
-        justify-content: center;
-    }
-    li:nth-child(1) {
-        color: cornflowerblue;
-    }
-    li:nth-child(2) {
-        color: #1DA1F2;
-    }
-    li:nth-child(3) {
-        color: #DE4032;
-    }
-    li:nth-child(4) {
-        color: #F2C442;
-    }
-
-    li:not(:first-child) a {
-        padding: 0 0.25rem;
-        margin: 0 0.75rem;
-    }
-
-    li:first-child a {
-        padding-right: 0.25rem;
-        margin-right: 0.75rem;
-    }
-
-    a {
-        --bs-text-opacity: 1;
-        color: inherit !important;
-    }
-}
-
-#footer_contact {
-    i {
-        margin-right: 0.75rem;
-    }
-
-    li {
-        color: $text-color;
-    }
-}
-
-
 // Gallery Image
 @import "gallery";
-
-
-// Login
-
-#loginForm {
-    .img {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-image: url("../images/login.png");
-    }
-
-    .wrap {
-        width: 100%;
-        overflow: hidden;
-        background: #fff;
-        border-radius: 5px;
-        box-shadow: 0 10px 34px -15px rgba(0, 0, 0, 0.24);
-        .img {
-            height: 200px;
-        }
-    }
-
-    .login-wrap {
-        position: relative;
-        h3 {
-            font-weight: 300;
-        }
-    }
-
-    .form-group {
-        position: relative;
-        z-index: 0;
-        margin-bottom: 20px !important;
-        a {
-            color: gray; }
-    }
-
-    .form-control {
-        height: 48px;
-        background: #fff;
-        color: #000;
-        font-size: 16px;
-        border-radius: 5px;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        &:focus, &:active {
-            outline: none !important;
-            -webkit-box-shadow: none;
-            box-shadow: none;
-            border: 1px solid #01d28e;
-        }
-    }
-
-
-    .form-control-placeholder {
-        position: absolute;
-        top: 2px;
-        padding: 7px 0 0 15px;
-        -webkit-transition: all 400ms;
-        -o-transition: all 400ms;
-        transition: all 400ms;
-        opacity: .6;
-    }
-
-    .form-control:focus, .form-control:valid  {
-        & + .form-control-placeholder {
-            -webkit-transform: translate3d(0, -120%, 0);
-            transform: translate3d(0, -120%, 0);
-            padding: 7px 0 0 0;
-            opacity: 1;
-            text-transform: uppercase;
-            font-size: 12px;
-            letter-spacing: 1px;
-            color: #01d28e;
-            font-weight: 700;
-        }
-    }
-
-    .btn {
-        cursor: pointer;
-        -webkit-box-shadow: none !important;
-        box-shadow: none !important;
-        font-size: 15px;
-        padding: 10px 20px;
-        &:hover, &:active, &:focus {
-            outline: none;
-        }
-        &.btn-primary {
-            background: #01d28e !important;
-            border: 1px solid #01d28e !important;
-            color: #fff !important;
-        }
-        &.btn-primary:hover {
-            border: 1px solid #01d28e;
-            background: transparent;
-            color: #01d28e;
-        }
-        &.btn-primary.btn-outline-primary {
-            border: 1px solid #01d28e;
-            background: transparent;
-            color: #01d28e;
-        }
-        &.btn-primary.btn-outline-primary:hover {
-            border: 1px solid transparent;
-            background: #01d28e;
-            color: #fff;
-        }
-    }
-}
 
 

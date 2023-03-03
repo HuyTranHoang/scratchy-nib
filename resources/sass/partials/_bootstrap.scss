@@ -1,0 +1,12 @@
+// Variables
+@use 'variables';
+
+// Custom bootstrap
+$primary: variables.$primary-color;
+$secondary: variables.$secondary-color;
+
+$accordion-button-active-bg: variables.$secondary-bg;
+$accordion-button-active-color: variables.$secondary-color;
+
+// Bootstrap
+@import '../../../node_modules/bootstrap/scss/bootstrap';
