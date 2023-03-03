@@ -116,4 +116,29 @@
     }
 }
 
+//Select Label
+.select{
+    border: 1px solid #CED4DA;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    padding: 0 5px;
+    background-color: white;
+    color: #6C757D;
+
+
+}
+.label{
+    position: absolute;
+    left: 10px;
+    pointer-events: none;
+    font-size: 0.7rem;
+    color: #6C757D;
+    background: white;
+}
+.field{
+    position: relative;
+    width: 100%;
+}
+
 
