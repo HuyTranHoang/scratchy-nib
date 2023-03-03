@@ -1,12 +1,15 @@
 // Variables
 @use '../abstracts/variables';
+// Mixins
+@use "../abstracts/mixins";
+
 
 .footer-icon {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     padding: 0;
-    @media (max-width: 767px) {
+    @include mixins.mobile {
         justify-content: center;
     }
     li:nth-child(1) {
