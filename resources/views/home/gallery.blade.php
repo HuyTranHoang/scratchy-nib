@@ -1,12 +1,12 @@
-<x-users.layouts.master>
+<x-layouts.master>
     <header class="bg-secondary-color">
-        <x-users.partials.overlay-bottom />
+        <x-partials.overlay-bottom />
     </header>
     <section>
         <div class="container ">
             <div class="row mb-2 rounded">
                 <div class="col-lg-6 col-md-6 col-sm-8 d-lg-flex d-md-flex d-flex mb-3">
-                    <select class="form-select rounded-pill" aria-label="SelectClass">
+                    <select class="form-select rounded-3 mx-2" aria-label="SelectClass">
                         <option>Select a Class</option>
                         <option value="">HTML</option>
                         <option value="">CSS</option>
@@ -14,7 +14,7 @@
                     </select>
 
 {{--                    Hiện Khi Chọn 1 Class (backend)--}}
-                    <select class="form-select rounded-pill" aria-label="SelectSection">
+                    <select class="form-select rounded-3 mx-2" aria-label="SelectSection">
                         <option>Select Section</option>
                         <option value="GFG1">HTML</option>
                         <option value="GFG2">CSS</option>
@@ -24,8 +24,8 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-4 d-lg-flex d-md-flex justify-content-lg-end justify-content-md-end mb-3">
                     <form action="" class="d-flex form-outline">
-                        <input class="form-control  rounded-pill rounded-end" id="" name="" type="text" placeholder="Search" aria-label="search">
-                        <button class="btn rounded-pill rounded-start btn-primary-color" type="submit">
+                        <input class="form-control rounded-start rounded-0" id="" name="" type="text" placeholder="Search" aria-label="search">
+                        <button class="btn rounded-end rounded-0 btn-primary-color" type="submit">
                             <i class="fas fa-search"></i>
                         </button>
                     </form>
@@ -179,6 +179,6 @@
         </div>
     </section>
     <footer class="bg-secondary-color">
-        <x-users.partials.overlay-top />
+        <x-partials.overlay-top />
     </footer>
-</x-users.layouts.master>
+</x-layouts.master>
