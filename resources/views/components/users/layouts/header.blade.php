@@ -36,16 +36,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categories</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Traditional Calligraphy</a></li>
-                        <li><a class="dropdown-item" href="#">Contemporary Calligraphy</a></li>
-                        <li><a class="dropdown-item" href="#">Hand-lettering & Design</a></li>
-                        <li><a class="dropdown-item" href="#">Modern Calligraphy</a></li>
-                    </ul>
-                </li>
+                <li class="nav-item"><a href="/categories" class="nav-link">Categories</a></li>
                 <li class="nav-item"><a href="/gallery" class="nav-link">Gallery</a></li>
                 <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
                 <li class="nav-item"><a href="/about" class="nav-link">About</a></li>

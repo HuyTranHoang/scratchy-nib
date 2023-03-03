@@ -129,11 +129,10 @@
         .overlay{
             position: relative;
             color: #fff;
-            background-color: #ff416c;
             left: -100%;
             height: 100%;
             width: 200%;
-            background: linear-gradient(to right, #ff4b28, #ff228c);
+            background: #ff416c linear-gradient(to right, #ff4b28, #ff228c);
             transform: translateX(0);
             transition: transform 0.6s ease-in-out;
         }
