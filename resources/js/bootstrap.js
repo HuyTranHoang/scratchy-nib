@@ -1,11 +1,17 @@
 import loadash from 'lodash'
 window._ = loadash
 
+import $ from 'jquery';
+window.$ = $;
+
+import Lightbox from 'lightbox2'
+import "../../node_modules/lightbox2/dist/css/lightbox.css"
 
 import * as Popper from '@popperjs/core'
 window.Popper = Popper
 
 import 'bootstrap'
+
 
 
 /**
