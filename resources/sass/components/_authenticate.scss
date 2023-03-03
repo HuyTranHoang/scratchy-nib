@@ -1,7 +1,7 @@
 // Fonts
 @use "../abstracts/fonts";
 
-.lg-container{
+.lg-container {
     font-family: 'Montserrat', sans-serif;
     position: relative;
     width: 768px;
@@ -12,6 +12,67 @@
     overflow: hidden;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25),
     0 10px 10px rgba(0,0,0,0.22);
+
+
+    form {
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 50px;
+        height: 100%;
+        text-align: center;
+    }
+
+    h1 {
+        font-weight: bold;
+        margin: 0;
+    }
+    p {
+        font-size: 14px;
+        font-weight: 100;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+        margin: 15px 0 20px;
+    }
+
+    input {
+        background: #eee;
+        padding: 12px 15px;
+        margin: 8px 15px;
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+    }
+
+    a {
+        color: #333;
+        font-size: 14px;
+        text-decoration: none;
+        margin: 15px 0;
+    }
+
+    button {
+        color: #fff;
+        background: #ff4b2b;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 12px 55px;
+        margin: 20px;
+        border-radius: 20px;
+        border: 1px solid #ff4b2b;
+        outline: none;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: transform 80ms ease-in;
+        cursor: pointer;
+    }
+
+    button:active {
+        transform: scale(0.90);
+    }
 }
 .sign-up, .sign-in{
     position: absolute;
@@ -32,75 +93,26 @@
 
 .sign-up-mobile {
     width: 100%;
-    opacity: 0;;
+    opacity: 0;
     z-index: 1;
+    transition: opacity .3s ease-in;
 }
 .sign-in-mobile {
     width: 100%;
+    opacity: 1;
     z-index: 2;
+    transition: opacity .3s ease-in;
 }
 
-form {
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 50px;
-    height: 100%;
-    text-align: center;
-}
-h1 {
-    font-weight: bold;
-    margin: 0;
-}
-p {
-    font-size: 14px;
-    font-weight: 100;
-    line-height: 20px;
-    letter-spacing: 0.5px;
-    margin: 15px 0 20px;
-}
-input {
-    background: #eee;
-    padding: 12px 15px;
-    margin: 8px 15px;
-    width: 100%;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-}
-a {
-    color: #333;
-    font-size: 14px;
-    text-decoration: none;
-    margin: 15px 0;
-}
-button {
-    color: #fff;
-    background: #ff4b2b;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 12px 55px;
-    margin: 20px;
-    border-radius: 20px;
-    border: 1px solid #ff4b2b;
-    outline: none;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: transform 80ms ease-in;
-    cursor: pointer;
-}
-button:active {
-    transform: scale(0.90);
-}
-#signIn,#signUp {
+#signIn,#signUp, #signIn-mobile, #signUp-mobile {
     background-color: transparent;
     border: 2px solid #fff;
 }
+
 .lg-container.right-panel-active .sign-in {
     transform: translateX(100%);
 }
+
 .lg-container.right-panel-active .sign-up {
     transform: translateX(100%);
     opacity: 1;
@@ -111,6 +123,11 @@ button:active {
     transform: translateY(0%);
     opacity: 1;
     z-index: 5;
+}
+
+.lg-container.right-panel-active .sign-in-mobile {
+    transform: translateY(0%);
+    opacity: 0;
 }
 
 .overlay-container {

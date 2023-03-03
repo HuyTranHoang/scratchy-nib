@@ -71,12 +71,12 @@
                 <div class="overlay-left">
                     <h1>Welcome Back!</h1>
                     <p>To keep connected with us please login with your personal info</p>
-                    <button id="signIn-mobile" class="border-white border-1">Sign In</button>
+                    <button id="signIn-mobile">Sign In</button>
                 </div>
                 <div class="overlay-right">
                     <h1>Hello, Friend</h1>
                     <p>Enter your personal details and start journey with us</p>
-                    <button id="signUp-mobile" class="border-white border-1">Sign Up</button>
+                    <button id="signUp-mobile">Sign Up</button>
                 </div>
             </div>
         </div>
