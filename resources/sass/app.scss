@@ -16,6 +16,8 @@
 @use "components/categories";
 // Authenticate
 @use "components/authenticate";
+// Errors page
+@use "components/errors";
 
 // For footer to be in the bottom
 html,body {
