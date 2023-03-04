@@ -37,6 +37,12 @@
                     Users
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('roles.index')}}">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    Roles
+                </a>
+            </li>
             <hr>
             <li class="nav-item">
                 <strong class="px-3 py-2">Username</strong>

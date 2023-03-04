@@ -6,6 +6,7 @@ use App\Http\Controllers\CalligraphyStylesController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\GalleryImagesController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RolesController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -43,4 +44,5 @@ Route::prefix('admin')->group(function () {
     Route::resource('feedback', FeedbackController::class);
     Route::resource('gallery', GalleryImagesController::class);
     Route::resource('users', UserController::class);
+    Route::resource('roles', RolesController::class);
 });
