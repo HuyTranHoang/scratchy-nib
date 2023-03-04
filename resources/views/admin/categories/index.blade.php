@@ -57,7 +57,8 @@
                     @method('DELETE')
                     <div class="modal-body">
                         <input id="category_id" name="category_id" hidden value="">
-                        <h5 class="text-center mb-5 text-danger">Are you sure you want to delete this category?</h5>
+                        <h5 class="text-center text-danger">Are you sure you want to delete this category?</h5>
+                        <h6 class="text-center mb-3 text-primary-color fw-light" style="font-size: 0.8rem"><i>this action cannot be reversed</i></h6>
 
                         <label for="category_name">Category Name: </label>
                         <input class="form-control mt-1" type="text" id="category_name" name="category_name" disabled readonly>
