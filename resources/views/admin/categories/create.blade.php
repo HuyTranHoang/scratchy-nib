@@ -4,7 +4,7 @@
         <h1 class="h2">Calligraphy Categories</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
-                <button type="button" class="btn btn-sm btn-outline-primary">Add New Categories</button>
+                <a href="{{ route('categories.index') }}" class="btn btn-sm btn-outline-primary">Categories List</a>
             </div>
         </div>
     </div>
@@ -15,7 +15,7 @@
     <form method="POST" action="{{route('categories.store')}}">
         @csrf
         <div class="row">
-            <div class="col-5">
+            <div class="col-lg-8 col-xl-5">
                 <label for="category_name" class="form-label">Category Name</label>
                 <input type="text" name="category_name" id="category_name" class="form-control" value="{{old('category_name')}}">
                 @error('category_name')
@@ -31,9 +31,15 @@
                     <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                     @enderror
                 </div>
+
+                <div class="row justify-content-end">
+                    <div class="col-md-12 col-lg-6 col-xl-4">
+                        <button type="submit" class="btn btn-primary w-100">Store</button>
+                    </div>
+                </div>
+
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Store</button>
     </form>
 
 
