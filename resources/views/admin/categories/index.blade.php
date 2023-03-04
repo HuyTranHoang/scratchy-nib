@@ -44,32 +44,20 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="deleteModalLabel">Confirm delete</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+    <x-admin.partials.delete-modal>
+        <x-slot:action>
+            {{route('categories.destroy','id')}}
+        </x-slot:action>
 
-                <form method="post" action="{{route('categories.destroy','id')}}">
-                    @csrf
-                    @method('DELETE')
-                    <div class="modal-body">
-                        <input id="category_id" name="category_id" hidden value="">
-                        <h5 class="text-center text-danger">Are you sure you want to delete this category?</h5>
-                        <h6 class="text-center mb-3 text-primary-color fw-light" style="font-size: 0.8rem"><i>this action cannot be reversed</i></h6>
+        <x-slot:body>
+            <input id="category_id" name="category_id" hidden value="">
+            <h5 class="text-center text-danger">Are you sure you want to delete this category?</h5>
+            <h6 class="text-center mb-3 text-primary-color fw-light" style="font-size: 0.8rem">
+                <i>this action cannot be reversed</i></h6>
 
-                        <label for="category_name">Category Name: </label>
-                        <input class="form-control mt-1" type="text" id="category_name" name="category_name" disabled readonly>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Yes, delete it</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+            <label for="category_name">Category Name: </label>
+            <input class="form-control mt-1" type="text" id="category_name" name="category_name" disabled readonly>
+        </x-slot:body>
+    </x-admin.partials.delete-modal>
 
 </x-admin.layouts.master>
