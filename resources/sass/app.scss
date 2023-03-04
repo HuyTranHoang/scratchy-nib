@@ -12,6 +12,10 @@
 @use "components/footer";
 // Gallery Image
 @use "components/gallery";
+// Categories
+@use "components/categories";
+// Authenticate
+@use "components/authenticate";
 
 // For footer to be in the bottom
 html,body {
@@ -38,14 +42,3 @@ body {
         opacity: 1;
     }
 }
-
-// Categories
-.card{
-    transition: 1s transform;
-}
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
-}
-
-

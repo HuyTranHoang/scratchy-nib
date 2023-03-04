@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Http\Requests\StylePostRequest;
 use App\Http\Requests\StylePutRequest;
 use App\Models\CalligraphyCategory;
+
 use App\Models\CalligraphyStyle;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -13,8 +15,8 @@ class CalligraphyStylesController extends Controller
 {
     public function index()
     {
-        return view('admin.styles.index',[
-            'styles' => CalligraphyStyle::all()
+        return view('admin.styles.index', [
+            'styles' => CalligraphyStyle::all(),
         ]);
     }
 
