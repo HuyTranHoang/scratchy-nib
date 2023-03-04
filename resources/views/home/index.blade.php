@@ -74,7 +74,8 @@
 
     </section>
 
-    <section>
+    <section data-aos="fade-right" data-aos-easing="ease">
+
         <div class="container text-primary">
             <h1 id="Traditional" class="my-3 text-center text-primary">Traditional Calligraphy</h1>
             <div class="row mb-3">
@@ -118,7 +119,7 @@
 
     <section class="bg-secondary-color">
         <x-partials.overlay-top />
-        <div class="container text-secondary">
+        <div data-aos="fade-left" class="container text-secondary">
             <h1 id="Contemporary" class="mb-3 text-center">Contemporary Calligraphy</h1>
             <div class="row mb-3">
                 <div class="col-sm-4 col-md-4 col-lg-2 offset-lg-1">
@@ -177,7 +178,7 @@
         <x-partials.overlay-bottom />
     </section>
 
-    <section>
+    <section data-aos="fade-right">
         <div class="container text-primary">
             <h1 id="Hand-lettering" class="my-3 text-center text-primary">Hand-lettering & Design</h1>
             <div class="row mb-3">
@@ -216,7 +217,7 @@
 
     <section class="bg-secondary-color">
         <x-partials.overlay-top />
-        <div class="container text-secondary">
+        <div data-aos="fade-left" data-aos-easing="ease-in-cubic" class="container text-secondary">
             <h1 id="Modern" class="mb-3 text-center">Modern Calligraphy</h1>
             <div class="row mb-3">
                 <div class="col-sm-4 col-md-4 col-lg-2 offset-lg-1">
