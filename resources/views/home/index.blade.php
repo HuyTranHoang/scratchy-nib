@@ -34,6 +34,8 @@
                             <button type="submit" class="btn btn-primary-color">SUBSCRIBE</button>
                         </div>
                     </form>
+
+                    <h6>Visitor counter: {{$visitorCount}}</h6>
                 </div>
             </div>
         </div>

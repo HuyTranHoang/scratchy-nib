@@ -23,12 +23,14 @@ use Illuminate\Support\Facades\Route;
 
 // Home Page
 
-Route::get('/', [HomeController::class, 'index'])->name('home.index');
-Route::get('/category', [HomeController::class, 'category'])->name('home.category');
-Route::get('/gallery', [HomeController::class, 'gallery'])->name('home.gallery');
-Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
-Route::post('/send-email', [HomeController::class, 'sendEmail'])->name('home.send-email');
-Route::get('/about', [HomeController::class, 'about'])->name('home.about');
+Route::middleware(['web', 'VisitorCounter'])->group(function () {
+    Route::get('/', [HomeController::class, 'index'])->name('home.index');
+    Route::get('/category', [HomeController::class, 'category'])->name('home.category');
+    Route::get('/gallery', [HomeController::class, 'gallery'])->name('home.gallery');
+    Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
+    Route::post('/send-email', [HomeController::class, 'sendEmail'])->name('home.send-email');
+    Route::get('/about', [HomeController::class, 'about'])->name('home.about');
+});
 
 Route::get('/authenticate', [HomeController::class, 'authenticate'])->name('home.authenticate');
 

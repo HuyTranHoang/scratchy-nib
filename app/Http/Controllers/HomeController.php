@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\EmailPostRequest;
+use App\Models\Visitor;
 use Illuminate\Support\Facades\Mail;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -10,7 +11,9 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('home.index');
+        return view('home.index', [
+            'visitorCount' => Visitor::sum('view')
+        ]);
     }
 
     public function category()
