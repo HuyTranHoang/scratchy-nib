@@ -29,7 +29,9 @@
                     <td>{{$category -> category_description}}</td>
                     <td class="table-action text-center d-flex justify-content-center">
                         <a href="{{route('categories.edit', $category -> category_id)}}"><i class="fa-solid fa-pen"></i></a>
-                        <button type="button" class="ms-3 border-0 {{$index % 2 != 0 ? 'bg-white' : ''}}" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                        <button type="button" class="ms-3 border-0 {{$index % 2 != 0 ? 'bg-white' : ''}} delete-category"
+                                data-id="{{$category -> category_id}}" data-name="{{$category -> category_name}}"
+                                data-bs-toggle="modal" data-bs-target="#deleteModal">
                             <i class="text-primary fa-solid fa-trash"></i>
                         </button>
 
@@ -49,17 +51,22 @@
                     <h1 class="modal-title fs-5" id="deleteModalLabel">Confirm delete</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    Are you sure want to delete <b>{{$category -> category_name}}</b> category
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <form method="post" action="{{route('categories.destroy', $category -> category_id)}}">
-                            @csrf
-                            @method('delete')
-                            <button type="submit" class="btn btn-primary">Yes, delete it!</button>
-                        </form>
-                </div>
+
+                <form method="post" action="{{route('categories.destroy','id')}}">
+                    @csrf
+                    @method('DELETE')
+                    <div class="modal-body">
+                        <input id="category_id" name="category_id" hidden value="">
+                        <h5 class="text-center mb-5 text-danger">Are you sure you want to delete this category?</h5>
+
+                        <label for="category_name">Category Name: </label>
+                        <input class="form-control mt-1" type="text" id="category_name" name="category_name" disabled readonly>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Yes, delete it</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

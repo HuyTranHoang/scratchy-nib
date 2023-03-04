@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CategoryPostRequest;
 use App\Http\Requests\CategoryPutRequest;
 use App\Models\CalligraphyCategory;
+use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class CalligraphyCategoriesController extends Controller
@@ -46,10 +47,12 @@ class CalligraphyCategoriesController extends Controller
         return redirect(route('categories.index'));
     }
 
-    public function destroy(CalligraphyCategory $category)
+    public function destroy(Request $request)
     {
+        $CateID = $request->category_id;
+        $category = CalligraphyCategory::findOrFail($CateID);
         $category->delete();
-        Alert::warning('Success', 'Calligraphy category succesfully deleted!')->autoClose(1500);
+        Alert::success('Success', 'Calligraphy category succesfully deleted!')->showConfirmButton('Ok', '#B35757')->autoClose(1500);
 
         return redirect(route('categories.index'));
     }
