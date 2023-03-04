@@ -29,7 +29,7 @@ class CalligraphyStylesController extends Controller
     {
         $validated = $request->validated();
         CalligraphyStyle::create($validated);
-        Alert::success('Success', 'New calligraphy category successfully added!')->autoClose(1500);
+        Alert::success('Success', 'New calligraphy category successfully added!')->showConfirmButton('Ok', '#B35757')->autoClose(1500);
         return redirect(route('styles.index'));
     }
 
@@ -45,7 +45,7 @@ class CalligraphyStylesController extends Controller
     {
         $validated = $request->validated();
         $style->update($validated);
-        Alert::success('Success', 'Calligraphy category succesfully updated!')->autoClose(1500);
+        Alert::success('Success', 'Calligraphy style successfully updated!')->showConfirmButton('Ok', '#B35757')->autoClose(1500);
         return redirect(route('styles.index'));
     }
 
@@ -53,7 +53,7 @@ class CalligraphyStylesController extends Controller
     public function destroy(CalligraphyStyle $style)
     {
         $style->delete();
-        Alert::warning('Success', 'Calligraphy style succesfully deleted!')->autoClose(1500);
+        Alert::success('Success', 'Calligraphy style successfully deleted!')->showConfirmButton('Ok', '#B35757')->autoClose(1500);
         return redirect(route('styles.index'));
     }
 }
