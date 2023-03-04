@@ -13,3 +13,17 @@
         @content;
     }
 }
+
+@mixin tablet-min {
+    @media screen and (min-width: #{breakpoints.$screen-md-min}) {
+        @content;
+    }
+}
+
+// Large devices
+
+@mixin desktop-min {
+    @media screen and (min-width: #{breakpoints.$screen-lg-min}) {
+        @content;
+    }
+}

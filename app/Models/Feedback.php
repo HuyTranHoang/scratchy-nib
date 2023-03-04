@@ -9,16 +9,18 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Feedback extends Model
 {
     use HasFactory;
+
     protected $primaryKey = 'feedback_id';
+
     protected $table = 'feedback';
 
     public function calligraphy(): BelongsTo
     {
-        return $this->belongsTo(Calligraphy::class,'calligraphy_id');
+        return $this->belongsTo(Calligraphy::class, 'calligraphy_id');
     }
 
     public function user(): BelongsTo
     {
-        return $this->belongsTo(User::class,'user_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 }

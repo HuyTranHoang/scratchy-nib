@@ -23,7 +23,7 @@ class CategoryPutRequest extends FormRequest
     {
         return [
             'category_name' => 'required|max:50',
-            'category_description' => 'required|max:65535'
+            'category_description' => 'required|max:65535',
         ];
     }
 }
