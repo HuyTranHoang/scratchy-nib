@@ -1,28 +1,31 @@
-.card{
+// Variables
+@use '../abstracts/variables';
+// Mixins
+@use "../abstracts/mixins";
+
+.card {
     transition: 1s transform;
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    }
+    &-text {
+        opacity: .75;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .img-fit{
+        aspect-ratio: 16/16;
+        object-fit: cover;
+    }
 }
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
-}
-.card-text{
-    opacity: .75;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-.card .img-fit{
-    aspect-ratio: 16/16;
-    object-fit: cover;
-}
-$main-red: rgb(211,114,114) !default;
-$main-red-rgb-015: rgba(189, 21, 11, 0.1) !default;
 
 .light {
     background: #f3f5f7;
 }
 
-a, a:hover {
+.postcard a, .postcard a:hover {
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
@@ -144,7 +147,7 @@ a, a:hover {
     }
 }
 
-@media screen and (min-width: 769px) {
+@include mixins.tablet-min {
     .postcard {
         flex-wrap: inherit;
 
@@ -190,17 +193,18 @@ a, a:hover {
         }
 
         &:nth-child(2n+1) .postcard__text::before {
-            left: -12px !important;
+            left: -19px !important;
             transform: rotate(4deg);
         }
 
         &:nth-child(2n+0) .postcard__text::before {
-            right: -12px !important;
+            right: -19px !important;
             transform: rotate(-4deg);
         }
     }
 }
-@media screen and (min-width: 1024px){
+
+@include mixins.tablet-min {
     .postcard__text {
         padding: 2rem 3.5rem;
     }
@@ -229,27 +233,27 @@ a, a:hover {
 
 /* COLORS */
 .postcard .postcard__tagbox .red.play:hover {
-    background: $main-red;
+    background: variables.$main-red;
 }
 .red .postcard__title:hover {
-    color: $main-red;
+    color: variables.$main-red;
 }
 .red .postcard__bar {
-    background-color: $main-red;
+    background-color: variables.$main-red;
 }
 .red::before {
-    background-image: linear-gradient(-30deg, $main-red-rgb-015, transparent 50%);
+    background-image: linear-gradient(-30deg, variables.$main-red-rgb-015, transparent 50%);
 }
 .red:nth-child(2n)::before {
-    background-image: linear-gradient(30deg, $main-red-rgb-015, transparent 50%);
+    background-image: linear-gradient(30deg, variables.$main-red-rgb-015, transparent 50%);
 }
 
-@media screen and (min-width: 769px) {
+@include mixins.tablet-min {
 
     .red::before {
-        background-image: linear-gradient(-80deg, $main-red-rgb-015, transparent 50%);
+        background-image: linear-gradient(-80deg, variables.$main-red-rgb-015, transparent 50%);
     }
     .red:nth-child(2n)::before {
-        background-image: linear-gradient(80deg, $main-red-rgb-015, transparent 50%);
+        background-image: linear-gradient(80deg, variables.$main-red-rgb-015, transparent 50%);
     }
 }

@@ -3,15 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Calligraphy;
-use App\Models\CalligraphyStyle;
 use Illuminate\Http\Request;
 
 class CalligraphiesController extends Controller
 {
     public function index()
     {
-        return view('admin.calligraphies.index',[
-            'calligraphies' => Calligraphy::all()
+        return view('admin.calligraphies.index', [
+            'calligraphies' => Calligraphy::all(),
         ]);
     }
 

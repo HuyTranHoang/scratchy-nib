@@ -5,15 +5,14 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CategoryPostRequest;
 use App\Http\Requests\CategoryPutRequest;
 use App\Models\CalligraphyCategory;
-use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class CalligraphyCategoriesController extends Controller
 {
     public function index()
     {
-        return view('admin.categories.index',[
-            'categories' => CalligraphyCategory::all()
+        return view('admin.categories.index', [
+            'categories' => CalligraphyCategory::all(),
         ]);
     }
 
@@ -27,13 +26,14 @@ class CalligraphyCategoriesController extends Controller
         $validated = $request->validated();
         CalligraphyCategory::create($validated);
         Alert::success('Success', 'New calligraphy category succesfully added!')->autoClose(1500);
+
         return redirect(route('categories.index'));
     }
 
     public function edit(CalligraphyCategory $category)
     {
-        return view('admin.categories.edit',[
-           'category' => $category
+        return view('admin.categories.edit', [
+            'category' => $category,
         ]);
     }
 
@@ -42,6 +42,7 @@ class CalligraphyCategoriesController extends Controller
         $validated = $request->validated();
         $category->update($validated);
         Alert::success('Success', 'Calligraphy category succesfully updated!')->autoClose(1500);
+
         return redirect(route('categories.index'));
     }
 
@@ -49,6 +50,7 @@ class CalligraphyCategoriesController extends Controller
     {
         $category->delete();
         Alert::warning('Success', 'Calligraphy category succesfully deleted!')->autoClose(1500);
+
         return redirect(route('categories.index'));
     }
 }

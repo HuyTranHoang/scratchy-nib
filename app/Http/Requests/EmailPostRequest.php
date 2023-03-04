@@ -25,7 +25,7 @@ class EmailPostRequest extends FormRequest
             'name' => 'required|max:50',
             'email' => 'required|max:50',
             'subject' => 'required|max:255',
-            'message' => 'required|max:65535'
+            'message' => 'required|max:65535',
         ];
     }
 }
