@@ -9,11 +9,13 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class GalleryImage extends Model
 {
     use HasFactory;
+
     protected $primaryKey = 'image_id';
+
     protected $table = 'gallery_images';
 
     public function calligraphy(): BelongsTo
     {
-        return $this->belongsTo(Calligraphy::class,'calligraphy_id');
+        return $this->belongsTo(Calligraphy::class, 'calligraphy_id');
     }
 }

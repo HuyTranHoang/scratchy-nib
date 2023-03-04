@@ -1,31 +1,31 @@
-.overlay-top {
-    background-image: url('../images/overlay-top.png');
-    background-position: top center;
+// Mixins
+@use "../abstracts/mixins";
+
+
+%overlay {
     background-repeat: repeat-x;
     background-size: 100% auto;
-    @media (max-width: 767px) {
+
+    height: 175px;
+
+    //Mobile
+    @include mixins.mobile {
         height: 75px;
     }
-    @media (min-width: 768px) and (max-width: 1024px) {
+    //Tablet
+    @include mixins.tablet {
         height: 125px;
-    }
-    @media (min-width:1024px) {
-        height: 175px;
     }
 }
 
+.overlay-top {
+    @extend %overlay;
+    background-image: url('../images/overlay-top.png');
+    background-position: top center;
+}
+
 .overlay-bottom {
+    @extend %overlay;
     background-image: url('../images/overlay-bottom.png');
     background-position: bottom center;
-    background-repeat: repeat-x;
-    background-size: 100% auto;
-    @media (max-width: 767px) {
-        height: 75px;
-    }
-    @media (min-width: 768px) and (max-width: 1024px) {
-        height: 125px;
-    }
-    @media (min-width:1025px) {
-        height: 175px;
-    }
 }

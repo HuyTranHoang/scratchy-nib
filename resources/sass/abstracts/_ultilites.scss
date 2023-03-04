@@ -18,34 +18,37 @@
     background-color: variables.$secondary-bg;
 }
 
-.btn-primary-color {
+%btn {
     border-radius: 1.25rem;
     padding: 0.5rem 0.8rem;
     font-weight: 500;
     color: white;
-    background-color: #d37272;
     &:hover {
-        color: rgb(242, 242, 242);
-        background-color: #e07979;
+        color: variables.$text-color-white;
     }
     &:active {
-        color: rgb(242, 242, 242) !important;
-        background-color: #db7676 !important;
+        color: variables.$text-color-white !important;
+    }
+}
+
+.btn-primary-color {
+    @extend %btn;
+    background-color: variables.$primary-btn-color;
+    &:hover {
+        background-color: lighten(variables.$primary-btn-color,3);
+    }
+    &:active {
+        background-color: lighten(variables.$primary-btn-color,5) !important;
     }
 }
 
 .btn-secondary-color {
-    border-radius: 1.25rem;
-    padding: 0.5rem 0.8rem;
-    font-weight: 500;
-    color: white;
-    background-color: #bf994f;
+    @extend %btn;
+    background-color: variables.$secondary-btn-color;
     &:hover {
-        color: rgb(242, 242, 242);
-        background-color: #c7a052;
+        background-color: lighten(variables.$secondary-btn-color,3);
     }
     &:active {
-        color: rgb(242, 242, 242) !important;
-        background-color: #c29c4f !important;
+        background-color: lighten(variables.$secondary-btn-color,5) !important;
     }
 }

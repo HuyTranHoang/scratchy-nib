@@ -1,5 +1,7 @@
 // Variables
 @use '../abstracts/variables';
+// Mixins
+@use "../abstracts/mixins";
 
 .navbar-title {
     font-family: Regista, serif;
@@ -23,9 +25,21 @@
     margin-top: 5rem;
     font-size: 5rem;
     font-family: 'Babylone Script', serif;
-    color: #d37171;
+    color: variables.$header-text-color;
 }
 
 .header-text-color {
-    color: #d37171;
+    color: variables.$header-text-color;
+}
+
+.banner-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 28vw;
+    @include mixins.tablet {
+        position: relative;
+        float: right;
+        height: 45vw;
+    }
 }
