@@ -26,8 +26,7 @@ class CalligraphyCategoriesController extends Controller
     {
         $validated = $request->validated();
         CalligraphyCategory::create($validated);
-        Alert::success('Success', 'New calligraphy category succesfully added!')->autoClose(1500);
-
+        Alert::success('Success', 'New calligraphy category succesfully added!')->buttonsStyling(false)->autoClose(1500);
         return redirect(route('categories.index'));
     }
 
@@ -42,7 +41,7 @@ class CalligraphyCategoriesController extends Controller
     {
         $validated = $request->validated();
         $category->update($validated);
-        Alert::success('Success', 'Calligraphy category succesfully updated!')->autoClose(1500);
+        Alert::success('Success', 'Calligraphy category succesfully updated!')->buttonsStyling(false)->autoClose(1500);
 
         return redirect(route('categories.index'));
     }
@@ -52,7 +51,7 @@ class CalligraphyCategoriesController extends Controller
         $CateID = $request->category_id;
         $category = CalligraphyCategory::findOrFail($CateID);
         $category->delete();
-        Alert::success('Success', 'Calligraphy category succesfully deleted!')->showConfirmButton('Ok', '#B35757')->autoClose(1500);
+        Alert::success('Success', 'Calligraphy category succesfully deleted!')->buttonsStyling(false)->autoClose(1500);
 
         return redirect(route('categories.index'));
     }
