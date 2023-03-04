@@ -74,9 +74,9 @@
 
     </section>
 
-    <section class="">
+    <section>
         <div class="container text-primary">
-            <h1 class="my-3 text-center text-primary">Traditional Calligraphy</h1>
+            <h1 id="Traditional" class="my-3 text-center text-primary">Traditional Calligraphy</h1>
             <div class="row mb-3">
                 <div class="col-sm-4 col-md-4 col-lg-2 offset-lg-1">
                     <img class="img-fluid" src="{{asset('storage/images/divider-pink.png')}}" alt="divider">
@@ -119,7 +119,7 @@
     <section class="bg-secondary-color">
         <x-partials.overlay-top />
         <div class="container text-secondary">
-            <h1 class="mb-3 text-center">Contemporary Calligraphy</h1>
+            <h1 id="Contemporary" class="mb-3 text-center">Contemporary Calligraphy</h1>
             <div class="row mb-3">
                 <div class="col-sm-4 col-md-4 col-lg-2 offset-lg-1">
                     <img class="img-fluid" src="{{asset('storage/images/divider-pink.png')}}" alt="divider">
@@ -177,9 +177,9 @@
         <x-partials.overlay-bottom />
     </section>
 
-    <section class="">
+    <section>
         <div class="container text-primary">
-            <h1 class="my-3 text-center text-primary">Hand-lettering & Design</h1>
+            <h1 id="Hand-lettering" class="my-3 text-center text-primary">Hand-lettering & Design</h1>
             <div class="row mb-3">
                 <div class="col-sm-4 col-md-4 col-lg-2 offset-lg-1">
                     <img class="img-fluid" src="{{asset('storage/images/divider-gold.png')}}" alt="divider">
@@ -217,7 +217,7 @@
     <section class="bg-secondary-color">
         <x-partials.overlay-top />
         <div class="container text-secondary">
-            <h1 class="mb-3 text-center">Modern Calligraphy</h1>
+            <h1 id="Modern" class="mb-3 text-center">Modern Calligraphy</h1>
             <div class="row mb-3">
                 <div class="col-sm-4 col-md-4 col-lg-2 offset-lg-1">
                     <img class="img-fluid" src="{{asset('storage/images/divider-gold.png')}}" alt="divider">
