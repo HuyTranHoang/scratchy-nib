@@ -2,6 +2,7 @@ import './bootstrap'
 import Masonry from 'masonry-layout'
 import ImagesLoaded from 'imagesloaded'
 
+import handleDeleteModal from './handleDeleteModal'
 
 $(function() {
     const grid = document.querySelector('.grid')
@@ -15,15 +16,7 @@ $(function() {
         });
     });
 
-// Handle Delete Category
-
-    $(document).on('click','.delete-category',function(){
-        let id = $(this).attr('data-id');
-        let CategoryName = $(this).attr('data-name');
-        $('#category_id').val(id);
-        $('#category_name').val(CategoryName);
-    });
-
-
+    // Handle Delete Category
+    handleDeleteModal();
 });
 

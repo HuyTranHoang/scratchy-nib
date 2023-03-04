@@ -4,7 +4,7 @@
         <h1 class="h2">Calligraphy Categories</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
-                <a href="{{route('categories.create')}}" class="btn btn-sm btn-outline-primary">Add New Categories</a>
+                <a href="{{route('categories.create')}}" class="btn btn-sm btn-outline-primary">Add New Category</a>
             </div>
         </div>
     </div>
@@ -55,7 +55,7 @@
             <h6 class="text-center mb-3 text-primary-color fw-light" style="font-size: 0.8rem">
                 <i>this action cannot be reversed</i></h6>
 
-            <label for="category_name">Category Name: </label>
+            <label for="category_name">Category name: </label>
             <input class="form-control mt-1" type="text" id="category_name" name="category_name" disabled readonly>
         </x-slot:body>
     </x-admin.partials.delete-modal>
