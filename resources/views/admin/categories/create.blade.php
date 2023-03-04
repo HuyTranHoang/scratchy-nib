@@ -10,7 +10,7 @@
     </div>
 
 
-    <h3>Add category</h3>
+    <h3>Create new category</h3>
 
     <form method="POST" action="{{route('categories.store')}}">
         @csrf

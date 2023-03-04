@@ -15,6 +15,8 @@ class Calligraphy extends Model
 
     protected $table = 'calligraphies';
 
+    protected $fillable = ['calligraphy_name','calligraphy_description','style_id'];
+
     public function calligraphyStyle(): BelongsTo
     {
         return $this->belongsTo(CalligraphyStyle::class, 'style_id');

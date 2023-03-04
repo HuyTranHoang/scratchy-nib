@@ -30,6 +30,10 @@ class CalligraphyCategoriesController extends Controller
         return redirect(route('categories.index'));
     }
 
+    public function show() {
+        abort('404');
+    }
+
     public function edit(CalligraphyCategory $category)
     {
         return view('admin.categories.edit', [
