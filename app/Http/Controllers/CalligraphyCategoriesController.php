@@ -26,7 +26,7 @@ class CalligraphyCategoriesController extends Controller
     {
         $validated = $request->validated();
         CalligraphyCategory::create($validated);
-        Alert::success('Success', 'New calligraphy category succesfully added!')->autoClose(1500);
+        Alert::success('Success', 'New calligraphy category successfully added!')->autoClose(1500);
         return redirect(route('categories.index'));
     }
 

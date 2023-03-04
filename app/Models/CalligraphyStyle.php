@@ -12,6 +12,7 @@ class CalligraphyStyle extends Model
     use HasFactory;
     protected $primaryKey = 'style_id';
     protected $table = 'calliraphy_styles';
+    protected $fillable = ['style_name','style_description','category_id'];
 
     public function calligraphyCategory(): BelongsTo
     {

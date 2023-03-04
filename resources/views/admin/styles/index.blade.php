@@ -4,7 +4,7 @@
         <h1 class="h2">Calligraphy Styles</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
-                <button type="button" class="btn btn-sm btn-outline-primary">Add New Styles</button>
+                <a href="{{route('styles.create')}}" class="btn btn-sm btn-outline-primary">Add New Styles</a>
             </div>
         </div>
     </div>
@@ -23,15 +23,20 @@
             </tr>
             </thead>
             <tbody>
-            @foreach($styles as $style)
+            @foreach($styles as $index => $style)
                 <tr>
                     <td>{{$style -> style_id}}</td>
                     <td>{{$style -> style_name}}</td>
                     <td>{{$style -> style_description}}</td>
-                    <td class="table-action text-center">
-                        <a href="#"><i class="fa-solid fa-pen"></i></a>
-                        <a href="#"><i class="fa-solid fa-trash"></i></a>
+                    <td class="table-action text-center d-flex justify-content-center">
+                        <a href="{{route('styles.edit', $style -> style_id)}}"><i class="fa-solid fa-pen"></i></a>
+                        <form method="post" action="{{route('styles.destroy', $style -> style_id)}}">
+                            @csrf
+                            @method('delete')
+                            <button class="ms-3 border-0 {{$index % 2 != 0 ? 'bg-white' : ''}}"><i class="text-primary fa-solid fa-trash"></i></button>
+                        </form>
                     </td>
+
                     <td>{{date('d-m-Y', strtotime($style -> created_at))}}</td>
                 </tr>
             @endforeach
