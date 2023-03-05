@@ -1,13 +1,14 @@
 <?php
 
-use App\Http\Controllers\CalligraphiesController;
 use App\Http\Controllers\CalligraphyCategoriesController;
 use App\Http\Controllers\CalligraphyStylesController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\GalleryImagesController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RolesController;
 use App\Http\Controllers\UserController;
+use App\Models\CalligraphyCategory;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +21,16 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
 // Home Page
 
@@ -42,9 +53,11 @@ Route::prefix('admin')->group(function () {
 
     Route::resource('categories', CalligraphyCategoriesController::class);
     Route::resource('styles', CalligraphyStylesController::class);
-    Route::resource('calligraphies', CalligraphiesController::class);
+    Route::resource('calligraphies', CalligraphyCategory::class);
     Route::resource('feedback', FeedbackController::class);
     Route::resource('gallery', GalleryImagesController::class);
     Route::resource('users', UserController::class);
     Route::resource('roles', RolesController::class);
 });
+
+require __DIR__.'/auth.php';

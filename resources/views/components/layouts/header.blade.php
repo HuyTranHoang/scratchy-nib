@@ -52,6 +52,26 @@
                 <li class="nav-item"><a href="/gallery" class="nav-link">Gallery</a></li>
                 <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
                 <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+                @guest()
+                    <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
+                @endguest
+                @auth()
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ Auth::user()->name }}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Profile</a></li>
+                            <li>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <button class="dropdown-item" type="submit">Log Out</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                @endauth
+
             </ul>
         </div>
     </div>
