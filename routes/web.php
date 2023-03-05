@@ -48,7 +48,7 @@ Route::get('/authenticate', [HomeController::class, 'authenticate'])->name('home
 // Admin Page
 Route::prefix('admin')->group(function () {
     Route::get('/', function () {
-        return view('admin.index');
+        return view('admin.dashboard');
     })->name('admin.index');
 
     Route::resource('categories', CalligraphyCategoriesController::class);

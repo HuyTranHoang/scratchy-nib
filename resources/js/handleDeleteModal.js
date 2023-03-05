@@ -14,6 +14,13 @@
          $('#role_name').val(roleName);
      });
 
+     $(document).on('click','.delete-style',function() {
+         const id = $(this).attr('data-id');
+         const styleName = $(this).attr('data-name');
+         $('#style_id').val(id);
+         $('#style_name').val(styleName);
+     });
+
      $(document).on('click','.delete-calligraphy',function() {
          const id = $(this).attr('data-id');
          const calligraphyName = $(this).attr('data-name');

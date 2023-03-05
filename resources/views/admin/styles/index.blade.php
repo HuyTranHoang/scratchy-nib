@@ -30,7 +30,9 @@
                     <td>{{$style -> style_description}}</td>
                     <td class="table-action text-center d-flex justify-content-center">
                         <a href="{{route('styles.edit', $style -> style_id)}}"><i class="fa-solid fa-pen"></i></a>
-                        <button type="button" class="ms-3 border-0 {{$index % 2 != 0 ? 'bg-white' : ''}}" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                        <button type="button" class="ms-3 border-0 {{$index % 2 != 0 ? 'bg-white' : ''}} delete-style"
+                                data-id="{{$style -> style_id}}" data-name="{{$style -> style_name}}"
+                                data-bs-toggle="modal" data-bs-target="#deleteModal">
                             <i class="text-primary fa-solid fa-trash"></i>
                         </button>
                     </td>
@@ -42,25 +44,21 @@
         </table>
     </div>
 
-    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="deleteModalLabel">Confirm delete</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Are you sure want to delete <b>{{$style -> style_name}}</b> style
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <form method="post" action="{{route('styles.destroy', $style -> style_id)}}">
-                        @csrf
-                        @method('delete')
-                        <button type="submit" class="btn btn-primary">Yes, delete it!</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Modal -->
+    <x-admin.partials.delete-modal>
+        <x-slot:action>
+            {{route('styles.destroy','id')}}
+        </x-slot:action>
+
+        <x-slot:body>
+            <input id="style_id" name="style_id" hidden value="">
+            <h5 class="text-center text-danger">Are you sure you want to delete this style?</h5>
+            <h6 class="text-center mb-3 text-primary-color fw-light" style="font-size: 0.8rem">
+                <i>this action cannot be reversed</i></h6>
+
+            <label for="style_name">Style name: </label>
+            <input class="form-control mt-1" type="text" id="style_name" name="style_name" disabled readonly>
+        </x-slot:body>
+    </x-admin.partials.delete-modal>
+
 </x-admin-layout>

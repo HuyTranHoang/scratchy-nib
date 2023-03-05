@@ -1,7 +1,21 @@
 import './bootstrap';
+import Masonry from 'masonry-layout'
+import ImagesLoaded from 'imagesloaded'
+import handleDeleteModal from './handleDeleteModal'
 
-import Alpine from 'alpinejs';
 
-window.Alpine = Alpine;
+$(function() {
+    const grid = document.querySelector('.grid')
+    let msnry
+    ImagesLoaded( grid, function() {
+        msnry = new Masonry( grid, {
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-sizer',
+            gutter : 10,
+            percentPosition: true
+        });
+    });
 
-Alpine.start();
+    // Handle Delete Category
+    handleDeleteModal();
+});
