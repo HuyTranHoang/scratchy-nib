@@ -1,4 +1,4 @@
-<x-admin.layouts.master>
+<x-admin-layout>
 
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Roles</h1>
@@ -57,4 +57,4 @@
         </x-slot:body>
     </x-admin.partials.delete-modal>
 
-</x-admin.layouts.master>
+</x-admin-layout>

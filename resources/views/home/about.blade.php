@@ -1,4 +1,4 @@
-<x-layouts.master>
+<x-home-layout>
     <section class="bg-secondary-color">
             <div class="row m-0">
                 <div class="col-md-12">
@@ -29,4 +29,4 @@
         </div>
         <x-partials.overlay-top color="bg-secondary-color"/>
     </section>
-</x-layouts.master>
+</x-home-layout>

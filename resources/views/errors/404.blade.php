@@ -1,4 +1,4 @@
-<x-layouts.master>
+<x-home-layout>
 
     <div class="container vh-100">
         <div class="row">
@@ -10,4 +10,4 @@
             </div>
         </div>
     </div>
-</x-layouts.master>
+</x-home-layout>

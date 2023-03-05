@@ -1,4 +1,4 @@
-<x-layouts.master>
+<x-home-layout>
 
     @include('sweetalert::alert')
 
@@ -89,4 +89,4 @@
         </div>
         <x-partials.overlay-top color="bg-secondary-color"/>
     </section>
-</x-layouts.master>
+</x-home-layout>
