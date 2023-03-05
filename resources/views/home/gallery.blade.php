@@ -187,7 +187,7 @@
         <x-home.partials.overlay-top />
     </footer>
 
-    @push('masonry')
+    @push('scripts')
         @vite(['resources/js/masonry.js'])
     @endpush
 

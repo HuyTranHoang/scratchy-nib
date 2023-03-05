@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
     {{-- Js and library --}}
     @vite(['resources/js/app.js'])
-    @stack('masonry')
+    @stack('scripts')
 </head>
 <body>
 

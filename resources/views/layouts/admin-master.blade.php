@@ -11,7 +11,8 @@
     {{-- Font Awesome --}}
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
     {{-- Js and library --}}
-    @vite(['resources/js/app.js'])
+    @vite(['resources/js/app.js','resources/js/handleDeleteModal.js'])
+    @stack('scripts')
 
 </head>
 <body>

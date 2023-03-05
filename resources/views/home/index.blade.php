@@ -257,6 +257,8 @@
         <x-home.partials.overlay-bottom />
     </section>
 
-
+    @push('scripts')
+        @vite(['resources/js/aos.js'])
+    @endpush
 
 </x-home-layout>

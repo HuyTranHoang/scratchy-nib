@@ -4,23 +4,6 @@ window._ = loadash
 import $ from 'jquery';
 window.$ = $;
 
-// Lightbox
-import Lightbox from 'lightbox2'
-import "../../node_modules/lightbox2/dist/css/lightbox.css"
-
-// Aos
-import AOS from 'aos';
-import '../../node_modules/aos/dist/aos.css';
-AOS.init({
-    offset: 50,
-    delay: 50,
-    duration: 600,
-    easing: 'ease-in-out',
-    mirror: true,
-    once: false,
-    anchorPlacement: 'top-center',
-});
-
 import Alpine from 'alpinejs';
 window.Alpine = Alpine;
 Alpine.start();
