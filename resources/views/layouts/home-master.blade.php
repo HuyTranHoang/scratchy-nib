@@ -16,11 +16,11 @@
 </head>
 <body>
 
-    <x-layouts.header />
+    <x-home.layouts.header />
 
     {{$slot}}
 
-    <x-layouts.footer />
+    <x-home.layouts.footer />
 
 </body>
 </html>
