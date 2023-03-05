@@ -58,6 +58,11 @@
             </x-home.partials.footer-accordion-list>
 
             <div class="text-center p-4">
+                <div class="row">
+                    <div class="col">
+                        Current time and location: <span id="ticker"></span>
+                    </div>
+                </div>
                 Sitemap | ©2023 Scratchy Nib | All rights reserved.
             </div>
         </div>
