@@ -1,4 +1,4 @@
-<x-layouts.master>
+<x-home-layout>
 
     <section class="bg-secondary-color position-relative pb-md-0 pb-xl-5">
         <div class="container">
@@ -259,4 +259,4 @@
 
 
 
-</x-layouts.master>
+</x-home-layout>

@@ -1,5 +1,5 @@
-<x-admin.layouts.master>
+<x-admin-layout>
 
     Admin Dash board
 
-</x-admin.layouts.master>
+</x-admin-layout>

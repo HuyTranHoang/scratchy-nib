@@ -1,4 +1,4 @@
-<x-layouts.master>
+<x-home-layout>
     <header class="bg-secondary-color">
         <x-partials.overlay-bottom />
     </header>
@@ -186,4 +186,4 @@
     <footer class="bg-secondary-color">
         <x-partials.overlay-top />
     </footer>
-</x-layouts.master>
+</x-home-layout>
