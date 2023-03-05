@@ -186,4 +186,9 @@
     <footer class="bg-secondary-color">
         <x-home.partials.overlay-top />
     </footer>
+
+    @push('masonry')
+        @vite(['resources/js/masonry.js'])
+    @endpush
+
 </x-home-layout>
