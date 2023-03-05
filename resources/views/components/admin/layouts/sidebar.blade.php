@@ -2,43 +2,49 @@
     <div class="position-sticky pt-3 sidebar-sticky">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{route('categories.index')}}">
+                <a class="nav-link {{ request()->routeIs('admin.*') ? 'active' : '' }}" aria-current="page" href="{{route('admin.index')}}">
+                    <i class="fa-solid fa-circle-three-quarters-stroke"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{ request()->routeIs('categories.*') ? 'active' : '' }}" aria-current="page" href="{{route('categories.index')}}">
                     <i class="fa-solid fa-layer-group"></i>
                     Categories
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('styles.index')}}">
+                <a class="nav-link {{ request()->routeIs('styles.*') ? 'active' : '' }}" href="{{route('styles.index')}}">
                     <i class="fa-solid fa-palette"></i>
                     Styles
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('calligraphies.index')}}">
+                <a class="nav-link {{ request()->routeIs('calligraphies.*') ? 'active' : '' }}" href="{{route('calligraphies.index')}}">
                     <i class="fa-solid fa-pen-nib"></i>
                     Calligraphies
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('feedback.index')}}">
+                <a class="nav-link {{ request()->routeIs('feedback.*') ? 'active' : '' }}" href="{{route('feedback.index')}}">
                     <i class="fa-solid fa-comment"></i>
                     Feedback
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('gallery.index')}}">
+                <a class="nav-link {{ request()->routeIs('gallery.*') ? 'active' : '' }}" href="{{route('gallery.index')}}">
                     <i class="fa-solid fa-image"></i>
                     Gallery Images
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('users.index')}}">
+                <a class="nav-link {{ request()->routeIs('users.*') ? 'active' : '' }}" href="{{route('users.index')}}">
                     <i class="fa-solid fa-user"></i>
                     Users
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('roles.index')}}">
+                <a class="nav-link {{ request()->routeIs('roles.*') ? 'active' : '' }}" href="{{route('roles.index')}}">
                     <i class="fa-solid fa-pen-to-square"></i>
                     Roles
                 </a>
