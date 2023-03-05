@@ -7,4 +7,5 @@ $(function() {
     handleDeleteModal();
     // Handle GeoLocation
     InitLocationTime();
+
 });

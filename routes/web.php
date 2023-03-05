@@ -6,6 +6,7 @@ use App\Http\Controllers\CalligraphyStylesController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\GalleryImagesController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LocationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RolesController;
 use App\Http\Controllers\UserController;
@@ -22,6 +23,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+// Breeze
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -33,7 +36,6 @@ Route::middleware('auth')->group(function () {
 });
 
 // Home Page
-
 Route::middleware(['web', 'VisitorCounter'])->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home.index');
     Route::get('/category', [HomeController::class, 'category'])->name('home.category');
@@ -44,6 +46,8 @@ Route::middleware(['web', 'VisitorCounter'])->group(function () {
 });
 
 Route::get('/authenticate', [HomeController::class, 'authenticate'])->name('home.authenticate');
+// GeoLocation
+Route::post('/get-location-data', [LocationController::class,'getLocationData']);
 
 // Admin Page
 Route::prefix('admin')->group(function () {
