@@ -204,27 +204,27 @@ class DatabaseSeeder extends Seeder
 
         GalleryImage::factory()->createMany([
             [
-                'image_name' => 'Hinh1',
+                'image_name' => 'uploads/Hinh1.jpg',
                 'image_description' => '',
                 'calligraphy_id' => '1',
             ],
             [
-                'image_name' => 'Hinh2',
+                'image_name' => 'uploads/Hinh2.jpg',
                 'image_description' => '',
                 'calligraphy_id' => '2',
             ],
             [
-                'image_name' => 'Hinh3',
+                'image_name' => 'uploads/Hinh3.jpg',
                 'image_description' => '',
                 'calligraphy_id' => '3',
             ],
             [
-                'image_name' => 'Hinh4',
+                'image_name' => 'uploads/Hinh4.jpg',
                 'image_description' => '',
                 'calligraphy_id' => '4',
             ],
             [
-                'image_name' => 'Hinh5',
+                'image_name' => 'uploads/Hinh5.jpg',
                 'image_description' => '',
                 'calligraphy_id' => '5',
             ],

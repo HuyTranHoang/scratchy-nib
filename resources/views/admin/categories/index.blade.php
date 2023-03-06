@@ -10,14 +10,14 @@
     </div>
 
     <h3>Categories List</h3>
-    <div class="table-responsive">
-        <table class="table table-striped table-sm">
-            <thead>
+    <div class="table-responsive table-bordered">
+        <table class="table table-striped align-middle">
+            <thead class="table-success">
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Categories Name</th>
                 <th scope="col">Categories Description</th>
-                <th scope="col" class="text-center">Action</th>
+                <th scope="col" colspan="2" class="text-center">Action</th>
                 <th scope="col">Created At</th>
             </tr>
             </thead>
@@ -27,14 +27,14 @@
                     <td>{{$category -> category_id}}</td>
                     <td>{{$category -> category_name}}</td>
                     <td>{{$category -> category_description}}</td>
-                    <td class="table-action text-center d-flex justify-content-center">
-                        <a href="{{route('categories.edit', $category -> category_id)}}"><i class="fa-solid fa-pen"></i></a>
-                        <button type="button" class="ms-3 border-0 {{$index % 2 != 0 ? 'bg-white' : ''}} delete-category"
+                    <td class="text-center px-0">
+                        <a href="{{route('categories.edit', $category -> category_id)}}"><i class="fa-solid fa-pen"></i></a></td>
+                    <td class="text-center px-0">
+                        <button type="button" class="px-1 border-0 {{$index % 2 != 0 ? 'bg-white' : ''}} delete-category"
                                 data-id="{{$category -> category_id}}" data-name="{{$category -> category_name}}"
                                 data-bs-toggle="modal" data-bs-target="#deleteModal">
                             <i class="text-primary fa-solid fa-trash"></i>
                         </button>
-
                     </td>
                     <td>{{date('d-m-Y', strtotime($category -> created_at))}}</td>
                 </tr>

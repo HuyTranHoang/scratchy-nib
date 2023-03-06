@@ -9,15 +9,15 @@
         </div>
     </div>
     <h3>Gallery Images List</h3>
-    <div class="table-responsive">
-        <table class="table table-striped table-sm">
-            <thead>
+    <div class="table-responsive table-bordered">
+        <table class="table table-striped align-middle">
+            <thead class="table-success">
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Image Name</th>
                 <th scope="col">Image Description</th>
                 <th scope="col">Calligraphy Name</th>
-                <th scope="col" class="text-center">Action</th>
+                <th scope="col" colspan="2" class="text-center">Action</th>
                 <th scope="col">Created At</th>
             </tr>
             </thead>

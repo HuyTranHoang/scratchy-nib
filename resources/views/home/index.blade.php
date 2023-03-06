@@ -256,5 +256,5 @@
         </div>
         <x-home.partials.overlay-bottom />
     </section>
-    
+
 </x-home-layout>

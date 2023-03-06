@@ -1,3 +1,5 @@
+import './bootstrap';
+
 $(function() {
     $(document).on('click','.delete-category',function() {
         const id = $(this).attr('data-id');

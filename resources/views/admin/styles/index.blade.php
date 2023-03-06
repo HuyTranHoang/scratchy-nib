@@ -11,14 +11,15 @@
 
 
     <h3>Styles List</h3>
-    <div class="table-responsive">
-        <table class="table table-striped table-sm">
-            <thead>
+    <div class="table-responsive table-bordered">
+        <table class="table table-striped align-middle">
+            <thead class="table-success">
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Styles Name</th>
                 <th scope="col">Styles Description</th>
-                <th scope="col" class="text-center">Action</th>
+                <th scope="col">Category Name</th>
+                <th scope="col" colspan="2" class="text-center">Action</th>
                 <th scope="col">Created At</th>
             </tr>
             </thead>
@@ -28,15 +29,16 @@
                     <td>{{$style -> style_id}}</td>
                     <td>{{$style -> style_name}}</td>
                     <td>{{$style -> style_description}}</td>
-                    <td class="table-action text-center d-flex justify-content-center">
-                        <a href="{{route('styles.edit', $style -> style_id)}}"><i class="fa-solid fa-pen"></i></a>
-                        <button type="button" class="ms-3 border-0 {{$index % 2 != 0 ? 'bg-white' : ''}} delete-style"
+                    <td>{{$style -> calligraphyCategory -> category_name}}</td>
+                    <td class="text-center px-0">
+                        <a href="{{route('styles.edit', $style -> style_id)}}"><i class="fa-solid fa-pen"></i></a></td>
+                    <td class="text-center px-0">
+                        <button type="button" class="px-1 border-0 {{$index % 2 != 0 ? 'bg-white' : ''}} delete-calligraphy"
                                 data-id="{{$style -> style_id}}" data-name="{{$style -> style_name}}"
                                 data-bs-toggle="modal" data-bs-target="#deleteModal">
                             <i class="text-primary fa-solid fa-trash"></i>
                         </button>
                     </td>
-
                     <td>{{date('d-m-Y', strtotime($style -> created_at))}}</td>
                 </tr>
             @endforeach
