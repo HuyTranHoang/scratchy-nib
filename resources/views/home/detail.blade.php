@@ -6,11 +6,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-5">
-                <div class="main-img">
-                    <a href="https://api.lorem.space/image/game" data-lightbox="detail">
-                        <img class="shadow-1-strong rounded" src="https://api.lorem.space/image/game" alt="" width="400" height="500">
+                    <a href="https://api.lorem.space/image/face" data-lightbox="detail">
+                        <img class="card-img-top rounded" src="https://images.unsplash.com/photo-1678101629498-26e7ac3e74f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="" >
                     </a>
-                </div>
             </div>
             <div class="col-md-7 bg-secondary-color rounded">
                 <div class="description px-2">
@@ -30,12 +28,10 @@
         <hr>
     </div>
 
-
-
         <section class="container">
             <p class="display-5">More Category</p>
-                <div class="row row-cols-1 row-cols-md-4 g-4">
-                    <div class="col">
+                <div class="row row-cols-md-5 row-cols-sm-4 g-4">
+                    <div class="col-sm-4 col-md">
                         <div class="card">
                             <a href="https://api.lorem.space/image/book" data-lightbox="gallery"><img class="card-img-top img-fit" src="https://api.lorem.space/image/book"  alt="Error"/></a>
                             <div class="card-body">
@@ -47,7 +43,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-sm-4 col-md">
                         <div class="card h-100">
                             <a href="https://api.lorem.space/image/movie" data-lightbox="gallery"><img class="card-img-top img-fit" src="https://api.lorem.space/image/movie"  alt="Error"/></a>
                             <div class="card-body d-flex flex-column h-100" >
@@ -59,7 +55,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-sm-4 col-md">
                         <div class="card h-100">
                             <a href="https://api.lorem.space/image/album" data-lightbox="gallery"><img class="card-img-top img-fit" src="https://api.lorem.space/image/album" alt="Error"/></a>
                             <div class="card-body">
@@ -71,7 +67,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-sm-4 col-md">
+                        <div class="card h-100">
+                            <a href="https://api.lorem.space/image/face" data-lightbox="gallery"><img class="card-img-top img-fit" src="https://api.lorem.space/image/face" alt="Error"/></a>
+                            <div class="card-body d-flex flex-column h-100" >
+                                <h6 class="card-title">Name</h6>
+                                <p class="card-text">Category</p>
+                                <div class="text-start">
+                                    <a class="btn btn-primary-color text-decoration-none rounded" href="#">View More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md">
                         <div class="card h-100">
                             <a href="https://api.lorem.space/image/face" data-lightbox="gallery"><img class="card-img-top img-fit" src="https://api.lorem.space/image/face" alt="Error"/></a>
                             <div class="card-body d-flex flex-column h-100" >
@@ -86,7 +94,6 @@
                 </div>
             <hr>
         </section>
-
 
     <section class="container">
         <form action="">
@@ -128,7 +135,7 @@
                                     <div class="d-flex align-items-center mb-3">
                                         <p class="mb-0">March 15, 2021</p>
                                         <a href="#" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
-                                        <a href="#" class="text-success"><i class="fas fa-redo-alt ms-2"></i></a>
+                                        <a href="#" class="text-success"><i class="fa-solid fa-trash ms-2"></i></i></a>
                                     </div>
                                     <p class="mb-0">Hôm Nay Em Tuyệt Lắm</p>
                                 </div>
@@ -147,7 +154,7 @@
                             <div class="d-flex align-items-center mb-3">
                                 <p class="mb-0">March 15, 2021</p>
                                 <a href="#" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
-                                <a href="#" class="text-success"><i class="fas fa-redo-alt ms-2"></i></a>
+                                <a href="#" class="text-success"><i class="fa-solid fa-trash ms-2"></i></a>
                             </div>
                             <p class="mb-0">
                                 Hôm Nay Em Tuyệt Lắm
@@ -161,13 +168,13 @@
     <footer class="bg-secondary-color">
         <x-home.partials.overlay-top />
     </footer>
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/q9jvkl47n5k7covggc5pinvziolp0zpycw2ieyl3adc8mjwj/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
         tinymce.init({
             selector: 'textarea#premiumskinsandicons-bootstrap',
             content_css: '//www.tiny.cloud/css/codepen.min.css',
             skin: 'bootstrap',
-            plugins: 'image lists link anchor charmap',
+            plugins: 'lists link anchor charmap',
             toolbar: 'formatselect | bold italic bullist numlist | link image charmap',
             menubar: false,
             setup: (editor) => {

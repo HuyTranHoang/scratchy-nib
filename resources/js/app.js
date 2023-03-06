@@ -2,6 +2,7 @@ import './bootstrap';
 import InitLocationTime from './geolocation'
 
 // Lightbox
+
 import Lightbox from 'lightbox2'
 import "../../node_modules/lightbox2/dist/css/lightbox.css"
 
