@@ -14,10 +14,10 @@
         <table class="table table-striped align-middle">
             <thead class="table-success">
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">Role Name</th>
+                <th scope="col" class="">#</th>
+                <th scope="col" class="col-6 w-75">Role Name</th>
                 <th scope="col" colspan="2" class="text-center">Action</th>
-                <th scope="col">Created At</th>
+                <th scope="col" class="">Created At</th>
             </tr>
             </thead>
             <tbody>
@@ -25,14 +25,17 @@
                 <tr>
                     <td>{{$role -> role_id}}</td>
                     <td>{{$role -> role_name}}</td>
-                    <td class="table-action text-center d-flex justify-content-center">
-                        <a href="{{route('roles.edit', $role -> role_id)}}"><i class="fa-solid fa-pen"></i></a>
-                        <button type="button" class="ms-3 border-0 {{$index % 2 != 0 ? 'bg-white' : ''}} delete-role"
+
+                    <td class="text-center px-0">
+                        <a href="{{route('calligraphies.edit', $role -> role_id)}}"><i class="px-1 fa-solid fa-pen"></i></a></td>
+                    <td class="text-center px-0">
+                        <button type="button" class="px-1 border-0 {{$index % 2 != 0 ? 'bg-white' : ''}} delete-calligraphy"
                                 data-id="{{$role -> role_id}}" data-name="{{$role -> role_name}}"
                                 data-bs-toggle="modal" data-bs-target="#deleteModal">
                             <i class="text-primary fa-solid fa-trash"></i>
                         </button>
                     </td>
+
                     <td>{{date('d-m-Y', strtotime($role -> created_at))}}</td>
                 </tr>
             @endforeach
