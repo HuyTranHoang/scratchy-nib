@@ -40,6 +40,9 @@ class HomeController extends Controller
     {
         return view('home.authenticate');
     }
+    public function detail(){
+        return view('home.detail');
+    }
 
     public function sendEmail(EmailPostRequest $request)
     {
@@ -53,4 +56,5 @@ class HomeController extends Controller
 
         return redirect()->back();
     }
+
 }

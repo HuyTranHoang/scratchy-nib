@@ -30,9 +30,9 @@
                     <td>{{$user -> name}}</td>
                     <td>{{$user -> email}}</td>
                     <td>{{$user -> password}}</td>
-                    <td class="table-action text-center">
-                        <a href="#"><i class="fa-solid fa-pen"></i></a>
-                        <a href="#"><i class="fa-solid fa-trash"></i></a>
+                    <td class="table-action text-center" style="min-width: 100px">
+                        <a href="#" ><i class="fa-solid fa-pen"></i></a>
+                        <span><a href="#"><i class="fa-solid fa-trash"></i></a></span>
                     </td>
                     <td>{{date('d-m-Y', strtotime($user -> created_at))}}</td>
                 </tr>

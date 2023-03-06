@@ -5,8 +5,9 @@
         <div class="container">
             <div class="row mb-4">
                 <div class="col d-flex justify-content-center">
-                    <form action="" class="d-flex w-50">
-                        <input class="form-control rounded-start rounded-0" id="" name="" type="text" placeholder="Search" aria-label="search">
+                    <form action="" class="d-flex w-50 field-cate">
+                       <label class="label-cate" for="searchcate">Search</label>
+                        <input class="input-text rounded-start rounded-0" id="searchcate" name="" type="text" aria-label="search">
                         <button class="btn btn-primary-color rounded-end rounded-0 " type="submit"><i class="fas fa-search"></i></button>
                     </form>
                 </div>
@@ -48,7 +49,9 @@
             <div class="row row-cols-1 row-cols-md-4 g-4">
                 <div class="col">
                     <div class="card">
-                        <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" data-lightbox="gallery"><img class="card-img-top img-fit" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg"  alt="Error"/></a>
+                        <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" data-lightbox="categories">
+                            <img class="card-img-top img-fit" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg"  alt="Error"/>
+                        </a>
                         <div class="card-body">
                             <h6 class="card-title">Name</h6>
                             <p class="card-text">Categorysfdddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
@@ -60,7 +63,9 @@
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                        <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" data-lightbox="gallery"><img class="card-img-top img-fit" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg"  alt="Error"/></a>
+                        <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" data-lightbox="categories">
+                            <img class="card-img-top img-fit" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg"  alt="Error"/>
+                        </a>
                         <div class="card-body d-flex flex-column h-100" >
                             <h6 class="card-title">Name</h6>
                             <p class="card-text">Category</p>
@@ -72,7 +77,9 @@
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                        <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" data-lightbox="gallery"><img class="card-img-top img-fit" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg"  alt="Error"/></a>
+                        <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" data-lightbox="categories">
+                            <img class="card-img-top img-fit" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg"  alt="Error"/>
+                        </a>
                         <div class="card-body" >
                             <h6 class="card-title">Name</h6>
                             <p class="card-text">Category</p>
@@ -84,7 +91,9 @@
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                        <a href="https://api.lorem.space/image/face" data-lightbox="gallery"><img class="card-img-top img-fit" src="https://api.lorem.space/image/face"  alt="Error"/></a>
+                        <a href="https://api.lorem.space/image/face" data-lightbox="categories">
+                            <img class="card-img-top img-fit" src="https://api.lorem.space/image/face"  alt="Error"/>
+                        </a>
                         <div class="card-body d-flex flex-column h-100" >
                             <h6 class="card-title">Name</h6>
                             <p class="card-text">Category</p>
@@ -96,7 +105,9 @@
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                        <a href="https://api.lorem.space/image/album" data-lightbox="gallery"><img class="card-img-top img-fit" src="https://api.lorem.space/image/album"  alt="Error"/></a>
+                        <a href="https://api.lorem.space/image/album" data-lightbox="categories">
+                            <img class="card-img-top img-fit" src="https://api.lorem.space/image/album"  alt="Error"/>
+                        </a>
                         <div class="card-body d-flex flex-column h-100" >
                             <h6 class="card-title">Name</h6>
                             <p class="card-text">Category</p>
@@ -108,7 +119,9 @@
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                        <a href="https://api.lorem.space/image/book" data-lightbox="gallery"><img class="card-img-top img-fit" src="https://api.lorem.space/image/book"  alt="Error"/></a>
+                        <a href="https://api.lorem.space/image/book" data-lightbox="categories">
+                            <img class="card-img-top img-fit" src="https://api.lorem.space/image/book"  alt="Error"/>
+                        </a>
                         <div class="card-body d-flex flex-column h-100" >
                             <h6 class="card-title">Name</h6>
                             <p class="card-text">Category</p>
@@ -120,7 +133,7 @@
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                        <a href="https://api.lorem.space/image/game" data-lightbox="gallery"><img class="card-img-top img-fit" src="https://api.lorem.space/image/game"  alt="Error"/></a>
+                        <a href="https://api.lorem.space/image/game" data-lightbox="categories"><img class="card-img-top img-fit" src="https://api.lorem.space/image/game"  alt="Error"/></a>
                         <div class="card-body d-flex flex-column h-100" >
                             <h6 class="card-title">Name</h6>
                             <p class="card-text">Category</p>
@@ -132,7 +145,7 @@
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                        <a href="https://api.lorem.space/image/movie" data-lightbox="gallery"><img class="card-img-top img-fit"   src="https://api.lorem.space/image/movie"  alt="Error"/></a>
+                        <a href="https://api.lorem.space/image/movie" data-lightbox="categories"><img class="card-img-top img-fit" src="https://api.lorem.space/image/movie"  alt="Error"/></a>
                         <div class="card-body d-flex flex-column h-100" >
                             <h6 class="card-title">Name</h6>
                             <p class="card-text">Category</p>

@@ -257,3 +257,30 @@
         background-image: linear-gradient(80deg, variables.$main-red-rgb-015, transparent 50%);
     }
 }
+//Input
+.input-text{
+    border: 1px solid #CED4DA;
+    border-radius: 5px;
+    width: 100%;
+    height: 45px;
+    padding: 0 5px;
+    background-color: white;
+    color: #6C757D;
+
+
+}
+.label-cate{
+    position: absolute;
+    left: 10px;
+    bottom: 35px;
+    pointer-events: none;
+    font-size: 1rem;
+    color: #d37171;
+    padding: 0px 5px;
+    background: white;
+
+}
+.field-cate{
+    position: relative;
+    width: 100%;
+}
