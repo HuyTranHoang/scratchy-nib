@@ -18,6 +18,8 @@
 @use "components/authenticate";
 // Errors page
 @use "components/errors";
+// Continuous scrolling ticker/marquee
+@use "components/ticker";
 
 // For footer to be in the bottom
 html,body {

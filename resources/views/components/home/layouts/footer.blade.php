@@ -59,12 +59,19 @@
 
             <div class="text-center p-4">
                 <div class="row">
-                    <div class="col">
-                        Current time and location: <span id="ticker"></span>
+                    <div class="col d-flex justify-content-center">
+                        <span class="ticker-text p-0">Current time and location:</span>
+                        <div class="position-relative" style="width: 375px;">
+                            <div class="ticker-text p-0">
+                                <p class="msg"><span class="ticker"></span></p>
+                                <p class="msg msg--two"><span class="ticker"></span></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 Sitemap | ©2023 Scratchy Nib | All rights reserved.
             </div>
+
         </div>
     </div>
 </footer>

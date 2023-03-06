@@ -22,6 +22,5 @@
 
     <x-home.layouts.footer />
 
-
 </body>
 </html>
