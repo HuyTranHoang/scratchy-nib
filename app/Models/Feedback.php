@@ -14,6 +14,8 @@ class Feedback extends Model
 
     protected $table = 'feedback';
 
+    protected $fillable = ['feedback_message','user_id','calligraphy_id'];
+
     public function calligraphy(): BelongsTo
     {
         return $this->belongsTo(Calligraphy::class, 'calligraphy_id');

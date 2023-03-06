@@ -25,10 +25,17 @@ $(function() {
     $(document).on('click','.delete-calligraphy',function() {
         const id = $(this).attr('data-id');
         const calligraphyName = $(this).attr('data-name');
-        let calligraphyStyle = $(this).attr('data-style');
+        const calligraphyStyle = $(this).attr('data-style');
         $('#calligraphy_id').val(id);
         $('#calligraphy_name').val(calligraphyName);
         $('#calligraphy_style').val(calligraphyStyle);
+    });
+
+    $(document).on('click','.delete-feedback',function() {
+        const id = $(this).attr('data-id');
+        const feedbackMessage = $(this).attr('data-message');
+        $('#feedback_id').val(id);
+        $('#feedback_message').val(feedbackMessage);
     });
 
 

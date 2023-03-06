@@ -1,14 +1,14 @@
 <x-admin-layout>
 
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Feedback</h1>
+        <h1 class=" text-primary-color">Feedback</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
-                <button type="button" class="btn btn-sm btn-outline-primary">Add New Feedback</button>
+                <a href="{{ route('feedback.create') }}" class="btn btn-sm btn-outline-primary">Add New Feedback</a>
             </div>
         </div>
     </div>
-    <h3>Feeback List</h3>
+    <h3>Feedback List</h3>
     <div class="table-responsive table-bordered">
         <table class="table table-striped align-middle">
             <thead class="table-success">
@@ -43,5 +43,22 @@
             </tbody>
         </table>
     </div>
+
+    <!-- Modal -->
+    <x-admin.partials.delete-modal>
+        <x-slot:action>
+            {{route('feedback.destroy','id')}}
+        </x-slot:action>
+
+        <x-slot:body>
+            <input id="feedback_id" name="feedback_id" hidden value="">
+            <h5 class="text-center text-danger">Are you sure you want to delete this feedback?</h5>
+            <h6 class="text-center mb-3 text-primary-color fw-light" style="font-size: 0.8rem">
+                <i>this action cannot be reversed</i></h6>
+
+            <label for="feedback_message">Feedback message: </label>
+            <input class="form-control mt-1" type="text" id="feedback_message" name="feedback_message" disabled readonly>
+        </x-slot:body>
+    </x-admin.partials.delete-modal>
 
 </x-admin-layout>

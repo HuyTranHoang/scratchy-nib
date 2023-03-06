@@ -1,7 +1,7 @@
 <x-admin-layout>
 
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2 text-primary-color">Calligraphies</h1>
+        <h1 class=" text-primary-color">Calligraphies</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
                 <a href="{{route('calligraphies.create')}}" class="btn btn-sm btn-outline-primary">Add New Calligraphy</a>
@@ -10,7 +10,7 @@
     </div>
 
 
-    <h3>Calligraphies List</h3>
+    <h3>Calligraphies list</h3>
     <div class="table-responsive table-bordered">
         <table class="table table-striped align-middle">
             <thead class="table-success">
