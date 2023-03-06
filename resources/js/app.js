@@ -20,6 +20,10 @@ ImagesLoaded( grid, function() {
     });
 });
 
+
+
+
+
 $(function() {
     // Handle GeoLocation
     InitLocationTime();
