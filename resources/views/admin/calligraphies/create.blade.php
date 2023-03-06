@@ -45,6 +45,17 @@
                     @enderror
                 </div>
 
+
+                <div class="mb-3" id="previewCard" style="display: none">
+                    <div class="card" style="width: 13rem;">
+                        <img src="" alt=""
+                                 class="card-img-top" id="ImgOutput">
+                        <div class="card-body">
+                            Image preview
+                        </div>
+                    </div>
+                </div>
+
                 <div class="mb-3">
                     <label for="image" class="form-label">Image</label>
                     <input type="file" name="image" id="image" class="form-control">

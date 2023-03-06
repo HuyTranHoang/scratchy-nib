@@ -30,6 +30,15 @@ $(function() {
         $('#calligraphy_name').val(calligraphyName);
         $('#calligraphy_style').val(calligraphyStyle);
     });
+
+
+    // Handle Image Preview
+    function previewImage(event) {
+        const output = document.getElementById('ImgOutput');
+        output.src = URL.createObjectURL(event.target.files[0]);
+        $('#previewCard').css('display', 'block');
+    }
+    $('#image').on('change',previewImage);
 });
 
 
