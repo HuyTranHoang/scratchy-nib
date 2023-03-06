@@ -109,11 +109,11 @@
                 <div class="col-md-6 col-lg-5 offset-lg-1 text-center">
                     <img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Wang_Xianzi_Imitation_by_Tang_Dynasty.JPG/1280px-Wang_Xianzi_Imitation_by_Tang_Dynasty.JPG" alt="">
                     <i><b>新婦地黃湯帖</b> by Wang Xianzhi</i>
-                    <row>
+                    <div class="row">
                         <div class="col">
                             <button class="btn btn-secondary-color btn-more-about mt-3 pe-4">More about Traditional Calligraphy <i class="fa-solid fa-arrow-right"></i></button>
                         </div>
-                    </row>
+                    </div>
                 </div>
             </div>
         </div>
