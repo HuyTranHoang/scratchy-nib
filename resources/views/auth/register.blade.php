@@ -21,7 +21,9 @@
                 @error('password_confirmation')
                 <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                 @enderror
-                <button>Sign Up</button>
+                <button class="d-flex">Sign Up
+                    <div class="loader-signup" id="loader"></div>
+                </button>
             </form>
         </div>
         <div class="overlay-container">
@@ -59,7 +61,9 @@
                 @error('password_confirmation')
                 <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                 @enderror
-                <button>Sign Up</button>
+                <button class="d-flex">Sign Up
+                    <div class="loader-inline" id="loader"></div>
+                </button>
             </form>
         </div>
 
@@ -73,5 +77,13 @@
             </div>
         </div>
     </div>
+
+    <script type="module">
+        $(function() {
+            $( "form" ).submit(function() {
+                $('#loader').show();
+            });
+        });
+    </script>
 
 </x-auth-layout>

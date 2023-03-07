@@ -9,10 +9,9 @@
                 @error('email')
                 <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                 @enderror
-                <button>Submit</button>
-                <div style="min-height: 3rem">
-                    <div class="loader" id="loader"></div>
-                </div>
+                <button class="d-flex">Submit
+                    <div class="loader-inline" id="loader"></div>
+                </button>
             </form>
         </div>
         <div class="overlay-container">
