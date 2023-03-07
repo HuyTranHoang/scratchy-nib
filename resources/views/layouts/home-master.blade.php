@@ -16,6 +16,9 @@
 </head>
 <body>
 
+    @include('sweetalert::alert')
+
+
     <x-home.layouts.header />
 
     {{$slot}}

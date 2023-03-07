@@ -1,7 +1,4 @@
 <x-home-layout>
-
-    @include('sweetalert::alert')
-
     <section class="bg-secondary-color">
         <div class="row m-0">
             <div class="col-md-12">

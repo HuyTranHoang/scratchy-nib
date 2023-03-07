@@ -51,7 +51,8 @@ Route::get('/authenticate', [HomeController::class, 'authenticate'])->name('home
 Route::post('/get-location-data', [LocationController::class,'getLocationData']);
 
 // Admin Page
-Route::prefix('admin')->group(function () {
+
+Route::middleware(['web','CheckIsAdmin'])->prefix('admin')->group(function () {
     Route::get('/', function () {
         return view('admin.dashboard');
     })->name('admin.index');

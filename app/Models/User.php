@@ -46,6 +46,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function isAdmin()
+    {
+        return $this->role_id === 1;
+    }
+
     public function feedback(): HasMany
     {
         return $this->hasMany(Feedback::class, 'user_id');
