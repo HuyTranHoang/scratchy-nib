@@ -32,8 +32,8 @@ class CalligraphiesController extends Controller
         $validated = $request->validated();
         $calligraphy = Calligraphy::create($validated);
         if ($request->hasFile('image')) {
-            $image['image_name'] = $request->file('image')->store('uploads','public');
-            $image['calligraphy_id'] = $calligraphy -> calligraphy_id;
+            $image['image_name'] = $request->file('image')->store('uploads', 'public');
+            $image['calligraphy_id'] = $calligraphy->calligraphy_id;
             GalleryImage::create($image);
         }
         Alert::success('Success', 'New calligraphy succesfully added!')->buttonsStyling(false)->autoClose(1500);
@@ -65,11 +65,11 @@ class CalligraphiesController extends Controller
 //            } elseif (count($calligraphy -> galleryImage) == 1) {
 //                $oldImageName[] = 'storage/' . $calligraphy -> galleryImage ->first() -> image_name;
 //            }
-            $oldImageName = 'storage/' . $calligraphy -> galleryImage ->first() -> image_name;
+            $oldImageName = 'storage/' . $calligraphy->galleryImage->first()->image_name;
             File::delete($oldImageName);
-            GalleryImage::where('calligraphy_id',$calligraphy->calligraphy_id) -> delete();
-            $image['image_name'] = $request->file('image')->store('uploads','public');
-            $image['calligraphy_id'] = $calligraphy -> calligraphy_id;
+            GalleryImage::where('calligraphy_id', $calligraphy->calligraphy_id)->delete();
+            $image['image_name'] = $request->file('image')->store('uploads', 'public');
+            $image['calligraphy_id'] = $calligraphy->calligraphy_id;
             GalleryImage::create($image);
         }
 
