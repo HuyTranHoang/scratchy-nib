@@ -5,6 +5,10 @@
     </p>
 </header>
 
+<form id="send-verification" method="post" action="{{ route('verification.send') }}">
+    @csrf
+</form>
+
 <form method="post" action="{{ route('profile.update') }}" class="mt-6">
     @csrf
     @method('patch')
@@ -32,8 +36,25 @@
         @error('email')
         <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
         @enderror
-
     </div>
+
+    @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
+        <div class="row mt-3">
+            <p class="text-primary-color text-decoration-underline" style="font-size: 0.8rem">
+                Your email address is unverified.
+                <button form="send-verification" class="btn btn-secondary d-flex mt-2" style="font-size: 0.8rem">
+                    Click here to re-send the verification email.
+                    <span class="loader-inline" id="loader"></span>
+                </button>
+            </p>
+
+            @if (session('status') === 'verification-link-sent')
+                <p class="mt-2 text-success">
+                    A new verification link has been sent to your email address.
+                </p>
+            @endif
+        </div>
+    @endif
 
     <div class="row mt-3">
         <div class="d-flex align-items-center justify-content-between col-sm-12 col-md-8 col-lg-5">

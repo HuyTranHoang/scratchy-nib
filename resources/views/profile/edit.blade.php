@@ -25,5 +25,13 @@
         </div>
         <x-home.overlay-top color="bg-secondary-color"/>
     </section>
+
+    <script type="module">
+        $(function() {
+            $( "form" ).submit(function() {
+                $('#loader').show();
+            });
+        });
+    </script>
 </x-home-layout>
 

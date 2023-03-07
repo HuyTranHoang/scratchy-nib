@@ -110,6 +110,16 @@ body {
      height: 3em;
      animation: spin 1s linear infinite;
      display: none;
+     &-inline {
+         border: 3px solid rgb(231 200 190 / 20%);
+         border-top-color: white;
+         border-radius: 50%;
+         width: 1.25rem;
+         height: 1.25rem;
+         animation: spin 1s linear infinite;
+         margin-left: .5rem;
+         display: none;
+     }
  }
 
 @keyframes spin {
