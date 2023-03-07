@@ -8,7 +8,7 @@
                 <h1 class="text-center text-uppercase text-primary mt-5">Profile</h1>
             </div>
         </div>
-        <x-home.partials.overlay-bottom />
+        <x-home.overlay-bottom />
     </section>
 
     <section>
@@ -23,7 +23,7 @@
             </div>
 
         </div>
-        <x-home.partials.overlay-top color="bg-secondary-color"/>
+        <x-home.overlay-top color="bg-secondary-color"/>
     </section>
 </x-home-layout>
 

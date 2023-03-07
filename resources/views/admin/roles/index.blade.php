@@ -44,7 +44,7 @@
     </div>
 
     <!-- Modal -->
-    <x-admin.partials.delete-modal>
+    <x-admin.delete-modal>
         <x-slot:action>
             {{route('roles.destroy','id')}}
         </x-slot:action>
@@ -58,6 +58,6 @@
             <label for="role_name">Role name: </label>
             <input class="form-control mt-1" type="text" id="role_name" name="role_name" disabled readonly>
         </x-slot:body>
-    </x-admin.partials.delete-modal>
+    </x-admin.delete-modal>
 
 </x-admin-layout>

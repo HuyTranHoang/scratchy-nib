@@ -61,7 +61,7 @@
     </div>
 
     <!-- Modal -->
-    <x-admin.partials.delete-modal>
+    <x-admin.delete-modal>
         <x-slot:action>
             {{route('calligraphies.destroy','id')}}
         </x-slot:action>
@@ -77,6 +77,6 @@
             <label for="calligraphy_style">Calligraphy style: </label>
             <input class="form-control mt-1" type="text" id="calligraphy_style" name="calligraphy_style" disabled readonly>
         </x-slot:body>
-    </x-admin.partials.delete-modal>
+    </x-admin.delete-modal>
 
 </x-admin-layout>

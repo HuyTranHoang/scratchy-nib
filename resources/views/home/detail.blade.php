@@ -1,7 +1,7 @@
 
 <x-home-layout>
     <header class="bg-secondary-color">
-        <x-home.partials.overlay-bottom />
+        <x-home.overlay-bottom />
     </header>
     <div class="container">
         <div class="row">
@@ -159,7 +159,7 @@
         </div>
     </section>
     <footer class="bg-secondary-color">
-        <x-home.partials.overlay-top />
+        <x-home.overlay-top />
     </footer>
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
