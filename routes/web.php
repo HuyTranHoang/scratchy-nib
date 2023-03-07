@@ -24,16 +24,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-// Breeze
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
 
 // Home Page
 Route::middleware(['web', 'VisitorCounter'])->group(function () {
@@ -41,14 +31,20 @@ Route::middleware(['web', 'VisitorCounter'])->group(function () {
     Route::get('/category', [HomeController::class, 'category'])->name('home.category');
     Route::get('/gallery', [HomeController::class, 'gallery'])->name('home.gallery');
     Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
-    Route::post('/send-email', [HomeController::class, 'sendEmail'])->name('home.send-email');
     Route::get('/about', [HomeController::class, 'about'])->name('home.about');
     Route::get('/detail', [HomeController::class, 'detail'])->name('home.detail');
 });
 
-Route::get('/authenticate', [HomeController::class, 'authenticate'])->name('home.authenticate');
-// GeoLocation
+// User profile
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+});
+
+// Geo Location
 Route::post('/get-location-data', [LocationController::class,'getLocationData']);
+// Send Email
+Route::post('/send-email', [HomeController::class, 'sendEmail'])->name('send-email');
 
 // Admin Page
 

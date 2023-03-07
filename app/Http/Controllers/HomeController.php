@@ -52,7 +52,7 @@ class HomeController extends Controller
             $email->to('huy.th878@aptechlearning.edu.vn', $validated['name']);
         });
 
-        Alert::success('Success', 'Your email sent successfully!')->autoClose(1500);
+        Alert::success('Success', 'Your email sent successfully!')->buttonsStyling(false)->autoClose(1500);
 
         return redirect()->back();
     }

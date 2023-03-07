@@ -40,7 +40,7 @@
                     <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Categories
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu animate slideIn">
                         <li><a class="dropdown-item" href="{{ url('/#Traditional') }}">Traditional Calligraphy</a></li>
                         <li><a class="dropdown-item" href="{{ url('/#Contemporary') }}">Contemporary Calligraphy</a></li>
                         <li><a class="dropdown-item" href="{{ url('/#Hand-lettering') }}">Hand-lettering & Design</a></li>

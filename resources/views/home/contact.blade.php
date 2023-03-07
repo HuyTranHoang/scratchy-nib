@@ -16,7 +16,7 @@
                         <h4 class="text-uppercase text-primary"><i class="fa-light fa-message-question"></i> Have Questions?</h4>
                         <p>Simply fill the form below, and we will try our best to get back to you as soon as possible =]</p>
                         <div>
-                            <form action="{{route('home.send-email')}}" method="POST">
+                            <form action="{{route('send-email')}}" method="POST">
                                 @csrf
                                 <div class="row mt-3">
                                     <div class="col-md-12 col-lg-6">
@@ -60,6 +60,9 @@
                                     <div class="col-lg-6 offset-lg-3">
                                         <button type="submit" class="btn btn-primary w-100">Submit</button>
                                     </div>
+                                    <div class="d-flex mt-3 justify-content-center">
+                                        <div class="loader" id="loader"></div>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -79,6 +82,7 @@
                                 Ho Chi Minh <br>
                                 Viet Nam
                             </span>
+
                         </div>
                     </div>
                 </div>
@@ -86,4 +90,13 @@
         </div>
         <x-home.overlay-top color="bg-secondary-color"/>
     </section>
+
+    <script type="module">
+        $(function() {
+            $( "form" ).submit(function() {
+                $('#loader').show();
+            });
+        });
+    </script>
+
 </x-home-layout>
