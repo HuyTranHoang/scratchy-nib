@@ -10,7 +10,7 @@
                 @error('email')
                 <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                 @enderror
-                <input id="password" type="password" name="password" placeholder="Password">
+                <input id="password" type="password" name="password" placeholder="Password" autocomplete="password">
                 @error('password')
                 <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                 @enderror
@@ -37,11 +37,11 @@
             <form method="POST" action="{{ route('login') }}" class="mb-5">
                 @csrf
                 <h1>Sign in</h1>
-                <input id="email" type="email" name="email" placeholder="Email" value="{{ old('email') }}">
+                <input id="email-mobile" type="email" name="email" placeholder="Email" value="{{ old('email') }}">
                 @error('email')
                 <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                 @enderror
-                <input id="password" type="password" name="password" placeholder="Password">
+                <input id="password-mobile" type="password" name="password" placeholder="Password" autocomplete="password">
                 @error('password')
                 <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                 @enderror
