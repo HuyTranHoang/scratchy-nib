@@ -44,7 +44,7 @@
 
     <section class="bg-primary-color">
         <div class="container text-primary-color">
-            <h1 class="my-3 text-center text-primary">Calligraphy</h1>
+            <h1 class="py-3 text-center text-primary">Calligraphy</h1>
             <p>
                 Calligraphy is an ancient art form that originated in China over 2000 years ago.
                 It involves the creation of beautiful and intricate writing, using a variety of techniques and tools.
@@ -76,8 +76,7 @@
 
     </section>
 
-    <section data-aos="fade-right" data-aos-easing="ease">
-
+    <section data-aos="fade-up" data-aos-easing="ease">
         <div class="container text-primary">
             <h1 id="Traditional" class="my-3 text-center text-primary">Traditional Calligraphy</h1>
             <div class="row mb-3">
@@ -121,7 +120,7 @@
 
     <section class="bg-secondary-color">
         <x-home.overlay-top />
-        <div data-aos="fade-left" class="container text-secondary">
+        <div data-aos="fade-right" class="container text-secondary">
             <h1 id="Contemporary" class="mb-3 text-center">Contemporary Calligraphy</h1>
             <div class="row mb-3">
                 <div class="col-sm-4 col-md-4 col-lg-2 offset-lg-1">
@@ -219,7 +218,7 @@
 
     <section class="bg-secondary-color">
         <x-home.overlay-top />
-        <div data-aos="fade-left" data-aos-easing="ease-in-cubic" class="container text-secondary">
+        <div data-aos="fade-down" data-aos-easing="ease-in-cubic" class="container text-secondary">
             <h1 id="Modern" class="mb-3 text-center">Modern Calligraphy</h1>
             <div class="row mb-3">
                 <div class="col-sm-4 col-md-4 col-lg-2 offset-lg-1">

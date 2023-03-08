@@ -28,16 +28,6 @@
 // Aos
 @import url('../../node_modules/aos/dist/aos.css');
 
-
-// For footer to be in the bottom
-html,body {
-    height: 100%;
-}
-body {
-    display: flex;
-    flex-direction: column;
-}
-
 //Section content
 .btn-more-about{
     position: relative;

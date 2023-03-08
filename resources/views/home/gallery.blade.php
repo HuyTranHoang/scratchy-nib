@@ -183,8 +183,6 @@
             </div>
         </div>
     </section>
-    <footer class="bg-secondary-color">
-        <x-home.overlay-top />
-    </footer>
+    <x-home.overlay-top color="bg-secondary-color" />
 
 </x-home-layout>

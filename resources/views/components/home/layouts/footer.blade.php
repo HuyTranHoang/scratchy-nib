@@ -1,6 +1,6 @@
 <footer class="text-center text-lg-start bg-secondary-color text-muted text-primary-color">
     <div class="container text-center text-md-start">
-        <div class="tab-content accordion row mt-3 bg-secondary-color" id="footerContent">
+        <div class="tab-content accordion row bg-secondary-color" id="footerContent">
             <div class="col-md-4 col-lg-4 pt-3">
                 <h4 class="text-uppercas footer-text-color">
                     Content Disclaimer

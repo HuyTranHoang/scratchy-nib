@@ -8,9 +8,9 @@ import Lightbox from 'lightbox2'
 import AOS from 'aos';
 
 AOS.init({
-    offset: 50,
-    delay: 50,
-    duration: 650,
+    offset: 120,
+    delay: 30,
+    duration: 550,
     easing: 'ease-in-out',
     mirror: true,
     once: false,
