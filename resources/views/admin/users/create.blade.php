@@ -5,30 +5,30 @@
     </div>
 
 
-    <h3>Create New Users</h3>
+    <h3>Create new user</h3>
 
     <form method="post" action="{{route('users.store')}}">
         @csrf
         <div class="row">
             <div class="col-5">
-                <label for="users_name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="users_name" name="users_name" value="{{old('users_email')}}" >
-                @error('users_name')
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" value="{{old('name')}}" >
+                @error('name')
                 <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                 @enderror
 
                 <div class="my-3">
-                    <label for="users_email" class="form-label">Email</label>
-                    <input type="email" class="form-control" name="users_email" id="users_email" value="{{old('users_email')}}">
-                    @error('users_email')
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" id="email" value="{{old('email')}}">
+                    @error('email')
                     <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                     @enderror
                 </div>
 
                 <div class="my-3">
-                    <label for="users_password" class="form-label">Password</label>
-                    <input type="password" class="form-control" name="users_password" id="users_password" value="{{old('users_password')}}">
-                    @error('users_password')
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password" id="password" value="{{old('password')}}">
+                    @error('password')
                     <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                     @enderror
                 </div>

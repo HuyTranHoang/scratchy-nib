@@ -10,7 +10,7 @@
     </div>
 
 
-    <h3>Users List</h3>
+    <h3>Users list</h3>
     <div class="table-responsive table-bordered">
         <table class="table table-striped align-middle">
             <thead class="table-success">

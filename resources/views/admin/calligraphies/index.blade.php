@@ -17,11 +17,11 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Calligraphy Name</th>
-                    <th scope="col">Calligraphy Image</th>
+                    <th scope="col">Image</th>
                     <th scope="col">Calligraphy Description</th>
-                    <th scope="col">Calligraphy Style</th>
+                    <th scope="col">Style</th>
                     <th scope="col" colspan="2" class="text-center">Action</th>
-                    <th scope="col">Created At</th>
+                    <th scope="col" style="min-width: 100px">Created At</th>
                 </tr>
             </thead>
             <tbody>
