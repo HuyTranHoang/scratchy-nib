@@ -1,4 +1,5 @@
-const ticker = document.getElementById("ticker");
+const ticker = document.querySelectorAll(".ticker");
+
 function getLocation() {
     // Get the user's location using geolocation
     return new Promise((resolve, reject) => {
@@ -13,7 +14,9 @@ function showTicker(locationName) {
     let time = now.toLocaleTimeString();
 
     // Display the date, time, and location in the ticker
-    ticker.innerHTML = date + " " + time + " | " + locationName;
+    ticker.forEach(function(item) {
+        item.innerHTML = date + " " + time + " | " + locationName;
+    });
     // Call the function again after 1 second to update the ticker
     setTimeout(function () {
         showTicker(locationName)

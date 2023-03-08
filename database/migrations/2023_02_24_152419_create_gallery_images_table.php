@@ -10,8 +10,8 @@ return new class extends Migration
     {
         Schema::create('gallery_images', function (Blueprint $table) {
             $table->id('image_id');
-            $table->string('image_name', 50);
-            $table->string('image_description', 255);
+            $table->string('image_name', 255);
+            $table->string('image_description', 255)->nullable();
             $table->foreignId('calligraphy_id')->references('calligraphy_id')->on('calligraphies')
                 ->onDelete('cascade');
             $table->timestamps();

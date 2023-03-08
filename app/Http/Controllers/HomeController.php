@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\EmailPostRequest;
+use App\Mail\Contact;
 use App\Models\Visitor;
 use Illuminate\Support\Facades\Mail;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -46,13 +47,16 @@ class HomeController extends Controller
 
     public function sendEmail(EmailPostRequest $request)
     {
-        $validated = $request->validated();
-        Mail::send('emails.contact', compact('validated'), function ($email) use ($validated) {
-            $email->subject($validated['subject']);
-            $email->to('huy.th878@aptechlearning.edu.vn', $validated['name']);
-        });
 
-        Alert::success('Success', 'Your email sent successfully!')->autoClose(1500);
+        $validated = $request->validated();
+        Mail::to('huy.th878@aptechlearning.edu.vn')->send(new Contact($validated));
+
+//        Mail::send(new Contact(), compact('validated'), function ($email) use ($validated) {
+//            $email->subject($validated['subject']);
+//            $email->to('huy.th878@aptechlearning.edu.vn', $validated['name']);
+//        });
+
+        Alert::success('Success', 'Your email sent successfully!')->buttonsStyling(false)->autoClose(1500);
 
         return redirect()->back();
     }

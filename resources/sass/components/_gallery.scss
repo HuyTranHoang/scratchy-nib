@@ -16,7 +16,6 @@
 }
 .card-btn:hover{
     background-color: #e07979;
-    outline: #e07979;
     color : whitesmoke;
 }
 
@@ -47,9 +46,12 @@
     position: absolute;
 }
 
-.card-body-gallery,
+.card-body-gallery {
+    transition: .2s all linear;
+}
+
 .card-btn {
-    transition: .3s all ease-in;
+    transition: .2s all ease-in;
 }
 
 .card-title-gallery,

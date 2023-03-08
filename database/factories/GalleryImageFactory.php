@@ -11,7 +11,6 @@ class GalleryImageFactory extends Factory
     public function definition(): array
     {
         return [
-            'image_id' => $this->faker->randomNumber(),
             'image_name' => $this->faker->name(),
             'image_description' => $this->faker->text(),
             'created_at' => Carbon::now(),

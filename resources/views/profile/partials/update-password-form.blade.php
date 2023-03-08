@@ -1,38 +1,61 @@
-<section>
-    <header>
-        <h2 class="text-lg font-medium text-gray-900">
-            {{ __('Update Password') }}
-        </h2>
+<header>
+    <h2 class="fs-4"> Update Password </h2>
+    <p class="text-primary-color">
+        Ensure your account is using a long, random password to stay secure.
+    </p>
+</header>
 
-        <p class="mt-1 text-sm text-gray-600">
-            {{ __('Ensure your account is using a long, random password to stay secure.') }}
-        </p>
-    </header>
-
-    <form method="post" action="{{ route('password.update') }}" class="mt-6 space-y-6">
-        @csrf
-        @method('put')
-
-        <div>
-            <x-input-label for="current_password" :value="__('Current Password')" />
-            <x-text-input id="current_password" name="current_password" type="password" class="mt-1 block w-full" autocomplete="current-password" />
-            <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" />
+<form method="post" action="{{ route('password.update') }}" class="mt-6">
+    @csrf
+    @method('put')
+    <div>
+        <label for="current_password" class="form-label">Current Password</label>
+        <div class="row">
+            <div class="col-sm-12 col-md-8 col-lg-5">
+                <input id="current_password" type="password" name="current_password"
+                       class="form-control">
+            </div>
         </div>
+        @if ($errors->updatePassword->get('current_password'))
+            @foreach ((array) $errors->updatePassword->get('current_password') as $message)
+                <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
+            @endforeach
+        @endif
+    </div>
 
-        <div>
-            <x-input-label for="password" :value="__('New Password')" />
-            <x-text-input id="password" name="password" type="password" class="mt-1 block w-full" autocomplete="new-password" />
-            <x-input-error :messages="$errors->updatePassword->get('password')" class="mt-2" />
+    <div class="mt-3">
+        <label for="password" class="form-label">New Password</label>
+        <div class="row">
+            <div class="col-sm-12 col-md-8 col-lg-5">
+                <input id="password" type="password" name="password"
+                       class="form-control">
+            </div>
         </div>
+        @if ($errors->updatePassword->get('password'))
+            @foreach ((array) $errors->updatePassword->get('password') as $message)
+                <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
+            @endforeach
+        @endif
+    </div>
 
-        <div>
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-            <x-text-input id="password_confirmation" name="password_confirmation" type="password" class="mt-1 block w-full" autocomplete="new-password" />
-            <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="mt-2" />
+    <div class="mt-3">
+        <label for="password_confirmation" class="form-label">Confirm Password</label>
+        <div class="row">
+            <div class="col-sm-12 col-md-8 col-lg-5">
+                <input id="password_confirmation" type="password" name="password_confirmation"
+                       class="form-control">
+            </div>
         </div>
+        @if ($errors->updatePassword->get('password_confirmation'))
+            @foreach ((array) $errors->updatePassword->get('password_confirmation') as $message)
+                <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
+            @endforeach
+        @endif
+    </div>
 
-        <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+    <div class="row mt-3">
+        <div class="d-flex align-items-center justify-content-between col-sm-12 col-md-8 col-lg-5">
+            <button type="submit" class="btn btn-primary">Save</button>
 
             @if (session('status') === 'password-updated')
                 <p
@@ -40,9 +63,9 @@
                     x-show="show"
                     x-transition
                     x-init="setTimeout(() => show = false, 2000)"
-                    class="text-sm text-gray-600"
-                >{{ __('Saved.') }}</p>
+                    class="my-0 text-primary"
+                >Your password is saved</p>
             @endif
         </div>
-    </form>
-</section>
+    </div>
+</form>

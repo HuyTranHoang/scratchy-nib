@@ -23,7 +23,7 @@
                 </ul>
             </div>
 
-            <x-home.partials.footer-accordion-list title="Navigate" id="footer_navigate">
+            <x-home.footer-accordion-list title="Navigate" id="footer_navigate">
                 <ul class="list-unstyled">
                     <li>
                         <a href="/about" class="link-secondary text-decoration-none">
@@ -46,25 +46,32 @@
                             Privacy Policy</a>
                     </li>
                 </ul>
-            </x-home.partials.footer-accordion-list>
+            </x-home.footer-accordion-list>
 
-            <x-home.partials.footer-accordion-list title="Contact" id="footer_contact">
+            <x-home.footer-accordion-list title="Contact" id="footer_contact">
                 <ul class="list-unstyled">
                     <li class="text-primary-color">HO CHI MINH, ZIP 70000, VN</li>
                     <li><a class="link-secondary text-decoration-none" href = "mailto: scratchynib@gmail.com">scratchynib@gmail.com</a></li>
                     <li><a class="link-secondary text-decoration-none" href="tel:+8499999999">+84 999 999 99</a></li>
                     <li><a class="link-secondary text-decoration-none" href="tel:+8488888888">+84 888 888 88</a></li>
                 </ul>
-            </x-home.partials.footer-accordion-list>
+            </x-home.footer-accordion-list>
 
             <div class="text-center p-4">
                 <div class="row">
-                    <div class="col">
-                        Current time and location: <span id="ticker"></span>
+                    <div class="col d-flex justify-content-center">
+                        <span class="ticker-text p-0">Current time and location:</span>
+                        <div class="position-relative" style="width: 375px;">
+                            <div class="ticker-text p-0">
+                                <p class="msg"><span class="ticker"></span></p>
+                                <p class="msg msg--two"><span class="ticker"></span></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 Sitemap | ©2023 Scratchy Nib | All rights reserved.
             </div>
+
         </div>
     </div>
 </footer>

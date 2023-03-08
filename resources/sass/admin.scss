@@ -35,36 +35,8 @@
     }
 }
 
-// Table
-
-.table-action {
-    @media screen and (max-width: 540px)  {
-        height: 57px;
-    }
-    a {
-        padding: 0 5px;
-        margin: 0 5px;
-        position: relative;
-        &:first-child {
-            display: flex;
-            justify-items: center;
-            align-items: center;
-            text-decoration: none;
-        }
-        &:first-child:before {
-            content: '';
-            width: 1px;
-            height: 100%;
-            top: 0;
-            right: -8px;
-            background-color: #b3b3b3;
-            position: absolute;
-        }
-    }
-}
 
 // Dashboard
-
 .icon-card {
     height: 100%;
     max-height: 56px;

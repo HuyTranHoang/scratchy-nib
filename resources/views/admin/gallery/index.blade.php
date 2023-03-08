@@ -1,7 +1,7 @@
 <x-admin-layout>
 
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Gallery Images</h1>
+        <h1 class=" text-primary-color">Gallery Images</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
                 <button type="button" class="btn btn-sm btn-outline-primary">Add New Gallery-Image</button>
@@ -9,15 +9,15 @@
         </div>
     </div>
     <h3>Gallery Images List</h3>
-    <div class="table-responsive">
-        <table class="table table-striped table-sm">
-            <thead>
+    <div class="table-responsive table-bordered">
+        <table class="table table-striped align-middle">
+            <thead class="table-success">
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Image Name</th>
                 <th scope="col">Image Description</th>
                 <th scope="col">Calligraphy Name</th>
-                <th scope="col" class="text-center">Action</th>
+                <th scope="col" colspan="2" class="text-center">Action</th>
                 <th scope="col">Created At</th>
             </tr>
             </thead>

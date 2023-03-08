@@ -1,6 +1,6 @@
 <x-home-layout>
     <header class="bg-secondary-color">
-        <x-home.partials.overlay-bottom />
+        <x-home.overlay-bottom />
     </header>
         <div class="container">
             <div class="row mb-4">
@@ -158,6 +158,6 @@
             </div>
             </section>
     <footer class="bg-secondary-color">
-        <x-home.partials.overlay-top />
+        <x-home.overlay-top />
     </footer>
 </x-home-layout>

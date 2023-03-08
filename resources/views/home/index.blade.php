@@ -72,7 +72,7 @@
                 </div>
             </div>
         </div>
-        <x-home.partials.overlay-bottom color="bg-secondary-color" />
+        <x-home.overlay-bottom color="bg-secondary-color" />
 
     </section>
 
@@ -120,7 +120,7 @@
     </section>
 
     <section class="bg-secondary-color">
-        <x-home.partials.overlay-top />
+        <x-home.overlay-top />
         <div data-aos="fade-left" class="container text-secondary">
             <h1 id="Contemporary" class="mb-3 text-center">Contemporary Calligraphy</h1>
             <div class="row mb-3">
@@ -177,7 +177,7 @@
                 </div>
             </div>
         </div>
-        <x-home.partials.overlay-bottom />
+        <x-home.overlay-bottom />
     </section>
 
     <section data-aos="fade-right">
@@ -218,7 +218,7 @@
     </section>
 
     <section class="bg-secondary-color">
-        <x-home.partials.overlay-top />
+        <x-home.overlay-top />
         <div data-aos="fade-left" data-aos-easing="ease-in-cubic" class="container text-secondary">
             <h1 id="Modern" class="mb-3 text-center">Modern Calligraphy</h1>
             <div class="row mb-3">
@@ -254,7 +254,7 @@
                 </div>
             </div>
         </div>
-        <x-home.partials.overlay-bottom />
+        <x-home.overlay-bottom />
     </section>
-    
+
 </x-home-layout>

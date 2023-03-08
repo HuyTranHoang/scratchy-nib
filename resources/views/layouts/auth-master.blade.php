@@ -1,3 +1,5 @@
+@props(['title'])
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,24 +8,14 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Scratchy Nib</title>
-    {{-- Bootstrap 5.3 & Custom CSS --}}
-    @vite(['resources/sass/app.scss'])
+    <title> {{$title}} </title>
+    @vite(['resources/sass/app.scss','resources/js/app.js'])
     {{-- Font Awesome --}}
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
-    {{-- Js and library --}}
-    @vite(['resources/js/app.js'])
 </head>
-<body>
 
-    @include('sweetalert::alert')
-
-
-    <x-home.layouts.header />
-
+<body class="container d-flex justify-content-center align-items-center">
     {{$slot}}
-
-    <x-home.layouts.footer />
-
 </body>
 </html>
+

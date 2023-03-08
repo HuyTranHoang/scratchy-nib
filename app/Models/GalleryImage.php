@@ -14,6 +14,8 @@ class GalleryImage extends Model
 
     protected $table = 'gallery_images';
 
+    protected $fillable = ['image_name','image_description','calligraphy_id'];
+
     public function calligraphy(): BelongsTo
     {
         return $this->belongsTo(Calligraphy::class, 'calligraphy_id');

@@ -40,7 +40,7 @@
                     <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Categories
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu animate slideIn m-0">
                         <li><a class="dropdown-item" href="{{ url('/#Traditional') }}">Traditional Calligraphy</a></li>
                         <li><a class="dropdown-item" href="{{ url('/#Contemporary') }}">Contemporary Calligraphy</a></li>
                         <li><a class="dropdown-item" href="{{ url('/#Hand-lettering') }}">Hand-lettering & Design</a></li>
@@ -60,8 +60,11 @@
                         <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {{ Auth::user()->name }}
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu animate slideIn m-0">
                             <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Profile</a></li>
+                            @if( Auth::user()-> role_id == 1)
+                                <li><a class="dropdown-item" href="{{ route('admin.index') }}">Admin dashboard</a></li>
+                            @endif
                             <li>
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
