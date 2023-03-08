@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             StyleSeeder::class,
             CalligraphySeeder::class,
-            ImageSeeder::class
+            ImageSeeder::class,
+            FeedbackSeeder::class
         ]);
     }
 }
