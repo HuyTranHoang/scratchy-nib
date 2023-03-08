@@ -316,7 +316,85 @@ class DatabaseSeeder extends Seeder
                 'style_id' => '2',
             ],
         ]);
+            //Chinese calligraphy
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => 'Tang Dynasty copy of 新婦地黃湯帖',
+                'calligraphy_description' => "Currently in the Taito Ward Calligraphy Museum (台東区立書道博物館) ",
+                'style_id' => '3',
+            ],
+            [
+                'calligraphy_name' => 'Lantingji Xu',
+                'calligraphy_description' => "The most famous Chinese calligraphic work",
+                'style_id' => '3',
+            ],
+        ]);
+            //Korean calligraphy
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => 'Yun Baek-ha (Yun Sun)',
+                'calligraphy_description' => "A calligraphic handscroll with part of the Buddhist Suranga Sūtra,
+                Choson/Joseon dynasty, 18th century, from Korea (© The Trustees of the British Museum)",
+                'style_id' => '4',
+            ],
+            [
+                'calligraphy_name' => 'Cursive Gungche font',
+                'calligraphy_description' => "Image Courtesy dramasROK",
+                'style_id' => '4',
+            ],
+        ]);
+            //Japanese calligraphy
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => '別無工夫',
+                'calligraphy_description' => 'by Musō Soseki (1275–1351, Japanese zen master, poet, and alligrapher.
+                The characters "別無工夫" ("no spiritual meaning") are written in a flowing, connected sōsho style.',
+                'style_id' => '5',
+            ],
+            [
+                'calligraphy_name' => 'Karate (空手)',
+                'calligraphy_description' => ' is a martial art developed in the Ryukyu Islands in what is now Okinawa, Japan.
+                It developed from the indigenous martial arts of Ryukyu Islands (called te (手), literally "hand"; tii in Okinawan)
+                under the influence of Chinese martial arts, particularly to that of the Fujian White Crane.
+                Karate is a striking art using punching, kicking, knee strikes, elbow strikes and open hand techniques
+                such as knife-hands, spear-hands, and palm-heel strikes. In some styles, grappling, throws, joint locks,
+                 restraints, and vital point strikes are also taught. A karate practitioner is called a karateka (空手家)',
+                'style_id' => '5',
+            ],
+        ]);
+            //Western calligraphy
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => "Paul's epistle to Philemon",
+                'calligraphy_description' => 'Incipit epistula ad phylemonem. PAULUS VINCTUS JESU CHRISTI & timotheus frater,
+                philemoni dilecto & adjutori nostro, & appie sorori carissime, & archippo commilitoni nostro, & ecclesie,
+                que in domo tua est. Gratia vobis, et pax a deo patre nostro, et domino iesu christo. Gratias ago deo meo,
+                semper memoriam tui faciens in [orationibus meis].',
+                'style_id' => '6',
+            ],
+            [
+                'calligraphy_name' => 'Monastery',
+                'calligraphy_description' => 'Calligraphy in a Vulgate of AD 1407 on display in Malmesbury Abbey,
+                 Wiltshire, England. The Bible was hand written in Belgium, by Gerard Brils, for reading aloud
+                in a monastery.',
+                'style_id' => '6',
+            ],
+        ]);
+            //Greek Calligraphy
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => "I always stand by your side",
+                'calligraphy_description' => '',
+                'style_id' => '7',
+            ],
+            [
+                'calligraphy_name' => 'Imazing',
+                'calligraphy_description' => '',
+                'style_id' => '7',
+            ],
+        ]);
 
+        // Feedback
         Feedback::factory()->createMany([
             [
                 'feedback_message' => 'Nhìn hông hiểu gì hết',
@@ -345,6 +423,7 @@ class DatabaseSeeder extends Seeder
             ],
         ]);
 
+        // Hình
         GalleryImage::factory()->createMany([
             [
                 'image_name' => 'uploads/Hinh1.jpg',
