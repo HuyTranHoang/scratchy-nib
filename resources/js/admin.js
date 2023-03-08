@@ -38,6 +38,13 @@ $(function() {
         $('#feedback_message').val(feedbackMessage);
     });
 
+    $(document).on('click','.delete-users',function() {
+        const id = $(this).attr('data-id');
+        const usersName = $(this).attr('data-name');
+        $('#users_id').val(id);
+        $('#users_name').val(usersName);
+    });
+
 
     // Handle Image Preview
     function previewImage(event) {
