@@ -35,84 +35,74 @@
         <section class="container">
             <hr>
             <p class="display-5">More Category</p>
-                <div class="row row-cols-md-5 row-cols-sm-4 g-4">
+                <div class="row row-cols-md-6 row-cols-sm-4 g-4">
+
                     <div class="col-sm-4 col-md">
-                        <div class="card">
-                            <a href="https://api.lorem.space/image/book" data-lightbox="detail"><img class="card-img-top img-fit" src="https://api.lorem.space/image/book"  alt="Error"/></a>
+                        <a href="#" class="card text-decoration-none">
+                            <img class="card-img-top img-fit" src="https://api.lorem.space/image/book"  alt="Error"/>
                             <div class="card-body">
-                                <h6 class="card-title">Name</h6>
-                                <p class="card-text">Category</p>
-                                <div class="text-start">
-                                    <a class="btn btn-primary-color text-decoration-none rounded" href="#">View</a>
-                                </div>
+                                <h6 class="card-title text-primary-color">Name</h6>
+                                <p class="card-text text-primary-color">Category</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
+
                     <div class="col-sm-4 col-md">
-                        <div class="card h-100">
-                            <a href="https://api.lorem.space/image/movie" data-lightbox="detail"><img class="card-img-top img-fit" src="https://api.lorem.space/image/movie"  alt="Error"/></a>
-                            <div class="card-body d-flex flex-column h-100" >
-                                <h6 class="card-title">Name</h6>
-                                <p class="card-text">Category</p>
-                                <div class="text-start">
-                                    <a class="btn btn-primary-color text-decoration-none rounded" href="#">View</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-md">
-                        <div class="card h-100">
-                            <a href="https://api.lorem.space/image/album" data-lightbox="detail"><img class="card-img-top img-fit" src="https://api.lorem.space/image/album" alt="Error"/></a>
+                        <a href="#" class="card text-decoration-none">
+                            <img class="card-img-top img-fit" src="https://api.lorem.space/image/book"  alt="Error"/>
                             <div class="card-body">
-                                <h6 class="card-title">Name</h6>
-                                <p class="card-text">Category</p>
-                                <div class="text-start">
-                                    <a class="btn btn-primary-color text-decoration-none rounded" href="#">View</a>
-                                </div>
+                                <h6 class="card-title text-primary-color">Name</h6>
+                                <p class="card-text text-primary-color">Category</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
+
                     <div class="col-sm-4 col-md">
-                        <div class="card h-100">
-                            <a href="https://api.lorem.space/image/face" data-lightbox="detail"><img class="card-img-top img-fit" src="https://api.lorem.space/image/face" alt="Error"/></a>
-                            <div class="card-body d-flex flex-column h-100" >
-                                <h6 class="card-title">Name</h6>
-                                <p class="card-text">Category</p>
-                                <div class="text-start">
-                                    <a class="btn btn-primary-color text-decoration-none rounded" href="#">View</a>
-                                </div>
+                        <a href="#" class="card text-decoration-none">
+                            <img class="card-img-top img-fit" src="https://api.lorem.space/image/book"  alt="Error"/>
+                            <div class="card-body">
+                                <h6 class="card-title text-primary-color">Name</h6>
+                                <p class="card-text text-primary-color">Category</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
+
                     <div class="col-sm-4 col-md">
-                        <div class="card h-100">
-                            <a href="https://api.lorem.space/image/face" data-lightbox="detail"><img class="card-img-top img-fit" src="https://api.lorem.space/image/face" alt="Error"/></a>
-                            <div class="card-body d-flex flex-column h-100" >
-                                <h6 class="card-title">Name</h6>
-                                <p class="card-text">Category</p>
-                                <div class="text-start">
-                                    <a class="btn btn-primary-color text-decoration-none rounded" href="#">View</a>
-                                </div>
+                        <a href="#" class="card text-decoration-none">
+                            <img class="card-img-top img-fit" src="https://api.lorem.space/image/book"  alt="Error"/>
+                            <div class="card-body">
+                                <h6 class="card-title text-primary-color">Name</h6>
+                                <p class="card-text text-primary-color">Category</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
-                    <div class="col-sm-4 col-md d-md-none">
-                        <div class="card h-100">
-                            <a href="https://api.lorem.space/image/face" data-lightbox="detail"><img class="card-img-top img-fit" src="https://api.lorem.space/image/face" alt="Error"/></a>
-                            <div class="card-body d-flex flex-column h-100" >
-                                <h6 class="card-title">Name</h6>
-                                <p class="card-text">Category</p>
-                                <div class="text-start">
-                                    <a class="btn btn-primary-color text-decoration-none rounded" href="#">View</a>
-                                </div>
+
+                    <div class="col-sm-4 col-md">
+                        <a href="#" class="card text-decoration-none">
+                            <img class="card-img-top img-fit" src="https://api.lorem.space/image/book"  alt="Error"/>
+                            <div class="card-body">
+                                <h6 class="card-title text-primary-color">Name</h6>
+                                <p class="card-text text-primary-color">Category</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
+
+                    <div class="col-sm-4 col-md">
+                        <a href="#" class="card text-decoration-none">
+                            <img class="card-img-top img-fit" src="https://api.lorem.space/image/book"  alt="Error"/>
+                            <div class="card-body">
+                                <h6 class="card-title text-primary-color">Name</h6>
+                                <p class="card-text text-primary-color">Category</p>
+                            </div>
+                        </a>
+                    </div>
+
                 </div>
             <hr>
         </section>
 
     <section class="container">
+        {{ request()->feedback_message }}
         <form action="">
             <div class="row mb-2">
                 <div class="col-8">
@@ -126,12 +116,12 @@
             <div class="row mb-2">
                 <div class="col">
                     <label for="email">Describe your issue in detail</label>
-                    <textarea id="premiumskinsandicons-bootstrap"></textarea>
+                    <textarea id="premiumskinsandicons-bootstrap" name="feedback_message"></textarea>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <button type="button" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </div>
         </form>
@@ -207,6 +197,7 @@
     <script src="https://cdn.tiny.cloud/1/q9jvkl47n5k7covggc5pinvziolp0zpycw2ieyl3adc8mjwj/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
         tinymce.init({
+            entity_encoding : "raw",
             selector: 'textarea#premiumskinsandicons-bootstrap',
             content_css: '//www.tiny.cloud/css/codepen.min.css',
             skin: 'bootstrap',

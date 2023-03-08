@@ -31,7 +31,7 @@
                     <td class="text-center px-0">
                         <a href="{{route('feedback.edit', $feb -> feedback_id)}}"><i class="fa-solid fa-pen"></i></a></td>
                     <td class="text-center px-0">
-                        <button type="button" class="px-1 border-0 {{$index % 2 != 0 ? 'bg-white' : ''}} delete-feedback"
+                        <button type="button" class="px-1 border-0 delete-feedback" style="background-color: inherit"
                                 data-id="{{$feb -> feedback_id}}" data-message="{{$feb -> feedback_message}}"
                                 data-bs-toggle="modal" data-bs-target="#deleteModal">
                             <i class="text-primary fa-solid fa-trash"></i>
@@ -42,6 +42,7 @@
             @endforeach
             </tbody>
         </table>
+        {{ $feedback->links() }}
     </div>
 
     <!-- Modal -->

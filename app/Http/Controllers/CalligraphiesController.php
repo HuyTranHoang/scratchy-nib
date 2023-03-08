@@ -16,7 +16,7 @@ class CalligraphiesController extends Controller
     public function index()
     {
         return view('admin.calligraphies.index', [
-            'calligraphies' => Calligraphy::all()
+            'calligraphies' => Calligraphy::paginate(5)
         ]);
     }
 
@@ -58,15 +58,16 @@ class CalligraphiesController extends Controller
         $validated = $request->validated();
         $calligraphy->update($validated);
         if ($request->hasFile('image')) {
-//            if (count($calligraphy -> galleryImage) >= 2) {
-//                foreach ($calligraphy -> galleryImage as $image) {
-//                    $oldImageName[] = 'storage/' . $image -> image_name;
-//                }
-//            } elseif (count($calligraphy -> galleryImage) == 1) {
-//                $oldImageName[] = 'storage/' . $calligraphy -> galleryImage ->first() -> image_name;
-//            }
-            $oldImageName = 'storage/' . $calligraphy->galleryImage->first()->image_name;
-            File::delete($oldImageName);
+            if (count($calligraphy -> galleryImage) >= 2) {
+                foreach ($calligraphy -> galleryImage as $image) {
+                    $oldImageName[] = 'storage/' . $image -> image_name;
+                }
+            } elseif (count($calligraphy -> galleryImage) == 1) {
+                $oldImageName[] = 'storage/' . $calligraphy -> galleryImage ->first() -> image_name;
+            }
+            if ($oldImageName ?? false) {
+                File::delete($oldImageName);
+            }
             GalleryImage::where('calligraphy_id', $calligraphy->calligraphy_id)->delete();
             $image['image_name'] = $request->file('image')->store('uploads', 'public');
             $image['calligraphy_id'] = $calligraphy->calligraphy_id;

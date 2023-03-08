@@ -29,7 +29,7 @@
                     <td class="text-center px-0">
                         <a href="{{route('calligraphies.edit', $role -> role_id)}}"><i class="px-1 fa-solid fa-pen"></i></a></td>
                     <td class="text-center px-0">
-                        <button type="button" class="px-1 border-0 {{$index % 2 != 0 ? 'bg-white' : ''}} delete-calligraphy"
+                        <button type="button" class="px-1 border-0 delete-calligraphy" style="background-color: inherit"
                                 data-id="{{$role -> role_id}}" data-name="{{$role -> role_name}}"
                                 data-bs-toggle="modal" data-bs-target="#deleteModal">
                             <i class="text-primary fa-solid fa-trash"></i>

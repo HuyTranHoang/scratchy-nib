@@ -46,7 +46,7 @@
                     <td class="text-center px-0">
                         <a href="{{route('calligraphies.edit', $calligraphy -> calligraphy_id)}}"><i class="px-1 fa-solid fa-pen"></i></a></td>
                     <td class="text-center px-0">
-                        <button type="button" class="px-1 border-0 {{$index % 2 != 0 ? 'bg-white' : ''}} delete-calligraphy"
+                        <button type="button" class="px-1 border-0  delete-calligraphy" style="background-color: inherit"
                                 data-id="{{$calligraphy -> calligraphy_id}}" data-name="{{$calligraphy -> calligraphy_name}}"
                                 data-style="{{$calligraphy -> calligraphyStyle -> style_name}}"
                                 data-bs-toggle="modal" data-bs-target="#deleteModal">
@@ -58,6 +58,7 @@
             @endforeach
             </tbody>
         </table>
+        {{ $calligraphies->links() }}
     </div>
 
     <!-- Modal -->

@@ -16,7 +16,7 @@ class CalligraphyStylesController extends Controller
     public function index()
     {
         return view('admin.styles.index', [
-            'styles' => CalligraphyStyle::all(),
+            'styles' => CalligraphyStyle::paginate(5)
         ]);
     }
 

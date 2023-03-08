@@ -31,12 +31,12 @@
                     Feedback
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {{ request()->routeIs('gallery.*') ? 'active' : '' }}" href="{{route('gallery.index')}}">
-                    <i class="fa-solid fa-image"></i>
-                    Gallery Images
-                </a>
-            </li>
+{{--            <li class="nav-item">--}}
+{{--                <a class="nav-link {{ request()->routeIs('gallery.*') ? 'active' : '' }}" href="{{route('gallery.index')}}">--}}
+{{--                    <i class="fa-solid fa-image"></i>--}}
+{{--                    Gallery Images--}}
+{{--                </a>--}}
+{{--            </li>--}}
             <li class="nav-item">
                 <a class="nav-link {{ request()->routeIs('users.*') ? 'active' : '' }}" href="{{route('users.index')}}">
                     <i class="fa-solid fa-user"></i>
