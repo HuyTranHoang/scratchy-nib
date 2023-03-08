@@ -76,7 +76,7 @@
 
     </section>
 
-    <section data-aos="fade-up" data-aos-easing="ease">
+    <section data-aos="fade-right" data-aos-easing="ease">
         <div class="container text-primary">
             <h1 id="Traditional" class="my-3 text-center text-primary">Traditional Calligraphy</h1>
             <div class="row mb-3">
@@ -120,57 +120,59 @@
 
     <section class="bg-secondary-color">
         <x-home.overlay-top />
-        <div data-aos="fade-right" class="container text-secondary">
-            <h1 id="Contemporary" class="mb-3 text-center">Contemporary Calligraphy</h1>
-            <div class="row mb-3">
-                <div class="col-sm-4 col-md-4 col-lg-2 offset-lg-1">
-                    <img class="img-fluid" src="{{asset('storage/images/divider-pink.png')}}" alt="divider">
+        <div class="container text-secondary overflow-hidden">
+            <div data-aos="fade-left">
+                <h1 id="Contemporary" class="mb-3 text-center">Contemporary Calligraphy</h1>
+                <div class="row mb-3">
+                    <div class="col-sm-4 col-md-4 col-lg-2 offset-lg-1">
+                        <img class="img-fluid" src="{{asset('storage/images/divider-pink.png')}}" alt="divider">
+                    </div>
                 </div>
-            </div>
-            <div class="row text-primary-color">
-                <div class="col-md-6 col-lg-5 offset-lg-1 text-center">
-                    <img class="img-fluid" src="https://i.pinimg.com/564x/4d/ec/20/4dec201059f0f7ae894a189453a9f2e9.jpg" alt="">
-                    <i>Love it catches you when you're not looking</i>
+                <div class="row text-primary-color">
+                    <div class="col-md-6 col-lg-5 offset-lg-1 text-center">
+                        <img class="img-fluid" src="https://i.pinimg.com/564x/4d/ec/20/4dec201059f0f7ae894a189453a9f2e9.jpg" alt="">
+                        <i>Love it catches you when you're not looking</i>
+                    </div>
+
+                    <div class="col-md-6 col-lg-5 offset-lg-1 text-center">
+                        <p>
+                            <b>Contemporary calligraphy</b> is a modern interpretation of traditional calligraphy that
+                            incorporates new techniques, materials, and styles. While traditional calligraphy emphasizes adherence
+                            to established rules and forms, <b>contemporary calligraphy</b> is more experimental and often allows for more
+                            creative expression.
+                        </p>
+                        <p>
+                            <b>Contemporary calligraphy</b> can take many forms, ranging from experimental calligraphy
+                            that pushes the boundaries of the art form, to more commercial calligraphy used for graphic design,
+                            branding, and marketing. Contemporary calligraphers may use a range of tools and media, such as
+                            digital tools, watercolors, and mixed media, to create their work.
+                        </p>
+                        <p>
+                            One of the key features of <b>contemporary calligraphy</b> is the incorporation of modern design elements
+                            and aesthetics. This can include the use of bold colors, graphic patterns, and abstract shapes,
+                            as well as the integration of calligraphy into other forms of design, such as typography, illustration,
+                            and branding.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="col-md-6 col-lg-5 offset-lg-1 text-center">
-                    <p>
-                        <b>Contemporary calligraphy</b> is a modern interpretation of traditional calligraphy that
-                        incorporates new techniques, materials, and styles. While traditional calligraphy emphasizes adherence
-                        to established rules and forms, <b>contemporary calligraphy</b> is more experimental and often allows for more
-                        creative expression.
-                    </p>
-                    <p>
-                        <b>Contemporary calligraphy</b> can take many forms, ranging from experimental calligraphy
-                        that pushes the boundaries of the art form, to more commercial calligraphy used for graphic design,
-                        branding, and marketing. Contemporary calligraphers may use a range of tools and media, such as
-                        digital tools, watercolors, and mixed media, to create their work.
-                    </p>
-                    <p>
-                        One of the key features of <b>contemporary calligraphy</b> is the incorporation of modern design elements
-                        and aesthetics. This can include the use of bold colors, graphic patterns, and abstract shapes,
-                        as well as the integration of calligraphy into other forms of design, such as typography, illustration,
-                        and branding.
-                    </p>
-                </div>
-            </div>
+                <div class="row text-primary-color mt-lg-3">
+                    <div class="col-md-6 col-lg-5 offset-lg-1 text-center">
+                        <p>
+                            <b>Contemporary calligraphy</b> is a constantly evolving art form, with new styles and techniques emerging all the time. Some contemporary calligraphers are also pushing the boundaries of the art form by incorporating technology and new media, such as using laser cutters to create intricate calligraphy designs, or experimenting with interactive calligraphy installations.
+                        </p>
+                        <p>
+                            In summary, <b>contemporary calligraphy</b> is a modern interpretation of traditional calligraphy that embraces new techniques, materials, and styles, and allows for more creative expression and experimentation.
+                        </p>
+                    </div>
 
-            <div class="row text-primary-color mt-lg-3">
-                <div class="col-md-6 col-lg-5 offset-lg-1 text-center">
-                    <p>
-                        <b>Contemporary calligraphy</b> is a constantly evolving art form, with new styles and techniques emerging all the time. Some contemporary calligraphers are also pushing the boundaries of the art form by incorporating technology and new media, such as using laser cutters to create intricate calligraphy designs, or experimenting with interactive calligraphy installations.
-                    </p>
-                    <p>
-                        In summary, <b>contemporary calligraphy</b> is a modern interpretation of traditional calligraphy that embraces new techniques, materials, and styles, and allows for more creative expression and experimentation.
-                    </p>
-                </div>
-
-                <div class="col-md-6 col-lg-5 offset-lg-1 text-center">
-                    <img class="img-fluid" src="https://i.pinimg.com/originals/82/39/d8/8239d8337c4058b0e2d6a674075891bd.jpg" alt="">
-                    <i>Thanks, Love so much</i>
-                    <div class="row">
-                        <div class="col">
-                            <button class="btn btn-primary-color btn-more-about mt-3 pe-4">More about Contemporary Calligraphy <i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="col-md-6 col-lg-5 offset-lg-1 text-center">
+                        <img class="img-fluid" src="https://i.pinimg.com/originals/82/39/d8/8239d8337c4058b0e2d6a674075891bd.jpg" alt="">
+                        <i>Thanks, Love so much</i>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn btn-primary-color btn-more-about mt-3 pe-4">More about Contemporary Calligraphy <i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
                         </div>
                     </div>
                 </div>
