@@ -32,7 +32,7 @@ Route::middleware(['web', 'VisitorCounter'])->group(function () {
     Route::get('/gallery', [HomeController::class, 'gallery'])->name('home.gallery');
     Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
     Route::get('/about', [HomeController::class, 'about'])->name('home.about');
-    Route::get('/detail', [HomeController::class, 'detail'])->name('home.detail');
+    Route::get('/detail/{calligraphy}', [HomeController::class, 'detail'])->name('home.detail');
 });
 
 // User profile

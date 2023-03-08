@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\EmailPostRequest;
 use App\Mail\Contact;
+use App\Models\Calligraphy;
+use App\Models\CalligraphyCategory;
+use App\Models\CalligraphyStyle;
 use App\Models\GalleryImage;
 use App\Models\Visitor;
 use Illuminate\Support\Facades\Mail;
@@ -20,7 +23,10 @@ class HomeController extends Controller
 
     public function category()
     {
-        return view('home.category');
+        return view('home.category', [
+            'categories' => CalligraphyCategory::all(),
+            'styles' => CalligraphyStyle::all()
+        ]);
     }
 
     public function gallery()
@@ -40,8 +46,10 @@ class HomeController extends Controller
         return view('home.about');
     }
 
-    public function detail(){
-        return view('home.detail');
+    public function detail(Calligraphy $calligraphy){
+        return view('home.detail', [
+            'calligraphy' => $calligraphy
+        ]);
     }
 
     public function sendEmail(EmailPostRequest $request)
