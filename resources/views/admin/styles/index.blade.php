@@ -33,7 +33,7 @@
                     <td class="text-center px-0">
                         <a href="{{route('styles.edit', $style -> style_id)}}"><i class="fa-solid fa-pen"></i></a></td>
                     <td class="text-center px-0">
-                        <button type="button" class="px-1 border-0 {{$index % 2 != 0 ? 'bg-white' : ''}} delete-calligraphy"
+                        <button type="button" class="px-1 border-0 {{$index % 2 != 0 ? 'bg-white' : ''}} delete-style"
                                 data-id="{{$style -> style_id}}" data-name="{{$style -> style_name}}"
                                 data-bs-toggle="modal" data-bs-target="#deleteModal">
                             <i class="text-primary fa-solid fa-trash"></i>

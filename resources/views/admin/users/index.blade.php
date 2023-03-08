@@ -4,7 +4,7 @@
         <h1 class=" text-primary-color">Users</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
-                <button type="button" class="btn btn-sm btn-outline-primary">Add New User</button>
+                <a href="{{route('users.create')}}" class="btn btn-sm btn-outline-primary">Add New User</a>
             </div>
         </div>
     </div>
@@ -33,7 +33,7 @@
                     <td class="text-center px-0">
                         <a href="{{route('users.edit', $user -> user_id)}}"><i class="fa-solid fa-pen"></i></a></td>
                     <td class="text-center px-0">
-                        <button type="button" class="px-1 border-0 {{$index % 2 != 0 ? 'bg-white' : ''}} delete-calligraphy"
+                        <button type="button" class="px-1 border-0 {{$index % 2 != 0 ? 'bg-white' : ''}} delete-users"
                                 data-id="{{$user -> user_id}}" data-name="{{$user -> name}}"
                                 data-bs-toggle="modal" data-bs-target="#deleteModal">
                             <i class="text-primary fa-solid fa-trash"></i>
@@ -45,5 +45,22 @@
             </tbody>
         </table>
     </div>
+
+    <!-- Modal -->
+    <x-admin.delete-modal>
+        <x-slot:action>
+            {{route('users.destroy','id')}}
+        </x-slot:action>
+
+        <x-slot:body>
+            <input id="users_id" name="users_id" hidden="" value="">
+            <h5 class="text-center text-danger">Are you sure you want to delete this category?</h5>
+            <h6 class="text-center mb-3 text-primary-color fw-light" style="font-size: 0.8rem">
+                <i>this action cannot be reversed</i></h6>
+
+            <label for="users_name">Category name: </label>
+            <input class="form-control mt-1" type="text" id="users_name" name="users_name" disabled readonly>
+        </x-slot:body>
+    </x-admin.delete-modal>
 
 </x-admin-layout>

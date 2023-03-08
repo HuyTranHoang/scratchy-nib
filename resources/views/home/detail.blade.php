@@ -6,10 +6,10 @@
         <div class="row">
             <div class="col-md-5 bg-secondary-color p-0">
                     <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" data-lightbox="detail">
-                        <img class="img-size rounded-start" src="https://api.lorem.space/image/face" alt="error">
+                        <img class="img-size rounded" src="https://api.lorem.space/image/face" alt="error">
                     </a>
             </div>
-            <div class="col-md-7  bg-secondary-color rounded-end">
+            <div class="col-md-7  bg-secondary-color rounded">
                 <div class="main-description my-3">
                     <div class="categories text-bold">
                         Category:
@@ -180,7 +180,7 @@
                 </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col w-50">
             <div class="card text-dark">
                 <div class="card-body">
                     <div class="d-flex flex-start">
