@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\EmailPostRequest;
 use App\Mail\Contact;
+use App\Models\GalleryImage;
 use App\Models\Visitor;
 use Illuminate\Support\Facades\Mail;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -24,7 +25,9 @@ class HomeController extends Controller
 
     public function gallery()
     {
-        return view('home.gallery');
+        return view('home.gallery', [
+            'images' => GalleryImage::all()
+        ]);
     }
 
     public function contact()
@@ -37,10 +40,6 @@ class HomeController extends Controller
         return view('home.about');
     }
 
-    public function authenticate()
-    {
-        return view('home.authenticate');
-    }
     public function detail(){
         return view('home.detail');
     }
