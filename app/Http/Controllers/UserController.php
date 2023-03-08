@@ -42,8 +42,9 @@ class UserController extends Controller
 
     public function edit(User $user)
     {
-        //
-        return view('admin.users.edit',['user' => $user]);
+        return view('admin.users.edit', [
+            'user' => $user
+        ]);
     }
 
     public function update(UserPutRequest $request, User $user)
@@ -57,8 +58,7 @@ class UserController extends Controller
 
     public function destroy(Request $request)
     {
-
-        $userID = $request->users_id;
+        $userID = $request->user_id;
         $user = User::findOrFail($userID);
         $user->delete();
         Alert::success('Success', 'Delete succesfully deleted!')->buttonsStyling(false)->autoClose(1500);

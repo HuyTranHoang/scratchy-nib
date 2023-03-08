@@ -18,7 +18,7 @@
                 <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                 @enderror
 
-                <div class="my-3">
+                <div class="mt-3">
                     <label for="email" class="form-label">Email</label>
                     <input type="email" class="form-control" name="email" id="email" value="{{$user -> email}}">
                     @error('email')
@@ -26,7 +26,7 @@
                     @enderror
                 </div>
 
-                <div class="my-3">
+                <div class="mt-3">
                     <label for="password" class="form-label">Password</label>
                     <input type="password" class="form-control" name="password" id="password" value="{{$user -> password}}">
                     @error('password')
@@ -35,6 +35,6 @@
                 </div>
             </div>
         </div>
-        <button class="btn btn-primary" type="submit">Update</button>
+        <button class="btn btn-primary mt-3" type="submit">Update</button>
     </form>
 </x-admin-layout>

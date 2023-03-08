@@ -40,9 +40,11 @@ $(function() {
 
     $(document).on('click','.delete-users',function() {
         const id = $(this).attr('data-id');
-        const usersName = $(this).attr('data-name');
-        $('#users_id').val(id);
-        $('#users_name').val(usersName);
+        const userName = $(this).attr('data-name');
+        const userEmail = $(this).attr('data-email');
+        $('#user_id').val(id);
+        $('#user_name').val(userName);
+        $('#user_email').val(userEmail);
     });
 
 

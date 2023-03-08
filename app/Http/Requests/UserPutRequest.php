@@ -27,7 +27,7 @@ class UserPutRequest extends FormRequest
         return [
             'name' => ['required', 'string', 'max:50'],
             'password' => ['required', Password::defaults()],
-            'email' => ['email', 'max:50', Rule::unique(User::class)->ignore($this->user()->user_id,'user_id')]
+            'email' => ['email', 'max:50', Rule::unique(User::class)->ignore($this->user->user_id,'user_id')]
         ];
     }
 }
