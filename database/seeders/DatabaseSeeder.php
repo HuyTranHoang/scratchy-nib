@@ -421,34 +421,169 @@ class DatabaseSeeder extends Seeder
                 'calligraphy_id' => '5',
                 'user_id' => '5',
             ],
+            [
+                'feedback_message' => 'Đẹpquasas zậy ố mai gọt',
+                'calligraphy_id' => '5',
+                'user_id' => '5',
+            ],
+            [
+                'feedback_message' => 'nai à bíu ti full',
+                'calligraphy_id' => '5',
+                'user_id' => '5',
+            ],
+            [
+                'feedback_message' => 'quaoo a du ang seng',
+                'calligraphy_id' => '6',
+                'user_id' => '6',
+            ],
+            [
+                'feedback_message' => 'phan anh cua toi',
+                'calligraphy_id' => '7',
+                'user_id' => '7',
+            ],
+            [
+                'feedback_message' => 'dark dark burh burh lmao lmao',
+                'calligraphy_id' => '8',
+                'user_id' => '9',
+            ],
+            [
+                'feedback_message' => 'Holy shettt',
+                'calligraphy_id' => '9',
+                'user_id' => '8',
+            ],
+            [
+                'feedback_message' => 'Đẹp qu trời luôn thật không thể tin được',
+                'calligraphy_id' => '10',
+                'user_id' => '10',
+            ],
+            [
+                'feedback_message' => 'tôi yêu tấm ảnh này quá tuyệt vời',
+                'calligraphy_id' => '15',
+                'user_id' => '2',
+            ],
+            [
+                'feedback_message' => 'tôi yêu ảnh này',
+                'calligraphy_id' => '9',
+                'user_id' => '3',
+            ],
+            [
+                'feedback_message' => 'tấm ảnh làm tôi xúc động',
+                'calligraphy_id' => '11',
+                'user_id' => '5',
+            ],
+            [
+                'feedback_message' => 'thật ý nghĩa ',
+                'calligraphy_id' => '12',
+                'user_id' => '4',
+            ],
         ]);
 
         // Hình
         GalleryImage::factory()->createMany([
             [
-                'image_name' => 'uploads/Hinh1.jpg',
+                'image_name' => 'uploads/me.jpg',
                 'image_description' => '',
                 'calligraphy_id' => '1',
             ],
             [
-                'image_name' => 'uploads/Hinh2.jpg',
+                'image_name' => 'uploads/datnguoivietdeyenchonguoiviet.jpg',
                 'image_description' => '',
                 'calligraphy_id' => '2',
             ],
             [
-                'image_name' => 'uploads/Hinh3.jpg',
+                'image_name' => 'uploads/camottroithuongnho.jpg',
                 'image_description' => '',
                 'calligraphy_id' => '3',
             ],
             [
-                'image_name' => 'uploads/Hinh4.jpg',
+                'image_name' => 'uploads/bietkhinaogaplai.jpg',
                 'image_description' => '',
                 'calligraphy_id' => '4',
             ],
             [
-                'image_name' => 'uploads/Hinh5.jpg',
+                'image_name' => 'uploads/antrithanhthoi.jpg',
                 'image_description' => '',
                 'calligraphy_id' => '5',
+            ],
+            [
+                'image_name' => 'uploads/tonsuthanhdao.jpg',
+                'image_description' => '',
+                'calligraphy_id' => '6',
+            ],
+            [
+                'image_name' => 'uploads/allah.jpg',
+                'image_description' => '',
+                'calligraphy_id' => '7',
+            ],
+            [
+                'image_name' => 'uploads/amanah.jpg',
+                'image_description' => '',
+                'calligraphy_id' => '8',
+            ],
+            [
+                'image_name' => 'uploads/wallahu.jpg',
+                'image_description' => '',
+                'calligraphy_id' => '9',
+            ],
+            [
+                'image_name' => 'uploads/basmala.jpg',
+                'image_description' => '',
+                'calligraphy_id' => '10',
+            ],
+            [
+                'image_name' => 'uploads/tangdynasty.jpg',
+                'image_description' => '',
+                'calligraphy_id' => '11',
+            ],
+            [
+                'image_name' => 'uploads/rehmannia.jpg',
+                'image_description' => '',
+                'calligraphy_id' => '12',
+            ],
+            [
+                'image_name' => 'uploads/yunbake.jpg',
+                'image_description' => '',
+                'calligraphy_id' => '13',
+            ],
+            [
+                'image_name' => 'uploads/hangul.jpg',
+                'image_description' => '',
+                'calligraphy_id' => '14',
+            ],
+            [
+                'image_name' => 'uploads/arewritteninflowing.jpg',
+                'image_description' => '',
+                'calligraphy_id' => '15',
+            ],
+            [
+                'image_name' => 'uploads/karate.jpg',
+                'image_description' => '',
+                'calligraphy_id' => '16',
+            ],
+            [
+                'image_name' => 'uploads/eastern.jpg',
+                'image_description' => '',
+                'calligraphy_id' => '17',
+            ],
+            [
+                'image_name' => 'uploads/gerardbrils.jpg',
+                'image_description' => '',
+                'calligraphy_id' => '18',
+            ],
+            [
+                'image_name' => 'uploads/ialwaysstanbyyourside.jpg',
+                'image_description' => '',
+                'calligraphy_id' => '18',
+            ],
+            [
+                'image_name' => 'uploads/imazing.jpg',
+                'image_description' => '',
+                'calligraphy_id' => '19',
+            ],
+            [
+                'image_name' => 'uploads/gerardbrils.jpg',
+                'image_description' => '',
+                'calligraphy_id' => '20',
             ],
         ]);
     }
