@@ -14,6 +14,8 @@
 @use "components/gallery";
 // Categories
 @use "components/categories";
+// Detail
+@use "components/detail";
 // Authenticate
 @use "components/authenticate";
 // Errors page
@@ -25,6 +27,7 @@
 @import url('../../node_modules/lightbox2/dist/css/lightbox.min.css');
 // Aos
 @import url('../../node_modules/aos/dist/aos.css');
+
 
 // For footer to be in the bottom
 html,body {

@@ -2,6 +2,7 @@ import './bootstrap';
 import InitLocationTime from './geolocation'
 
 // Lightbox
+
 import Lightbox from 'lightbox2'
 // Aos
 import AOS from 'aos';
