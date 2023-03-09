@@ -45,7 +45,7 @@
                         <div class="card-gallery">
                             <img class="card-img-gallery rounded" src="{{ asset('storage/'.$image->image_name) }}"  alt="Error"/>
                             <a class="card-body-gallery" href="{{ asset('storage/'.$image->image_name) }}" data-lightbox="gallery">
-                                <h6 class="card-title-gallery"></h6>
+                                <h6 class="card-title-gallery">{{ $image -> calligraphy -> calligraphy_name }}</h6>
                                 <p class="card-category">{{ $image -> calligraphy -> calligraphyStyle -> style_name }}</p>
                                 <a class="card-btn text-decoration-none" href="{{ route('home.detail', $image -> calligraphy -> calligraphy_id) }}">Detail</a>
                             </a>
