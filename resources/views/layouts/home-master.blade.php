@@ -18,6 +18,8 @@
 
     @include('sweetalert::alert')
 
+    <!-- Back to top button -->
+    <a class="text-decoration-none" id="btt-button"></a>
 
     <x-home.layouts.header />
 

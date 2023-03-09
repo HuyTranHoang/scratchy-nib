@@ -1,5 +1,7 @@
 // Fonts
 @use "abstracts/fonts";
+// Variable
+@use "abstracts/variables";
 // Custom Bootstrap 5.3
 @use "abstracts/bootstrap";
 // Utilities ( Color, Button .. )
@@ -31,6 +33,7 @@
 //Section content
 .btn-more-about{
     position: relative;
+    transition: 0.1s all ease-in;
     i {
         top: 55%;
         right: 30px;
@@ -38,6 +41,9 @@
         position: absolute;
         transition: 0.1s all ease-in;
         opacity: 0;
+    }
+    &:hover {
+        padding-right: 25px;
     }
     &:hover i {
         right: 5px;
@@ -104,3 +110,41 @@
     }
 }
 
+// Back to top button
+
+#btt-button {
+    display: inline-block;
+    background-color: variables.$primary-color;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s,
+    opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    &::after {
+        content: "\f077";
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 2em;
+        line-height: 50px;
+        color: #fff;
+    }
+    &:hover {
+        cursor: pointer;
+        background-color: #333;
+    }
+    &:active {
+        background-color: #555;
+    }
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
