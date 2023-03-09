@@ -16,7 +16,8 @@ class CalligraphiesController extends Controller
     public function index()
     {
         return view('admin.calligraphies.index', [
-            'calligraphies' => Calligraphy::paginate(5)
+            'calligraphies' => Calligraphy::filter(request(['calligraphyName','styleID']))->paginate(5)->appends(request()->query()),
+            'styles' => CalligraphyStyle::all()
         ]);
     }
 

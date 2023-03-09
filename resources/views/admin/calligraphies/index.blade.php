@@ -9,8 +9,33 @@
         </div>
     </div>
 
+    <div class="row my-3">
+        <div class="col-md-12 col-lg-4">
+            <h3>Calligraphies list</h3>
+        </div>
 
-    <h3>Calligraphies list</h3>
+        <div class="colmd-12 d-sm-block col-lg-8 d-md-flex justify-content-md-end">
+            <form action="" class="d-flex form-outline">
+                <a class="btn btn-primary-color rounded me-3" href="{{ route('calligraphies.index') }}" style="line-height: 30px">Reset</a>
+                <div class="field me-3" style="min-width: 200px">
+                    <label for="styleID" class="label">Filter by Style Name</label>
+                    <select class="select" id="styleID" name="styleID" onchange='this.form.submit()'>
+                        <option value="">All</option>
+                        @foreach($styles as $style)
+                            <option {{ $style->style_id == request()->cateID ? 'selected' : '' }} value="{{ $style->style_id }}">{{ $style->style_name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <input class="form-control rounded-start rounded-0" style="width: 200px" value="{{ request()->calligraphyName }}"
+                       name="calligraphyName" type="text" placeholder="Search by name.." aria-label="search">
+                <button class="btn rounded-end rounded-0 btn-primary-color" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
     <div class="table-responsive table-bordered">
         <table class="table table-striped align-middle">
             <thead class="table-success">

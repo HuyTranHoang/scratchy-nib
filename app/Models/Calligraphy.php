@@ -31,4 +31,13 @@ class Calligraphy extends Model
     {
         return $this->hasMany(Feedback::class, 'calligraphy_id');
     }
+
+    public function scopeFilter($query, array $filters) {
+        if($filters['calligraphyName'] ?? false) {
+            $query->where('calligraphy_name','like','%'.request('calligraphyName').'%');
+        }
+        if($filters['styleID'] ?? false) {
+            $query->where('style_id',request('styleID'));
+        }
+    }
 }
