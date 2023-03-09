@@ -16,9 +16,10 @@
 
         <div class="colmd-12 d-sm-block col-lg-8 d-md-flex justify-content-md-end">
             <form action="" class="d-flex form-outline">
+                <a class="btn btn-primary-color rounded me-3" href="{{ route('styles.index') }}" style="line-height: 30px">Reset</a>
                 <div class="field me-3" style="min-width: 200px">
                     <label for="cateID" class="label">Filter by Category Name</label>
-                    <select class="select" id="cateID" name="cateID">
+                    <select class="select" id="cateID" name="cateID" onchange='this.form.submit()'>
                         <option value="">All</option>
                         @foreach($categories as $category)
                             <option {{ $category->category_id == request()->cateID ? 'selected' : '' }} value="{{ $category->category_id }}">{{ $category->category_name }}</option>
@@ -26,15 +27,11 @@
                     </select>
                 </div>
 
-                <input class="form-control me-3" style="width: 200px" value="{{ request()->styleName }}"
-                       id="" name="styleName" type="text" placeholder="Search by name.." aria-label="search">
-
-                <button class="btn rounded btn-primary-color me-3" type="submit">
-                    Filter
+                <input class="form-control rounded-start rounded-0" style="width: 200px" value="{{ request()->styleName }}"
+                       name="styleName" type="text" placeholder="Search by name.." aria-label="search">
+                <button class="btn rounded-end rounded-0 btn-primary-color" type="submit">
+                    <i class="fas fa-search"></i>
                 </button>
-
-                <a class="btn rounded btn-primary-color" href="{{ route('styles.index') }}" style="line-height: 30px">Reset</a>
-
             </form>
         </div>
     </div>
