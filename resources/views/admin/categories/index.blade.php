@@ -18,7 +18,8 @@
         <div class="d-sm-block col-md-6 d-md-flex justify-content-md-end">
             <a class="btn btn-primary me-3" href="{{ route('categories.index') }}">Reset</a>
             <form action="" class="d-flex form-outline">
-                <input class="form-control rounded-start rounded-0" id="" name="cateName" type="text" placeholder="Search by name.." aria-label="search">
+                <input class="form-control rounded-start rounded-0" value="{{ request()->cateName }}"
+                       name="cateName" type="text" placeholder="Search by name.." aria-label="search">
                 <button class="btn rounded-end rounded-0 btn-primary-color" type="submit">
                     <i class="fas fa-search"></i>
                 </button>
@@ -44,7 +45,7 @@
                     $redirectTo = $categories -> previousPageUrl();
                 }
             @endphp
-            @foreach($categories as $index => $category)
+            @forelse($categories as $index => $category)
                 <tr>
                     <td>{{$category -> category_id}}</td>
                     <td>{{$category -> category_name}}</td>
@@ -60,7 +61,12 @@
                     </td>
                     <td>{{date('d-m-Y', strtotime($category -> created_at))}}</td>
                 </tr>
-            @endforeach
+            @empty
+                <tr>
+                    <td></td>
+                    <td colspan="5" class="">No search results found</td>
+                </tr>
+            @endforelse
             </tbody>
         </table>
         {{ $categories->links() }}

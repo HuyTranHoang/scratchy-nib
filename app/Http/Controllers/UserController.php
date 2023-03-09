@@ -16,7 +16,7 @@ class UserController extends Controller
     public function index()
     {
         return view('admin.users.index', [
-            'users' => User::paginate(10)
+            'users' => User::filter(request(['userFilter']))->paginate(10)->appends(request()->query())
         ]);
     }
 

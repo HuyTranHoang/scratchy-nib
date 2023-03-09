@@ -56,7 +56,7 @@
                     $redirectTo = $calligraphies -> previousPageUrl();
                 }
             @endphp
-            @foreach($calligraphies as $index => $calligraphy)
+            @forelse($calligraphies as $index => $calligraphy)
                 <tr>
                     <td>{{$calligraphy -> calligraphy_id}}</td>
                     <td>{{$calligraphy-> calligraphy_name}}</td>
@@ -86,7 +86,12 @@
                     </td>
                     <td>{{date('d-m-Y', strtotime($calligraphy -> created_at))}}</td>
                 </tr>
-            @endforeach
+            @empty
+                <tr>
+                    <td></td>
+                    <td colspan="7" class="">No search results found</td>
+                </tr>
+            @endforelse
             </tbody>
         </table>
         {{ $calligraphies->links() }}

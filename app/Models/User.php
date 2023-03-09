@@ -60,4 +60,11 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->belongsTo(Role::class, 'user_id');
     }
+
+    public function scopeFilter($query, array $filters) {
+        if($filters['userFilter'] ?? false) {
+            $query->where('name','like','%'.request('userFilter').'%')
+                ->orWhere('email','like','%'.request('userFilter').'%');
+        }
+    }
 }

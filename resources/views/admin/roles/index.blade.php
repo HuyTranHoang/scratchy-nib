@@ -9,7 +9,23 @@
         </div>
     </div>
 
-    <h3>Roles list</h3>
+    <div class="row my-3">
+        <div class="col-md-6">
+            <h3>Roles list</h3>
+        </div>
+
+        <div class="d-sm-block col-md-6 d-md-flex justify-content-md-end">
+            <a class="btn btn-primary me-3" href="{{ route('roles.index') }}">Reset</a>
+            <form action="" class="d-flex form-outline">
+                <input class="form-control rounded-start rounded-0" value="{{ request()->userName }}"
+                       name="roleName" type="text" placeholder="Search by name.." aria-label="search">
+                <button class="btn rounded-end rounded-0 btn-primary-color" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
     <div class="table-responsive table-bordered">
         <table class="table table-striped align-middle">
             <thead class="table-success">
@@ -27,7 +43,7 @@
                     $redirectTo = $roles -> previousPageUrl();
                 }
             @endphp
-            @foreach($roles as $index => $role)
+            @forelse($roles as $index => $role)
                 <tr>
                     <td>{{$role -> role_id}}</td>
                     <td>{{$role -> role_name}}</td>
@@ -44,7 +60,12 @@
 
                     <td>{{date('d-m-Y', strtotime($role -> created_at))}}</td>
                 </tr>
-            @endforeach
+                @empty
+                    <tr>
+                        <td></td>
+                        <td colspan="4" class="">No search results found</td>
+                    </tr>
+                @endforelse
             </tbody>
         </table>
     </div>

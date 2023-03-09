@@ -15,7 +15,7 @@ class FeedbackController extends Controller
     public function index()
     {
         return view('admin.feedback.index', [
-            'feedback' => Feedback::paginate(5)
+            'feedback' => Feedback::filter(request(['userName']))->paginate(10)->appends(request()->query())
         ]);
     }
 

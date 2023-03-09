@@ -55,7 +55,7 @@
                     $redirectTo = $styles -> previousPageUrl();
                 }
             @endphp
-            @foreach($styles as $index => $style)
+            @forelse($styles as $index => $style)
                 <tr>
                     <td>{{$style -> style_id}}</td>
                     <td>{{$style -> style_name}}</td>
@@ -72,7 +72,12 @@
                     </td>
                     <td>{{date('d-m-Y', strtotime($style -> created_at))}}</td>
                 </tr>
-            @endforeach
+            @empty
+                <tr>
+                    <td></td>
+                    <td colspan="6" class="">No search results found</td>
+                </tr>
+            @endforelse
             </tbody>
         </table>
         {{ $styles->links() }}

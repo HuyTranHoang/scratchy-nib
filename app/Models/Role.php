@@ -18,4 +18,10 @@ class Role extends Model
         return $this->hasMany(User::class, 'role_id');
     }
 
+    public function scopeFilter($query, array $filters) {
+        if($filters['roleName'] ?? false) {
+            $query->where('role_name','like','%'.request('roleName').'%');
+        }
+    }
+
 }

@@ -25,4 +25,13 @@ class Feedback extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+
+    public function scopeFilter($query, array $filters) {
+        if($filters['userName'] ?? false) {
+            $query->whereIn('user_id',function ($query) {
+                $query->select('user_id')->from('users')
+                    ->where('name','like','%'.request()->userName.'%');
+            });
+        }
+    }
 }

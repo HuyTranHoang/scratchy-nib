@@ -9,8 +9,23 @@
         </div>
     </div>
 
+    <div class="row my-3">
+        <div class="col-md-6">
+            <h3>Users list</h3>
+        </div>
 
-    <h3>Users list</h3>
+        <div class="d-sm-block col-md-6 d-md-flex justify-content-md-end">
+            <a class="btn btn-primary me-3" href="{{ route('users.index') }}">Reset</a>
+            <form action="" class="d-flex form-outline">
+                <input class="form-control rounded-start rounded-0" value="{{ request()->userName }}"
+                       name="userFilter" type="text" placeholder="Search by name, email.." aria-label="search">
+                <button class="btn rounded-end rounded-0 btn-primary-color" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
     <div class="table-responsive table-bordered">
         <table class="table table-striped align-middle">
             <thead class="table-success">
@@ -30,7 +45,7 @@
                     $redirectTo = $users -> previousPageUrl();
                 }
             @endphp
-            @foreach($users as $index => $user)
+            @forelse($users as $index => $user)
                 <tr>
                     <td>{{$user -> user_id}}</td>
                     <td>{{$user -> name}}</td>
@@ -47,7 +62,12 @@
                     </td>
                     <td>{{date('d-m-Y', strtotime($user -> created_at))}}</td>
                 </tr>
-            @endforeach
+            @empty
+                <tr>
+                    <td></td>
+                    <td colspan="6" class="">No search results found</td>
+                </tr>
+            @endforelse
             </tbody>
         </table>
         {{ $users->links() }}

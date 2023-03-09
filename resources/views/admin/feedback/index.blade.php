@@ -8,7 +8,25 @@
             </div>
         </div>
     </div>
-    <h3>Feedback List</h3>
+
+    <div class="row my-3">
+        <div class="col-md-6">
+            <h3>Feedback List</h3>
+        </div>
+
+        <div class="d-sm-block col-md-6 d-md-flex justify-content-md-end">
+            <a class="btn btn-primary me-3" href="{{ route('feedback.index') }}">Reset</a>
+            <form action="" class="d-flex form-outline">
+                <input class="form-control rounded-start rounded-0" value="{{ request()->userName }}"
+                       name="userName" type="text" placeholder="Search by user name.." aria-label="search">
+                <button class="btn rounded-end rounded-0 btn-primary-color" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+
     <div class="table-responsive table-bordered">
         <table class="table table-striped align-middle">
             <thead class="table-success">
@@ -28,7 +46,7 @@
                     $redirectTo = $feedback -> previousPageUrl();
                 }
             @endphp
-            @foreach($feedback as $index => $feb)
+            @forelse($feedback as $index => $feb)
                 <tr>
                     <td>{{$feb -> feedback_id}}</td>
                     <td>{{$feb -> feedback_message}}</td>
@@ -45,7 +63,12 @@
                     </td>
                     <td>{{date('d-m-Y', strtotime($feb -> created_at))}}</td>
                 </tr>
-            @endforeach
+            @empty
+                <tr>
+                    <td></td>
+                    <td colspan="6" class="">No search results found</td>
+                </tr>
+            @endforelse
             </tbody>
         </table>
         {{ $feedback->links() }}

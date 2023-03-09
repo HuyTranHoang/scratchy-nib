@@ -13,7 +13,7 @@ class RolesController extends Controller
     public function index()
     {
         return view('admin.roles.index', [
-            'roles' => Role::paginate(10)
+            'roles' => Role::filter(request(['roleName']))->paginate(10)->appends(request()->query())
         ]);
     }
 
