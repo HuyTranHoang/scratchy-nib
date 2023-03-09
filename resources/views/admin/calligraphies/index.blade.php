@@ -22,7 +22,7 @@
                     <select class="select" id="styleID" name="styleID" onchange='this.form.submit()'>
                         <option value="">All</option>
                         @foreach($styles as $style)
-                            <option {{ $style->style_id == request()->cateID ? 'selected' : '' }} value="{{ $style->style_id }}">{{ $style->style_name }}</option>
+                            <option {{ $style->style_id == request()->styleID ? 'selected' : '' }} value="{{ $style->style_id }}">{{ $style->style_name }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -41,8 +41,8 @@
             <thead class="table-success">
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Calligraphy Name</th>
-                    <th scope="col">Image</th>
+                    <th scope="col" style="width: 200px;">Calligraphy Name</th>
+                    <th scope="col" style="max-width: 200px">Image</th>
                     <th scope="col">Calligraphy Description</th>
                     <th scope="col">Style</th>
                     <th scope="col" colspan="2" class="text-center">Action</th>
@@ -63,9 +63,9 @@
                     <td>
                         @forelse($calligraphy-> galleryImage as $image)
                             <img src="{{ asset('storage/'.$image -> image_name) }}" alt="{{ $image -> image_name }}"
-                                 style="max-width: 120px">
+                                 style="max-width: 200px">
                         @empty
-                            <img src="{{ asset('storage/images/noimage.jpg') }}" alt="No image" style="max-width: 120px">
+                            <img src="{{ asset('storage/images/noimage.jpg') }}" alt="No image" style="max-width: 200px">
                         @endforelse
 {{--                        @foreach ($calligraphy-> galleryImage as $image)--}}
 {{--                            <img src="{{ asset('storage/'.$image -> image_name) }}" alt="{{ $image -> image_name }}"--}}

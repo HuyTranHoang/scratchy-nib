@@ -68,7 +68,7 @@ class StyleSeeder extends Seeder
             ],
         ]);
 
-        // Style of Contemporary Calligraphy [ 8 - 10 ]
+        // Style of Contemporary Calligraphy [ 8 - 13 ]
         CalligraphyStyle::factory()->createMany([
             [
                 'style_id' => 8,
@@ -94,12 +94,34 @@ class StyleSeeder extends Seeder
                 often combined with modern design elements to create a unique, edgy aesthetic.',
                 'category_id' => 2,
             ],
-        ]);
-
-        // Style of Hand-lettering & Design [ 11 - 12 ]
-        CalligraphyStyle::factory()->createMany([
             [
                 'style_id' => 11,
+                'style_name' => 'Hand lettering',
+                'style_description' => 'Hand lettering is a contemporary style of calligraphy that is often used for
+                branding and graphic design. This style emphasizes clean, legible lettering with minimal flourishes or decorative elements.',
+                'category_id' => 2,
+            ],
+            [
+                'style_id' => 12,
+                'style_name' => 'Graffiti calligraphy',
+                'style_description' => 'Graffiti calligraphy is a style of contemporary calligraphy that is influenced
+                 by street art and graffiti culture. This style often incorporates bold, expressive lettering with a rough, textured feel.',
+                'category_id' => 2,
+            ],
+            [
+                'style_id' => 13,
+                'style_name' => 'Experimental calligraphy',
+                'style_description' => 'Experimental calligraphy is a contemporary style that pushes the boundaries of
+                the art form by incorporating new techniques, materials, and media. This can include using digital tools,
+                 mixed media, and even 3D printing to create unique and innovative calligraphy designs.',
+                'category_id' => 2,
+            ],
+        ]);
+
+        // Style of Hand-lettering & Design [ 14 - 19 ]
+        CalligraphyStyle::factory()->createMany([
+            [
+                'style_id' => 14,
                 'style_name' => '3D lettering',
                 'style_description' => '3D lettering uses shading and perspective to create the illusion of depth,
                 giving the letters a three-dimensional quality. This style is often used for logos, signage,
@@ -107,7 +129,7 @@ class StyleSeeder extends Seeder
                 'category_id' => 3,
             ],
             [
-                'style_id' => 12,
+                'style_id' => 15,
                 'style_name' => 'Vintage lettering',
                 'style_description' => 'Vintage lettering refers to a style of typography or lettering that is
                 reminiscent of the past, particularly from the early 20th century or earlier.
@@ -115,23 +137,79 @@ class StyleSeeder extends Seeder
                 and is typically characterized by a sense of nostalgia or retro charm.',
                 'category_id' => 3,
             ],
+            [
+                'style_id' => 16,
+                'style_name' => 'Modern lettering',
+                'style_description' => 'Modern lettering is a more minimalist and clean style of hand-lettering that emphasizes
+                simplicity and legibility. This style is often used for more contemporary or minimalist designs.',
+                'category_id' => 3,
+            ],
+            [
+                'style_id' => 17,
+                'style_name' => 'Illustrated lettering',
+                'style_description' => 'Illustrated lettering combines hand-drawn illustrations with lettering to create
+                unique and playful designs. This style is often used for book covers, packaging, and other creative projects.',
+                'category_id' => 3,
+            ],
+            [
+                'style_id' => 18,
+                'style_name' => 'Brush lettering',
+                'style_description' => 'Brush lettering uses a brush pen or paintbrush to create thick and thin strokes,
+                giving the letters a flowing, organic feel. This style is often used for more casual or playful designs.',
+                'category_id' => 3,
+            ],
+            [
+                'style_id' => 19,
+                'style_name' => 'Calligraphic lettering',
+                'style_description' => 'Calligraphic lettering is a style that combines calligraphy and hand-lettering
+                techniques to create elegant, flowing letterforms. This style is often used for formal or sophisticated designs.',
+                'category_id' => 3,
+            ],
         ]);
 
-        // Style of Modern Calligraphy [ 13 - 14 ]
+        // Style of Modern Calligraphy [ 20 - 14 ]
         CalligraphyStyle::factory()->createMany([
             [
-                'style_id' => 13,
+                'style_id' => 20,
                 'style_name' => 'Copperplate',
                 'style_description' => 'Copperplate is a traditional calligraphy style that has been adapted
                 for modern use. It features a delicate and flowing script, with thin upstrokes and thicker downstrokes.',
                 'category_id' => 4,
             ],
             [
-                'style_id' => 14,
+                'style_id' => 21,
                 'style_name' => 'Chalkboard art',
                 'style_description' => 'Chalkboard art refers to the practice of creating artwork or lettering on a
                 chalkboard surface. It is a popular form of modern hand-lettering and graphic design that has gained
                 popularity in recent years due to its versatility and rustic charm.',
+                'category_id' => 4,
+            ],
+            [
+                'style_id' => 22,
+                'style_name' => 'Blackletter',
+                'style_description' => 'Blackletter is a modern calligraphy style that takes inspiration from old German
+                 and English manuscripts. It often features dense, ornate lettering with sharp, angular shapes and heavy serifs.',
+                'category_id' => 4,
+            ],
+            [
+                'style_id' => 23,
+                'style_name' => 'Watercolor lettering',
+                'style_description' => 'Watercolor lettering is a modern calligraphy style that incorporates watercolor
+                paint into the design. The paint is often used to create a gradient effect, adding depth and dimension to the lettering.',
+                'category_id' => 4,
+            ],
+            [
+                'style_id' => 24,
+                'style_name' => 'Modern script',
+                'style_description' => 'Modern script is a modern calligraphy style that emphasizes simplicity and legibility.
+                It often features clean, flowing letterforms with minimal flourishes or ornamentation.',
+                'category_id' => 4,
+            ],
+            [
+                'style_id' => 25,
+                'style_name' => 'Gothic script',
+                'style_description' => 'Gothic script is a modern calligraphy style that takes inspiration from medieval
+                gothic lettering. It often features bold, blocky lettering with pointed serifs and angular shapes.',
                 'category_id' => 4,
             ],
         ]);

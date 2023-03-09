@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('calligraphies', function (Blueprint $table) {
             $table->id('calligraphy_id');
-            $table->string('calligraphy_name', 50);
+            $table->string('calligraphy_name', 255);
             $table->text('calligraphy_description')->nullable();
             $table->foreignId('style_id')->references('style_id')->on('calliraphy_styles')
                 ->onDelete('cascade');

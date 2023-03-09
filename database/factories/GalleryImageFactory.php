@@ -12,7 +12,6 @@ class GalleryImageFactory extends Factory
     {
         return [
             'image_name' => $this->faker->name(),
-            'image_description' => $this->faker->text(),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
 

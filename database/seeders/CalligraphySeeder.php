@@ -10,12 +10,17 @@ class CalligraphySeeder extends Seeder
     public function run(): void
     {
 
-        // Calligraphy of Traditional Calligraphy
+        // Traditional Calligraphy
             //Vietnam Calligraphy
         Calligraphy::factory()->createMany([
             [
+                'calligraphy_name' => 'Lộc',
+                'calligraphy_description' => 'Which mean fortune, success, the reward with merit, dedication.',
+                'style_id' => '1'
+            ],
+            [
                 'calligraphy_name' => 'Mẹ',
-                'calligraphy_description' => 'Which mean mom in vietnamese.',
+                'calligraphy_description' => 'Which mean mom.',
                 'style_id' => '1'
             ],
             [
@@ -83,6 +88,11 @@ class CalligraphySeeder extends Seeder
                 Basmala means "In the name of God, the Most Gracious, the Most Merciful.”',
                 'style_id' => '2',
             ],
+            [
+                'calligraphy_name' => 'Allah katında da güzeldir',
+                'calligraphy_description' => 'Mü’minlerin güzel gördükleri şey, Allah katında da güzeldir. Hadis-i Şerif Hat: Sami Efendi',
+                'style_id' => '2',
+            ],
         ]);
             //Chinese calligraphy
         Calligraphy::factory()->createMany([
@@ -94,6 +104,11 @@ class CalligraphySeeder extends Seeder
             [
                 'calligraphy_name' => 'Lantingji Xu',
                 'calligraphy_description' => "The most famous Chinese calligraphic work",
+                'style_id' => '3',
+            ],
+            [
+                'calligraphy_name' => 'Age',
+                'calligraphy_description' => "Chinese calligraphy'age' by sihui128 on DeviantArt",
                 'style_id' => '3',
             ],
         ]);
@@ -108,6 +123,22 @@ class CalligraphySeeder extends Seeder
             [
                 'calligraphy_name' => 'Cursive Gungche font',
                 'calligraphy_description' => "Image Courtesy dramasROK",
+                'style_id' => '4',
+            ],
+            [
+                'calligraphy_name' => 'Calligraphy works',
+                'calligraphy_description' => "By Kim Jeong Hui (1786-1856), a calligrapher during the Joseon Dynasty considered to be the finest in Korean history.",
+                'style_id' => '4',
+            ],
+            [
+                'calligraphy_name' => 'Song composed',
+                'calligraphy_description' => "The first printed copy of a song composed by King Sejong the Great, the inventor of Hangeul.",
+                'style_id' => '4',
+            ],
+            [
+                'calligraphy_name' => 'Mountain, blue mountain',
+                'calligraphy_description' => 'A calligraphic work by calligraphy artist Kim Sung-tae.
+                It reads, "Mountain, blue mountain," a line from the poem Cheongsando by Park Du Sin.',
                 'style_id' => '4',
             ],
         ]);
@@ -129,6 +160,16 @@ class CalligraphySeeder extends Seeder
                  restraints, and vital point strikes are also taught. A karate practitioner is called a karateka (空手家)',
                 'style_id' => '5',
             ],
+            [
+                'calligraphy_name' => 'Yume',
+                'calligraphy_description' => "Cursive calligraphy of 'yume', meaning dream.",
+                'style_id' => '5',
+            ],
+            [
+                'calligraphy_name' => 'Dream',
+                'calligraphy_description' => "Calligraphy of 夢 in japanese",
+                'style_id' => '5',
+            ],
         ]);
             //Western calligraphy
         Calligraphy::factory()->createMany([
@@ -147,6 +188,11 @@ class CalligraphySeeder extends Seeder
                 in a monastery.',
                 'style_id' => '6',
             ],
+            [
+                'calligraphy_name' => 'FJ Brechtel',
+                'calligraphy_description' => 'FJ Brechtel calligraphy of 16th century calligraphy.',
+                'style_id' => '6',
+            ],
         ]);
             //Greek Calligraphy
         Calligraphy::factory()->createMany([
@@ -159,6 +205,381 @@ class CalligraphySeeder extends Seeder
                 'calligraphy_name' => 'Imazing',
                 'calligraphy_description' => '',
                 'style_id' => '7',
+            ],
+        ]);
+
+        // Contemporary Calligraphy
+            // Brush calligraphy
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => "Experimental calligraphy",
+                'calligraphy_description' => '',
+                'style_id' => '8',
+            ],
+            [
+                'calligraphy_name' => "Love it catches you when you're not looking",
+                'calligraphy_description' => '',
+                'style_id' => '8',
+            ],
+            [
+                'calligraphy_name' => "Sometimes you win & sometimes you learn",
+                'calligraphy_description' => '',
+                'style_id' => '8',
+            ],
+            [
+                'calligraphy_name' => "We lightup the world",
+                'calligraphy_description' => '',
+                'style_id' => '8',
+            ],
+            [
+                'calligraphy_name' => "Pin on lettering",
+                'calligraphy_description' => '',
+                'style_id' => '8',
+            ],
+            [
+                'calligraphy_name' => "Guardian of galaxy",
+                'calligraphy_description' => '',
+                'style_id' => '8',
+            ],
+        ]);
+            // Modern script
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => "Visually",
+                'calligraphy_description' => '',
+                'style_id' => '9',
+            ],
+            [
+                'calligraphy_name' => "Bellany",
+                'calligraphy_description' => '',
+                'style_id' => '9',
+            ],
+            [
+                'calligraphy_name' => "Delightful",
+                'calligraphy_description' => '',
+                'style_id' => '9',
+            ],
+        ]);
+            //  Gothic calligraphy
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => "Freedom",
+                'calligraphy_description' => '',
+                'style_id' => '10',
+            ],
+            [
+                'calligraphy_name' => "Born to be free",
+                'calligraphy_description' => '',
+                'style_id' => '10',
+            ],
+            [
+                'calligraphy_name' => "Never give up",
+                'calligraphy_description' => '',
+                'style_id' => '10',
+            ],
+            [
+                'calligraphy_name' => "You are the one ",
+                'calligraphy_description' => '',
+                'style_id' => '10',
+            ],
+        ]);
+            //  Hand lettering
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => "Hey jude",
+                'calligraphy_description' => '',
+                'style_id' => '11',
+            ],
+            [
+                'calligraphy_name' => "Sasan Nasernia Ink Calligraphy, on Art Paper",
+                'calligraphy_description' => '',
+                'style_id' => '11',
+            ],
+            [
+                'calligraphy_name' => "Sweet Calligraphy",
+                'calligraphy_description' => '',
+                'style_id' => '11',
+            ],
+            [
+                'calligraphy_name' => "Give more than you receive",
+                'calligraphy_description' => '',
+                'style_id' => '11',
+            ],
+        ]);
+        //  Graffiti calligraphy
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => "Alphabet",
+                'calligraphy_description' => '',
+                'style_id' => '12',
+            ],
+            [
+                'calligraphy_name' => "Warios",
+                'calligraphy_description' => '',
+                'style_id' => '12',
+            ],
+            [
+                'calligraphy_name' => "Calligraffiti",
+                'calligraphy_description' => '',
+                'style_id' => '12',
+            ],
+        ]);
+        //  Experimental calligraphy
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => "네이버 블로그",
+                'calligraphy_description' => '인생이란 본시 어디에도 의탁할 곳이 없이 다만 하늘을 이고 땅을 밟은 채 떠도는 존재일 뿐이라는 사실을.',
+                'style_id' => '13',
+            ],
+            [
+                'calligraphy_name' => "Alphabet",
+                'calligraphy_description' => '',
+                'style_id' => '13',
+            ],
+            [
+                'calligraphy_name' => "Weisheit",
+                'calligraphy_description' => '',
+                'style_id' => '13',
+            ],
+        ]);
+
+        // Hand-lettering & Design
+            // 3D lettering
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => "Aloha vibes",
+                'calligraphy_description' => '',
+                'style_id' => '14',
+            ],
+            [
+                'calligraphy_name' => "Art Schools",
+                'calligraphy_description' => '',
+                'style_id' => '14',
+            ],
+            [
+                'calligraphy_name' => "Handlettering 3D style",
+                'calligraphy_description' => '',
+                'style_id' => '14',
+            ],
+            [
+                'calligraphy_name' => "Let your light shine",
+                'calligraphy_description' => '',
+                'style_id' => '14',
+            ],
+            [
+                'calligraphy_name' => "South",
+                'calligraphy_description' => '',
+                'style_id' => '14',
+            ],
+        ]);
+            // Vintage lettering
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => "We have recorded everything in a book",
+                'calligraphy_description' => '',
+                'style_id' => '15',
+            ],
+            [
+                'calligraphy_name' => "Salida wine fest",
+                'calligraphy_description' => '',
+                'style_id' => '15',
+            ],
+            [
+                'calligraphy_name' => "Roll with it & gain momentum",
+                'calligraphy_description' => '',
+                'style_id' => '15',
+            ],
+            [
+                'calligraphy_name' => "Autumn and spring",
+                'calligraphy_description' => '',
+                'style_id' => '15',
+            ],
+            [
+                'calligraphy_name' => "Work hard so you can shop harder",
+                'calligraphy_description' => '',
+                'style_id' => '15',
+            ],
+            [
+                'calligraphy_name' => "Coffee Tin Signs",
+                'calligraphy_description' => '',
+                'style_id' => '15',
+            ],
+            [
+                'calligraphy_name' => "I’m in love",
+                'calligraphy_description' => '',
+                'style_id' => '15',
+            ],
+        ]);
+            // Modern lettering
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => "Just visit this plane ",
+                'calligraphy_description' => '',
+                'style_id' => '16',
+            ],
+            [
+                'calligraphy_name' => "Clubnotes",
+                'calligraphy_description' => '',
+                'style_id' => '16',
+            ],
+            [
+                'calligraphy_name' => "Tiếng nói của vạn vật",
+                'calligraphy_description' => 'Voice of all things',
+                'style_id' => '16',
+            ],
+            [
+                'calligraphy_name' => "Tràng Giang",
+                'calligraphy_description' => 'Vietnamese literature',
+                'style_id' => '16',
+            ],
+            [
+                'calligraphy_name' => "Người lái đò sông đà",
+                'calligraphy_description' => 'Vietnamese literature',
+                'style_id' => '16',
+            ],
+            [
+                'calligraphy_name' => "Rừng xà nu",
+                'calligraphy_description' => 'Vietnamese literature',
+                'style_id' => '16',
+            ],
+            [
+                'calligraphy_name' => "Chuyện người con gái nam xương",
+                'calligraphy_description' => 'Vietnamese literature',
+                'style_id' => '16',
+            ],
+            [
+                'calligraphy_name' => "Vào phủ chúa trịnh",
+                'calligraphy_description' => 'Vietnamese literature',
+                'style_id' => '16',
+            ],
+            [
+                'calligraphy_name' => "Hoàng lê nhất thống chí",
+                'calligraphy_description' => 'Vietnamese literature',
+                'style_id' => '16',
+            ],
+            [
+                'calligraphy_name' => "September",
+                'calligraphy_description' => 'Is a month of the year written in different ways',
+                'style_id' => '16',
+            ],
+        ]);
+            // Illustrated lettering
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => "R letter",
+                'calligraphy_description' => '',
+                'style_id' => '17',
+            ],
+            [
+                'calligraphy_name' => "S letter",
+                'calligraphy_description' => '',
+                'style_id' => '17',
+            ],
+            [
+                'calligraphy_name' => "Summer",
+                'calligraphy_description' => '',
+                'style_id' => '17',
+            ],
+            [
+                'calligraphy_name' => "Summver Vacation",
+                'calligraphy_description' => '',
+                'style_id' => '17',
+            ],
+            [
+                'calligraphy_name' => "The World",
+                'calligraphy_description' => '',
+                'style_id' => '17',
+            ],
+        ]);
+            // Brush lettering
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => "Pink",
+                'calligraphy_description' => '',
+                'style_id' => '18',
+            ],
+            [
+                'calligraphy_name' => "Back in black",
+                'calligraphy_description' => '',
+                'style_id' => '18',
+            ],
+            [
+                'calligraphy_name' => "I have found the one whom my soul loves",
+                'calligraphy_description' => '',
+                'style_id' => '18',
+            ],
+            [
+                'calligraphy_name' => "Brave",
+                'calligraphy_description' => '',
+                'style_id' => '18',
+            ],
+            [
+                'calligraphy_name' => "Hold back the river let me look in your eyes",
+                'calligraphy_description' => '',
+                'style_id' => '18',
+            ],
+            [
+                'calligraphy_name' => "Smells like mint",
+                'calligraphy_description' => '',
+                'style_id' => '18',
+            ],
+            [
+                'calligraphy_name' => "Never forget who you are",
+                'calligraphy_description' => '',
+                'style_id' => '18',
+            ],
+            [
+                'calligraphy_name' => "Slow progress is better than no progress",
+                'calligraphy_description' => '',
+                'style_id' => '18',
+            ],
+        ]);
+            // Calligraphic lettering
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => "It always seem impossible until it's done",
+                'calligraphy_description' => '',
+                'style_id' => '19',
+            ],
+            [
+                'calligraphy_name' => "Don’t give up",
+                'calligraphy_description' => '',
+                'style_id' => '19',
+            ],
+            [
+                'calligraphy_name' => "Get better, don’t try to be just good",
+                'calligraphy_description' => '',
+                'style_id' => '19',
+            ],
+            [
+                'calligraphy_name' => "Happy",
+                'calligraphy_description' => '',
+                'style_id' => '19',
+            ],
+            [
+                'calligraphy_name' => "Be friendly",
+                'calligraphy_description' => '',
+                'style_id' => '19',
+            ],
+            [
+                'calligraphy_name' => "Live your life joyfully",
+                'calligraphy_description' => '',
+                'style_id' => '19',
+            ],
+            [
+                'calligraphy_name' => "Happiness never grow olds",
+                'calligraphy_description' => '',
+                'style_id' => '19',
+            ],
+            [
+                'calligraphy_name' => "Hey you’re so great",
+                'calligraphy_description' => '',
+                'style_id' => '19',
+            ],
+            [
+                'calligraphy_name' => "Make - Love - Give",
+                'calligraphy_description' => '',
+                'style_id' => '19',
             ],
         ]);
     }
