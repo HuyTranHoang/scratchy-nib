@@ -9,18 +9,46 @@
         </div>
     </div>
 
+    <div class="row my-3">
+        <div class="col-md-12 col-lg-4">
+            <h3>Styles list</h3>
+        </div>
 
-    <h3>Styles list</h3>
+        <div class="colmd-12 d-sm-block col-lg-8 d-md-flex justify-content-md-end">
+            <form action="" class="d-flex form-outline">
+                <div class="field me-3" style="min-width: 200px">
+                    <label for="cateID" class="label">Filter by Category Name</label>
+                    <select class="select" id="cateID" name="cateID">
+                        <option value="">All</option>
+                        @foreach($categories as $category)
+                            <option {{ $category->category_id == request()->cateID ? 'selected' : '' }} value="{{ $category->category_id }}">{{ $category->category_name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <input class="form-control me-3" style="width: 200px" value="{{ request()->styleName }}"
+                       id="" name="styleName" type="text" placeholder="Search by name.." aria-label="search">
+
+                <button class="btn rounded btn-primary-color me-3" type="submit">
+                    Filter
+                </button>
+
+                <a class="btn rounded btn-primary-color" href="{{ route('styles.index') }}" style="line-height: 30px">Reset</a>
+
+            </form>
+        </div>
+    </div>
+
     <div class="table-responsive table-bordered">
         <table class="table table-striped align-middle">
             <thead class="table-success">
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Styles Name</th>
+                <th scope="col" style="width: 10%">Styles Name</th>
                 <th scope="col">Styles Description</th>
-                <th scope="col">Category Name</th>
+                <th scope="col" style="width: 15%">Category Name</th>
                 <th scope="col" colspan="2" class="text-center">Action</th>
-                <th scope="col" style="min-width: 100px;">Created At</th>
+                <th scope="col" style="width: 10%;">Created At</th>
             </tr>
             </thead>
             <tbody>

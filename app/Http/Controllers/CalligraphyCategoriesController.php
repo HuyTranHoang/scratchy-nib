@@ -13,7 +13,7 @@ class CalligraphyCategoriesController extends Controller
     public function index()
     {
         return view('admin.categories.index', [
-            'categories' => CalligraphyCategory::paginate(5)
+            'categories' => CalligraphyCategory::filter(request(['cateName']))->paginate(5)->appends(request()->query())
         ]);
     }
 

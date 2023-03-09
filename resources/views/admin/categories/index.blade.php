@@ -4,21 +4,37 @@
         <h1 class=" text-primary-color">Calligraphy Categories</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
+
                 <a href="{{route('categories.create')}}" class="btn btn-sm btn-outline-primary">Add New Category</a>
             </div>
         </div>
     </div>
 
-    <h3>Categories list</h3>
+    <div class="row my-3">
+        <div class="col-md-6">
+            <h3>Categories list</h3>
+        </div>
+
+        <div class="d-sm-block col-md-6 d-md-flex justify-content-md-end">
+            <a class="btn btn-primary me-3" href="{{ route('categories.index') }}">Reset</a>
+            <form action="" class="d-flex form-outline">
+                <input class="form-control rounded-start rounded-0" id="" name="cateName" type="text" placeholder="Search by name.." aria-label="search">
+                <button class="btn rounded-end rounded-0 btn-primary-color" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
     <div class="table-responsive table-bordered">
         <table class="table table-striped align-middle">
             <thead class="table-success">
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Categories Name</th>
+                <th scope="col" style="width: 15%">Categories Name</th>
                 <th scope="col">Categories Description</th>
                 <th scope="col" colspan="2" class="text-center">Action</th>
-                <th scope="col">Created At</th>
+                <th scope="col" style="width: 10%">Created At</th>
             </tr>
             </thead>
             <tbody>

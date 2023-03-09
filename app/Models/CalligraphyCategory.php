@@ -20,4 +20,11 @@ class CalligraphyCategory extends Model
     {
         return $this->hasMany(CalligraphyStyle::class, 'category_id');
     }
+
+    public function scopeFilter($query, array $filters) {
+        if($filters['cateName'] ?? false) {
+            $query->where('category_name','like','%'.request('cateName').'%');
+        }
+    }
+
 }

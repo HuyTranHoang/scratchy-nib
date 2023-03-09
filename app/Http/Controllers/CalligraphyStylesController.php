@@ -16,7 +16,8 @@ class CalligraphyStylesController extends Controller
     public function index()
     {
         return view('admin.styles.index', [
-            'styles' => CalligraphyStyle::paginate(5)
+            'styles' => CalligraphyStyle::filter(request(['styleName','cateID']))->paginate(5)->appends(request()->query()),
+            'categories' => CalligraphyCategory::all()
         ]);
     }
 
