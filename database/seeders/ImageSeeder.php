@@ -228,7 +228,7 @@ class ImageSeeder extends Seeder
             ],
         ]);
 
-        // Hand-lettering & Design Image [ 54 - x ]
+        // Hand-lettering & Design Image [ 54 - 97 ]
         GalleryImage::factory()->createMany([
             [
                 'image_name' => 'uploads/3898d26772127b4ca71d55e46662ea34.jpg',
@@ -409,5 +409,146 @@ class ImageSeeder extends Seeder
             ],
 
         ]);
+
+        // Modern Calligraphy [ 98 - x ]
+        GalleryImage::factory()->createMany([
+            [
+                'image_name' => 'uploads/78f6e7d9fabc5a200e80cbc79ba35dcc.jpg',
+                'calligraphy_id' => '98',
+            ],
+            [
+                'image_name' => 'uploads/80e5595f84db441aa38637f36688cc16.jpg',
+                'calligraphy_id' => '99',
+            ],
+            [
+                'image_name' => 'uploads/8ca2e36b3e8a4684ac4a49d9d5e7a34e.jpg',
+                'calligraphy_id' => '100',
+            ],
+
+            [
+                'image_name' => 'uploads/d5f08421bcc96b4835224925d599723c.jpg',
+                'calligraphy_id' => '101',
+            ],
+            [
+                'image_name' => 'uploads/d832ab84a526bda47daad30c2adb51d5.jpg',
+                'calligraphy_id' => '102',
+            ],
+            [
+                'image_name' => 'uploads/e191458d163f7eb464f70b67c96e5c90.jpg',
+                'calligraphy_id' => '103',
+            ],            [
+                'image_name' => 'uploads/0d724e607e99419c2d09d3e7211c7a65.jpg',
+                'calligraphy_id' => '104',
+            ],
+            [
+                'image_name' => 'uploads/5ffbd404d03b3742249649b736c1a57a.jpg',
+                'calligraphy_id' => '105',
+            ],
+            [
+                'image_name' => 'uploads/19ab15f8b47b42b1525bf77310533586.jpg',
+                'calligraphy_id' => '106',
+            ],
+
+            [
+                'image_name' => 'uploads/b05f21d6eb2938c7cb33d6eb3dc48242.jpg',
+                'calligraphy_id' => '107',
+            ],
+            [
+                'image_name' => 'uploads/3157660e3c37a3783f33c56381c5b70c.jpg',
+                'calligraphy_id' => '108',
+            ],
+            [
+                'image_name' => 'uploads/b1ac32a5684fb156e9f2845e524eef25.jpg',
+                'calligraphy_id' => '109',
+            ],
+            [
+                'image_name' => 'uploads/1.jpg',
+                'calligraphy_id' => '110',
+            ],
+            [
+                'image_name' => 'uploads/3.jpg',
+                'calligraphy_id' => '111',
+            ],
+            [
+                'image_name' => 'uploads/10.jpg',
+                'calligraphy_id' => '112',
+            ],
+            [
+                'image_name' => 'uploads/16.jpg',
+                'calligraphy_id' => '113',
+            ],
+            [
+                'image_name' => 'uploads/23.jpg',
+                'calligraphy_id' => '114',
+            ],
+            [
+                'image_name' => 'uploads/28.jpg',
+                'calligraphy_id' => '115',
+            ],
+            [
+                'image_name' => 'uploads/40.jpg',
+                'calligraphy_id' => '116',
+            ],
+
+            [
+                'image_name' => 'uploads/ac0b37a19eccf72b21bd3fe11c608c14.jpg',
+                'calligraphy_id' => '117',
+            ],
+            [
+                'image_name' => 'uploads/41cf93c2ec4d011df469fd9edcaec8a0.jpg',
+                'calligraphy_id' => '118',
+            ],
+            [
+                'image_name' => 'uploads/34a6f3c12d26d6eeec39f97ef983916f.jpg',
+                'calligraphy_id' => '119',
+            ],
+            [
+                'image_name' => 'uploads/14250e4a6e342b20418d189eba4fca00.jpg',
+                'calligraphy_id' => '120',
+            ],
+            [
+                'image_name' => 'uploads/452758e55051498b8982e06a865d5ef8.jpg',
+                'calligraphy_id' => '121',
+            ],
+            [
+                'image_name' => 'uploads/fd08ba08b8d14e8bfb7fb9987050c40f.jpg',
+                'calligraphy_id' => '122',
+            ],
+            [
+                'image_name' => 'uploads/1ab93369510ef8e5266289e1c0e87fcf.jpg',
+                'calligraphy_id' => '123',
+            ],
+
+            [
+                'image_name' => 'uploads/qqq1223.jpg',
+                'calligraphy_id' => '124',
+            ],
+            [
+                'image_name' => 'uploads/12312366a.jpg',
+                'calligraphy_id' => '125',
+            ],
+            [
+                'image_name' => 'uploads/111112584aas.jpg',
+                'calligraphy_id' => '126',
+            ],
+
+            [
+                'image_name' => 'uploads/bea78df6097d8e09b3cbba43943fb122.jpg',
+                'calligraphy_id' => '127',
+            ],
+            [
+                'image_name' => 'uploads/3d56fec91659a90d850ada19098d5a86.jpg',
+                'calligraphy_id' => '128',
+            ],
+            [
+                'image_name' => 'uploads/884a7e18699535.562cf39272bf1.jpg',
+                'calligraphy_id' => '129',
+            ],
+            [
+                'image_name' => 'uploads/9c282d855776654778d65ed46f086d91.jpg',
+                'calligraphy_id' => '130',
+            ],
+        ]);
+
     }
 }

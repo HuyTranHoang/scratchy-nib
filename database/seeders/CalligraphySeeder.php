@@ -582,5 +582,189 @@ class CalligraphySeeder extends Seeder
                 'style_id' => '19',
             ],
         ]);
+
+        // Modern Calligraphy
+            // Copperplate
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => "Make things happen",
+                'calligraphy_description' => '',
+                'style_id' => '20',
+            ],
+            [
+                'calligraphy_name' => "Make more lime",
+                'calligraphy_description' => '',
+                'style_id' => '20',
+            ],
+            [
+                'calligraphy_name' => "Problem are not stop signs they are guidelines",
+                'calligraphy_description' => '',
+                'style_id' => '20',
+            ],
+        ]);
+            // Chalkboard Art
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => "Do more of what makes you happy",
+                'calligraphy_description' => '',
+                'style_id' => '21',
+            ],            [
+                'calligraphy_name' => "Nothing great ever came that easy",
+                'calligraphy_description' => '',
+                'style_id' => '21',
+            ],
+            [
+                'calligraphy_name' => "Happy fall y’all",
+                'calligraphy_description' => '',
+                'style_id' => '21',
+            ],
+            [
+                'calligraphy_name' => "It is never too late",
+                'calligraphy_description' => '',
+                'style_id' => '21',
+            ],
+            [
+                'calligraphy_name' => "Enjoy the little things",
+                'calligraphy_description' => '',
+                'style_id' => '21',
+            ],
+            [
+                'calligraphy_name' => "Make today ridiculously amazing",
+                'calligraphy_description' => '',
+                'style_id' => '21',
+            ],
+        ]);
+            // Blackletter
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => "D letter",
+                'calligraphy_description' => '',
+                'style_id' => '22',
+            ],
+            [
+                'calligraphy_name' => "C letter",
+                'calligraphy_description' => '',
+                'style_id' => '22',
+            ],
+            [
+                'calligraphy_name' => "Color blended circular calligram",
+                'calligraphy_description' => '',
+                'style_id' => '22',
+            ],
+            [
+                'calligraphy_name' => "Blackletter alphabet by luca barcellona",
+                'calligraphy_description' => '',
+                'style_id' => '22',
+            ],
+            [
+                'calligraphy_name' => "I’ll sleep when i’m dead",
+                'calligraphy_description' => '',
+                'style_id' => '22',
+            ],
+            [
+                'calligraphy_name' => "You’ll never walk alone",
+                'calligraphy_description' => '',
+                'style_id' => '22',
+            ],
+            [
+                'calligraphy_name' => "Awesome letter",
+                'calligraphy_description' => '',
+                'style_id' => '22',
+            ],
+            [
+                'calligraphy_name' => "Hope is the fuel of progress",
+                'calligraphy_description' => '',
+                'style_id' => '22',
+            ],
+            [
+                'calligraphy_name' => "In the beginning was the word",
+                'calligraphy_description' => '',
+                'style_id' => '22',
+            ],
+            [
+                'calligraphy_name' => "100 years of the coca-cola contour bottle",
+                'calligraphy_description' => '',
+                'style_id' => '22',
+            ],
+        ]);
+            // Watercolor lettering
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => "Live every moment",
+                'calligraphy_description' => '',
+                'style_id' => '23',
+            ],
+            [
+                'calligraphy_name' => "Done is better than perfect",
+                'calligraphy_description' => '',
+                'style_id' => '23',
+            ],
+            [
+                'calligraphy_name' => "Start each day with a grateful heart",
+                'calligraphy_description' => '',
+                'style_id' => '23',
+            ],
+            [
+                'calligraphy_name' => "Stay positive",
+                'calligraphy_description' => '',
+                'style_id' => '23',
+            ],
+            [
+                'calligraphy_name' => "My heart sleeps by the ocean",
+                'calligraphy_description' => '',
+                'style_id' => '23',
+            ],
+            [
+                'calligraphy_name' => "You have my whole heart for my whole life",
+                'calligraphy_description' => '',
+                'style_id' => '23',
+            ],
+            [
+                'calligraphy_name' => "Do it all with love",
+                'calligraphy_description' => '',
+                'style_id' => '23',
+            ],
+        ]);
+            // Modern script
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => "Shrine like the stars",
+                'calligraphy_description' => '',
+                'style_id' => '24',
+            ],
+            [
+                'calligraphy_name' => "Bloom",
+                'calligraphy_description' => '',
+                'style_id' => '24',
+            ],
+            [
+                'calligraphy_name' => "Take time for yourself",
+                'calligraphy_description' => '',
+                'style_id' => '24',
+            ],
+        ]);
+            // Gothic script
+        Calligraphy::factory()->createMany([
+            [
+                'calligraphy_name' => "Alphabet",
+                'calligraphy_description' => '',
+                'style_id' => '25',
+            ],
+            [
+                'calligraphy_name' => "Alphabet",
+                'calligraphy_description' => '',
+                'style_id' => '25',
+            ],
+            [
+                'calligraphy_name' => "Alphabet",
+                'calligraphy_description' => '',
+                'style_id' => '25',
+            ],
+            [
+                'calligraphy_name' => "Gothic calligraphy",
+                'calligraphy_description' => '',
+                'style_id' => '25',
+            ],
+        ]);
     }
 }
