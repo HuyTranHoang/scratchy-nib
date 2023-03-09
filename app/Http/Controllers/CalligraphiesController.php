@@ -80,10 +80,11 @@ class CalligraphiesController extends Controller
 
     public function destroy(Request $request)
     {
+        $redrectTo = $request->query('redirect_to',route('calligraphies.index'));
         $CalligraphyID = $request->calligraphy_id;
         $calligraphy = Calligraphy::findOrFail($CalligraphyID);
         $calligraphy->delete();
         Alert::success('Success', 'Calligraphy category succesfully deleted!')->buttonsStyling(false)->autoClose(1500);
-        return redirect(route('calligraphies.index'));
+        return redirect($redrectTo);
     }
 }

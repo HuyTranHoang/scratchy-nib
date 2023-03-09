@@ -25,6 +25,12 @@
                 </tr>
             </thead>
             <tbody>
+            @php
+                $redirectTo = $calligraphies->url($calligraphies->currentPage());
+                if (!$calligraphies -> hasMorePages() && $calligraphies -> count() == 1) {
+                    $redirectTo = $calligraphies -> previousPageUrl();
+                }
+            @endphp
             @foreach($calligraphies as $index => $calligraphy)
                 <tr>
                     <td>{{$calligraphy -> calligraphy_id}}</td>

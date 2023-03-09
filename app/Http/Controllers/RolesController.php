@@ -13,7 +13,7 @@ class RolesController extends Controller
     public function index()
     {
         return view('admin.roles.index', [
-            'roles' => Role::all()
+            'roles' => Role::paginate(10)
         ]);
     }
 
@@ -51,10 +51,11 @@ class RolesController extends Controller
 
     public function destroy(Request $request)
     {
+        $redrectTo = $request->query('redirect_to',route('roles.index'));
         $RoleID = $request->role_id;
         $role = Role::findOrFail($RoleID);
         $role->delete();
         Alert::success('Success', 'Calligraphy category succesfully deleted!')->buttonsStyling(false)->autoClose(1500);
-        return redirect(route('roles.index'));
+        return redirect($redrectTo);
     }
 }

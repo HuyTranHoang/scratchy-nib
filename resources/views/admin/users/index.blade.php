@@ -24,6 +24,12 @@
             </tr>
             </thead>
             <tbody>
+            @php
+                $redirectTo = $users->url($users->currentPage());
+                if (!$users -> hasMorePages() && $users -> count() == 1) {
+                    $redirectTo = $users -> previousPageUrl();
+                }
+            @endphp
             @foreach($users as $index => $user)
                 <tr>
                     <td>{{$user -> user_id}}</td>

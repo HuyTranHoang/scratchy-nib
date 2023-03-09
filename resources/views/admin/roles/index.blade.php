@@ -21,6 +21,12 @@
             </tr>
             </thead>
             <tbody>
+            @php
+                $redirectTo = $roles->url($roles->currentPage());
+                if (!$roles -> hasMorePages() && $roles -> count() == 1) {
+                    $redirectTo = $roles -> previousPageUrl();
+                }
+            @endphp
             @foreach($roles as $index => $role)
                 <tr>
                     <td>{{$role -> role_id}}</td>

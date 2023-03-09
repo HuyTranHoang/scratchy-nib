@@ -22,6 +22,12 @@
             </tr>
             </thead>
             <tbody>
+            @php
+                $redirectTo = $categories->url($categories->currentPage());
+                if (!$categories -> hasMorePages() && $categories -> count() == 1) {
+                    $redirectTo = $categories -> previousPageUrl();
+                }
+            @endphp
             @foreach($categories as $index => $category)
                 <tr>
                     <td>{{$category -> category_id}}</td>

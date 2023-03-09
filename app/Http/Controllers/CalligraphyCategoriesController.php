@@ -52,11 +52,12 @@ class CalligraphyCategoriesController extends Controller
 
     public function destroy(Request $request)
     {
+        $redrectTo = $request->query('redirect_to',route('categories.index'));
         $CateID = $request->category_id;
         $category = CalligraphyCategory::findOrFail($CateID);
         $category->delete();
         Alert::success('Success', 'Calligraphy category succesfully deleted!')->buttonsStyling(false)->autoClose(1500);
 
-        return redirect(route('categories.index'));
+        return redirect($redrectTo);
     }
 }

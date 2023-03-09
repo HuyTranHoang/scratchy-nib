@@ -54,10 +54,11 @@ class FeedbackController extends Controller
 
     public function destroy(Request $request)
     {
+        $redrectTo = $request->query('redirect_to',route('feedback.index'));
         $FeedbackID = $request->feedback_id;
         $feedback = Feedback::findOrFail($FeedbackID);
         $feedback->delete();
         Alert::success('Success', 'Feedback succesfully deleted!')->buttonsStyling(false)->autoClose(1500);
-        return redirect(route('feedback.index'));
+        return redirect($redrectTo);
     }
 }

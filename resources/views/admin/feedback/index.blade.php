@@ -22,6 +22,12 @@
             </tr>
             </thead>
             <tbody>
+            @php
+                $redirectTo = $feedback->url($feedback->currentPage());
+                if (!$feedback -> hasMorePages() && $feedback -> count() == 1) {
+                    $redirectTo = $feedback -> previousPageUrl();
+                }
+            @endphp
             @foreach($feedback as $index => $feb)
                 <tr>
                     <td>{{$feb -> feedback_id}}</td>

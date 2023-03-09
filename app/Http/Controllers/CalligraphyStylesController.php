@@ -54,10 +54,11 @@ class CalligraphyStylesController extends Controller
     //xong
     public function destroy(Request $request)
     {
+        $redrectTo = $request->query('redirect_to',route('styles.index'));
         $StyleID = $request->style_id;
         $style = CalligraphyStyle::findOrFail($StyleID);
         $style->delete();
         Alert::success('Success', 'Calligraphy style succesfully deleted!')->buttonsStyling(false)->autoClose(1500);
-        return redirect(route('styles.index'));
+        return redirect($redrectTo);
     }
 }

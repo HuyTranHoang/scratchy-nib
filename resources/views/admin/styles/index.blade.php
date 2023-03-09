@@ -24,6 +24,12 @@
             </tr>
             </thead>
             <tbody>
+            @php
+                $redirectTo = $styles->url($styles->currentPage());
+                if (!$styles -> hasMorePages() && $styles -> count() == 1) {
+                    $redirectTo = $styles -> previousPageUrl();
+                }
+            @endphp
             @foreach($styles as $index => $style)
                 <tr>
                     <td>{{$style -> style_id}}</td>
@@ -50,7 +56,7 @@
     <!-- Modal -->
     <x-admin.delete-modal>
         <x-slot:action>
-            {{route('styles.destroy','id')}}
+            {{route('styles.destroy',['id','redirect_to' => $redirectTo])}}
         </x-slot:action>
 
         <x-slot:body>
