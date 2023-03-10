@@ -44,8 +44,8 @@
                             <input type="hidden" name="styleID" value="{{ request()->styleID }}">
                             <label for="sort" class="label">Sort</label>
                             <select class="select mt-2" id="sort" name="sort" onchange='this.form.submit()'>
-                                <option value="DESC">Latest</option>
                                 <option {{ request()->sort == 'ASC' ? 'selected' : '' }} value="ASC">Oldest</option>
+                                <option {{ request()->sort == 'DESC' ? 'selected' : '' }} value="DESC">Latest</option>
                             </select>
                         </div>
                     </form>
