@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\EmailPostRequest;
+use App\Http\Requests\FeedbackPostRequest;
 use App\Mail\Contact;
 use App\Models\Calligraphy;
 use App\Models\CalligraphyCategory;
 use App\Models\CalligraphyStyle;
+use App\Models\Feedback;
 use App\Models\GalleryImage;
 use App\Models\Visitor;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -53,8 +56,17 @@ class HomeController extends Controller
     public function detail(Calligraphy $calligraphy){
         return view('home.detail', [
             'calligraphy' => $calligraphy,
-            'calligraphies' => Calligraphy::where('style_id',$calligraphy->style_id)->inRandomOrder()->limit(6)->get()
+            'calligraphies' => Calligraphy::where('style_id',$calligraphy->style_id)->inRandomOrder()->limit(6)->get(),
+            'feedback' => Feedback::where('calligraphy_id',$calligraphy->calligraphy_id)->orderBy('created_at','DESC')->paginate(4)
         ]);
+    }
+
+    public function storeFeedback(FeedbackPostRequest $request)
+    {
+        $validated = $request->validated();
+        Feedback::create($validated);
+        Alert::toast('Submit feedback succesfully!', 'success')->autoClose(1500);
+        return redirect()->back();
     }
 
     public function sendEmail(EmailPostRequest $request)

@@ -33,6 +33,7 @@ Route::middleware(['web', 'VisitorCounter'])->group(function () {
     Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
     Route::get('/about', [HomeController::class, 'about'])->name('home.about');
     Route::get('/detail/{calligraphy}', [HomeController::class, 'detail'])->name('home.detail');
+    Route::post('/store-feedback', [HomeController::class, 'storeFeedback'])->name('home.store-feedback');
 });
 
 // User profile

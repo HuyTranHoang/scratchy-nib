@@ -10,17 +10,19 @@
 
     <div class="container detail">
         <div class="row">
-            <div class="col-md-5 bg-secondary-color p-0">
+            <div class="col-md-6 p-0 d-flex align-items-center justify-content-center">
                     <a href="{{ asset('storage/'.$calligraphy -> galleryImage -> first() -> image_name) }}" data-lightbox="detail">
-                        <img class="img-size rounded" src="{{asset('storage/'.$calligraphy -> galleryImage -> first() -> image_name)}}" alt="error">
+                        <img class="rounded img-fluid" src="{{asset('storage/'.$calligraphy -> galleryImage -> first() -> image_name)}}" alt="error">
                     </a>
             </div>
 
 
-            <div class="col-md-7 bg-secondary-color rounded">
+            <div class="col-md-6 bg-secondary-color rounded">
                 <div class="my-3">
                     <h1 class="text-primary">{{ $calligraphy -> calligraphy_name }}</h1>
                 </div>
+
+                <hr>
 
                 <div class="categories fw-bold mt-3">
                     <h4>CATEGORY: <small class="text-primary-color">{{ $calligraphy -> calligraphyStyle -> calligraphyCategory -> category_name }}</small></h4>
@@ -66,49 +68,67 @@
         </section>
 
     <section class="container">
-        <form action="">
-            <h3 class="mb-3">Feedback</h3>
-            @guest()
-                <div class="row mb-2">
-                    <div class="col-3 d-flex justify-content-center align-items-center border-end border-1">
-                        <label for="name"><span class="text-danger">*</span>Name</label>
-                        <input type="text" class="form-control ms-2" id="name">
-                    </div>
-                    <div class="col-3 d-flex justify-content-center align-items-center">
-                        <span>Or <a href="{{ route('login') }}" class="text-decoration-none">Login</a> to give a feedback</span>
-                    </div>
-                </div>
-            @endguest
+        <h3 class="mb-3">Feedback</h3>
+        @guest
             <div class="row mb-2">
-                <div class="col-md-6">
-                      <textarea name="feedback_message">
-
-                      </textarea>
-                    <div class="row">
-                        <div class="col">
-                            <button type="submit" class="btn btn-primary float-end mt-3">Submit</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card text-dark">
-                        <div class="card-body d-flex">
-                            <img class="rounded shadow-1-strong me-3"
-                                 src="https://api.lorem.space/image/face" alt="avatar" width="80" height="80" />
-                            <div class="w-100">
-                                <h6 class="fw-bold mb-1">Văn Tèo</h6>
-                                <span class="mb-0">March 15, 2021</span>
-                                <p class="mb-0">
-                                    Hôm Nay Em Tuyệt Lắm
-                                </p>
-                                <button class="btn btn-danger float-end">Delete</button>
-                                <button class="btn btn-success float-end me-3">Edit</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-6">
+                    <h4><a href="{{ route('login') }}" class="text-decoration-none">Login</a> to give a feedback</h4>
                 </div>
             </div>
-        </form>
+        @endguest
+        <div class="row mb-2">
+            <div class="col-md-6">
+                @auth
+                    <form action="{{ route('home.store-feedback') }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="user_id" value="{{ Auth::user()->user_id }}">
+                        <input type="hidden" name="calligraphy_id" value="{{ $calligraphy->calligraphy_id }}">
+                        <textarea name="feedback_message"></textarea>
+                        @error('feedback_message')
+                        <span class="text-danger mt-3 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
+                        @enderror
+                        <div class="row">
+                            <div class="col">
+                                <button type="submit" class="btn btn-primary float-end mt-3">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                @endauth
+
+            </div>
+            <div class="col-md-6">
+                @foreach($feedback as $feb)
+                <div class="card text-dark mb-2">
+                    <div class="card-body d-flex">
+                        <img class="rounded shadow-1-strong me-3"
+                             src="https://i.pinimg.com/474x/28/1f/26/281f26edab6d1ce334d4058aea19abec.jpg" alt="avatar" width="80" height="80" />
+                        <div class="w-100">
+                            <div class="row">
+                                <div class="col-6">
+                                    <h6 class="fw-bold mb-1">{{ $feb->user->name }}</h6>
+                                    <span class="mb-0">{{ $feb->created_at->diffForHumans() }}</span>
+                                </div>
+                                <div class="col-6">
+                                    @auth
+                                        @if(Auth::user()->user_id == $feb->user_id || Auth::user()->role_id == 1)
+                                            <button class="btn btn-danger float-end">Delete</button>
+                                            <button class="btn btn-success float-end me-3">Edit</button>
+                                        @endif
+                                    @endauth
+
+                                </div>
+                            </div>
+                            <div class="mb-0">
+                                {!! $feb->feedback_message !!}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+                {{ $feedback->links() }}
+            </div>
+        </div>
         <hr>
     </section>
 
