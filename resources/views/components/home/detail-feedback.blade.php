@@ -1,5 +1,5 @@
 <section class="container">
-    <h3 class="mb-3">Feedback</h3>
+    <h3 id="feedback" class="mb-3">Feedback</h3>
     <div class="row mb-2">
         <div class="col-md-6">
             @guest

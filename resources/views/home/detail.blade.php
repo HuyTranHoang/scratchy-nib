@@ -65,4 +65,12 @@
             ]
         });
     </script>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const element = document.getElementById("feedback");
+        if (urlParams.has("page")) {
+            element.scrollIntoView();
+        }
+    </script>
 </x-home-layout>
