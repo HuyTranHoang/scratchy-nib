@@ -80,7 +80,7 @@
                 </div>
             @endguest
             <div class="row mb-2">
-                <div class="col-6">
+                <div class="col-md-6">
                       <textarea name="feedback_message">
 
                       </textarea>
@@ -90,7 +90,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <div class="card text-dark">
                         <div class="card-body d-flex">
                             <img class="rounded shadow-1-strong me-3"
