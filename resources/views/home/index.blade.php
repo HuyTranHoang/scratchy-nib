@@ -35,7 +35,7 @@
                         </div>
                     </form>
 
-                    <h6>Visitor counter: {{$visitorCount}}</h6>
+                    <h6>Visitor counter: {{ $visitorCount }}</h6>
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
             <div class="row">
                 <div class="col-12 mt-3">
                     <h6 class="fw-semibold text-primary"><i class="fa-duotone fa-sparkles"></i> Browse our collection of stunning calligraphic artwork, created by some of the world's most talented calligraphers.</h6>
-                    <a class="btn btn-primary-color btn-more-about mt-2">Explore Our Gallery <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="{{ route('home.gallery') }}" class="btn btn-primary-color btn-more-about mt-2">Explore Our Gallery <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -110,7 +110,8 @@
                     <i><b>新婦地黃湯帖</b> by Wang Xianzhi</i>
                     <div class="row">
                         <div class="col">
-                            <button class="btn btn-secondary-color btn-more-about mt-3">More about Traditional Calligraphy <i class="fa-solid fa-arrow-right"></i></button>
+                            <a href="{{ route('home.category',['cateID' => 1]) }}" class="btn btn-secondary-color btn-more-about mt-3">
+                                More about Traditional Calligraphy <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -171,7 +172,8 @@
                         <i>Thanks, Love so much</i>
                         <div class="row">
                             <div class="col">
-                                <button class="btn btn-primary-color btn-more-about mt-3">More about Contemporary Calligraphy <i class="fa-solid fa-arrow-right"></i></button>
+                                <a href="{{ route('home.category',['cateID' => 2]) }}" class="btn btn-primary-color btn-more-about mt-3">
+                                    More about Contemporary Calligraphy <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -210,7 +212,8 @@
                     <i>Just visit this plane</i>
                     <div class="row">
                         <div class="col">
-                            <button class="btn btn-secondary-color btn-more-about mt-3">More about Hand-lettering & Design <i class="fa-solid fa-arrow-right"></i></button>
+                            <a href="{{ route('home.category',['cateID' => 3]) }}" class="btn btn-secondary-color btn-more-about mt-3">
+                                More about Hand-lettering & Design <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -233,7 +236,8 @@
                     <i>Make things happen</i>
                     <div class="row">
                         <div class="col">
-                            <button class="btn btn-primary-color btn-more-about mt-3">More about odern Calligraphy <i class="fa-solid fa-arrow-right"></i></button>
+                            <a href="{{ route('home.category',['cateID' => 4]) }}" class="btn btn-primary-color btn-more-about mt-3">
+                                More about odern Calligraphy <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>

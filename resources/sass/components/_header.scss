@@ -43,3 +43,7 @@
         height: 45vw;
     }
 }
+
+.nav-active {
+    border-bottom: 1px solid variables.$primary-color;
+}

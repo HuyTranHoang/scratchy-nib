@@ -26,7 +26,7 @@
                 </div>
             </div>
         </div>
-    
+
         <section class="container">
             @if(request()->cateID)
                 <article class="postcard light red">

@@ -1,4 +1,4 @@
-<x-home-layout>
+<x-home-layout title="Scratchy Nib | Profile">
 
     @include('sweetalert::alert')
 
