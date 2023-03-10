@@ -75,7 +75,7 @@
     </div>
 
     <!-- Modal -->
-    <x-admin.delete-modal>
+    <x-delete-modal>
         <x-slot:action>
             {{route('feedback.destroy','id')}}
         </x-slot:action>
@@ -88,6 +88,6 @@
             <label for="feedback_message">Feedback message: </label>
             <input class="form-control mt-1" type="text" id="feedback_message" name="feedback_message" disabled readonly>
         </x-slot:body>
-    </x-admin.delete-modal>
+    </x-delete-modal>
 
 </x-admin-layout>

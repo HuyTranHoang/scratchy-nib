@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\EmailPostRequest;
 use App\Http\Requests\FeedbackPostRequest;
+use App\Http\Requests\FeedbackPutRequest;
 use App\Mail\Contact;
 use App\Models\Calligraphy;
 use App\Models\CalligraphyCategory;
@@ -57,7 +58,9 @@ class HomeController extends Controller
         return view('home.detail', [
             'calligraphy' => $calligraphy,
             'calligraphies' => Calligraphy::where('style_id',$calligraphy->style_id)->inRandomOrder()->limit(6)->get(),
-            'feedback' => Feedback::where('calligraphy_id',$calligraphy->calligraphy_id)->orderBy('created_at','DESC')->paginate(4)
+            'feedback' => Feedback::where('calligraphy_id',$calligraphy->calligraphy_id)
+                ->orderBy('created_at','DESC')->paginate(4),
+            'editfeedback' => Feedback::find(request()->feedback)
         ]);
     }
 
@@ -66,6 +69,23 @@ class HomeController extends Controller
         $validated = $request->validated();
         Feedback::create($validated);
         Alert::toast('Submit feedback succesfully!', 'success')->autoClose(1500);
+        return redirect()->back();
+    }
+
+    public function updateFeedback(FeedbackPutRequest $request, Feedback $feedback)
+    {;
+        $validated = $request->validated();
+        $feedback->update($validated);
+        Alert::toast('Update feedback succesfully!', 'success')->autoClose(1500);
+        return redirect(route('home.detail',request()->calligraphy_id));
+    }
+
+    public function deleteFeedback(Request $request)
+    {
+        $FeedbackID = $request->feedback_id;
+        $feedback = Feedback::findOrFail($FeedbackID);
+        $feedback->delete();
+        Alert::toast('Delete feedback succesfully!', 'success')->autoClose(1500);
         return redirect()->back();
     }
 

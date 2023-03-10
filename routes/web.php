@@ -34,6 +34,8 @@ Route::middleware(['web', 'VisitorCounter'])->group(function () {
     Route::get('/about', [HomeController::class, 'about'])->name('home.about');
     Route::get('/detail/{calligraphy}', [HomeController::class, 'detail'])->name('home.detail');
     Route::post('/store-feedback', [HomeController::class, 'storeFeedback'])->name('home.store-feedback');
+    Route::post('/update-feedback/{feedback}', [HomeController::class, 'updateFeedback'])->name('home.update-feedback');
+    Route::delete('/delete-feedback', [HomeController::class, 'deleteFeedback'])->name('home.delete-feedback');
 });
 
 // User profile

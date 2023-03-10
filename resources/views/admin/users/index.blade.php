@@ -74,7 +74,7 @@
     </div>
 
     <!-- Modal -->
-    <x-admin.delete-modal>
+    <x-delete-modal>
         <x-slot:action>
             {{route('users.destroy','id')}}
         </x-slot:action>
@@ -89,6 +89,6 @@
             <label for="user_email">Email: </label>
             <input class="form-control mt-1" type="text" id="user_email" disabled readonly>
         </x-slot:body>
-    </x-admin.delete-modal>
+    </x-delete-modal>
 
 </x-admin-layout>

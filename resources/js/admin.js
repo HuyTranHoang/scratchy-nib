@@ -1,6 +1,3 @@
-import './bootstrap';
-
-$(function() {
     $(document).on('click','.delete-category',function() {
         const id = $(this).attr('data-id');
         const categoryName = $(this).attr('data-name');
@@ -35,6 +32,7 @@ $(function() {
         const id = $(this).attr('data-id');
         const feedbackMessage = $(this).attr('data-message');
         $('#feedback_id').val(id);
+        $('#home_feedback_message').html(feedbackMessage);
         $('#feedback_message').val(feedbackMessage);
     });
 
@@ -47,7 +45,6 @@ $(function() {
         $('#user_email').val(userEmail);
     });
 
-
     // Handle Image Preview
     function previewImage(event) {
         const output = document.getElementById('ImgOutput');
@@ -55,6 +52,6 @@ $(function() {
         $('#previewCard').css('display', 'block');
     }
     $('#image').on('change',previewImage);
-});
+
 
 

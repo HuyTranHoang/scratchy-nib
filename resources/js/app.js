@@ -1,4 +1,5 @@
 import './bootstrap';
+import './admin';
 import InitLocationTime from './geolocation'
 
 // Lightbox

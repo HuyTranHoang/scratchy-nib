@@ -73,7 +73,7 @@
     </div>
 
     <!-- Modal -->
-    <x-admin.delete-modal>
+    <x-delete-modal>
         <x-slot:action>
             {{route('categories.destroy','id')}}
         </x-slot:action>
@@ -87,6 +87,6 @@
             <label for="category_name">Category name: </label>
             <input class="form-control mt-1" type="text" id="category_name" name="category_name" disabled readonly>
         </x-slot:body>
-    </x-admin.delete-modal>
+    </x-delete-modal>
 
 </x-admin-layout>

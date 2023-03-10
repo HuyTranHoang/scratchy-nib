@@ -84,7 +84,7 @@
     </div>
 
     <!-- Modal -->
-    <x-admin.delete-modal>
+    <x-delete-modal>
         <x-slot:action>
             {{route('styles.destroy',['id','redirect_to' => $redirectTo])}}
         </x-slot:action>
@@ -98,6 +98,6 @@
             <label for="style_name">Style name: </label>
             <input class="form-control mt-1" type="text" id="style_name" name="style_name" disabled readonly>
         </x-slot:body>
-    </x-admin.delete-modal>
+    </x-delete-modal>
 
 </x-admin-layout>
