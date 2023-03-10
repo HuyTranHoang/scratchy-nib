@@ -29,7 +29,10 @@ class HomeController extends Controller
     {
         return view('home.category', [
             'categories' => CalligraphyCategory::all(),
-            'styles' => CalligraphyStyle::all()
+            'styles' => CalligraphyStyle::filter(request(['cateID']))->get(),
+            'currentCategory' => CalligraphyCategory::find(request()->cateID),
+            'currentStyle' => CalligraphyStyle::find(request()->styleID),
+            'calligraphies' => Calligraphy::filter(request(['calligraphyName','cateID','styleID']))->paginate(16)->appends(request()->query())
         ]);
     }
 

@@ -28,10 +28,10 @@ class CalligraphyStyle extends Model
 
     public function scopeFilter($query, array $filters) {
         if($filters['styleName'] ?? false) {
-            $query->where('style_name','like','%'.request('styleName').'%');
+            $query->where('style_name','like','%'.$filters['styleName'].'%');
         }
         if($filters['cateID'] ?? false) {
-            $query->where('category_id',request('cateID'));
+            $query->where('category_id',$filters['cateID']);
         }
     }
 }

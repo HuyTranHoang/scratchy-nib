@@ -1,12 +1,10 @@
-<x-home-layout>
-    <section class="bg-secondary-color">
-        <div class="row m-0">
-            <div class="col-md-12">
-                <h1 class="text-center text-uppercase text-primary mt-5">Gallery</h1>
-            </div>
-        </div>
-        <x-home.overlay-bottom />
-    </section>
+<x-home-layout title="Scratchy Nib | Gallery">
+
+
+    <x-home.title-section>
+        Gallery
+    </x-home.title-section>
+
     <section>
         <div class="container">
             <div class="row mb-2 rounded">

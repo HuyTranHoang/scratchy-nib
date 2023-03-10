@@ -27,7 +27,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <x-admin.layouts.sidebar />
+        @include('layouts.partials.admin.sidebar')
 
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
            {{$slot}}

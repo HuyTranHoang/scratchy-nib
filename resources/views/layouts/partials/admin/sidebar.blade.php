@@ -52,6 +52,10 @@
             <hr>
             <li class="nav-item">
                 <strong class="px-3 py-2 text-success">{{ Auth::user() -> name }}</strong>
+                <a class="nav-link" href="{{ route('home.index') }}">
+                    <i class="fa-solid fa-house"></i>
+                    Back to homepage
+                </a>
                 <a class="nav-link" href="#">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     Logout

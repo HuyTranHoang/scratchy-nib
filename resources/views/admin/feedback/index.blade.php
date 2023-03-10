@@ -15,7 +15,7 @@
         </div>
 
         <div class="d-sm-block col-md-6 d-md-flex justify-content-md-end">
-            <a class="btn btn-primary me-3" href="{{ route('feedback.index') }}">Reset</a>
+            <a class="btn btn-primary-color rounded me-3" href="{{ route('feedback.index') }}">Reset</a>
             <form action="" class="d-flex form-outline">
                 <input class="form-control rounded-start rounded-0" value="{{ request()->userName }}"
                        name="userName" type="text" placeholder="Search by user name.." aria-label="search">

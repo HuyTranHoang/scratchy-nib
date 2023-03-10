@@ -1,14 +1,10 @@
-<x-home-layout>
-    <section class="bg-secondary-color">
-        <div class="row m-0">
-            <div class="col-md-12">
-                <h1 class="text-center text-uppercase text-primary mt-5">Detail</h1>
-            </div>
-        </div>
-        <x-home.overlay-bottom />
-    </section>
+<x-home-layout title="Scratchy Nib | Details">
 
-    <div class="container detail">
+    <x-home.title-section>
+        Details
+    </x-home.title-section>
+
+    <div class="container">
         <div class="row">
             <div class="col-md-6 p-0 d-flex align-items-center justify-content-center">
                     <a href="{{ asset('storage/'.$calligraphy -> galleryImage -> first() -> image_name) }}" data-lightbox="detail">
@@ -20,8 +16,9 @@
                 <div class="my-3">
                     <h1 class="text-primary">{{ $calligraphy -> calligraphy_name }}</h1>
                 </div>
+
                 <hr>
-                <div class="categories fw-bold mt-3">
+                <div class="fw-bold mt-3">
                     <h4>CATEGORY: <small class="text-primary-color">{{ $calligraphy -> calligraphyStyle -> calligraphyCategory -> category_name }}</small></h4>
                     <h4>STYLE: <small class="text-primary-color">{{ $calligraphy -> calligraphyStyle -> style_name  }}</small></h4>
                 </div>
@@ -32,7 +29,7 @@
                     Upload date: <span class="text-primary-color">{{ date('d-m-Y', strtotime($calligraphy -> created_at)) }}</span>
                 </div>
                 <h4 class="mt-3">DESCRIPTION: </h4>
-                <p class="description text-primary-color"> {{ $calligraphy -> calligraphy_description }}</p>
+                <p class="text-primary-color"> {{ $calligraphy -> calligraphy_description }}</p>
             </div>
         </div>
     </div>

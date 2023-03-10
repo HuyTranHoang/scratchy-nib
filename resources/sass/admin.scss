@@ -28,7 +28,7 @@
         color: #727272;
     }
     &.active {
-        color: #2470dc;
+        color: variables.$primary-color;
     }
     &:hover i, &.active i {
         color: inherit;

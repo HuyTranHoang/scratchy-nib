@@ -235,9 +235,7 @@
 .postcard .postcard__tagbox .red.play:hover {
     background: variables.$main-red;
 }
-.red .postcard__title:hover {
-    color: variables.$main-red;
-}
+
 .red .postcard__bar {
     background-color: variables.$main-red;
 }
@@ -262,13 +260,13 @@
     border-radius: 5px;
     width: 100%;
     height: 45px;
-    padding: 0 5px;
+    padding: 0 15px;
     background-color: white;
     color: #6C757D;
-
-
+    outline: none;
 }
-.label-cate{
+
+.label-cate {
     position: absolute;
     left: 10px;
     bottom: 35px;
@@ -279,7 +277,7 @@
     background: white;
 
 }
-.field-cate{
+.field-cate {
     position: relative;
     width: 100%;
 }

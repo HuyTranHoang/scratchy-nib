@@ -1,4 +1,4 @@
-<x-home-layout>
+<x-home-layout title="Scratchy Nib | Home page">
 
     <section class="bg-secondary-color position-relative pb-md-0 pb-xl-5">
         <div class="container">

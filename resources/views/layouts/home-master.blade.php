@@ -1,3 +1,5 @@
+@props(['title'])
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,7 +8,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Scratchy Nib</title>
+    <title>{{ $title }}</title>
     {{-- Bootstrap 5.3 & Custom CSS --}}
     @vite(['resources/sass/app.scss'])
     {{-- Font Awesome --}}
@@ -21,11 +23,11 @@
     <!-- Back to top button -->
     <a class="text-decoration-none" id="btt-button"></a>
 
-    <x-home.layouts.header />
+    @include('layouts.partials.home.header')
 
     {{$slot}}
 
-    <x-home.layouts.footer />
+    @include('layouts.partials.home.footer')
 
 </body>
 </html>

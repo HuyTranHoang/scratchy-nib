@@ -16,7 +16,7 @@
         </div>
 
         <div class="d-sm-block col-md-6 d-md-flex justify-content-md-end">
-            <a class="btn btn-primary me-3" href="{{ route('categories.index') }}">Reset</a>
+            <a class="btn btn-primary-color rounded me-3" href="{{ route('categories.index') }}">Reset</a>
             <form action="" class="d-flex form-outline">
                 <input class="form-control rounded-start rounded-0" value="{{ request()->cateName }}"
                        name="cateName" type="text" placeholder="Search by name.." aria-label="search">

@@ -36,8 +36,16 @@ class Calligraphy extends Model
         if($filters['calligraphyName'] ?? false) {
             $query->where('calligraphy_name','like','%'.request('calligraphyName').'%');
         }
+
         if($filters['styleID'] ?? false) {
             $query->where('style_id',request('styleID'));
+        }
+
+        if($filters['cateID'] ?? false) {
+            $query->whereIn('style_id',function ($query) use ($filters) {
+                $query->select('style_id')->from('calliraphy_styles')
+                    ->where('category_id',$filters['cateID']);
+            });
         }
     }
 }
