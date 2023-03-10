@@ -30,15 +30,20 @@
                     <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
                 @endguest
                 @auth()
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown {{ request()->routeIs('profile.*') ? 'nav-active' : '' }}">
                         <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {{ Auth::user()->name }}
                         </a>
                         <ul class="dropdown-menu animate slideIn m-0">
+                            <li>
+                                <img class="img-fluid" src="{{ asset('storage/' . Auth::user()->avatar) }}" alt="avatar">
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Profile</a></li>
                             @if( Auth::user()-> role_id == 1)
                                 <li><a class="dropdown-item" href="{{ route('admin.index') }}">Admin dashboard</a></li>
                             @endif
+                            <li><hr class="dropdown-divider"></li>
                             <li>
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf

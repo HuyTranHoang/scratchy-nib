@@ -9,7 +9,7 @@
     @csrf
 </form>
 
-<form method="post" action="{{ route('profile.update') }}" class="mt-6">
+<form method="post" action="{{ route('profile.update') }}" class="mt-6" enctype="multipart/form-data">
     @csrf
     @method('patch')
     <div>
@@ -34,6 +34,29 @@
             </div>
         </div>
         @error('email')
+        <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
+        @enderror
+    </div>
+
+    <div class="mt-3">
+        <div class="card" style="width: 13rem;">
+            <img src="{{ asset('storage/'.$user -> avatar) }}" alt="{{ $user -> avatar }}"
+                 class="card-img-top">
+            <div class="card-body text-center small">
+                Current Avatar
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <label for="avatar" class="form-label">Avatar</label>
+        <div class="row">
+            <div class="col-sm-12 col-md-8 col-lg-5">
+                <input id="avatar" type="file" name="avatar" value="{{ old('avatar', $user->email) }}"
+                       class="form-control">
+            </div>
+        </div>
+        @error('avatar')
         <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
         @enderror
     </div>
@@ -66,7 +89,7 @@
                     x-show="show"
                     x-transition
                     x-init="setTimeout(() => show = false, 2000)"
-                    class="my-0 text-primary"
+                    class="my-0 text-success"
                 >Your profile information is saved</p>
             @endif
         </div>
