@@ -23,37 +23,34 @@ class GalleryImage extends Model
 
     public function scopeFilter($query, array $filters) {
 
-        if($filters['cateID'] ?? false) {
-            if($filters['styleID'] ?? false) {
-                $query->whereHas('calligraphy.CalligraphyStyle', function ($query) {
-                    $query->where('style_id', '=', request()->styleID);
-                });
-            }
-
-            if($filters['calliName'] ?? false) {
-                $query->whereHas('calligraphy', function ($query) {
-                    $query->where('calligraphy_name', 'like','%'.request()->calliName.'%');
-                });
-            }
-
-            $query->whereHas('calligraphy.CalligraphyStyle.CalligraphyCategory', function($query) {
-                $query->where('category_id', '=', request()->cateID);
-            })
-                ->join('calligraphies', 'gallery_images.calligraphy_id', '=', 'calligraphies.calligraphy_id');
+        if ($filters['cateID'] ?? false) {
+            $query->whereHas('calligraphy.CalligraphyStyle.CalligraphyCategory', function ($query) use ($filters) {
+                $query->where('category_id', $filters['cateID'])
+                    ->when($filters['styleID'] ?? false, function ($query) use ($filters) {
+                        $query->where('style_id', $filters['styleID']);
+                    })
+                    ->when($filters['calliName'] ?? false, function ($query) use ($filters) {
+                        $query->where('calligraphy_name', 'like', '%' . $filters['calliName'] . '%');
+                    });
+            })->join('calligraphies', 'gallery_images.calligraphy_id', '=', 'calligraphies.calligraphy_id');
         } else {
-            if(($filters['calliName'] ?? false)) {
-                $query->whereIn('calligraphy_id',function ($query) {
+            if ($filters['calliName'] ?? false) {
+                $query->whereIn('calligraphy_id', function ($query) use ($filters) {
                     $query->select('calligraphy_id')->from('calligraphies')
-                        ->where('calligraphy_name','like','%'.request()->calliName.'%');
-                });;
-            }
-
-            if($filters['styleID'] ?? false ) {
-                $query->whereIn('calligraphy_id',function ($query) {
-                    $query->select('calligraphy_id')->from('calligraphies')
-                        ->where('style_id',request()->styleID);
+                        ->where('calligraphy_name', 'like', '%' . $filters['calliName'] . '%');
                 });
             }
+
+            if ($filters['styleID'] ?? false) {
+                $query->whereIn('calligraphy_id', function ($query) use ($filters) {
+                    $query->select('calligraphy_id')->from('calligraphies')
+                        ->where('style_id', $filters['styleID']);
+                });
+            }
+        }
+
+        if ($filters['sort'] ?? false) {
+            $query->orderBy('calligraphy_id',$filters['sort']);
         }
 
     }

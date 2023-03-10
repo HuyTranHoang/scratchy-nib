@@ -13,7 +13,7 @@ class LocationController extends Controller
         $lng = $request->input('lng');
         $apiKey = ENV('GOOGLE_MAPS_API_KEY');
 
-        $geocodingUrl = "https://maps.googleapis.com/maps/api/geocode/json?latlng={$lat},{$lng}&key={$apiKey}";
+//        $geocodingUrl = "https://maps.googleapis.com/maps/api/geocode/json?latlng={$lat},{$lng}&key={$apiKey}";
 
         $response = Http::get($geocodingUrl);
 

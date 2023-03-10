@@ -1,7 +1,13 @@
 <x-home-layout>
-    <header class="bg-secondary-color">
+    <section class="bg-secondary-color">
+        <div class="row m-0">
+            <div class="col-md-12">
+                <h1 class="text-center text-uppercase text-primary mt-5">Detail</h1>
+            </div>
+        </div>
         <x-home.overlay-bottom />
-    </header>
+    </section>
+
     <div class="container detail">
         <div class="row">
             <div class="col-md-5 bg-secondary-color p-0">
@@ -37,69 +43,23 @@
     </div>
 
         <section class="container">
+
             <hr>
-            <p class="display-5">You may also like</p>
-                <div class="row row-cols-md-6 row-cols-sm-4 g-4">
-
-                    <div class="col-sm-4 col-md">
-                        <a href="#" class="card text-decoration-none">
-                            <img class="card-img-top img-fit" src="https://api.lorem.space/image/book"  alt="Error"/>
-                            <div class="card-body">
-                                <h6 class="card-title text-primary-color">Name</h6>
-                                <p class="card-text text-primary-color">Category</p>
+            <p class="text-primary-color fs-3">You may also like</p>
+                <div class="row row-cols-lg-6 row-cols-md-3 row-cols-sm-4 g-4">
+                    @foreach($calligraphies as $subCalligraphy)
+                        @if($subCalligraphy->calligraphy_id != $calligraphy->calligraphy_id)
+                            <div class="col-sm-4 col-md">
+                                <a href="{{ route('home.detail', $subCalligraphy->calligraphy_id) }}" class="card category__card text-decoration-none h-100">
+                                    <img class="card-img-top" src="{{asset('storage/'.$subCalligraphy -> galleryImage -> first() -> image_name)}}"  alt="Error"/>
+                                    <div class="card-body d-flex flex-column justify-content-end">
+                                        <h6 class="card-title text-primary-color">{{ $subCalligraphy->calligraphy_name }}</h6>
+                                        <p class="card-text text-primary-color">{{ $subCalligraphy->calligraphyStyle->style_name }}</p>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-
-                    <div class="col-sm-4 col-md">
-                        <a href="#" class="card text-decoration-none">
-                            <img class="card-img-top img-fit" src="https://api.lorem.space/image/book"  alt="Error"/>
-                            <div class="card-body">
-                                <h6 class="card-title text-primary-color">Name</h6>
-                                <p class="card-text text-primary-color">Category</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-sm-4 col-md">
-                        <a href="#" class="card text-decoration-none">
-                            <img class="card-img-top img-fit" src="https://api.lorem.space/image/book"  alt="Error"/>
-                            <div class="card-body">
-                                <h6 class="card-title text-primary-color">Name</h6>
-                                <p class="card-text text-primary-color">Category</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-sm-4 col-md">
-                        <a href="#" class="card text-decoration-none">
-                            <img class="card-img-top img-fit" src="https://api.lorem.space/image/book"  alt="Error"/>
-                            <div class="card-body">
-                                <h6 class="card-title text-primary-color">Name</h6>
-                                <p class="card-text text-primary-color">Category</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-sm-4 col-md">
-                        <a href="#" class="card text-decoration-none">
-                            <img class="card-img-top img-fit" src="https://api.lorem.space/image/book"  alt="Error"/>
-                            <div class="card-body">
-                                <h6 class="card-title text-primary-color">Name</h6>
-                                <p class="card-text text-primary-color">Category</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-sm-4 col-md">
-                        <a href="#" class="card text-decoration-none">
-                            <img class="card-img-top img-fit" src="https://api.lorem.space/image/book"  alt="Error"/>
-                            <div class="card-body">
-                                <h6 class="card-title text-primary-color">Name</h6>
-                                <p class="card-text text-primary-color">Category</p>
-                            </div>
-                        </a>
-                    </div>
+                        @endif
+                    @endforeach
 
                 </div>
             <hr>
@@ -121,23 +81,23 @@
             @endguest
             <div class="row mb-2">
                 <div class="col-6">
-                    <textarea id="premiumskinsandicons-bootstrap" name="feedback_message"></textarea>
+                      <textarea name="feedback_message">
+                         Welcome to TinyMCE!
+                      </textarea>
                 </div>
                 <div class="col-6">
                     <div class="card text-dark">
-                        <div class="card-body d-flex flex-start">
+                        <div class="card-body d-flex">
                             <img class="rounded shadow-1-strong me-3"
                                  src="https://api.lorem.space/image/face" alt="avatar" width="80" height="80" />
-                            <div>
+                            <div class="w-100">
                                 <h6 class="fw-bold mb-1">Văn Tèo</h6>
-                                <div class="d-flex align-items-center mb-3">
-                                    <span class="mb-0">March 15, 2021</span>
-                                    <a href="#" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
-                                    <a href="#" class="text-success"><i class="fa-solid fa-trash ms-2"></i></a>
-                                </div>
+                                <span class="mb-0">March 15, 2021</span>
                                 <p class="mb-0">
                                     Hôm Nay Em Tuyệt Lắm
                                 </p>
+                                <button class="btn btn-danger float-end">Delete</button>
+                                <button class="btn btn-success float-end me-3">Edit</button>
                             </div>
                         </div>
                     </div>
@@ -153,32 +113,21 @@
         <hr>
     </section>
 
-    <footer class="bg-secondary-color">
-        <x-home.overlay-top />
-    </footer>
-    <script src="https://cdn.tiny.cloud/1/q9jvkl47n5k7covggc5pinvziolp0zpycw2ieyl3adc8mjwj/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <x-home.overlay-top color="bg-secondary-color"/>
+
+    <script src="https://cdn.tiny.cloud/1/r2ca2qp43km71mdmbvjwkdd99vpglucckcwto4flreqbh93a/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
         tinymce.init({
-            entity_encoding : "raw",
-            selector: 'textarea#premiumskinsandicons-bootstrap',
-            content_css: '//www.tiny.cloud/css/codepen.min.css',
-            skin: 'bootstrap',
-            plugins: 'lists link anchor charmap',
-            toolbar: 'formatselect | bold italic bullist numlist | link image charmap',
-            menubar: false,
-            setup: (editor) => {
-                editor.on('init', () => {
-                    editor.getContainer().style.transition="border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out"
-                });
-                editor.on('focus', () => {
-                    editor.getContainer().style.boxShadow="0 0 0 .2rem rgba(179, 87, 87, .25)"
-                    editor.getContainer().style.borderColor="#B35757"
-                });
-                editor.on('blur', () => {
-                    editor.getContainer().style.boxShadow=""
-                    editor.getContainer().style.borderColor=""
-                });
-            }
+            selector: 'textarea',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+            tinycomments_mode: 'embedded',
+            tinycomments_author: 'Author name',
+            mergetags_list: [
+                { value: 'First.Name', title: 'First Name' },
+                { value: 'Email', title: 'Email' },
+            ]
         });
     </script>
 </x-home-layout>

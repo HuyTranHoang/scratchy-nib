@@ -32,7 +32,7 @@ class HomeController extends Controller
     public function gallery()
     {
         return view('home.gallery', [
-            'images' => GalleryImage::filter(request(['cateID','styleID','calliName']))->paginate(30)->appends(request()->query()),
+            'images' => GalleryImage::filter(request(['cateID','styleID','calliName','sort']))->paginate(30)->appends(request()->query()),
             'categories' => CalligraphyCategory::all(),
             'styles' => CalligraphyStyle::filter(request(['cateID']))->get(),
             'currentStyle' => CalligraphyStyle::find(request()->styleID)->style_name ?? '',
@@ -52,7 +52,8 @@ class HomeController extends Controller
 
     public function detail(Calligraphy $calligraphy){
         return view('home.detail', [
-            'calligraphy' => $calligraphy
+            'calligraphy' => $calligraphy,
+            'calligraphies' => Calligraphy::where('style_id',$calligraphy->style_id)->inRandomOrder()->limit(6)->get()
         ]);
     }
 

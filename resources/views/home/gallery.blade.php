@@ -11,9 +11,10 @@
         <div class="container">
             <div class="row mb-2 rounded">
                 <div class="d-sm-block col-md-6 d-md-flex">
-                    <form action="" class="me-3 me-sm-0 me-md-3">
+                    <form action="" class="me-sm-0 me-md-3">
                         <div class="field me-4">
                             <label for="cateID" class="label">Filter by Category</label>
+                            <input type="hidden" name="sort" value="{{ request()->sort }}">
                             <select class="select mt-2" id="cateID" name="cateID" onchange='this.form.submit()'>
                                 <option value="">All</option>
                                 @foreach($categories as $category)
@@ -23,9 +24,10 @@
                         </div>
                     </form>
 
-                    <form action="">
+                    <form action="" class="me-sm-0 me-md-3">
                         <div class="field">
                             <input type="hidden" name="cateID" value="{{ request()->cateID }}">
+                            <input type="hidden" name="sort" value="{{ request()->sort }}">
                             <label for="styleID" class="label">Filter by Style</label>
                             <select class="select mt-2" id="styleID" name="styleID" onchange='this.form.submit()'>
                                 <option value="">All</option>
@@ -35,11 +37,24 @@
                             </select>
                         </div>
                     </form>
+
+                    <form action="">
+                        <div class="field">
+                            <input type="hidden" name="cateID" value="{{ request()->cateID }}">
+                            <input type="hidden" name="styleID" value="{{ request()->styleID }}">
+                            <label for="sort" class="label">Sort</label>
+                            <select class="select mt-2" id="sort" name="sort" onchange='this.form.submit()'>
+                                <option value="DESC">Latest</option>
+                                <option {{ request()->sort == 'ASC' ? 'selected' : '' }} value="ASC">Oldest</option>
+                            </select>
+                        </div>
+                    </form>
+
                 </div>
 
                 <div class="d-sm-block col-md-6 d-md-flex justify-content-md-end mt-2">
+                    <a class="btn btn-primary-color me-3 rounded" href="{{ route('home.gallery') }}">Clear all filter</a>
                     <form action="" class="d-flex form-outline">
-
                         <input type="hidden" name="cateID" value="{{ request()->cateID }}">
                         <input type="hidden" name="styleID" value="{{ request()->styleID }}">
                         <input class="form-control rounded-start rounded-0" value="{{ request()->calliName }}"
@@ -73,7 +88,7 @@
                     <div class="grid-item rounded">
                         <div class="card-gallery">
                             <img class="card-img-gallery rounded" src="{{ asset('storage/'.$image->image_name) }}"  alt="Error"/>
-                            <a class="card-body-gallery" href="{{ asset('storage/'.$image->image_name) }}" data-lightbox="gallery">
+                            <a class="card-body-gallery" href="{{ asset('storage/'.$image->image_name) }}" data-lightbox="{{ $image->image_name }}" data-title="{{ $image -> calligraphy -> calligraphy_name }}">
                                 <h6 class="card-title-gallery">{{ $image -> calligraphy -> calligraphy_name }}</h6>
                                 <p class="card-category">{{ $image -> calligraphy -> calligraphyStyle -> style_name }}</p>
                                 <a class="card-btn text-decoration-none" href="{{ route('home.detail', $image -> calligraphy -> calligraphy_id) }}">Detail</a>
