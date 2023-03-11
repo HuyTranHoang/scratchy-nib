@@ -69,7 +69,7 @@
                         </div>
                     </div>
                 </div>
-                Sitemap | ©2023 Scratchy Nib | All rights reserved.
+                <a class="text-decoration-none" href="{{ route('home.sitemap') }}">Sitemap</a> | ©2023 Scratchy Nib | All rights reserved.
             </div>
 
         </div>

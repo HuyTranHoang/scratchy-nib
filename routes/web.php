@@ -33,9 +33,13 @@ Route::middleware(['web', 'VisitorCounter'])->group(function () {
     Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
     Route::get('/about', [HomeController::class, 'about'])->name('home.about');
     Route::get('/detail/{calligraphy}', [HomeController::class, 'detail'])->name('home.detail');
+    Route::get('/sitemap', [HomeController::class, 'sitemap'])->name('home.sitemap');
+    // Feedback in detail
     Route::post('/store-feedback', [HomeController::class, 'storeFeedback'])->name('home.store-feedback');
     Route::post('/update-feedback/{feedback}', [HomeController::class, 'updateFeedback'])->name('home.update-feedback');
     Route::delete('/delete-feedback', [HomeController::class, 'deleteFeedback'])->name('home.delete-feedback');
+
+    // View other user profile ( Guest can see too )
     Route::get('profile/{user}', [HomeController::class, 'showUser'])->name('home.show-user');
 });
 

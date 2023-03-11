@@ -111,7 +111,6 @@
 }
 
 // Back to top button
-
 #btt-button {
     display: inline-block;
     background-color: variables.$primary-color;
@@ -146,5 +145,30 @@
     &.show {
         opacity: 1;
         visibility: visible;
+    }
+}
+
+// Site map
+
+.sitemap-list {
+    list-style: none;
+    > li {
+        margin-bottom: 30px;
+    }
+    li a {
+        text-decoration: none;
+    }
+}
+
+.sitemap-sublist {
+    margin-bottom: 5px;
+    li:first-child {
+        margin-top: 15px;
+    }
+    > li {
+        margin-bottom: 10px;
+    }
+    li a {
+        font-weight: 500;
     }
 }

@@ -37,7 +37,7 @@
                                 @endif
                             </ul>
 
-                            @if(Auth::user()->user_id == $user->user_id)
+                            @if( Auth::check() && (Auth::user()->user_id == $user->user_id) )
                                 <a href="{{ route('profile.edit') }}" class="btn btn-primary">Edit profile</a>
                             @endif
 

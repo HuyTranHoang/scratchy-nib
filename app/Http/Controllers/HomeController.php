@@ -116,4 +116,8 @@ class HomeController extends Controller
         return redirect()->back();
     }
 
+    public function sitemap() {
+        return view('home.sitemap');
+    }
+
 }
