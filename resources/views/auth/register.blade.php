@@ -5,11 +5,11 @@
             <form method="POST" action="{{ route('register') }}">
                 @csrf
                 <h1>Create Account</h1>
-                <input type="text" id="name" name="name" placeholder="Name">
+                <input type="text" id="name" name="name" value="{{ old('name') }}" placeholder="Name">
                 @error('name')
                 <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                 @enderror
-                <input type="email" id="email" name="email" placeholder="Email">
+                <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="Email">
                 @error('email')
                 <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                 @enderror
@@ -45,11 +45,11 @@
             <form method="POST" action="{{ route('register') }}" class="pt-5">
                 @csrf
                 <h1>Create Account</h1>
-                <input type="text" id="name-mobile" name="name" placeholder="Name">
+                <input type="text" id="name-mobile" name="name" value="{{ old('name') }}" placeholder="Name">
                 @error('name')
                 <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                 @enderror
-                <input type="email" id="email-mobile" name="email" placeholder="Email">
+                <input type="email" id="email-mobile" name="email" value="{{ old('email') }}" placeholder="Email">
                 @error('email')
                 <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                 @enderror

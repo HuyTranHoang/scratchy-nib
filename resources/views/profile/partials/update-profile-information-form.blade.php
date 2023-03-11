@@ -3,6 +3,15 @@
     <p class="text-primary-color">
         Update your account's profile information and email address.
     </p>
+    @if (session('status') === 'profile-updated')
+        <p
+            x-data="{ show: true }"
+            x-show="show"
+            x-transition
+            x-init="setTimeout(() => show = false, 2000)"
+            class="my-3 text-success fw-semibold"
+        >Your profile information is saved</p>
+    @endif
 </header>
 
 <form id="send-verification" method="post" action="{{ route('verification.send') }}">
@@ -42,8 +51,9 @@
         <label for="bio" class="form-label">Bio</label>
         <div class="row">
             <div class="col-sm-12 col-md-8 col-lg-5">
-                <input id="bio" type="text" name="bio" value="{{ old('bio', $user->bio) }}"
-                       class="form-control" placeholder="Micro bio about you">
+                <textarea id="bio" type="text" name="bio" class="form-control" placeholder="Micro bio about you" rows="3">
+                    {{ old('bio', $user->bio) }}
+                </textarea>
             </div>
         </div>
         @error('bio')
@@ -121,16 +131,6 @@
     <div class="row mt-3">
         <div class="d-flex align-items-center justify-content-between col-sm-12 col-md-8 col-lg-5">
             <button type="submit" class="btn btn-primary">Save</button>
-
-            @if (session('status') === 'profile-updated')
-                <p
-                    x-data="{ show: true }"
-                    x-show="show"
-                    x-transition
-                    x-init="setTimeout(() => show = false, 2000)"
-                    class="my-0 text-success"
-                >Your profile information is saved</p>
-            @endif
         </div>
     </div>
 </form>

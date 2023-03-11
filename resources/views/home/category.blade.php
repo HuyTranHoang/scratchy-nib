@@ -21,7 +21,7 @@
                 <div class="col d-xxl-flex justify-content-xxl-center">
                     <a href="{{ route('home.category') }}" class="btn btn-primary-color mx-1 mb-2 ">All Calligraphy</a>
                     @foreach($categories as $category)
-                        <a href="{{ route('home.category', ['cateID' => $category -> category_id ]) }}" class="btn btn-primary-color mx-1 mb-2 ">{{ $category -> category_name }}</a>
+                        <a href="{{ route('home.category', ['cateID' => $category -> category_id ]).'-'.Str::slug($category->category_name) }}" class="btn btn-primary-color mx-1 mb-2 ">{{ $category -> category_name }}</a>
                     @endforeach
                 </div>
             </div>
@@ -46,8 +46,8 @@
                         <span class="mt-3 fw-semibold">Styles list of this category</span>
                         <ul class="postcard__tagbox">
                             @foreach($styles as $style)
-                                <li class="tag__item">
-                                    <a href="{{'?cateID='.request()->get('cateID').'&styleID='.$style->style_id }}">{{ $style -> style_name }}</a>
+                                <li class="tag__item {{request()->styleID == $style->style_id.'-'.Str::slug($style->style_name) ? 'bg-primary text-white' : ''}}">
+                                    <a href="{{'?cateID='.$style->calligraphyCategory->category_id.'-'.Str::slug($style->calligraphyCategory->category_name).'&styleID='.$style->style_id.'-'.Str::slug($style->style_name) }}">{{ $style -> style_name }}</a>
                                 </li>
                             @endforeach
                         </ul>
@@ -77,8 +77,8 @@
                         </div>
                         <ul class="postcard__tagbox">
                             @foreach($styles as $style)
-                                <li class="tag__item {{request()->styleID == $style->style_id ? 'bg-primary text-white' : ''}}">
-                                    <a href="{{'?cateID='.request()->get('cateID').'&styleID='.$style->style_id }}">{{ $style -> style_name }}</a>
+                                <li class="tag__item {{request()->styleID == $style->style_id.'-'.Str::slug($style->style_name) ? 'bg-primary text-white' : ''}}">
+                                    <a href="{{'?styleID='.$style->style_id.'-'.Str::slug($style->style_name) }}">{{ $style -> style_name }}</a>
                                 </li>
                             @endforeach
                         </ul>
@@ -110,7 +110,7 @@
             <div class="row row-cols-1 row-cols-md-4 g-4 mb-3">
                 @foreach($calligraphies as $calligraphy)
                     <div class="col">
-                        <a href="{{ route('home.detail',$calligraphy->calligraphy_id) }}" class="card category__card text-decoration-none h-100">
+                        <a href="{{ route('home.detail', ['calligraphy' => $calligraphy->calligraphy_id]) . '-' . Str::slug($calligraphy->calligraphy_name)}}" class="card category__card text-decoration-none h-100">
                             <img class="card-img-top img-fit" src=" {{ asset('storage/'. $calligraphy->galleryImage->first()->image_name) }}"  alt="{{ $calligraphy->galleryImage->first()->image_name }}"/>
                             <div class="card-body text-primary-color">
                                 <h6 class="card-title">{{ $calligraphy->calligraphy_name }}</h6>

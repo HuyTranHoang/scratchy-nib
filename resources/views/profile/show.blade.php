@@ -25,12 +25,16 @@
                             <p class="card-text"><span class="fw-semibold">Registration Date:</span> {{$user->created_at}}</p>
 
                             <ul class="list-unstyled d-flex gap-3">
-                                <li>
-                                    <a style="color: cornflowerblue" href="{{$user->facebook}}"><i class="fa-brands fa-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a style="color: #1DA1F2" href="{{$user->twitter}}"><i class="fa-brands fa-twitter"></i></a>
-                                </li>
+                                @if($user->facebook)
+                                    <li>
+                                        <a style="color: cornflowerblue" href="{{$user->facebook}}"><i class="fa-brands fa-facebook"></i></a>
+                                    </li>
+                                @endif
+                                @if($user->twitter)
+                                    <li>
+                                        <a style="color: #1DA1F2" href="{{$user->twitter}}"><i class="fa-brands fa-twitter"></i></a>
+                                    </li>
+                                @endif
                             </ul>
 
                             @if(Auth::user()->user_id == $user->user_id)

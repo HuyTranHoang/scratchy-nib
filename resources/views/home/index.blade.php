@@ -237,7 +237,7 @@
                     <div class="row">
                         <div class="col">
                             <a href="{{ route('home.category',['cateID' => 4]) }}" class="btn btn-primary-color btn-more-about mt-3">
-                                More about odern Calligraphy <i class="fa-solid fa-arrow-right"></i></a>
+                                More about Modern Calligraphy <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>

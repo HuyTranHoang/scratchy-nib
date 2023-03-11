@@ -89,7 +89,7 @@
                             <a class="card-body-gallery" href="{{ asset('storage/'.$image->image_name) }}" data-lightbox="{{ $image->image_name }}" data-title="{{ $image -> calligraphy -> calligraphy_name }}">
                                 <h6 class="card-title-gallery">{{ $image -> calligraphy -> calligraphy_name }}</h6>
                                 <p class="card-category">{{ $image -> calligraphy -> calligraphyStyle -> style_name }}</p>
-                                <a class="card-btn text-decoration-none" href="{{ route('home.detail', $image -> calligraphy -> calligraphy_id) }}">Detail</a>
+                                <a class="card-btn text-decoration-none" href="{{ route('home.detail', $image -> calligraphy -> calligraphy_id).'-'.Str::slug($image -> calligraphy -> calligraphy_name) }}">Detail</a>
                             </a>
                         </div>
                     </div>

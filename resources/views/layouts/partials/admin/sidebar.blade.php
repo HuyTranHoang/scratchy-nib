@@ -50,16 +50,29 @@
                 </a>
             </li>
             <hr>
-            <li class="nav-item">
-                <strong class="px-3 py-2 text-success">{{ Auth::user() -> name }}</strong>
-                <a class="nav-link" href="{{ route('home.index') }}">
-                    <i class="fa-solid fa-house"></i>
-                    Back to homepage
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-offset="50,0" aria-expanded="false">
+                    <img style="height: 40px; width: 40px; border-radius: 50%" src="{{ asset('storage/' . Auth::user()->avatar) }}" alt="">
+                    <strong class="py-2 text-success">{{ Auth::user() -> name }}</strong>
                 </a>
-                <a class="nav-link" href="#">
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    Logout
-                </a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('home.index') }}">
+                            <i class="fa-solid fa-house"></i>
+                            Back to homepage
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button class="dropdown-item fw-semibold nav-link" type="submit">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                Logout
+                            </button>
+                        </form>
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>

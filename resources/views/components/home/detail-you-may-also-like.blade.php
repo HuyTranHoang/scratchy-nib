@@ -5,7 +5,7 @@
         @foreach($calligraphies as $subCalligraphy)
             @if($subCalligraphy->calligraphy_id != $calligraphy->calligraphy_id)
                 <div class="col-sm-4 col-md">
-                    <a href="{{ route('home.detail', $subCalligraphy->calligraphy_id) }}" class="card category__card text-decoration-none h-100">
+                    <a href="{{ route('home.detail', ['calligraphy' => $subCalligraphy->calligraphy_id]) . '-' . Str::slug($subCalligraphy->calligraphy_name) }}" class="card category__card text-decoration-none h-100">
                         <img class="card-img-top" src="{{asset('storage/'.$subCalligraphy -> galleryImage -> first() -> image_name)}}"  alt="Error"/>
                         <div class="card-body d-flex flex-column justify-content-end">
                             <h6 class="card-title text-primary-color">{{ $subCalligraphy->calligraphy_name }}</h6>
