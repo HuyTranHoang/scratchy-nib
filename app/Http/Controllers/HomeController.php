@@ -33,7 +33,9 @@ class HomeController extends Controller
             'styles' => CalligraphyStyle::filter(request(['cateID']))->get(),
             'currentCategory' => CalligraphyCategory::find(request()->cateID),
             'currentStyle' => CalligraphyStyle::find(request()->styleID),
-            'calligraphies' => Calligraphy::filter(request(['calligraphyName','cateID','styleID']))->paginate(16)->appends(request()->query())
+            'calligraphies' => Calligraphy::filter(request(['calligraphyName','cateID','styleID']))->paginate(16)->appends(request()->query()),
+            'randomCateImage' => CalligraphyStyle::where('category_id',request()->cateID ?? rand(1,4))->inRandomOrder()->first()->calligraphy()->inRandomOrder()->first(),
+            'randomStyleImage' => CalligraphyStyle::where('style_id',request()->styleID ?? 1)->first()->calligraphy()->inRandomOrder()->first()
         ]);
     }
 
@@ -64,7 +66,7 @@ class HomeController extends Controller
             'calligraphies' => Calligraphy::where('style_id',$calligraphy->style_id)->inRandomOrder()->limit(6)->get(),
             'feedback' => Feedback::where('calligraphy_id',$calligraphy->calligraphy_id)
                 ->orderBy('created_at','DESC')->paginate(4),
-            'editfeedback' => Feedback::find(request()->feedback)
+            'editfeedback' => Feedback::find(request()->feedback),
         ]);
     }
 

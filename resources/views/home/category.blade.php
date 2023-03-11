@@ -30,8 +30,8 @@
         <section class="container">
             @if(request()->cateID)
                 <article class="postcard light red">
-                    <a class="postcard__img_link" href="https://picsum.photos/501/500" data-lightbox="thumb">
-                        <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />
+                    <a class="postcard__img_link" href="{{ asset('storage/' . $randomCateImage->galleryImage->first()->image_name) }}" data-lightbox="thumb">
+                        <img class="postcard__img" src="{{ asset('storage/' . $randomCateImage->galleryImage->first()->image_name) }}" alt="Image Title" />
                     </a>
                     <div class="postcard__text t-dark">
                         <h1 class="postcard__title red">{{ $currentCategory->category_name }}</h1>
@@ -56,8 +56,8 @@
             @else
                 {{-- All Category--}}
                 <article class="postcard light red">
-                    <a class="postcard__img_link" href="https://picsum.photos/501/500" data-lightbox="thumb">
-                        <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />
+                    <a class="postcard__img_link" href="{{ asset('storage/' . $randomCateImage->galleryImage->first()->image_name) }}" data-lightbox="thumb">
+                        <img class="postcard__img" src="{{ asset('storage/' . $randomCateImage->galleryImage->first()->image_name) }}" alt="Image Title" />
                     </a>
                     <div class="postcard__text t-dark">
                         <h1 class="postcard__title red"><a href="#">All Calligraphy</a></h1>
@@ -88,8 +88,8 @@
 
             @if(request()->styleID)
                     <article class="postcard light red">
-                        <a class="postcard__img_link" href="https://picsum.photos/501/500" data-lightbox="thumb">
-                            <img class="postcard__img" src="https://picsum.photos/501/500" alt="Image Title" />
+                        <a class="postcard__img_link" href="{{ asset('storage/' . $randomStyleImage->galleryImage->first()->image_name) }}" data-lightbox="thumb">
+                            <img class="postcard__img" src="{{ asset('storage/' . $randomStyleImage->galleryImage->first()->image_name) }}" alt="Image Title" />
                         </a>
                         <div class="postcard__text t-dark">
                             <h1 class="postcard__title red">{{ $currentStyle->style_name }}</h1>
