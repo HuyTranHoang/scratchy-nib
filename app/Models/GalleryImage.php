@@ -22,6 +22,7 @@ class GalleryImage extends Model
     }
 
     public function scopeFilter($query, array $filters) {
+        $query->join('calligraphies', 'gallery_images.calligraphy_id', '=', 'calligraphies.calligraphy_id');
 
         if ($filters['cateID'] ?? false) {
             $query->whereHas('calligraphy.CalligraphyStyle.CalligraphyCategory', function ($query) use ($filters) {
@@ -32,31 +33,19 @@ class GalleryImage extends Model
                     ->when($filters['calliName'] ?? false, function ($query) use ($filters) {
                         $query->where('calligraphy_name', 'like', '%' . $filters['calliName'] . '%');
                     });
-            })->join('calligraphies', 'gallery_images.calligraphy_id', '=', 'calligraphies.calligraphy_id');
+            });
+        }
 
-            if ($filters['sort'] ?? false) {
-                $query->orderBy('calligraphies.calligraphy_id',$filters['sort']);
-            }
+        if ($filters['calliName'] ?? false) {
+            $query->where('calligraphy_name', 'like', '%' . $filters['calliName'] . '%');
+        }
 
-        } else {
-            if ($filters['calliName'] ?? false) {
-                $query->whereIn('calligraphy_id', function ($query) use ($filters)
-                {
-                    $query->select('calligraphy_id')->from('calligraphies')
-                        ->where('calligraphy_name', 'like', '%' . $filters['calliName'] . '%');
-                });
-            }
+        if ($filters['styleID'] ?? false) {
+            $query->where('style_id', $filters['styleID']);
+        }
 
-            if ($filters['styleID'] ?? false) {
-                $query->whereIn('calligraphy_id', function ($query) use ($filters) {
-                    $query->select('calligraphy_id')->from('calligraphies')
-                        ->where('style_id', $filters['styleID']);
-                });
-            }
-
-            if ($filters['sort'] ?? false) {
-                $query->orderBy('calligraphy_id',$filters['sort']);
-            }
+        if ($filters['sort'] ?? false) {
+            $query->orderBy('calligraphies.calligraphy_id', $filters['sort']);
         }
     }
 }
