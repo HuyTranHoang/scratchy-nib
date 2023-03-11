@@ -35,7 +35,7 @@
                         <div class="w-100">
                             <div class="row">
                                 <div class="col-6">
-                                    <h6 class="fw-bold mb-1">{{ $feb->user->name }}</h6>
+                                    <h6 class="fw-bold mb-1"><a href="{{ route('home.show-user',$feb->user->user_id) }}" class="text-decoration-none">{{ $feb->user->name }}</a></h6>
                                     <span class="mb-0">{{ $feb->created_at->diffForHumans() }}</span>
                                     <small class="text-primary-color">{{ $feb->created_at != $feb->updated_at ? '(edited)' : '' }}</small>
                                 </div>

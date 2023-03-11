@@ -33,11 +33,11 @@
                 <div class="card text-dark mb-2">
                     <div class="card-body d-flex">
                         <img class="rounded shadow-1-strong me-3"
-                             src="https://i.pinimg.com/474x/28/1f/26/281f26edab6d1ce334d4058aea19abec.jpg" alt="avatar" width="80" height="80" />
+                             src="{{ asset('storage/' . $feb->user->avatar) }}" alt="avatar" width="80" height="80" />
                         <div class="w-100">
                             <div class="row">
                                 <div class="col-6">
-                                    <h6 class="fw-bold mb-1">{{ $feb->user->name }}</h6>
+                                    <h6 class="fw-bold mb-1"><a href="{{ route('home.show-user',$feb->user->user_id) }}" class="text-decoration-none">{{ $feb->user->name }}</a></h6>
                                     <span class="mb-0">{{ $feb->created_at->diffForHumans() }}</span>
                                 </div>
                                 <div class="col-6">

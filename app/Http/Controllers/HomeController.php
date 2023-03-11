@@ -11,6 +11,7 @@ use App\Models\CalligraphyCategory;
 use App\Models\CalligraphyStyle;
 use App\Models\Feedback;
 use App\Models\GalleryImage;
+use App\Models\User;
 use App\Models\Visitor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -64,6 +65,12 @@ class HomeController extends Controller
             'feedback' => Feedback::where('calligraphy_id',$calligraphy->calligraphy_id)
                 ->orderBy('created_at','DESC')->paginate(4),
             'editfeedback' => Feedback::find(request()->feedback)
+        ]);
+    }
+
+    public function showUser(User $user){
+        return view('profile.show', [
+            'user' => $user
         ]);
     }
 

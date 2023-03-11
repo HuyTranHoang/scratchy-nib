@@ -39,6 +39,45 @@
     </div>
 
     <div class="mt-3">
+        <label for="bio" class="form-label">Bio</label>
+        <div class="row">
+            <div class="col-sm-12 col-md-8 col-lg-5">
+                <input id="bio" type="text" name="bio" value="{{ old('bio', $user->bio) }}"
+                       class="form-control" placeholder="Micro bio about you">
+            </div>
+        </div>
+        @error('bio')
+        <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
+        @enderror
+    </div>
+
+    <div class="mt-3">
+        <label for="facebook" class="form-label">Facebook</label>
+        <div class="row">
+            <div class="col-sm-12 col-md-8 col-lg-5">
+                <input id="facebook" type="text" name="facebook" value="{{ old('facebook', $user->facebook) }}"
+                       class="form-control" placeholder="Profile link">
+            </div>
+        </div>
+        @error('facebook')
+        <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
+        @enderror
+    </div>
+
+    <div class="mt-3">
+        <label for="twitter" class="form-label">Twitter</label>
+        <div class="row">
+            <div class="col-sm-12 col-md-8 col-lg-5">
+                <input id="twitter" type="text" name="twitter" value="{{ old('twitter', $user->twitter) }}"
+                       class="form-control" placeholder="Profile link">
+            </div>
+        </div>
+        @error('twitter')
+        <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
+        @enderror
+    </div>
+
+    <div class="mt-3">
         <div class="card" style="width: 13rem;">
             <img src="{{ asset('storage/'.$user -> avatar) }}" alt="{{ $user -> avatar }}"
                  class="card-img-top">

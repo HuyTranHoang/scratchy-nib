@@ -39,7 +39,7 @@
                                 <img class="img-fluid" src="{{ asset('storage/' . Auth::user()->avatar) }}" alt="avatar">
                             </li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Profile</a></li>
+                            <li><a class="dropdown-item" href="{{ route('home.show-user', Auth::user()->user_id) }}">Profile</a></li>
                             @if( Auth::user()-> role_id == 1)
                                 <li><a class="dropdown-item" href="{{ route('admin.index') }}">Admin dashboard</a></li>
                             @endif
