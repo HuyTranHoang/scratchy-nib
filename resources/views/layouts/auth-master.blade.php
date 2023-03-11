@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
 </head>
 
-<body class="container vh-100 d-flex justify-content-center align-items-center bg-primary-color">
+<body class="container vh-100 d-flex justify-content-center align-items-center">
     {{$slot}}
 </body>
 </html>
