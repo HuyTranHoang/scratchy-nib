@@ -19,16 +19,16 @@
 
                 <hr>
                 <div class="fw-bold mt-3">
-                    <h4>CATEGORY: <small class="text-primary-color">{{ $calligraphy -> calligraphyStyle -> calligraphyCategory -> category_name }}</small></h4>
-                    <h4>STYLE: <small class="text-primary-color">{{ $calligraphy -> calligraphyStyle -> style_name  }}</small></h4>
+                    <h4>Category: <small class="text-primary-color">{{ $calligraphy -> calligraphyStyle -> calligraphyCategory -> category_name }}</small></h4>
+                    <h4>Style: <small class="text-primary-color">{{ $calligraphy -> calligraphyStyle -> style_name  }}</small></h4>
                 </div>
                 <div class="fw-semibold mt-3">
-                    Author:
+                    <h5>Author:</h5>
                 </div>
                 <div class="fw-semibold mt-3">
-                    Upload date: <span class="text-primary-color">{{ date('d-m-Y', strtotime($calligraphy -> created_at)) }}</span>
+                    <h5>Upload date: <small class="text-primary-color">{{ date('d-m-Y', strtotime($calligraphy -> created_at)) }}</small> </h5>
                 </div>
-                <h4 class="mt-3">DESCRIPTION: </h4>
+                <h5 class="mt-3">Description: </h5>
                 <p class="text-primary-color"> {{ $calligraphy -> calligraphy_description }}</p>
             </div>
         </div>

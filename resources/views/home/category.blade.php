@@ -106,6 +106,11 @@
                     </article>
             @endif
 
+            <div class="row mb-3">
+                <div class="col-sm-4 col-md-4 col-lg-2">
+                    <img class="img-fluid" src="{{asset('storage/images/divider-pink.png')}}" alt="divider">
+                </div>
+            </div>
 
             <div class="row row-cols-1 row-cols-md-4 g-4 mb-3">
                 @foreach($calligraphies as $calligraphy)
