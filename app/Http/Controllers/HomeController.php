@@ -34,8 +34,7 @@ class HomeController extends Controller
             'currentCategory' => CalligraphyCategory::find(request()->cateID),
             'currentStyle' => CalligraphyStyle::find(request()->styleID),
             'calligraphies' => Calligraphy::filter(request(['calligraphyName','cateID','styleID']))->paginate(16)->appends(request()->query()),
-            'randomCateImage' => CalligraphyStyle::where('category_id',request()->cateID ?? rand(1,4))->inRandomOrder()->first()->calligraphy()->inRandomOrder()->first(),
-            'randomStyleImage' => CalligraphyStyle::where('style_id',request()->styleID ?? 1)->first()->calligraphy()->inRandomOrder()->first()
+            'randomImage' => CalligraphyStyle::inRandomOrder()->first()->style_image
         ]);
     }
 
