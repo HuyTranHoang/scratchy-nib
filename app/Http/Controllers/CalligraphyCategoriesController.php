@@ -6,6 +6,7 @@ use App\Http\Requests\CategoryPostRequest;
 use App\Http\Requests\CategoryPutRequest;
 use App\Models\CalligraphyCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class CalligraphyCategoriesController extends Controller
@@ -25,6 +26,11 @@ class CalligraphyCategoriesController extends Controller
     public function store(CategoryPostRequest $request)
     {
         $validated = $request->validated();
+
+        if ($request->hasFile('category_image')) {
+            $validated['category_image'] = $request->file('category_image')->store('uploads/cateImages', 'public');
+        }
+
         CalligraphyCategory::create($validated);
         Alert::success('Success', 'New calligraphy category succesfully added!')->buttonsStyling(false)->autoClose(1500);
         return redirect(route('categories.index'));
@@ -44,6 +50,13 @@ class CalligraphyCategoriesController extends Controller
     public function update(CategoryPutRequest $request, CalligraphyCategory $category)
     {
         $validated = $request->validated();
+
+        if ($request->hasFile('category_image')) {
+            $oldImageName = 'storage/' . $category->category_image;
+            File::delete($oldImageName);
+            $validated['category_image'] = $request->file('category_image')->store('uploads/cateImages', 'public');
+        }
+
         $category->update($validated);
         Alert::success('Success', 'Calligraphy category succesfully updated!')->buttonsStyling(false)->autoClose(1500);
 
@@ -55,6 +68,8 @@ class CalligraphyCategoriesController extends Controller
         $redrectTo = $request->query('redirect_to',route('categories.index'));
         $CateID = $request->category_id;
         $category = CalligraphyCategory::findOrFail($CateID);
+        $oldImageName = 'storage/' . $category->category_image;
+        File::delete($oldImageName);
         $category->delete();
         Alert::success('Success', 'Calligraphy category succesfully deleted!')->buttonsStyling(false)->autoClose(1500);
 

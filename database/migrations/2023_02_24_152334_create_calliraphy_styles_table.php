@@ -10,8 +10,8 @@ return new class extends Migration
     {
         Schema::create('calliraphy_styles', function (Blueprint $table) {
             $table->id('style_id');
-            $table->string('style_name', 50);
-            $table->string('style_image')->default('styleImage/noImage.jpg');
+            $table->string('style_name', 255);
+            $table->string('style_image')->default('uploads/styleImages/noImage.jpg');
             $table->text('style_description')->nullable();
             $table->foreignId('category_id')->references('category_id')->on('calligraphy_categories')
                 ->onDelete('cascade');

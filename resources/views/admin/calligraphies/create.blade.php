@@ -45,7 +45,6 @@
                     @enderror
                 </div>
 
-
                 <div class="mb-3" id="previewCard" style="display: none">
                     <div class="card" style="width: 13rem;">
                         <img src="" alt=""

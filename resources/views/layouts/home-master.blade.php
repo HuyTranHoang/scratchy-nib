@@ -1,4 +1,4 @@
-@props(['title'])
+@props(['title' => 'Scratchy Nib'])
 
 <!doctype html>
 <html lang="en">

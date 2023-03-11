@@ -10,8 +10,8 @@ return new class extends Migration
     {
         Schema::create('calligraphy_categories', function (Blueprint $table) {
             $table->id('category_id');
-            $table->string('category_name', 50);
-            $table->string('category_image')->default('cateImage/noImage.jpg');
+            $table->string('category_name', 255);
+            $table->string('category_image')->default('uploads/cateImages/noImage.jpg');
             $table->text('category_description')->nullable();
             $table->timestamps();
         });

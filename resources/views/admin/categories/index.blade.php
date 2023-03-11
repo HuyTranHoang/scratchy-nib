@@ -33,6 +33,7 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col" style="width: 15%">Categories Name</th>
+                <th scope="col" style="max-width: 200px">Categories Image</th>
                 <th scope="col">Categories Description</th>
                 <th scope="col" colspan="2" class="text-center">Action</th>
                 <th scope="col" style="width: 10%">Created At</th>
@@ -49,6 +50,10 @@
                 <tr>
                     <td>{{$category -> category_id}}</td>
                     <td>{{$category -> category_name}}</td>
+                    <td>
+                        <img src="{{ asset('storage/'.$category -> category_image) }}" alt="{{ $category -> category_image }}"
+                             style="max-width: 200px">
+                    </td>
                     <td>{{$category -> category_description}}</td>
                     <td class="text-center px-0">
                         <a href="{{route('categories.edit', $category -> category_id)}}"><i class="fa-solid fa-pen"></i></a></td>

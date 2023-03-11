@@ -12,7 +12,7 @@
 
     <h3>Update category</h3>
 
-    <form method="POST" action="{{route('categories.update',$category->category_id)}}">
+    <form method="POST" action="{{route('categories.update',$category->category_id)}}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="row">
@@ -32,6 +32,25 @@
                     <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                     @enderror
                 </div>
+
+                <div class="mb-3" id="previewCard">
+                    <div class="card" style="width: 13rem;">
+                        <img src="{{ asset('storage/' . $category->category_image) }}" alt=""
+                             class="card-img-top" id="ImgOutput">
+                        <div class="card-body">
+                            Image preview
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="image" class="form-label">Image</label>
+                    <input type="file" name="category_image" id="image" class="form-control">
+                    @error('category_image')
+                    <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
+                    @enderror
+                </div>
+
             </div>
         </div>
         <button type="submit" class="btn btn-primary">Update</button>

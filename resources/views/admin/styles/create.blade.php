@@ -12,7 +12,7 @@
 
     <h3>Create new style</h3>
 
-    <form method="post" action="{{route('styles.store')}}">
+    <form method="post" action="{{route('styles.store')}}" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="col-5">
@@ -41,6 +41,24 @@
                         @endforeach
                     </select>
                     @error('category_id')
+                    <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
+                    @enderror
+                </div>
+
+                <div class="mb-3" id="previewCard" style="display: none">
+                    <div class="card" style="width: 13rem;">
+                        <img src="" alt=""
+                             class="card-img-top" id="ImgOutput">
+                        <div class="card-body">
+                            Image preview
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="image" class="form-label">Image</label>
+                    <input type="file" name="style_image" id="image" class="form-control">
+                    @error('style_image')
                     <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                     @enderror
                 </div>

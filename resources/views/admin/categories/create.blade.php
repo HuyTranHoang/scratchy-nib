@@ -12,7 +12,7 @@
 
     <h3>Create new category</h3>
 
-    <form method="POST" action="{{route('categories.store')}}">
+    <form method="POST" action="{{route('categories.store')}}" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="col-lg-8 col-xl-5">
@@ -28,6 +28,24 @@
                         {{old('category_description')}}
                     </textarea>
                     @error('category_description')
+                    <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
+                    @enderror
+                </div>
+
+                <div class="mb-3" id="previewCard" style="display: none">
+                    <div class="card" style="width: 13rem;">
+                        <img src="" alt=""
+                             class="card-img-top" id="ImgOutput">
+                        <div class="card-body">
+                            Image preview
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="image" class="form-label">Image</label>
+                    <input type="file" name="category_image" id="image" class="form-control">
+                    @error('category_image')
                     <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                     @enderror
                 </div>

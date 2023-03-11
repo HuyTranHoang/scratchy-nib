@@ -99,7 +99,7 @@
             {{ $images->links() }}
             @if($images->count() == 0)
                 <div style="min-height: 200px">
-                    <h4 class="text-primary-color">There seem to be no search results matching your request</h4>
+                    <h4 class="text-primary-color">There seem to be no search results matching "{{request()->calliName}}"</h4>
                     <a class="btn btn-primary-color mt-3" href="{{ route('home.gallery') }}">Reset all filter and search</a>
                 </div>
             @endif

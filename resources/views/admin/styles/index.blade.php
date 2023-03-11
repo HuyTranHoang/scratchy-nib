@@ -42,6 +42,7 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col" style="width: 10%">Styles Name</th>
+                <th scope="col" style="max-width: 200px">Styles Image</th>
                 <th scope="col">Styles Description</th>
                 <th scope="col" style="width: 15%">Category Name</th>
                 <th scope="col" colspan="2" class="text-center">Action</th>
@@ -59,6 +60,10 @@
                 <tr>
                     <td>{{$style -> style_id}}</td>
                     <td>{{$style -> style_name}}</td>
+                    <td>
+                        <img src="{{ asset('storage/'.$style -> style_image) }}" alt="{{ $style -> style_image }}"
+                             style="max-width: 200px">
+                    </td>
                     <td>{{$style -> style_description}}</td>
                     <td>{{$style -> calligraphyCategory -> category_name}}</td>
                     <td class="text-center px-0">

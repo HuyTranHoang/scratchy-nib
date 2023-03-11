@@ -14,7 +14,7 @@ class CalligraphyCategory extends Model
 
     protected $table = 'calligraphy_categories';
 
-    protected $fillable = ['category_name', 'category_description'];
+    protected $fillable = ['category_name', 'category_description','category_image'];
 
     public function calligraphyStyle(): HasMany
     {

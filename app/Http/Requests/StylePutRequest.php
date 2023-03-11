@@ -23,6 +23,7 @@ class StylePutRequest extends FormRequest
     {
         return [
             'style_name' => 'required|max:50',
+            'style_image' => 'max:2048',
             'style_description' => 'required|max:65535',
             'category_id' => 'required'
         ];

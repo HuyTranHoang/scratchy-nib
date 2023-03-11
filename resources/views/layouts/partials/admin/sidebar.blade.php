@@ -58,7 +58,7 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('home.index') }}">
+                        <a class="dropdown-item nav-link" href="{{ route('home.index') }}">
                             <i class="fa-solid fa-house"></i>
                             Back to homepage
                         </a>

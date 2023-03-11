@@ -9,6 +9,7 @@ use App\Models\CalligraphyCategory;
 
 use App\Models\CalligraphyStyle;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class CalligraphyStylesController extends Controller
@@ -31,6 +32,10 @@ class CalligraphyStylesController extends Controller
     public function store(StylePostRequest $request)
     {
         $validated = $request->validated();
+        if ($request->hasFile('style_image')) {
+            $validated['style_image'] = $request->file('style_image')->store('uploads/styleImages', 'public');
+        }
+
         CalligraphyStyle::create($validated);
         Alert::success('Success', 'New calligraphy style successfully added!')->buttonsStyling(false)->autoClose(1500);
         return redirect(route('styles.index'));
@@ -47,17 +52,23 @@ class CalligraphyStylesController extends Controller
     public function update(StylePutRequest $request, CalligraphyStyle $style)
     {
         $validated = $request->validated();
+        if ($request->hasFile('style_image')) {
+            $oldImageName = 'storage/' . $style->style_image;
+            File::delete($oldImageName);
+            $validated['style_image'] = $request->file('style_image')->store('uploads/cateImages', 'public');
+        }
         $style->update($validated);
         Alert::success('Success', 'Calligraphy style successfully updated!')->buttonsStyling(false)->autoClose(1500);
         return redirect(route('styles.index'));
     }
 
-    //xong
     public function destroy(Request $request)
     {
         $redrectTo = $request->query('redirect_to',route('styles.index'));
         $StyleID = $request->style_id;
         $style = CalligraphyStyle::findOrFail($StyleID);
+        $oldImageName = 'storage/' . $style->style_image;
+        File::delete($oldImageName);
         $style->delete();
         Alert::success('Success', 'Calligraphy style succesfully deleted!')->buttonsStyling(false)->autoClose(1500);
         return redirect($redrectTo);
