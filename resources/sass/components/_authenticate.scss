@@ -3,13 +3,23 @@
 
 @use "../abstracts/variables";
 
+@use "../abstracts/mixins";
+
 #authenticate .form-control {
     padding-right: 3.8rem;
 }
 
+#authenticate label {
+    color: variables.$text-color
+}
+
 .loginform {
     position: relative;
-    width: 820px;
+    height: 572px;
+    @include mixins.mobile {
+     height: auto;
+    }
+    width: 750px;
     margin: 20px auto;
     border: 1px solid #dddd;
     border-radius: 18px;
@@ -43,11 +53,17 @@
 }
 
 .bg-image {
-    background-image: url('https://images.pexels.com/photos/2033997/pexels-photo-2033997.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+    background-image: url('../images/auth-bg.jpg');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top center;
     background-size: cover;
-    min-height: 440px;
+}
+
+.auth-body-image {
+    background-image: url('../images/auth-body-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
 }
 
 .auth-btn {
