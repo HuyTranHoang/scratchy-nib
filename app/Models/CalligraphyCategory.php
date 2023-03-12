@@ -23,7 +23,7 @@ class CalligraphyCategory extends Model
 
     public function scopeFilter($query, array $filters) {
         if($filters['cateName'] ?? false) {
-            $query->where('category_name','like','%'.request('cateName').'%');
+            $query->where('category_name','like','%'.$filters['cateName'].'%');
         }
     }
 

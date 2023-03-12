@@ -28,9 +28,9 @@ class Feedback extends Model
 
     public function scopeFilter($query, array $filters) {
         if($filters['userName'] ?? false) {
-            $query->whereIn('user_id',function ($query) {
+            $query->whereIn('user_id',function ($query) use ($filters) {
                 $query->select('user_id')->from('users')
-                    ->where('name','like','%'.request()->userName.'%');
+                    ->where('name','like','%'.$filters['userName'].'%');
             });
         }
     }

@@ -20,7 +20,7 @@ class Role extends Model
 
     public function scopeFilter($query, array $filters) {
         if($filters['roleName'] ?? false) {
-            $query->where('role_name','like','%'.request('roleName').'%');
+            $query->where('role_name','like','%'.$filters['roleName'].'%');
         }
     }
 
