@@ -7,7 +7,7 @@
                     <h1 class="header-title">Mastering Calligraphy</h1>
 
                     <p>
-                        Welcome to Scratchy Nib, the ultimate resource for learning and practicing the art of calligraphy.
+                        Welcome to Scratchy Nib, the ultimate resource for viewing, learning and practicing the art of calligraphy.
                         Our website is designed to help you explore the beauty and artistry of this ancient craft, and to provide
                         you with the tools and knowledge you need to become a skilled calligrapher.
                     </p>
