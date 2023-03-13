@@ -16,8 +16,19 @@ class CalligraphyStylesController extends Controller
 {
     public function index()
     {
+
+        $perPage = 5;
+        $page = request()->input('page', 1);
+        $totalItems = CalligraphyStyle::filter(request(['styleName','cateID']))->count();
+        $totalPages = ceil($totalItems / $perPage);
+
+        if ($page > $totalPages) {
+            Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(1500);
+            return redirect(route('styles.index',['page'=> 1]));
+        }
+
         return view('admin.styles.index', [
-            'styles' => CalligraphyStyle::filter(request(['styleName','cateID','orderby','sort']))->paginate(5)->appends(request()->query()),
+            'styles' => CalligraphyStyle::filter(request(['styleName','cateID','orderby','sort']))->paginate($perPage)->appends(request()->query()),
             'categories' => CalligraphyCategory::all()
         ]);
     }

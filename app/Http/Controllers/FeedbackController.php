@@ -14,8 +14,19 @@ class FeedbackController extends Controller
 {
     public function index()
     {
+
+        $perPage = 10;
+        $page = request()->input('page', 1);
+        $totalItems = Feedback::filter(request(['userName']))->count();
+        $totalPages = ceil($totalItems / $perPage);
+
+        if ($page > $totalPages) {
+            Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(1500);
+            return redirect(route('feedback.index',['page'=> 1]));
+        }
+
         return view('admin.feedback.index', [
-            'feedback' => Feedback::filter(request(['userName']))->paginate(10)->appends(request()->query())
+            'feedback' => Feedback::filter(request(['userName']))->paginate($perPage)->appends(request()->query())
         ]);
     }
 
