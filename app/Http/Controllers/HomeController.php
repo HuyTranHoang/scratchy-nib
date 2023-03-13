@@ -72,12 +72,6 @@ class HomeController extends Controller
         ]);
     }
 
-    public function showUser(User $user){
-        return view('profile.show', [
-            'user' => $user
-        ]);
-    }
-
     public function storeFeedback(FeedbackPostRequest $request)
     {
         $validated = $request->validated();

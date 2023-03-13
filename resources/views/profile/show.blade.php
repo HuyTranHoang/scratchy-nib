@@ -21,8 +21,8 @@
                         <div class="card-body">
                             <h5 class="card-title text-secondary">{{$user->name}}</h5>
                             <p class="card-text"><span class="fw-semibold">Email:</span> {{$user->email}}</p>
-                            <p class="card-text"><span class="fw-semibold">Bio:</span> {{$user->bio}}</p>
-                            <p class="card-text"><span class="fw-semibold">Registration Date:</span> {{$user->created_at}}</p>
+                            <p class="card-text"><span class="fw-semibold">Bio:</span> {!! $user->bio ?? '<i>'.$user->name.' has not updated their bio yet</i>' !!}</p>
+                            <p class="card-text"><span class="fw-semibold">Registration Date:</span> {{$user->created_at->diffForHumans()}}</p>
 
                             <ul class="list-unstyled d-flex gap-3">
                                 @if($user->facebook)

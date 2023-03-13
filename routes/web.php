@@ -40,7 +40,7 @@ Route::middleware(['web', 'VisitorCounter'])->group(function () {
     Route::delete('/delete-feedback', [HomeController::class, 'deleteFeedback'])->name('home.delete-feedback');
 
     // View other user profile ( Guest can see too )
-    Route::get('profile/{user}', [HomeController::class, 'showUser'])->name('home.show-user');
+    Route::get('profile/{user}', [ProfileController::class, 'showUser'])->name('home.show-user');
 });
 
 // User profile
