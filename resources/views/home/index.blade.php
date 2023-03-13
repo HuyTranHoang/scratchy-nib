@@ -19,15 +19,22 @@
                         and to stay up-to-date on the latest trends and techniques in this beautiful and timeless art form.
                     </p>
 
-                    <form class="row">
+                    <form action="{{ route('subscribe') }}" method="post" class="row">
+                        @csrf
                         <div class="col-4">
                             <div class="mb-3">
-                                <input type="text" class="form-control" name="firstName" placeholder="Your first name">
+                                <input type="text" class="form-control" name="name" placeholder="Your name">
+                                @error('name')
+                                <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
+                                @enderror
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="mb-3">
                                 <input type="email" class="form-control" name="email" placeholder="Your email address">
+                                @error('email')
+                                <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
+                                @enderror
                             </div>
                         </div>
                         <div class="col-4">
@@ -78,7 +85,7 @@
 
     @foreach($categories as $index => $category)
         @if($index % 2 == 0)
-            <section data-aos="fade-right" data-aos-easing="ease">
+            <section data-aos="fade-right" data-aos-easing="ease" class="mb-3">
                 <div class="container text-primary">
                     <h1 id="Traditional" class="my-3 text-center text-primary">{{ $category->category_name }}</h1>
                     <div class="row mb-3">
@@ -106,7 +113,7 @@
                 </div>
             </section>
         @else
-            <section class="bg-secondary-color">
+            <section class="bg-secondary-color mb-3">
                 <x-home.overlay-top />
                 <div class="container text-secondary overflow-hidden">
                     <div data-aos="fade-left">

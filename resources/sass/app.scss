@@ -174,3 +174,10 @@
         font-weight: 500;
     }
 }
+
+// Profile
+
+.avatar {
+    aspect-ratio: 4/4;
+    object-fit: cover;
+}

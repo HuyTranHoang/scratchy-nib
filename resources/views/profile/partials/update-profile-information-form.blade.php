@@ -87,21 +87,22 @@
         @enderror
     </div>
 
-    <div class="mt-3">
+    <div class="mt-3" id="previewCard">
         <div class="card" style="width: 13rem;">
             <img src="{{ asset('storage/'.$user -> avatar) }}" alt="{{ $user -> avatar }}"
-                 class="card-img-top">
-            <div class="card-body text-center small">
-                Current Avatar
+                 class="card-img-top avatar" id="ImgOutput">
+            <div class="card-body">
+                Image preview
             </div>
         </div>
     </div>
 
+
     <div class="mt-3">
-        <label for="avatar" class="form-label">Avatar</label>
+        <label for="image" class="form-label">Avatar</label>
         <div class="row">
             <div class="col-sm-12 col-md-8 col-lg-5">
-                <input id="avatar" type="file" name="avatar" value="{{ old('avatar', $user->email) }}"
+                <input id="image" type="file" name="avatar" value="{{ old('avatar', $user->avatar) }}"
                        class="form-control">
             </div>
         </div>

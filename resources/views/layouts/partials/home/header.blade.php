@@ -35,7 +35,7 @@
                         </a>
                         <ul class="dropdown-menu animate slideIn m-0">
                             <li>
-                                <img class="img-fluid" src="{{ asset('storage/' . Auth::user()->avatar) }}" alt="avatar">
+                                <img class="img-fluid avatar" src="{{ asset('storage/' . Auth::user()->avatar) }}" alt="avatar">
                             </li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="{{ route('home.show-user', Auth::user()->user_id) }}">Profile</a></li>

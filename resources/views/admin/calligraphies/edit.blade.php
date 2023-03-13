@@ -47,12 +47,10 @@
                     @enderror
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-3" id="previewCard">
                     <div class="card" style="width: 13rem;">
-                        @foreach ($calligraphy-> galleryImage as $image)
-                            <img src="{{ asset('storage/'.$image -> image_name) }}" alt="{{ $image -> image_name }}"
-                                 class="card-img-top">
-                        @endforeach
+                        <img src="{{ asset('storage/' . $calligraphy->galleryImage->first()->image_name) }}" alt=""
+                             class="card-img-top" id="ImgOutput">
                         <div class="card-body">
                             Image preview
                         </div>
@@ -60,9 +58,9 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="image" class="form-label">Calligraphy Image</label>
-                    <input type="file" name="image" id="image" class="form-control">
-                    @error('image')
+                    <label for="image" class="form-label">Image</label>
+                    <input type="file" name="category_image" id="image" class="form-control">
+                    @error('category_image')
                     <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                     @enderror
                 </div>

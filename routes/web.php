@@ -53,6 +53,8 @@ Route::middleware(['auth'])->group(function () {
 Route::post('/get-location-data', [LocationController::class,'getLocationData']);
 // Send Email
 Route::post('/send-email', [HomeController::class, 'sendEmail'])->name('send-email');
+// Newsleter Subscriber
+Route::post('/subscribe', [HomeController::class, 'subscribe'])->name('subscribe');
 
 // Admin Page
 

@@ -13,7 +13,9 @@ use App\Models\Feedback;
 use App\Models\GalleryImage;
 use App\Models\User;
 use App\Models\Visitor;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -103,18 +105,31 @@ class HomeController extends Controller
 
     public function sendEmail(EmailPostRequest $request)
     {
-
         $validated = $request->validated();
         Mail::to('huy.th878@aptechlearning.edu.vn')->send(new Contact($validated));
-
 //        Mail::send(new Contact(), compact('validated'), function ($email) use ($validated) {
 //            $email->subject($validated['subject']);
 //            $email->to('huy.th878@aptechlearning.edu.vn', $validated['name']);
 //        });
-
-        Alert::success('Success', 'Your email sent successfully!')->buttonsStyling(false)->autoClose(1500);
+        Alert::toast('Your email has been sent successfully!', 'success')->buttonsStyling(false)->autoClose(1500);
 
         return redirect()->back();
+    }
+
+    public function subscribe(Request $request) {
+        $validated = $request->validate([
+            'name' => 'string|max:50|alpha:ascii|required',
+            'email' => 'email|max:50|unique:newsletter_subscribers,email|required'
+        ]);
+
+        $validated['created_at'] = Carbon::now();
+        $validated['updated_at'] = Carbon::now();
+
+        DB::table('newsletter_subscribers')->insert($validated);
+
+        Alert::toast('Your email has been subscribed to our new newsletter!', 'success')->buttonsStyling(false)->autoClose(1500);
+        return redirect()->back();
+
     }
 
     public function sitemap() {

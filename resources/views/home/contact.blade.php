@@ -10,7 +10,7 @@
                 <div class="col-md-7 col-sm-12 text-primary-color bg-secondary-color rounded">
                     <div class="p-4">
                         <h4 class="text-uppercase text-primary"><i class="fa-light fa-message-question"></i> Have Questions?</h4>
-                        <p>Simply fill the form below, and we will try our best to get back to you as soon as possible =]</p>
+                        <p>Simply fill the form below, and we will try our best to get back to you as soon as possible.</p>
                         <div>
                             <form action="{{route('send-email')}}" method="POST">
                                 @csrf
@@ -52,14 +52,14 @@
                                     </div>
                                 </div>
 
-                                <div class="row mt-3">
-                                    <div class="col-lg-6 offset-lg-3">
-                                        <button type="submit" class="btn btn-primary w-100">Submit</button>
-                                    </div>
-                                    <div class="d-flex mt-3 justify-content-center">
-                                        <div class="loader" id="loader"></div>
-                                    </div>
+
+                                <div class="d-flex justify-content-center">
+                                    <button class="auth-btn d-flex align-items-center justify-content-center">
+                                        Submit
+                                        <div class="loader-inline" id="loader"></div>
+                                    </button>
                                 </div>
+
                             </form>
                         </div>
                     </div>
