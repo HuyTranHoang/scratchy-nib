@@ -15,12 +15,11 @@
                         Categories
                     </a>
                     <ul class="dropdown-menu animate slideIn m-0">
-                        <li><a class="dropdown-item" href="{{ url('/#Traditional') }}">Traditional Calligraphy</a></li>
-                        <li><a class="dropdown-item" href="{{ url('/#Contemporary') }}">Contemporary Calligraphy</a></li>
-                        <li><a class="dropdown-item" href="{{ url('/#Hand-lettering') }}">Hand-lettering & Design</a></li>
-                        <li><a class="dropdown-item" href="{{ url('/#Modern') }}">Modern Calligraphy</a></li>
+                        @foreach( $categories as $category )
+                            <li><a class="dropdown-item" href="{{ route('home.category', ['cateID' => $category->category_id]) }}">{{ $category->category_name }}</a></li>
+                        @endforeach
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="{{ route('home.category') }}"><i class="fa-solid fa-right"></i> More </a></li>
+                        <li><a class="dropdown-item" href="{{ route('home.category') }}">All calligraphy</a></li>
                     </ul>
                 </li>
                 <li class="nav-item {{ request()->routeIs('home.gallery') ? 'nav-active' : '' }}"><a href="/gallery" class="nav-link">Gallery</a></li>

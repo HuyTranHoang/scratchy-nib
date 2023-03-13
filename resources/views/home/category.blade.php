@@ -40,7 +40,7 @@
                         </div>
                         <div class="postcard__bar"></div>
                         <div class="postcard__preview-txt">
-                            {{ $currentCategory->category_description }}
+                            {!! $currentCategory->category_description !!}
                         </div>
 
                         <span class="mt-3 fw-semibold">Styles list of this category</span>
