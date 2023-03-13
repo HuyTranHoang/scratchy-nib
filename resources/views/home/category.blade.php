@@ -40,7 +40,10 @@
                         </div>
                         <div class="postcard__bar"></div>
                         <div class="postcard__preview-txt">
-                            {!! $currentCategory->category_description !!}
+                            @php
+                                $category_description = explode(';',$currentCategory->category_description)
+                            @endphp
+                            {!! $category_description[0] !!}
                         </div>
 
                         <span class="mt-3 fw-semibold">Styles list of this category</span>
@@ -66,7 +69,7 @@
                         </div>
                         <div class="postcard__bar"></div>
                         <div class="postcard__preview-txt">
-                            Calligraphy is the art of creating beautiful, decorative handwriting or lettering with a pen,
+                            <b>Calligraphy</b> is the art of creating beautiful, decorative handwriting or lettering with a pen,
                             brush, or other writing instrument. It is an ancient art form that has been practiced for thousands
                             of years, originating in various cultures around the world such as Chinese, Islamic,
                             and Western calligraphy. Calligraphy is not just about writing words, but also about creating

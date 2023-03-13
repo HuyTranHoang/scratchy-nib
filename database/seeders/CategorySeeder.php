@@ -18,6 +18,11 @@ class CategorySeeder extends Seeder
                         <b>Traditional calligraphy</b> is the art of beautiful writing by hand, often using special pens or brushes and ink.
                         It is an ancient art form that has been practiced for thousands of years in various cultures around the world,
                         including China, Japan, Korea, and many Islamic countries.
+                    </p>;
+                    <p>
+                        <b>Traditional calligraphy</b> is the art of beautiful writing by hand, often using special pens or brushes and ink.
+                        It is an ancient art form that has been practiced for thousands of years in various cultures around the world,
+                        including China, Japan, Korea, and many Islamic countries.
                     </p>
                     <p>
                         In <b>traditional calligraphy</b>, the focus is on the visual appearance of the written letters and words,
@@ -37,6 +42,12 @@ class CategorySeeder extends Seeder
                 'category_name' => 'Contemporary Calligraphy',
                 'category_image' => 'uploads/cateImages/4dec201059f0f7ae894a189453a9f2e9.jpg',
                 'category_description' => '<p>
+                            <b>Contemporary calligraphy</b> is a modern interpretation of traditional calligraphy that
+                            incorporates new techniques, materials, and styles. While traditional calligraphy emphasizes adherence
+                            to established rules and forms, <b>contemporary calligraphy</b> is more experimental and often allows for more
+                            creative expression.
+                        </p>;
+                        <p>
                             <b>Contemporary calligraphy</b> is a modern interpretation of traditional calligraphy that
                             incorporates new techniques, materials, and styles. While traditional calligraphy emphasizes adherence
                             to established rules and forms, <b>contemporary calligraphy</b> is more experimental and often allows for more
@@ -75,6 +86,12 @@ class CategorySeeder extends Seeder
                         design elements to create a unique and cohesive visual message. Unlike traditional calligraphy,
                         which is focused on creating stylized writing using a particular script, hand-lettering is all
                         about creating letterforms that are uniquely designed for a specific purpose or message.
+                    </p>;
+                    <p>
+                        <b>Hand-lettering and design</b> is a type of visual art that combines hand-drawn lettering and
+                        design elements to create a unique and cohesive visual message. Unlike traditional calligraphy,
+                        which is focused on creating stylized writing using a particular script, hand-lettering is all
+                        about creating letterforms that are uniquely designed for a specific purpose or message.
                     </p>
                     <p>
                         <b>Hand-lettering and design</b> can be used in a variety of contexts, including branding and marketing,
@@ -96,6 +113,12 @@ class CategorySeeder extends Seeder
                 'category_name' => 'Modern Calligraphy',
                 'category_image' => 'uploads/cateImages/3157660e3c37a3783f33c56381c5b70c.jpg',
                 'category_description' => '<p>
+                        <b>Modern calligraphy</b> is a contemporary form of calligraphy that combines traditional calligraphy
+                        techniques with modern design elements. It has become increasingly popular in recent years,
+                        especially with the rise of social media platforms like Instagram, where modern calligraphers
+                        showcase their work.
+                    </p>;
+                    <p>
                         <b>Modern calligraphy</b> is a contemporary form of calligraphy that combines traditional calligraphy
                         techniques with modern design elements. It has become increasingly popular in recent years,
                         especially with the rise of social media platforms like Instagram, where modern calligraphers
