@@ -40,10 +40,7 @@
                         </div>
                         <div class="postcard__bar"></div>
                         <div class="postcard__preview-txt">
-                            @php
-                                $category_description = explode(';',$currentCategory->category_description)
-                            @endphp
-                            {!! $category_description[0] !!}
+                            {!! $currentCategory->category_description !!}
                         </div>
 
                         <span class="mt-3 fw-semibold">Styles list of this category</span>
@@ -133,7 +130,7 @@
             @if($calligraphies->count() == 0)
                 <div style="min-height: 200px">
                     <hr>
-                    <h4 class="text-primary-color">There seem to be no search results matching "{{request()->calligraphyName}}"</h4>
+                    <h4 class="text-primary-color">There seem to be no search results matching your request, or this category don't have any calligraphy</h4>
                     <a class="btn btn-primary-color mt-3" href="{{ route('home.category') }}">Reset all filter and search</a>
                 </div>
             @endif

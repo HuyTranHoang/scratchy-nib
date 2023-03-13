@@ -77,9 +77,6 @@
     </section>
 
     @foreach($categories as $index => $category)
-        @php
-            $category_description = explode(';',$category->category_description)
-        @endphp
         @if($index % 2 == 0)
             <section data-aos="fade-right" data-aos-easing="ease">
                 <div class="container text-primary">
@@ -92,7 +89,7 @@
 
                     <div class="row text-primary-color">
                         <div class="col-md-6 col-lg-5 offset-lg-1 text-center">
-                            {!! $category_description[1] !!}
+                            {!! $category->category_description !!}
                         </div>
                         <div class="col-md-6 col-lg-5 offset-lg-1 text-center">
                             <img class="img-fluid" style="max-height: 500px" src=" {{ asset('storage/' . $category->category_image) }}" alt="">
@@ -132,7 +129,7 @@
                             </div>
 
                             <div class="col-md-6 col-lg-5 offset-lg-1 text-center">
-                                {!! $category_description[1] !!}
+                                {!! $category->category_description !!}
                             </div>
                         </div>
                     </div>

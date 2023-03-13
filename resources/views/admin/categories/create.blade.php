@@ -60,5 +60,24 @@
         </div>
     </form>
 
+    {{--    Tinymce Script  --}}
+    <script src="https://cdn.tiny.cloud/1/r2ca2qp43km71mdmbvjwkdd99vpglucckcwto4flreqbh93a/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            entity_encoding : "raw",
+            height: 250,
+            selector: 'textarea',
+            plugins: 'lists link anchor charmap',
+            toolbar: 'formatselect | bold italic bullist numlist | link image charmap',
+            tinycomments_mode: 'embedded',
+            tinycomments_author: 'Author name',
+            menubar: false,
+            mergetags_list: [
+                { value: 'First.Name', title: 'First Name' },
+                { value: 'Email', title: 'Email' },
+            ]
+        });
+    </script>
+
 
 </x-admin-layout>

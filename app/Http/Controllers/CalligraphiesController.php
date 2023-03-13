@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CalligraphyPostRequest;
 use App\Http\Requests\CalligraphyPutRequest;
 use App\Models\Calligraphy;
+use App\Models\CalligraphyCategory;
 use App\Models\CalligraphyStyle;
 use App\Models\GalleryImage;
 use Illuminate\Http\Request;
@@ -16,8 +17,9 @@ class CalligraphiesController extends Controller
     public function index()
     {
         return view('admin.calligraphies.index', [
-            'calligraphies' => Calligraphy::filter(request(['calligraphyName','styleID']))->paginate(5)->appends(request()->query()),
-            'styles' => CalligraphyStyle::all()
+            'calligraphies' => Calligraphy::filter(request(['calligraphyName','styleID','cateID']))->paginate(5)->appends(request()->query()),
+            'styles' => CalligraphyStyle::filter(request(['cateID']))->get(),
+            'categories' => CalligraphyCategory::all()
         ]);
     }
 

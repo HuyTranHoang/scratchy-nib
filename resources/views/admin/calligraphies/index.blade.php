@@ -15,10 +15,24 @@
         </div>
 
         <div class="colmd-12 d-sm-block col-lg-8 d-md-flex justify-content-md-end">
+            <a class="btn btn-primary-color rounded me-3" href="{{ route('calligraphies.index') }}" style="line-height: 30px">Reset</a>
+
             <form action="" class="d-flex form-outline">
-                <a class="btn btn-primary-color rounded me-3" href="{{ route('calligraphies.index') }}" style="line-height: 30px">Reset</a>
                 <div class="field me-3" style="min-width: 200px">
-                    <label for="styleID" class="label">Filter by Style Name</label>
+                    <label for="cateID" class="label">Filter by Category</label>
+                    <select class="select" id="cateID" name="cateID" onchange='this.form.submit()'>
+                        <option value="">All</option>
+                        @foreach( $categories as $category)
+                            <option {{ $category->category_id == request()->cateID ? 'selected' : '' }} value="{{ $category->category_id }}">{{ $category->category_name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </form>
+
+            <form action="" class="d-flex form-outline">
+                <div class="field me-3" style="min-width: 200px">
+                    <input type="hidden" name="cateID" value="{{request()->cateID}}">
+                    <label for="styleID" class="label">Filter by Style</label>
                     <select class="select" id="styleID" name="styleID" onchange='this.form.submit()'>
                         <option value="">All</option>
                         @foreach($styles as $style)

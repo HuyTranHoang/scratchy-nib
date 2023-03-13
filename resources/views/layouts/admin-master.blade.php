@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('storage/images/fountain-pen.png') }}">
     <title>Scratchy Nib | Admin</title>
     {{-- Bootstrap 5.3 & Admin CSS --}}
-    @vite(['resources/sass/admin.scss'])
+    @vite(['resources/sass/app.scss'])
     {{-- Font Awesome --}}
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css">
     {{-- Js and library --}}

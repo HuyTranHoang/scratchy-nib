@@ -1,4 +1,4 @@
-<footer class="text-center text-lg-start bg-secondary-color text-muted text-primary-color">
+<footer class="text-center text-lg-start bg-secondary-color text-muted text-primary-color mt-3">
     <div class="container text-center text-md-start">
         <div class="tab-content accordion row bg-secondary-color" id="footerContent">
             <div class="col-md-4 col-lg-4 pt-3">

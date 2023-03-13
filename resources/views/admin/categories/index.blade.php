@@ -54,7 +54,7 @@
                         <img src="{{ asset('storage/'.$category -> category_image) }}" alt="{{ $category -> category_image }}"
                              style="max-width: 200px">
                     </td>
-                    <td>{{$category -> category_description}}</td>
+                    <td>{!! $category -> category_description !!}</td>
                     <td class="text-center px-0">
                         <a href="{{route('categories.edit', $category -> category_id)}}"><i class="fa-solid fa-pen"></i></a></td>
                     <td class="text-center px-0">
