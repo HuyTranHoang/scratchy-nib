@@ -27,6 +27,10 @@
                     </select>
                 </div>
 
+            </form>
+
+            <form action="" class="d-flex form-outline">
+                <input type="hidden" name="cateID" value="{{request()->cateID}}">
                 <input class="form-control rounded-start rounded-0" style="width: 200px" value="{{ request()->styleName }}"
                        name="styleName" type="text" placeholder="Search by name.." aria-label="search">
                 <button class="btn rounded-end rounded-0 btn-primary-color" type="submit">
@@ -41,12 +45,24 @@
             <thead class="table-success">
             <tr>
                 <th scope="col">#</th>
-                <th scope="col" style="width: 10%">Styles Name</th>
+                <th scope="col" style="width: 10%">
+                    @if(request()->orderby=='name' && request()->sort=='desc')
+                        <a class="text-decoration-none text-success" href="?orderby=name&sort=asc&cateID={{request()->cateID}}&styleName={{request()->styleName}}">Styles Name <i class="fa-solid fa-caret-up"></i></a>
+                    @else
+                        <a class="text-decoration-none {{request()->orderby=='name' && request()->sort=='asc' ? 'text-success' : ''}}" href="?orderby=name&sort=desc&cateID={{request()->cateID}}&styleName={{request()->styleName}}">Styles Name <i class="fa-solid fa-caret-down"></i></a>
+                    @endif
+                </th>
                 <th scope="col" style="max-width: 200px">Styles Image</th>
                 <th scope="col">Styles Description</th>
                 <th scope="col" style="width: 15%">Category Name</th>
                 <th scope="col" colspan="2" class="text-center">Action</th>
-                <th scope="col" style="width: 10%;">Created At</th>
+                <th scope="col" style="width: 10%;">
+                    @if(request()->orderby=='date' && request()->sort=='desc')
+                        <a class="text-decoration-none text-success" href="?orderby=date&sort=asc&cateID={{request()->cateID}}&styleName={{request()->styleName}}">Created At <i class="fa-solid fa-caret-up"></i></a>
+                    @else
+                        <a class="text-decoration-none {{request()->orderby=='date' && request()->sort=='asc' ? 'text-success' : ''}}" href="?orderby=date&sort=desc&cateID={{request()->cateID}}&styleName={{request()->styleName}}">Created At <i class="fa-solid fa-caret-down"></i></a>
+                    @endif
+                </th>
             </tr>
             </thead>
             <tbody>
@@ -80,7 +96,7 @@
             @empty
                 <tr>
                     <td></td>
-                    <td colspan="6" class="">No search results found</td>
+                    <td colspan="7" class="">No search results found</td>
                 </tr>
             @endforelse
             </tbody>

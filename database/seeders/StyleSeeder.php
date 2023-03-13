@@ -13,7 +13,7 @@ class StyleSeeder extends Seeder
         CalligraphyStyle::factory()->createMany([
             [
                 'style_id' => 1,
-                'style_name' => 'Vietnam Caligraphy',
+                'style_name' => 'Vietnam calligraphy',
                 'style_image' => 'uploads/styleImages/7f938736ef17c0d85fbdbcf7f15de02f.jpg',
                 'style_description' => 'Known as "Thư Pháp Việt Nam" in Vietnamese,
                 is an important part of Vietnamese culture and has a long history dating back to ancient times.
@@ -22,7 +22,7 @@ class StyleSeeder extends Seeder
             ],
             [
                 'style_id' => 2,
-                'style_name' => 'Arabic Calligraphy',
+                'style_name' => 'Arabic calligraphy',
                 'style_image' => 'uploads/styleImages/4472c0b5f6158a885a6c335c4c52a6f2.jpg',
                 'style_description' => 'Known as "khatt", is characterized by its flowing, curved lines and intricate
                 patterns. It is considered a sacred art form in Islamic culture and is often used to write religious texts.',
@@ -30,7 +30,7 @@ class StyleSeeder extends Seeder
             ],
             [
                 'style_id' => 3,
-                'style_name' => 'Chinese Calligraphy',
+                'style_name' => 'Chinese calligraphy',
                 'style_image' => 'uploads/styleImages/1280px-Wang_Xianzi_Imitation_by_Tang_Dynasty.jpg',
                 'style_description' => 'Known as "Shūfǎ" in Chinese, Chinese calligraphy is one of the oldest and most
                 revered forms of calligraphy. It is characterized by its emphasis on brush strokes and ink flow,
@@ -39,7 +39,7 @@ class StyleSeeder extends Seeder
             ],
             [
                 'style_id' => 4,
-                'style_name' => 'Korea Calligraphy',
+                'style_name' => 'Korea calligraphy',
                 'style_image' => 'uploads/styleImages/Calligraphy-art-works-Korea.jpg',
                 'style_description' => 'Known as "Seoye", Korean calligraphy is characterized by its use of simplified
                 and graceful lines. It often emphasizes the beauty of individual strokes rather than the overall composition.',
@@ -47,7 +47,7 @@ class StyleSeeder extends Seeder
             ],
             [
                 'style_id' => 5,
-                'style_name' => 'Japan Calligraphy',
+                'style_name' => 'Japan calligraphy',
                 'style_image' => 'uploads/styleImages/5a0b5c2705f29626c329cdc841d7113f.jpg',
                 'style_description' => 'Known as "Shodō" in Japanese, Japanese calligraphy is influenced by
                 Chinese calligraphy but has its own distinct style. It emphasizes the beauty of simple lines and the
@@ -56,7 +56,7 @@ class StyleSeeder extends Seeder
             ],
             [
                 'style_id' => 6,
-                'style_name' => 'Western Calligraphy',
+                'style_name' => 'Western calligraphy',
                 'style_image' => 'uploads/styleImages/English_-_Rochester_Bible_-_Walters_W18_-_Reverse_Detail.jpg',
                 'style_description' => 'Western calligraphy has a long history dating back to the Roman Empire.
                 It includes various styles such as Gothic, Italic, and Copperplate. Western calligraphy is known
@@ -66,7 +66,7 @@ class StyleSeeder extends Seeder
             ],
             [
                 'style_id' => 7,
-                'style_name' => 'Greek Calligraphy',
+                'style_name' => 'Greek calligraphy',
                 'style_image' => 'uploads/styleImages/maxresdefault.jpg',
                 'style_description' => 'Greek calligraphy refers to the art of beautiful writing in the Greek language,
                 using a variety of scripts and styles. The Greek alphabet has a long history and has been used for

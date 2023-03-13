@@ -33,5 +33,12 @@ class CalligraphyStyle extends Model
         if($filters['cateID'] ?? false) {
             $query->where('category_id',$filters['cateID']);
         }
+        if($filters['orderby'] ?? false) {
+            if ($filters['orderby'] == 'name'){
+                $query->orderBy('style_image',$filters['sort']);
+            } else {
+                $query->orderBy('created_at',$filters['sort']);
+            }
+        }
     }
 }

@@ -32,11 +32,23 @@
             <thead class="table-success">
             <tr>
                 <th scope="col">#</th>
-                <th scope="col" style="width: 15%">Categories Name</th>
+                <th scope="col" style="width: 15%">
+                    @if(request()->orderby=='name' && request()->sort=='desc')
+                    <a class="text-decoration-none text-success" href="?orderby=name&sort=asc&cateName={{request()->cateName}}">Categories Name <i class="fa-solid fa-caret-up"></i></a>
+                    @else
+                    <a class="text-decoration-none {{request()->orderby=='name' && request()->sort=='asc' ? 'text-success' : ''}}" href="?orderby=name&sort=desc&cateName={{request()->cateName}}">Categories Name <i class="fa-solid fa-caret-down"></i></a>
+                    @endif
+                </th>
                 <th scope="col" style="max-width: 200px">Categories Image</th>
                 <th scope="col">Categories Description</th>
                 <th scope="col" colspan="2" class="text-center">Action</th>
-                <th scope="col" style="width: 10%">Created At</th>
+                <th scope="col" style="width: 10%">
+                    @if(request()->orderby=='date' && request()->sort=='desc')
+                        <a class="text-decoration-none text-success" href="?orderby=date&sort=asc&cateName={{request()->cateName}}">Created At <i class="fa-solid fa-caret-up"></i></a>
+                    @else
+                        <a class="text-decoration-none {{request()->orderby=='date' && request()->sort=='asc' ? 'text-success' : ''}}" href="?orderby=date&sort=desc&cateName={{request()->cateName}}">Created At <i class="fa-solid fa-caret-down"></i></a>
+                    @endif
+                </th>
             </tr>
             </thead>
             <tbody>
@@ -69,7 +81,7 @@
             @empty
                 <tr>
                     <td></td>
-                    <td colspan="5" class="">No search results found</td>
+                    <td colspan="6" class="">No search results found</td>
                 </tr>
             @endforelse
             </tbody>

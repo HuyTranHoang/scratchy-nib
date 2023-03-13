@@ -25,6 +25,13 @@ class CalligraphyCategory extends Model
         if($filters['cateName'] ?? false) {
             $query->where('category_name','like','%'.$filters['cateName'].'%');
         }
+        if($filters['orderby'] ?? false) {
+            if ($filters['orderby'] == 'name'){
+                $query->orderBy('category_name',$filters['sort']);
+            } else {
+                $query->orderBy('created_at',$filters['sort']);
+            }
+        }
     }
 
 }

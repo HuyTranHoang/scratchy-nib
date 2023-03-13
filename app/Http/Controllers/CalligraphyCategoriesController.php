@@ -14,7 +14,7 @@ class CalligraphyCategoriesController extends Controller
     public function index()
     {
         return view('admin.categories.index', [
-            'categories' => CalligraphyCategory::filter(request(['cateName']))->paginate(5)->appends(request()->query())
+            'categories' => CalligraphyCategory::filter(request(['cateName','orderby','sort']))->paginate(5)->appends(request()->query())
         ]);
     }
 
