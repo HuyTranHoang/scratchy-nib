@@ -15,37 +15,48 @@ class CalligraphySeeder extends Seeder
         Calligraphy::factory()->createMany([
             [
                 'calligraphy_name' => 'Lộc',
-                'calligraphy_description' => 'Which mean fortune, success, the reward with merit, dedication.',
+                'calligraphy_description' => '"Lộc" in Vietnamese calligraphy can be written as "Lộc" or "Lộc Phát"
+                (if you want to add the word "phát" which means prosperity). Vietnamese calligraphy has a long
+                history and is heavily influenced by Chinese calligraphy. It is characterized by its flowing lines,
+                graceful curves, and bold strokes. The Vietnamese alphabet has 29 letters, each with its own unique
+                shape and form, making it a fascinating and beautiful script to work with. Vietnamese calligraphy
+                is often used to write poetry, proverbs, and Buddhist scriptures, and it is considered an important
+                aspect of Vietnamese culture.',
                 'style_id' => '1'
             ],
             [
                 'calligraphy_name' => 'Mẹ',
-                'calligraphy_description' => 'Which mean mom.',
+                'calligraphy_description' => '"Mẹ" in Vietnamese calligraphy can be written as "Mẹ" or "Mẹ yêu"
+                (if you want to add the word "yêu" which means love). Vietnamese calligraphy has a distinctive style
+                and is characterized by its flowing strokes, elegant curves, and bold lines.
+                The script is heavily influenced by Chinese calligraphy, but has its own unique features and characteristics.
+                Vietnamese calligraphy is used to write a wide range of texts, including poetry, literature, and religious texts.
+                It is considered an important part of Vietnamese culture and art.',
                 'style_id' => '1'
             ],
             [
                 'calligraphy_name' => 'Đất Người Việt Để Yên Cho Người Việt',
-                'calligraphy_description' => 'Vietnamese land of Vietnamese people.',
+                'calligraphy_description' => '"Đất Người Việt Để Yên Cho Người Việt" in Vietnamese calligraphy can be written as "Đất Người Việt Để Yên Cho Người Việt" or "Đất nước Việt Nam để yên cho nhân dân Việt Nam" (if you want to add a more complete meaning which translates to "Let the land of Vietnam be peaceful for the people of Vietnam"). Vietnamese calligraphy is a beautiful and elegant script that is often used to write important texts, such as poetry, literature, and religious scriptures. The script is characterized by its flowing strokes, bold lines, and graceful curves. It has a long and rich history and is considered an important part of Vietnamese culture and heritage.',
                 'style_id' => '1',
             ],
             [
                 'calligraphy_name' => 'Cả Một Trời Thương Nhớ',
-                'calligraphy_description' => 'Sky of memory.',
+                'calligraphy_description' => 'In English, it translates to "A Sky Full of Longing and Fondness". This phrase is often used to express the depth of one\'s love or longing for someone or something. ',
                 'style_id' => '1',
             ],
             [
                 'calligraphy_name' => 'Biết khi nào gặp lại',
-                'calligraphy_description' => 'Know when to see you again?.',
+                'calligraphy_description' => 'In English, it translates to "When Will We Meet Again?". This phrase is often used to express the hope or desire to see someone again in the future. Vietnamese calligraphy is a beautiful and expressive script that can convey the emotional depth and beauty of language in a unique and striking way.',
                 'style_id' => '1',
             ],
             [
                 'calligraphy_name' => 'An Trí Thảnh Thơi',
-                'calligraphy_description' => 'Peace of mind.',
+                'calligraphy_description' => '"An Trí Thảnh Thơi" in Vietnamese is a phrase that can be translated to "Peaceful and Relaxed". This phrase is often used to describe a state of being or a desired state of mind where one is calm, tranquil, and at ease. Vietnamese calligraphy is a beautiful and intricate script that can convey the emotional depth and beauty of language in a unique and striking way.',
                 'style_id' => '1',
             ],
             [
                 'calligraphy_name' => 'Tôn Sư Trọng Đạo',
-                'calligraphy_description' => 'Respect life morality and property.',
+                'calligraphy_description' => '"Tôn Sư Trọng Đạo" is a Vietnamese phrase that can be translated to "Respect the Teacher, Value the Moral Way". It is a Confucian teaching that emphasizes the importance of education and morality. Vietnamese calligraphy is a beautiful and expressive script that can convey the wisdom and depth of traditional Vietnamese culture in a unique and striking way.',
                 'style_id' => '1',
             ],
         ]);
@@ -103,7 +114,9 @@ class CalligraphySeeder extends Seeder
             ],
             [
                 'calligraphy_name' => 'Lantingji Xu',
-                'calligraphy_description' => "The most famous Chinese calligraphic work",
+                'calligraphy_description' => "Lantingji Xu (蘭亭集序) is one of the most famous Chinese calligraphy works. It was written by the famous Tang Dynasty calligrapher Wang Xizhi (王羲之) in 353 AD. The work consists of a preface and poems written by various poets who attended a gathering at Lanting (Orchid Pavilion) hosted by Wang Xizhi.
+                Lantingji Xu is known for its exquisite and fluid calligraphy, as well as its literary and cultural significance. The preface in particular is considered a masterpiece of Chinese calligraphy, and has been widely studied and imitated by calligraphers throughout history.
+                Today, Lantingji Xu is still considered a classic example of Chinese calligraphy and is treasured for its artistic and cultural value.",
                 'style_id' => '3',
             ],
             [
@@ -162,12 +175,19 @@ class CalligraphySeeder extends Seeder
             ],
             [
                 'calligraphy_name' => 'Yume',
-                'calligraphy_description' => "Cursive calligraphy of 'yume', meaning dream.",
+                'calligraphy_description' => '"Yume" (夢) in Japanese calligraphy means "dream". The character is written
+                with three strokes, starting with a horizontal stroke, followed by a vertical stroke, and ending with a
+                curved stroke. Japanese calligraphy is a beautiful and expressive art form that is deeply rooted in
+                Japanese culture and tradition, and it is often used to convey profound and inspirational messages.',
                 'style_id' => '5',
             ],
             [
                 'calligraphy_name' => 'Dream',
-                'calligraphy_description' => "Calligraphy of 夢 in japanese",
+                'calligraphy_description' => '"Dream" in Japanese calligraphy is written as "夢" which is pronounced as "yume".
+                 It is a popular subject for Japanese calligraphy and often used to express the idea of aspirations, goals,
+                 and wishes. The character consists of three strokes, with a horizontal stroke followed by a vertical
+                 stroke and a final curve. Japanese calligraphy is a highly respected art form in Japan and is often
+                 studied for its cultural and aesthetic value.',
                 'style_id' => '5',
             ],
         ]);
@@ -190,7 +210,12 @@ class CalligraphySeeder extends Seeder
             ],
             [
                 'calligraphy_name' => 'FJ Brechtel',
-                'calligraphy_description' => 'FJ Brechtel calligraphy of 16th century calligraphy.',
+                'calligraphy_description' => 'In Western calligraphy, "FJ Brechtel" would be written using the Latin alphabet.
+                The exact style and design of the letters would depend on the calligraphic style being used.
+                For example, in Copperplate or Spencerian script, the letters would be highly ornate and flourished,
+                while in a more modern or minimalist style, the letters may be simpler and more streamlined.
+                However, in general, Western calligraphy emphasizes legibility, consistency, and balance in letterforms,
+                and it often incorporates artistic flourishes and decorations as well.',
                 'style_id' => '6',
             ],
         ]);
@@ -198,12 +223,21 @@ class CalligraphySeeder extends Seeder
         Calligraphy::factory()->createMany([
             [
                 'calligraphy_name' => "I always stand by your side",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"I always stand by your side" in Greek calligraphy can be written as
+                "Πάντα στο πλευρό σου" (Pánta sto plefyró sou). In Greek calligraphy, each letter is carefully
+                crafted to create a visually stunning and harmonious composition.
+                The script is characterized by its fluid lines, decorative flourishes,
+                and elegant curves. Its a beautiful script that has been used for centuries in religious texts,
+                manuscripts, and inscriptions.',
                 'style_id' => '7',
             ],
             [
                 'calligraphy_name' => 'Imazing',
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'Imazing (which I assume means "amazing") in Greek calligraphy can be written
+                as "καταπληκτικό" (katapliktikó). Greek calligraphy, also known as Byzantine calligraphy,
+                has a rich history and is characterized by its highly decorative and ornate style.
+                The Greek alphabet has 24 letters, each with its own distinct shape and form,
+                making it a beautiful and unique script to work with.',
                 'style_id' => '7',
             ],
         ]);
@@ -218,12 +252,22 @@ class CalligraphySeeder extends Seeder
             ],
             [
                 'calligraphy_name' => "Love it catches you when you're not looking",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Love, it catches you when you\'re not looking" is a poetic expression that
+                means that love can come into your life unexpectedly, without any prior warning or conscious effort
+                on your part. It suggests that love is not something that can be actively sought or pursued,
+                but rather something that happens naturally and spontaneously. The phrase also implies that love has
+                the power to surprise and delight us, and that its arrival can be a pleasant and unexpected experience.',
                 'style_id' => '8',
             ],
             [
                 'calligraphy_name' => "Sometimes you win & sometimes you learn",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The phrase "Sometimes you win and sometimes you learn" is a saying that
+                suggests that even when you don\'t achieve your desired outcome, there is still an opportunity for growth and
+                learning. Rather than seeing failure or disappointment as a negative experience, 
+                the phrase encourages individuals to view these situations as an opportunity to learn from their mistakes and
+                improve themselves. It also implies that the process of learning and growth is ongoing, and that setbacks
+                and obstacles are a natural part of the journey towards personal and professional development. In essence,
+                the phrase emphasizes the importance of resilience and the ability to turn adversity into a positive experience.',
                 'style_id' => '8',
             ],
             [
