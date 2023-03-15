@@ -42,6 +42,11 @@
         float: right;
         height: 45vw;
     }
+    @include mixins.mobile {
+        position: relative;
+        float: right;
+        height: 45vw;
+    }
 }
 
 .nav-active {

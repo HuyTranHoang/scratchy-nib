@@ -45,8 +45,12 @@
                 </div>
             </div>
         </div>
-        <img class="banner-img" src="{{asset('storage/images/header-cover.png')}}" alt="">
+        <img class="banner-img d-none d-lg-block" src="{{asset('storage/images/header-cover.png')}}" alt="">
     </section>
+
+    <div class="d-flex justify-content-end bg-secondary-color d-lg-none">
+        <img class="banner-img" src="{{asset('storage/images/header-cover.png')}}" alt="">
+    </div>
 
     <section class="bg-primary-color">
         <div class="container text-primary-color">
