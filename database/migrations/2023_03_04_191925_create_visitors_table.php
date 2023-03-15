@@ -12,8 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('visitors', function (Blueprint $table) {
-            $table->id();
-            $table->string('ip')->unique();
+            $table->string('ip')->primary();
             $table->integer('view')->default(1);
             $table->timestamps();
         });

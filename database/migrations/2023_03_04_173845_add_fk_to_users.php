@@ -8,7 +8,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->foreignId('role_id')->after('remember_token')->default('2')->references('role_id')->on('roles')
+            $table->foreignId('role_id')->after('twitter')->default('2')->references('role_id')->on('roles')
                 ->onDelete('cascade');
         });
     }

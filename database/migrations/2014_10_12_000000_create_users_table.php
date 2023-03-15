@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('bio',255)->nullable();
             $table->string('facebook',50)->nullable();
             $table->string('twitter',50)->nullable();
-            $table->rememberToken();
+//            $table->rememberToken();
             $table->timestamps();
         });
     }

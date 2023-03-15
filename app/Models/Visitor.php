@@ -10,5 +10,6 @@ class Visitor extends Model
     use HasFactory;
 
     protected $table = 'visitors';
+    protected $primaryKey ='ip';
     protected $fillable = ['ip','view','updated_at'];
 }

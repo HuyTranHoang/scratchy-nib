@@ -263,7 +263,7 @@ class CalligraphySeeder extends Seeder
                 'calligraphy_name' => "Sometimes you win & sometimes you learn",
                 'calligraphy_description' => 'The phrase "Sometimes you win and sometimes you learn" is a saying that
                 suggests that even when you don\'t achieve your desired outcome, there is still an opportunity for growth and
-                learning. Rather than seeing failure or disappointment as a negative experience, 
+                learning. Rather than seeing failure or disappointment as a negative experience,
                 the phrase encourages individuals to view these situations as an opportunity to learn from their mistakes and
                 improve themselves. It also implies that the process of learning and growth is ongoing, and that setbacks
                 and obstacles are a natural part of the journey towards personal and professional development. In essence,
