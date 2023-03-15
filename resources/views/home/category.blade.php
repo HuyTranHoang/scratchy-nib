@@ -106,7 +106,7 @@
                     </article>
             @endif
 
-            <div class="row mb-3">
+            <div class="row mb-3" id="calligraphy">
                 <div class="col-sm-4 col-md-4 col-lg-2">
                     <img class="img-fluid" src="{{asset('storage/images/divider-pink.png')}}" alt="divider">
                 </div>
@@ -138,4 +138,12 @@
 
         <x-home.overlay-top color="bg-secondary-color"/>
 
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const element = document.getElementById("calligraphy");
+        if (urlParams.has("page")) {
+            element.scrollIntoView();
+        }
+    </script>
 </x-home-layout>

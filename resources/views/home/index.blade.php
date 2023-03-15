@@ -42,7 +42,6 @@
                         </div>
                     </form>
 
-                    <h6>Visitor counter: {{ $visitorCount }}</h6>
                 </div>
             </div>
         </div>
