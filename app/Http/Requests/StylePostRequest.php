@@ -22,7 +22,7 @@ class StylePostRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'style_name' => 'required|max:50',
+            'style_name' => 'required|max:255',
             'style_image' => 'max:2048',
             'style_description' => 'required|max:65535',
             'category_id' => 'required'

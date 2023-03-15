@@ -22,7 +22,7 @@ class CategoryPostRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'category_name' => 'required|max:50',
+            'category_name' => 'required|max:255',
             'category_image' =>'max:2048',
             'category_description' => 'required|max:65535',
         ];

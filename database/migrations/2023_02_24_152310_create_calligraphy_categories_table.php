@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id('category_id');
             $table->string('category_name', 255);
             $table->string('category_image')->default('uploads/cateImages/noImage.jpg');
-            $table->text('category_description')->nullable();
+            $table->text('category_description');
             $table->timestamps();
         });
     }
