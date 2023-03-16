@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\CalligraphyStyle;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Carbon;
 
 class StyleSeeder extends Seeder
 {
@@ -19,6 +20,8 @@ class StyleSeeder extends Seeder
                 is an important part of Vietnamese culture and has a long history dating back to ancient times.
                 Vietnamese calligraphy uses the Roman alphabet and is typically written in black ink on white paper or silk.',
                 'category_id' => 1,
+                'created_at' => Carbon::now()->subMinutes(200),
+                'updated_at' => Carbon::now()->subMinutes(200),
             ],
             [
                 'style_id' => 2,
@@ -27,6 +30,8 @@ class StyleSeeder extends Seeder
                 'style_description' => 'Known as "khatt", is characterized by its flowing, curved lines and intricate
                 patterns. It is considered a sacred art form in Islamic culture and is often used to write religious texts.',
                 'category_id' => 1,
+                'created_at' => Carbon::now()->subMinutes(199),
+                'updated_at' => Carbon::now()->subMinutes(199),
             ],
             [
                 'style_id' => 3,
@@ -36,6 +41,8 @@ class StyleSeeder extends Seeder
                 revered forms of calligraphy. It is characterized by its emphasis on brush strokes and ink flow,
                 with the aim of creating a harmonious balance between the written characters and the surrounding space.',
                 'category_id' => 1,
+                'created_at' => Carbon::now()->subMinutes(198),
+                'updated_at' => Carbon::now()->subMinutes(198),
             ],
             [
                 'style_id' => 4,
@@ -44,6 +51,8 @@ class StyleSeeder extends Seeder
                 'style_description' => 'Known as "Seoye", Korean calligraphy is characterized by its use of simplified
                 and graceful lines. It often emphasizes the beauty of individual strokes rather than the overall composition.',
                 'category_id' => 1,
+                'created_at' => Carbon::now()->subMinutes(197),
+                'updated_at' => Carbon::now()->subMinutes(197),
             ],
             [
                 'style_id' => 5,
@@ -53,6 +62,8 @@ class StyleSeeder extends Seeder
                 Chinese calligraphy but has its own distinct style. It emphasizes the beauty of simple lines and the
                 balance between black ink and white space. Japanese calligraphy is often used in Zen meditation and martial arts.',
                 'category_id' => 1,
+                'created_at' => Carbon::now()->subMinutes(196),
+                'updated_at' => Carbon::now()->subMinutes(196),
             ],
             [
                 'style_id' => 6,
@@ -63,6 +74,8 @@ class StyleSeeder extends Seeder
                 for its use of a pointed pen or quill to create thick and thin lines, as well as its emphasis on
                 legibility and readability.',
                 'category_id' => 1,
+                'created_at' => Carbon::now()->subMinutes(195),
+                'updated_at' => Carbon::now()->subMinutes(195),
             ],
             [
                 'style_id' => 7,
@@ -72,6 +85,8 @@ class StyleSeeder extends Seeder
                 using a variety of scripts and styles. The Greek alphabet has a long history and has been used for
                 writing since the 8th century BC.',
                 'category_id' => 1,
+                'created_at' => Carbon::now()->subMinutes(194),
+                'updated_at' => Carbon::now()->subMinutes(194),
             ],
         ]);
 
@@ -85,6 +100,8 @@ class StyleSeeder extends Seeder
                 brush instead of a traditional pen or nib to create letters and strokes.
                 This style is often characterized by its flowing, loose lines and expressive brushwork.',
                 'category_id' => 2,
+                'created_at' => Carbon::now()->subMinutes(193),
+                'updated_at' => Carbon::now()->subMinutes(193),
             ],
             [
                 'style_id' => 9,
@@ -94,6 +111,8 @@ class StyleSeeder extends Seeder
                 calligraphy that emphasizes flowing, organic lines and unique letterforms.
                 This style often incorporates decorative flourishes and ligatures for added flair.',
                 'category_id' => 2,
+                'created_at' => Carbon::now()->subMinutes(192),
+                'updated_at' => Carbon::now()->subMinutes(192),
             ],
             [
                 'style_id' => 10,
@@ -103,6 +122,8 @@ class StyleSeeder extends Seeder
                 illuminated manuscripts. In contemporary gothic calligraphy, traditional gothic letterforms are
                 often combined with modern design elements to create a unique, edgy aesthetic.',
                 'category_id' => 2,
+                'created_at' => Carbon::now()->subMinutes(191),
+                'updated_at' => Carbon::now()->subMinutes(191),
             ],
             [
                 'style_id' => 11,
@@ -111,6 +132,8 @@ class StyleSeeder extends Seeder
                 'style_description' => 'Hand lettering is a contemporary style of calligraphy that is often used for
                 branding and graphic design. This style emphasizes clean, legible lettering with minimal flourishes or decorative elements.',
                 'category_id' => 2,
+                'created_at' => Carbon::now()->subMinutes(190),
+                'updated_at' => Carbon::now()->subMinutes(190),
             ],
             [
                 'style_id' => 12,
@@ -119,6 +142,8 @@ class StyleSeeder extends Seeder
                 'style_description' => 'Graffiti calligraphy is a style of contemporary calligraphy that is influenced
                  by street art and graffiti culture. This style often incorporates bold, expressive lettering with a rough, textured feel.',
                 'category_id' => 2,
+                'created_at' => Carbon::now()->subMinutes(189),
+                'updated_at' => Carbon::now()->subMinutes(189),
             ],
             [
                 'style_id' => 13,
@@ -128,6 +153,8 @@ class StyleSeeder extends Seeder
                 the art form by incorporating new techniques, materials, and media. This can include using digital tools,
                  mixed media, and even 3D printing to create unique and innovative calligraphy designs.',
                 'category_id' => 2,
+                'created_at' => Carbon::now()->subMinutes(188),
+                'updated_at' => Carbon::now()->subMinutes(188),
             ],
         ]);
 
@@ -141,6 +168,8 @@ class StyleSeeder extends Seeder
                 giving the letters a three-dimensional quality. This style is often used for logos, signage,
                 and other designs that need to stand out.',
                 'category_id' => 3,
+                'created_at' => Carbon::now()->subMinutes(187),
+                'updated_at' => Carbon::now()->subMinutes(187),
             ],
             [
                 'style_id' => 15,
@@ -151,6 +180,8 @@ class StyleSeeder extends Seeder
                 This style often features ornate and elaborate letterforms with intricate details and serifs,
                 and is typically characterized by a sense of nostalgia or retro charm.',
                 'category_id' => 3,
+                'created_at' => Carbon::now()->subMinutes(186),
+                'updated_at' => Carbon::now()->subMinutes(186),
             ],
             [
                 'style_id' => 16,
@@ -159,6 +190,8 @@ class StyleSeeder extends Seeder
                 'style_description' => 'Modern lettering is a more minimalist and clean style of hand-lettering that emphasizes
                 simplicity and legibility. This style is often used for more contemporary or minimalist designs.',
                 'category_id' => 3,
+                'created_at' => Carbon::now()->subMinutes(185),
+                'updated_at' => Carbon::now()->subMinutes(185),
             ],
             [
                 'style_id' => 17,
@@ -167,6 +200,8 @@ class StyleSeeder extends Seeder
                 'style_description' => 'Illustrated lettering combines hand-drawn illustrations with lettering to create
                 unique and playful designs. This style is often used for book covers, packaging, and other creative projects.',
                 'category_id' => 3,
+                'created_at' => Carbon::now()->subMinutes(184),
+                'updated_at' => Carbon::now()->subMinutes(184),
             ],
             [
                 'style_id' => 18,
@@ -175,6 +210,8 @@ class StyleSeeder extends Seeder
                 'style_description' => 'Brush lettering uses a brush pen or paintbrush to create thick and thin strokes,
                 giving the letters a flowing, organic feel. This style is often used for more casual or playful designs.',
                 'category_id' => 3,
+                'created_at' => Carbon::now()->subMinutes(183),
+                'updated_at' => Carbon::now()->subMinutes(183),
             ],
             [
                 'style_id' => 19,
@@ -183,10 +220,12 @@ class StyleSeeder extends Seeder
                 'style_description' => 'Calligraphic lettering is a style that combines calligraphy and hand-lettering
                 techniques to create elegant, flowing letterforms. This style is often used for formal or sophisticated designs.',
                 'category_id' => 3,
+                'created_at' => Carbon::now()->subMinutes(182),
+                'updated_at' => Carbon::now()->subMinutes(182),
             ],
         ]);
 
-        // Style of Modern Calligraphy [ 20 - 14 ]
+        // Style of Modern Calligraphy [ 20 - 25 ]
         CalligraphyStyle::factory()->createMany([
             [
                 'style_id' => 20,
@@ -195,6 +234,8 @@ class StyleSeeder extends Seeder
                 'style_description' => 'Copperplate is a traditional calligraphy style that has been adapted
                 for modern use. It features a delicate and flowing script, with thin upstrokes and thicker downstrokes.',
                 'category_id' => 4,
+                'created_at' => Carbon::now()->subMinutes(181),
+                'updated_at' => Carbon::now()->subMinutes(181),
             ],
             [
                 'style_id' => 21,
@@ -204,6 +245,8 @@ class StyleSeeder extends Seeder
                 chalkboard surface. It is a popular form of modern hand-lettering and graphic design that has gained
                 popularity in recent years due to its versatility and rustic charm.',
                 'category_id' => 4,
+                'created_at' => Carbon::now()->subMinutes(180),
+                'updated_at' => Carbon::now()->subMinutes(180),
             ],
             [
                 'style_id' => 22,
@@ -212,6 +255,8 @@ class StyleSeeder extends Seeder
                 'style_description' => 'Blackletter is a modern calligraphy style that takes inspiration from old German
                  and English manuscripts. It often features dense, ornate lettering with sharp, angular shapes and heavy serifs.',
                 'category_id' => 4,
+                'created_at' => Carbon::now()->subMinutes(179),
+                'updated_at' => Carbon::now()->subMinutes(179),
             ],
             [
                 'style_id' => 23,
@@ -220,6 +265,8 @@ class StyleSeeder extends Seeder
                 'style_description' => 'Watercolor lettering is a modern calligraphy style that incorporates watercolor
                 paint into the design. The paint is often used to create a gradient effect, adding depth and dimension to the lettering.',
                 'category_id' => 4,
+                'created_at' => Carbon::now()->subMinutes(178),
+                'updated_at' => Carbon::now()->subMinutes(178),
             ],
             [
                 'style_id' => 24,
@@ -228,6 +275,8 @@ class StyleSeeder extends Seeder
                 'style_description' => 'Modern script is a modern calligraphy style that emphasizes simplicity and legibility.
                 It often features clean, flowing letterforms with minimal flourishes or ornamentation.',
                 'category_id' => 4,
+                'created_at' => Carbon::now()->subMinutes(177),
+                'updated_at' => Carbon::now()->subMinutes(177),
             ],
             [
                 'style_id' => 25,
@@ -236,6 +285,8 @@ class StyleSeeder extends Seeder
                 'style_description' => 'Gothic script is a modern calligraphy style that takes inspiration from medieval
                 gothic lettering. It often features bold, blocky lettering with pointed serifs and angular shapes.',
                 'category_id' => 4,
+                'created_at' => Carbon::now()->subMinutes(176),
+                'updated_at' => Carbon::now()->subMinutes(176),
             ],
         ]);
     }

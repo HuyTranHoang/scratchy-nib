@@ -45,7 +45,7 @@ class GalleryImage extends Model
         }
 
         if ($filters['sort'] ?? false) {
-            $query->orderBy('calligraphies.calligraphy_id', $filters['sort']);
+            $query->orderBy('calligraphies.created_at', $filters['sort']);
         }
     }
 }

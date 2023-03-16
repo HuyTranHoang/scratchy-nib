@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\CalligraphyCategory;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Carbon;
 
 class CategorySeeder extends Seeder
 {
@@ -32,6 +33,8 @@ class CategorySeeder extends Seeder
                         or as a form of meditation or spiritual practice.
                         Today, <b>traditional calligraphy</b> is still practiced as a form of art and a way to preserve cultural traditions.
                     </p>',
+                'created_at' => Carbon::now()->subMinutes(255),
+                'updated_at' => Carbon::now()->subMinutes(255),
             ],
             [
                 'category_id' => 2,
@@ -67,6 +70,8 @@ class CategorySeeder extends Seeder
                             that embraces new techniques, materials, and styles, and allows for more creative expression and
                             experimentation.
                         </p>',
+                'created_at' => Carbon::now()->subMinutes(244),
+                'updated_at' => Carbon::now()->subMinutes(244),
             ],
             [
                 'category_id' => 3,
@@ -93,6 +98,8 @@ class CategorySeeder extends Seeder
                         <b>Hand-lettering and design</b> is a versatile art form that combines typography, graphic design,
                         and illustration to create unique and expressive visual communication.
                     </p>',
+                'created_at' => Carbon::now()->subMinutes(233),
+                'updated_at' => Carbon::now()->subMinutes(233),
             ],
             [
                 'category_id' => 4,
@@ -120,6 +127,8 @@ class CategorySeeder extends Seeder
                         <b>Modern calligraphy</b> is a versatile and creative art form that allows calligraphers
                         to push the boundaries of traditional calligraphy and create unique and expressive designs.
                     </p>',
+                'created_at' => Carbon::now()->subMinutes(222),
+                'updated_at' => Carbon::now()->subMinutes(222),
             ],
         ]);
     }
