@@ -19,7 +19,7 @@
             <div class="col-lg-8 col-xl-5">
                 <div class="mb-3">
                     <label for="calligraphy_name" class="form-label">Name</label>
-                    <input type="text" name="calligraphy_name" id="calligraphy_name" class="form-control" value="{{ $calligraphy -> calligraphy_name }}">
+                    <input type="text" name="calligraphy_name" id="calligraphy_name" class="form-control" value="{{ old('calligraphy_name',$calligraphy -> calligraphy_name) }}">
                     @error('calligraphy_name')
                     <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                     @enderror
@@ -28,7 +28,7 @@
                 <div class="mb-3">
                     <label for="calligraphy_description" class="form-label">Description</label>
                     <textarea class="form-control" name="calligraphy_description" id="calligraphy_description" rows="3">
-                        {{ $calligraphy -> calligraphy_description }}
+                        {{ old('calligraphy_description',$calligraphy -> calligraphy_description) }}
                     </textarea>
                     @error('calligraphy_description')
                     <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>

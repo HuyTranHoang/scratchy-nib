@@ -18,14 +18,16 @@
         <div class="row">
             <div class="col-lg-8 col-xl-5">
                 <label for="style_name" class="form-label">Style Name</label>
-                <input type="text" class="form-control" id="style_name" name="style_name"value="{{$style -> style_name}}">
+                <input type="text" class="form-control" id="style_name" name="style_name"value="{{ old('style_name',$style -> style_name) }}">
                 @error('style_name')
                 <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                 @enderror
 
                 <div class="my-3">
                     <label for="style_description" class="form-label">Style Description</label>
-                    <textarea class="form-control" name="style_description" id="style_description">{{$style -> style_description}}</textarea>
+                    <textarea class="form-control" name="style_description" id="style_description">
+                        {{ old('style_description',$style -> style_description) }}
+                    </textarea>
                     @error('style_description')
                     <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                     @enderror
@@ -35,7 +37,7 @@
                     <label for="category_name" class="form-label">Category Name</label>
                     <select name="category_id" id="category_id" class="form-control">
                         @foreach($categories as $category)
-                            <option value="{{$category -> category_id}}">{{$category -> category_name}}</option>
+                            <option {{ $category->category_id == $style->category_id ? 'selected' : '' }} value="{{$category -> category_id}}">{{$category -> category_name}}</option>
                         @endforeach
                     </select>
                     @error('category_id')

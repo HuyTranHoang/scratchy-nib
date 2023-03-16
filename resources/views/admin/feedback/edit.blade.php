@@ -18,7 +18,7 @@
             <div class="col-lg-8 col-xl-5">
                 <label for="feedback_message" class="form-label">Feedback Message</label>
                 <textarea class="form-control" name="feedback_message" id="feedback_message" rows="3">
-                        {{ $feedback -> feedback_message }}
+                        {{ old('feedback_message',$feedback -> feedback_message) }}
                 </textarea>
                 @error('feedback_message')
                 <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>

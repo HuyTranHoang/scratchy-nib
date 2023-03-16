@@ -17,14 +17,16 @@
         <div class="row">
             <div class="col-lg-8 col-xl-5">
                 <label for="style_name" class="form-label">Style Name</label>
-                <input type="text" class="form-control" id="style_name" name="style_name">
+                <input type="text" class="form-control" id="style_name" name="style_name" value="{{ old('style_name') }}">
                 @error('style_name')
                 <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                 @enderror
 
                 <div class="my-3">
                     <label for="style_description" class="form-label">Style Description</label>
-                    <textarea class="form-control" name="style_description" id="style_description"></textarea>
+                    <textarea name="style_description" id="style_description">
+                        {{ old('style_description') }}
+                    </textarea>
                     @error('style_description')
                     <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                     @enderror

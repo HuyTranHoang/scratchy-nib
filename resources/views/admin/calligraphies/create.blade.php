@@ -37,7 +37,7 @@
                     <select class="form-select" name="style_id" id="style_id" aria-label="Calligraphy style select">
                         <option value="" hidden="">-- Select One --</option>
                         @foreach($styles as $style)
-                            <option value="{{ $style -> style_id }}">{{ $style -> style_name }}</option>
+                            <option {{ $style->style_id == old('style_id') ? 'selected' : '' }} value="{{ $style -> style_id }}">{{ $style -> style_name }}</option>
                         @endforeach
                     </select>
                     @error('style_id')

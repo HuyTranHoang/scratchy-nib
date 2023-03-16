@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-5">
                 <label for="category_name" class="form-label">Category Name</label>
-                <input type="text" name="category_name" id="category_name" class="form-control" value="{{$category -> category_name}}">
+                <input type="text" name="category_name" id="category_name" class="form-control" value="{{ old('category_name',$category -> category_name) }}">
                 @error('category_name')
                 <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                 @enderror
@@ -26,7 +26,7 @@
                 <div class="my-3">
                     <label for="category_description" class="form-label">Category Description</label>
                     <textarea class="form-control" name="category_description" id="category_description" rows="3">
-                        {{$category -> category_description}}
+                        {{ old('category_description',$category -> category_description) }}
                     </textarea>
                     @error('category_description')
                     <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
