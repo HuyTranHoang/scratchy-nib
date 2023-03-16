@@ -55,7 +55,7 @@
                     <li><a class="link-secondary text-decoration-none" href="tel:+8499999999">+84 999 999 99</a></li>
                     <li><a class="link-secondary text-decoration-none" href="tel:+8488888888">+84 888 888 88</a></li>
                     <li><hr></li>
-                    <li style="font-size: 0.8rem">Visitors counter: {{$visitorCount}} </li>
+                    <li style="font-size: 0.8rem">Visitors counter: {{ number_format($visitorCount) }} </li>
                 </ul>
             </x-home.footer-accordion-list>
 
