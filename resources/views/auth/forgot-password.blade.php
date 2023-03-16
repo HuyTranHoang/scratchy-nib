@@ -6,7 +6,7 @@
                 <form class="ms-md-3 ms-sm-0" method="POST" action="{{ route('password.email') }}" id="authenticate">
                     @csrf
                     <div class="m-3 row text-center">
-                        <h1 class="mt-md-0 mt-lg-5">Sign In</h1>
+                        <h1 class="mt-md-0 mt-lg-5">Reset password</h1>
                     </div>
 
                     <div class="row text-primary mt-2 me-3 ms-sm-3 ms-md-0">

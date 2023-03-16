@@ -35,7 +35,7 @@
                 <div class="mb-3">
                     <label for="style_id" class="form-label">Calligraphy Style</label>
                     <select class="form-select" name="style_id" id="style_id" aria-label="Calligraphy style select">
-                        <option value="">-- Select One --</option>
+                        <option value="" hidden="">-- Select One --</option>
                         @foreach($styles as $style)
                             <option value="{{ $style -> style_id }}">{{ $style -> style_name }}</option>
                         @endforeach

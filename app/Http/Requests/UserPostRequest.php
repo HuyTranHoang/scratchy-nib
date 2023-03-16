@@ -27,7 +27,8 @@ class UserPostRequest extends FormRequest
         return [
             'name' => ['required', 'string', 'max:50'],
             'password' => ['required', Password::defaults()],
-            'email' => ['email', 'max:50', Rule::unique(User::class)]
+            'email' => ['email', 'max:50', Rule::unique(User::class)],
+            'role_id' => ['required']
         ];
     }
 }

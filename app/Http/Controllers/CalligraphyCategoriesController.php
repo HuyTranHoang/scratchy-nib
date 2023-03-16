@@ -64,7 +64,9 @@ class CalligraphyCategoriesController extends Controller
 
         if ($request->hasFile('category_image')) {
             $oldImageName = 'storage/' . $category->category_image;
-            File::delete($oldImageName);
+            if ($oldImageName != 'storage/uploads/cateImages/noImage.jpg') {
+                File::delete($oldImageName);
+            }
             $validated['category_image'] = $request->file('category_image')->store('uploads/cateImages', 'public');
         }
 
@@ -80,7 +82,9 @@ class CalligraphyCategoriesController extends Controller
         $CateID = $request->category_id;
         $category = CalligraphyCategory::findOrFail($CateID);
         $oldImageName = 'storage/' . $category->category_image;
-        File::delete($oldImageName);
+        if ($oldImageName != 'storage/uploads/cateImages/noImage.jpg') {
+            File::delete($oldImageName);
+        }
         $category->delete();
         Alert::success('Success', 'Calligraphy category succesfully deleted!')->buttonsStyling(false)->autoClose(1500);
 

@@ -43,12 +43,12 @@
                     Users
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {{ request()->routeIs('roles.*') ? 'active' : '' }}" href="{{route('roles.index')}}">
-                    <i class="fa-solid fa-pen-to-square"></i>
-                    Roles
-                </a>
-            </li>
+{{--            <li class="nav-item">--}}
+{{--                <a class="nav-link {{ request()->routeIs('roles.*') ? 'active' : '' }}" href="{{route('roles.index')}}">--}}
+{{--                    <i class="fa-solid fa-pen-to-square"></i>--}}
+{{--                    Roles--}}
+{{--                </a>--}}
+{{--            </li>--}}
             <hr>
 
             <li class="nav-item dropdown">

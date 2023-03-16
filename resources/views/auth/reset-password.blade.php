@@ -44,7 +44,7 @@
 
                     <div class="d-flex justify-content-center">
                         <button class="auth-btn d-flex align-items-center justify-content-center">
-                            Send reset link
+                            Submit
                             <div class="loader-inline" id="loader"></div>
                         </button>
                     </div>

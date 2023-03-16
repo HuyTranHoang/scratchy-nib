@@ -4,7 +4,7 @@
         <h1 class="">Calligraphy Styles</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
-                <button type="button" class="btn btn-sm btn-outline-primary">Add New Styles</button>
+                <a href="{{ route('styles.index') }}" class="btn btn-sm btn-outline-primary">Styles List</a>
             </div>
         </div>
     </div>
@@ -16,7 +16,7 @@
         @csrf
         @method('PUT')
         <div class="row">
-            <div class="col-5">
+            <div class="col-lg-8 col-xl-5">
                 <label for="style_name" class="form-label">Style Name</label>
                 <input type="text" class="form-control" id="style_name" name="style_name"value="{{$style -> style_name}}">
                 @error('style_name')
@@ -60,8 +60,13 @@
                     <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                     @enderror
                 </div>
+
+                <div class="row justify-content-end my-3">
+                    <div class="col-md-12 col-lg-6 col-xl-4">
+                        <button type="submit" class="btn btn-primary w-100">Update</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <button class="btn btn-primary" type="submit">Update</button>
     </form>
 </x-admin-layout>

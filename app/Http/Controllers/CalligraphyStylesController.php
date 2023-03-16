@@ -65,7 +65,9 @@ class CalligraphyStylesController extends Controller
         $validated = $request->validated();
         if ($request->hasFile('style_image')) {
             $oldImageName = 'storage/' . $style->style_image;
-            File::delete($oldImageName);
+            if ($oldImageName != 'storage/uploads/styleImages/noImage.jpg') {
+                File::delete($oldImageName);
+            }
             $validated['style_image'] = $request->file('style_image')->store('uploads/cateImages', 'public');
         }
         $style->update($validated);
@@ -79,7 +81,9 @@ class CalligraphyStylesController extends Controller
         $StyleID = $request->style_id;
         $style = CalligraphyStyle::findOrFail($StyleID);
         $oldImageName = 'storage/' . $style->style_image;
-        File::delete($oldImageName);
+        if ($oldImageName != 'storage/uploads/styleImages/noImage.jpg') {
+            File::delete($oldImageName);
+        }
         $style->delete();
         Alert::success('Success', 'Calligraphy style succesfully deleted!')->buttonsStyling(false)->autoClose(1500);
         return redirect($redrectTo);

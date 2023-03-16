@@ -54,7 +54,7 @@
                     @enderror
                 </div>
 
-                <div class="row justify-content-end">
+                <div class="row justify-content-end my-3">
                     <div class="col-md-12 col-lg-6 col-xl-4">
                         <button type="submit" class="btn btn-primary w-100">Update</button>
                     </div>
