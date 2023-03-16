@@ -88,9 +88,6 @@
         top: calc(100% - 35px);
         opacity: 1;
     }
-    @include mixins.mobile {
-        background-color: #e07979;
-    }
 }
 
 /* clear fix */
