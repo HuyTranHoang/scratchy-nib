@@ -22,13 +22,13 @@ class UserController extends Controller
         $totalItems = User::filter(request(['userFilter']))->count();
         $totalPages = ceil($totalItems / $perPage);
 
-        if ($page > $totalPages) {
+        if ($page > $totalPages && !request()->userFilter) {
             Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(1500);
             return redirect(route('users.index',['page'=> 1]));
         }
 
         return view('admin.users.index', [
-            'users' => User::filter(request(['userFilter']))->paginate($perPage)->appends(request()->query())
+            'users' => User::filter(request(['userFilter','orderby','sort']))->paginate($perPage)->appends(request()->query())
         ]);
     }
 

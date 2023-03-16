@@ -22,13 +22,13 @@ class CalligraphiesController extends Controller
         $totalItems = Calligraphy::filter(request(['calligraphyName','styleID','cateID']))->count();
         $totalPages = ceil($totalItems / $perPage);
 
-        if ($page > $totalPages) {
+        if ($page > $totalPages && !request()->calligraphyName) {
             Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(1500);
             return redirect(route('calligraphies.index',['page'=> 1]));
         }
 
         return view('admin.calligraphies.index', [
-            'calligraphies' => Calligraphy::filter(request(['calligraphyName','styleID','cateID']))->paginate($perPage)->appends(request()->query()),
+            'calligraphies' => Calligraphy::filter(request(['calligraphyName','styleID','cateID','orderby','sort']))->paginate($perPage)->appends(request()->query()),
             'styles' => CalligraphyStyle::filter(request(['cateID']))->get(),
             'categories' => CalligraphyCategory::all()
         ]);
@@ -37,7 +37,8 @@ class CalligraphiesController extends Controller
     public function create()
     {
         return view('admin.calligraphies.create', [
-            'styles' => CalligraphyStyle::all()
+            'styles' => CalligraphyStyle::all(),
+            'categories' => CalligraphyCategory::all()
         ]);
     }
 

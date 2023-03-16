@@ -1,5 +1,6 @@
 @use "../abstracts/variables";
 
+@use "../abstracts/mixins";
 .sidebar {
     position: fixed;
     top: 0;
@@ -77,4 +78,19 @@ th a {
 
 th a:hover {
     color: #198750;
+}
+
+
+// Search form
+.admin-searchform {
+    width: 50%;
+    @include mixins.mobile {
+        width: 100%;
+    }
+}
+
+.admin-form-group {
+    @include mixins.tablet {
+        flex-wrap: wrap;
+    }
 }

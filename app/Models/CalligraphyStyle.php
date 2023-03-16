@@ -35,7 +35,7 @@ class CalligraphyStyle extends Model
         }
         if($filters['orderby'] ?? false) {
             if ($filters['orderby'] == 'name'){
-                $query->orderBy('style_image',$filters['sort']);
+                $query->orderBy('style_name',$filters['sort']);
             } else {
                 $query->orderBy('created_at',$filters['sort']);
             }

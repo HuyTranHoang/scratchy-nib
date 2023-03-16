@@ -15,9 +15,9 @@
         </div>
 
         <div class="d-sm-block col-md-6 d-md-flex justify-content-md-end">
-            <a class="btn btn-primary-color rounded me-3" href="{{ route('users.index') }}">Reset</a>
+            <a class="btn btn-primary-color rounded me-3 mb-3 mb-md-0" href="{{ route('users.index') }}">Reset</a>
             <form action="" class="d-flex form-outline">
-                <input class="form-control rounded-start rounded-0" value="{{ request()->userName }}"
+                <input class="form-control rounded-start rounded-0" value="{{ request()->userFilter }}"
                        name="userFilter" type="text" placeholder="Search by name, email.." aria-label="search">
                 <button class="btn rounded-end rounded-0 btn-primary-color" type="submit">
                     <i class="fas fa-search"></i>
@@ -31,11 +31,23 @@
             <thead class="table-success">
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Name</th>
+                <th scope="col">
+                    @if(request()->orderby=='name' && request()->sort=='desc')
+                        <a class="text-decoration-none text-success" href="?orderby=name&sort=asc&userFilter={{request()->userFilter}}">Created At <i class="fa-solid fa-caret-down"></i></a>
+                    @else
+                        <a class="text-decoration-none {{request()->orderby=='name' && request()->sort=='asc' ? 'text-success' : ''}}" href="?orderby=name&sort=desc&userFilter={{request()->userFilter}}">Name <i class="fa-solid fa-caret-up"></i></a>
+                    @endif
+                </th>
                 <th scope="col">Email</th>
                 <th scope="col">Password</th>
                 <th scope="col" colspan="2" class="text-center">Action</th>
-                <th>Created At</th>
+                <th style="width: 10%">
+                    @if(request()->orderby=='date' && request()->sort=='desc')
+                        <a class="text-decoration-none text-success" href="?orderby=date&sort=asc&userFilter={{request()->userFilter}}">Created At <i class="fa-solid fa-caret-down"></i></a>
+                    @else
+                        <a class="text-decoration-none {{request()->orderby=='date' && request()->sort=='asc' ? 'text-success' : ''}}" href="?orderby=date&sort=desc&userFilter={{request()->userFilter}}">Created At <i class="fa-solid fa-caret-up"></i></a>
+                    @endif
+                </th>
             </tr>
             </thead>
             <tbody>
@@ -60,7 +72,7 @@
                             <i class="text-primary fa-solid fa-trash"></i>
                         </button>
                     </td>
-                    <td>{{date('d-m-Y', strtotime($user -> created_at))}}</td>
+                    <td>{{date('d/m/Y H:i', strtotime($user -> created_at))}}</td>
                 </tr>
             @empty
                 <tr>

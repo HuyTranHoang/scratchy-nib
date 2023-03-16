@@ -71,5 +71,14 @@ class User extends Authenticatable implements MustVerifyEmail
             $query->where('name','like','%'.$filters['userFilter'].'%')
                 ->orWhere('email','like','%'.$filters['userFilter'].'%');
         }
+
+        if($filters['orderby'] ?? false) {
+            if ($filters['orderby'] == 'name'){
+                $query->orderBy('name',$filters['sort']);
+            } else {
+                $query->orderBy('created_at',$filters['sort']);
+            }
+        }
+
     }
 }

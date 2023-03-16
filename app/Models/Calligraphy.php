@@ -47,5 +47,14 @@ class Calligraphy extends Model
                     ->where('category_id',$filters['cateID']);
             });
         }
+
+        if($filters['orderby'] ?? false) {
+            if ($filters['orderby'] == 'name'){
+                $query->orderBy('calligraphy_name',$filters['sort']);
+            } else {
+                $query->orderBy('created_at',$filters['sort']);
+            }
+        }
+
     }
 }

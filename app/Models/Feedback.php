@@ -27,11 +27,20 @@ class Feedback extends Model
     }
 
     public function scopeFilter($query, array $filters) {
-        if($filters['userName'] ?? false) {
+        if($filters['feedbackFilter'] ?? false) {
             $query->whereIn('user_id',function ($query) use ($filters) {
                 $query->select('user_id')->from('users')
-                    ->where('name','like','%'.$filters['userName'].'%');
-            });
+                    ->where('name','like','%'.$filters['feedbackFilter'].'%');
+            })
+                ->orWhere('feedback_message','like','%'.$filters['feedbackFilter'].'%');
+        }
+
+        if($filters['orderby'] ?? false) {
+            if ($filters['orderby'] == 'userid'){
+                $query->orderBy('user_id',$filters['sort']);
+            } else {
+                $query->orderBy('created_at',$filters['sort']);
+            }
         }
     }
 }

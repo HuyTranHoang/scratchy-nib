@@ -14,11 +14,12 @@
             <h3>Calligraphies list</h3>
         </div>
 
-        <div class="colmd-12 d-sm-block col-lg-8 d-md-flex justify-content-md-end">
-            <a class="btn btn-primary-color rounded me-3" href="{{ route('calligraphies.index') }}" style="line-height: 30px">Reset</a>
+        <div class="col-md-12 d-sm-block col-lg-8 d-md-flex justify-content-md-end admin-form-group">
 
-            <form action="" class="d-flex form-outline">
-                <div class="field me-3" style="min-width: 200px">
+            <form action="" class="d-flex mt-3 mt-lg-0">
+                <a class="btn btn-primary-color rounded me-3 mb-3 mb-md-0" href="{{ route('calligraphies.index') }}" style="line-height: 30px">Reset</a>
+
+                <div class="field me-md-0 me-lg-3" style="min-width: 200px">
                     <label for="cateID" class="label">Filter by Category</label>
                     <select class="select" id="cateID" name="cateID" onchange='this.form.submit()'>
                         <option value="">All</option>
@@ -29,8 +30,8 @@
                 </div>
             </form>
 
-            <form action="" class="d-flex form-outline">
-                <div class="field me-3" style="min-width: 200px">
+            <form action="" class="d-flex mt-3 mt-lg-0 admin-form-group">
+                <div class="field me-md-0 me-lg-3 mb-3 mb-lg-0" style="min-width: 200px">
                     <input type="hidden" name="cateID" value="{{request()->cateID}}">
                     <label for="styleID" class="label">Filter by Style</label>
                     <select class="select" id="styleID" name="styleID" onchange='this.form.submit()'>
@@ -41,11 +42,13 @@
                     </select>
                 </div>
 
-                <input class="form-control rounded-start rounded-0" style="width: 200px" value="{{ request()->calligraphyName }}"
-                       name="calligraphyName" type="text" placeholder="Search by name.." aria-label="search">
-                <button class="btn rounded-end rounded-0 btn-primary-color" type="submit">
-                    <i class="fas fa-search"></i>
-                </button>
+                <div class="d-flex w-100">
+                    <input class="form-control rounded-start rounded-0" style="min-width: 200px" value="{{ request()->calligraphyName }}"
+                           name="calligraphyName" type="text" placeholder="Search by name.." aria-label="search">
+                    <button class="btn rounded-end rounded-0 btn-primary-color" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
             </form>
         </div>
     </div>
@@ -55,12 +58,24 @@
             <thead class="table-success">
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col" style="width: 200px;">Calligraphy Name</th>
+                    <th scope="col" style="width: 15%">
+                        @if(request()->orderby=='name' && request()->sort=='desc')
+                            <a class="text-decoration-none text-success" href="?orderby=name&sort=asc&cateID={{request()->cateID}}&styleID={{request()->styleID}}&calligraphyName={{request()->calligraphyName}}">Calligraphies Name <i class="fa-solid fa-caret-down"></i></a>
+                        @else
+                            <a class="text-decoration-none {{request()->orderby=='name' && request()->sort=='asc' ? 'text-success' : ''}}" href="?orderby=name&sort=desc&cateID={{request()->cateID}}&styleID={{request()->styleID}}&calligraphyName={{request()->calligraphyName}}">Calligraphies Name <i class="fa-solid fa-caret-up"></i></a>
+                        @endif
+                    </th>
                     <th scope="col" style="max-width: 200px">Image</th>
                     <th scope="col">Calligraphy Description</th>
                     <th scope="col">Style</th>
                     <th scope="col" colspan="2" class="text-center">Action</th>
-                    <th scope="col" style="min-width: 100px">Created At</th>
+                    <th scope="col" style="width: 10%">
+                        @if(request()->orderby=='date' && request()->sort=='desc')
+                            <a class="text-decoration-none text-success" href="?orderby=date&sort=asc&cateID={{request()->cateID}}&styleID={{request()->styleID}}&calligraphyName={{request()->calligraphyName}}">Created At <i class="fa-solid fa-caret-down"></i></a>
+                        @else
+                            <a class="text-decoration-none {{request()->orderby=='date' && request()->sort=='asc' ? 'text-success' : ''}}" href="?orderby=date&sort=desc&cateID={{request()->cateID}}&styleID={{request()->styleID}}&calligraphyName={{request()->calligraphyName}}">Created At <i class="fa-solid fa-caret-up"></i></a>
+                        @endif
+                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -98,7 +113,7 @@
                             <i class="text-primary fa-solid fa-trash"></i>
                         </button>
                     </td>
-                    <td>{{date('d-m-Y', strtotime($calligraphy -> created_at))}}</td>
+                    <td>{{date('d/m/Y H:i', strtotime($calligraphy -> created_at))}}</td>
                 </tr>
             @empty
                 <tr>

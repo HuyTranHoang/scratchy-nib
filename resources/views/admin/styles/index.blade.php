@@ -14,9 +14,9 @@
             <h3>Styles list</h3>
         </div>
 
-        <div class="colmd-12 d-sm-block col-lg-8 d-md-flex justify-content-md-end">
+        <div class="col-md-12 d-sm-block col-lg-8 d-md-flex justify-content-md-end">
             <form action="" class="d-flex form-outline">
-                <a class="btn btn-primary-color rounded me-3" href="{{ route('styles.index') }}" style="line-height: 30px">Reset</a>
+                <a class="btn btn-primary-color rounded me-3 mb-3 mb-md-0" href="{{ route('styles.index') }}" style="line-height: 30px">Reset</a>
                 <div class="field me-3" style="min-width: 200px">
                     <label for="cateID" class="label">Filter by Category Name</label>
                     <select class="select" id="cateID" name="cateID" onchange='this.form.submit()'>
@@ -47,9 +47,9 @@
                 <th scope="col">#</th>
                 <th scope="col" style="width: 10%">
                     @if(request()->orderby=='name' && request()->sort=='desc')
-                        <a class="text-decoration-none text-success" href="?orderby=name&sort=asc&cateID={{request()->cateID}}&styleName={{request()->styleName}}">Styles Name <i class="fa-solid fa-caret-up"></i></a>
+                        <a class="text-decoration-none text-success" href="?orderby=name&sort=asc&cateID={{request()->cateID}}&styleName={{request()->styleName}}">Styles Name <i class="fa-solid fa-caret-down"></i></a>
                     @else
-                        <a class="text-decoration-none {{request()->orderby=='name' && request()->sort=='asc' ? 'text-success' : ''}}" href="?orderby=name&sort=desc&cateID={{request()->cateID}}&styleName={{request()->styleName}}">Styles Name <i class="fa-solid fa-caret-down"></i></a>
+                        <a class="text-decoration-none {{request()->orderby=='name' && request()->sort=='asc' ? 'text-success' : ''}}" href="?orderby=name&sort=desc&cateID={{request()->cateID}}&styleName={{request()->styleName}}">Styles Name <i class="fa-solid fa-caret-up"></i></a>
                     @endif
                 </th>
                 <th scope="col" style="max-width: 200px">Styles Image</th>
@@ -58,9 +58,9 @@
                 <th scope="col" colspan="2" class="text-center">Action</th>
                 <th scope="col" style="width: 10%;">
                     @if(request()->orderby=='date' && request()->sort=='desc')
-                        <a class="text-decoration-none text-success" href="?orderby=date&sort=asc&cateID={{request()->cateID}}&styleName={{request()->styleName}}">Created At <i class="fa-solid fa-caret-up"></i></a>
+                        <a class="text-decoration-none text-success" href="?orderby=date&sort=asc&cateID={{request()->cateID}}&styleName={{request()->styleName}}">Created At <i class="fa-solid fa-caret-down"></i></a>
                     @else
-                        <a class="text-decoration-none {{request()->orderby=='date' && request()->sort=='asc' ? 'text-success' : ''}}" href="?orderby=date&sort=desc&cateID={{request()->cateID}}&styleName={{request()->styleName}}">Created At <i class="fa-solid fa-caret-down"></i></a>
+                        <a class="text-decoration-none {{request()->orderby=='date' && request()->sort=='asc' ? 'text-success' : ''}}" href="?orderby=date&sort=desc&cateID={{request()->cateID}}&styleName={{request()->styleName}}">Created At <i class="fa-solid fa-caret-up"></i></a>
                     @endif
                 </th>
             </tr>
@@ -91,7 +91,7 @@
                             <i class="text-primary fa-solid fa-trash"></i>
                         </button>
                     </td>
-                    <td>{{date('d-m-Y', strtotime($style -> created_at))}}</td>
+                    <td>{{date('d/m/Y H:i', strtotime($style -> created_at))}}</td>
                 </tr>
             @empty
                 <tr>
