@@ -191,4 +191,7 @@
 .avatar {
     aspect-ratio: 4/4;
     object-fit: cover;
+    @include mixins.mobile {
+        width: 50%;
+    }
 }

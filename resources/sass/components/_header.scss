@@ -25,6 +25,7 @@
     margin-top: 5rem;
     font-size: 5rem;
     @include mixins.mobile {
+        margin-top: 2rem;
         margin-left: 8px;
         font-size: 3rem;
     }

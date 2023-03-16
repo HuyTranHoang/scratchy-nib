@@ -58,13 +58,15 @@
 .card-category {
     color: oldlace;
     padding-left: 3px;
+    @include mixins.mobile {
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
 }
 .card-title-gallery {
     font-size: 1rem;
     font-weight: 500;
     top: calc(100% - 95px);
     margin-bottom: 0;
-
 }
 
 .card-category {
@@ -85,6 +87,9 @@
     @include mixins.tablet {
         top: calc(100% - 35px);
         opacity: 1;
+    }
+    @include mixins.mobile {
+        background-color: #e07979;
     }
 }
 
