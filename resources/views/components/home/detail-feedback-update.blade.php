@@ -1,10 +1,10 @@
 <section class="container">
-    <h3 class="mb-3">Feedback</h3>
+    <h3 id="feedback" class="mb-3">Feedback</h3>
     <div class="row mb-2">
         <div class="col-md-6">
             @guest
                 <div class="row mb-2">
-                    <div class="col-6">
+                    <div class="col-md-6">
                         <h4><a href="{{ route('login') }}" class="text-decoration-none">Login</a> to give a feedback</h4>
                     </div>
                 </div>
@@ -15,7 +15,9 @@
                     <input type="hidden" name="user_id" value="{{ Auth::user()->user_id }}">
                     <input type="hidden" name="calligraphy_id" value="{{ $calligraphy->calligraphy_id }}">
                     <textarea name="feedback_message">
-                        {{$editfeedback->feedback_message}}
+                        @if($editfeedback->user_id == auth()->user()->user_id)
+                            {{$editfeedback->feedback_message}}
+                        @endif
                     </textarea>
                     @error('feedback_message')
                     <span class="text-danger mt-3 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
@@ -71,19 +73,3 @@
     </div>
     <hr>
 </section>
-
-<!-- Modal -->
-<x-delete-modal>
-    <x-slot:action>
-        {{route('home.delete-feedback','id')}}
-    </x-slot:action>
-
-    <x-slot:body>
-        <input id="feedback_id" name="feedback_id" hidden value="">
-        <h5 class="text-center text-danger">Are you sure you want to delete this feedback?</h5>
-        <h6 class="text-center mb-3 text-primary-color fw-light" style="font-size: 0.8rem">
-            <i>this action cannot be reversed</i></h6>
-        <label for="feedback_message">Feedback message: </label>
-        <div id="home_feedback_message" class="mt-3 text-primary-color bg-secondary-color p-2"></div>
-    </x-slot:body>
-</x-delete-modal>

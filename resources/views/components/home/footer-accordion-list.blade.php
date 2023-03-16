@@ -6,7 +6,7 @@
         </button>
     </h2>
     <div id="{{$id}}" class="accordion-collapse collapse d-lg-block d-md-block float-md-end float-lg-end" data-bs-parent="#footerContent">
-            <h5 class="text-uppercase footer-text-color d-sm-none d-md-block d-lg-block">
+            <h5 class="text-uppercase footer-text-color d-none d-md-block">
                 {{$title}}
             </h5>
             {{$slot}}

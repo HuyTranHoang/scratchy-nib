@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CalligraphiesController;
 use App\Http\Controllers\CalligraphyCategoriesController;
 use App\Http\Controllers\CalligraphyStylesController;
@@ -59,9 +60,7 @@ Route::post('/subscribe', [HomeController::class, 'subscribe'])->name('subscribe
 // Admin Page
 
 Route::middleware(['web','CheckIsAdmin'])->prefix('admin')->group(function () {
-    Route::get('/', function () {
-        return view('admin.dashboard');
-    })->name('admin.index');
+    Route::get('/', [AdminController::class,'index'])->name('admin.index');
 
     Route::resource('categories', CalligraphyCategoriesController::class);
     Route::resource('styles', CalligraphyStylesController::class);

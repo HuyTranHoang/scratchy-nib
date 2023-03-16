@@ -4,6 +4,8 @@
 @use "abstracts/variables";
 // Custom Bootstrap 5.3
 @use "abstracts/bootstrap";
+// Mixin
+@use "abstracts/mixins";
 // Utilities ( Color, Button .. )
 @use "abstracts/ultilites";
 // Overlay
@@ -128,6 +130,11 @@
     opacity: 0;
     visibility: hidden;
     z-index: 1000;
+    @include mixins.mobile {
+        right: 10px;
+        width: 30px;
+        height: 30px;
+    }
     &::after {
         content: "\f077";
         font-family: FontAwesome;
@@ -136,6 +143,10 @@
         font-size: 2em;
         line-height: 50px;
         color: #fff;
+        @include mixins.mobile {
+            line-height: 30px;
+            font-size: 1em;
+        }
     }
     &:hover {
         cursor: pointer;

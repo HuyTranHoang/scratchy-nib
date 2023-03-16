@@ -24,6 +24,10 @@
 .header-title {
     margin-top: 5rem;
     font-size: 5rem;
+    @include mixins.mobile {
+        margin-left: 8px;
+        font-size: 3rem;
+    }
     font-family: 'Babylone Script', serif;
     color: variables.$header-text-color;
 }

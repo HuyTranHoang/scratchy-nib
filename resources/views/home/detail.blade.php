@@ -44,6 +44,22 @@
 
     <x-home.overlay-top color="bg-secondary-color"/>
 
+    <!-- Modal -->
+    <x-delete-modal>
+        <x-slot:action>
+            {{route('home.delete-feedback','id')}}
+        </x-slot:action>
+
+        <x-slot:body>
+            <input id="feedback_id" name="feedback_id" hidden value="">
+            <h5 class="text-center text-danger">Are you sure you want to delete this feedback?</h5>
+            <h6 class="text-center mb-3 text-primary-color fw-light" style="font-size: 0.8rem">
+                <i>this action cannot be reversed</i></h6>
+            <label for="feedback_message">Feedback message: </label>
+            <div id="home_feedback_message" class="mt-3 text-primary-color bg-secondary-color p-2"></div>
+        </x-slot:body>
+    </x-delete-modal>
+
     {{--    Tinymce Script  --}}
     <script src="https://cdn.tiny.cloud/1/r2ca2qp43km71mdmbvjwkdd99vpglucckcwto4flreqbh93a/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
@@ -67,6 +83,10 @@
         const urlParams = new URLSearchParams(window.location.search);
         const element = document.getElementById("feedback");
         if (urlParams.has("page")) {
+            element.scrollIntoView();
+        }
+
+        if (urlParams.has("feedback")) {
             element.scrollIntoView();
         }
     </script>

@@ -7,8 +7,8 @@
         <div class="container">
             <div class="row mb-4">
                 <div class="col d-flex justify-content-center">
-                    <form action="" class="d-flex w-50 field-cate">
-                       <label class="label-cate" for="calligraphyName">Search</label>
+                    <form action="" class="d-flex field-cate">
+                       <label class="label-cate" for="calligraphyName">Search by name</label>
                         <input type="hidden" name="cateID" value="{{ request()->cateID }}">
                         <input type="hidden" name="styleID" value="{{ request()->styleID }}">
                         <input class="input-text rounded-start rounded-0" value="{{ request()->calligraphyName }}"
@@ -107,7 +107,7 @@
             @endif
 
             <div class="row mb-3" id="calligraphy">
-                <div class="col-sm-4 col-md-4 col-lg-2">
+                <div class="col-6 col-md-4 col-lg-2">
                     <img class="img-fluid" src="{{asset('storage/images/divider-pink.png')}}" alt="divider">
                 </div>
             </div>

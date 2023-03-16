@@ -9,7 +9,7 @@
                         <h1 class="mt-md-0 mt-lg-5">Sign In</h1>
                     </div>
 
-                    <div class="row text-primary mt-2 me-3 ms-sm-3 ms-md-0">
+                    <div class="row text-primary mt-2 me-3 ms-3 ms-md-0">
                         <ul>
                             @if($errors->any())
                                 @foreach($errors->getMessages() as $this_error)
@@ -22,14 +22,14 @@
                         </ul>
                     </div>
 
-                    <div class="form-floating mt-4 mb-3 me-3 ms-sm-3 ms-md-0">
+                    <div class="form-floating mt-4 mb-3 me-3 ms-3 ms-md-0">
                         <input type="email" class="form-control" id="email" name="email" autocomplete="username"
                                placeholder="email" value="{{old('email')}}">
                         <label for="email">Email</label>
                         <span><i class="fa-light fa-at"></i></span>
                     </div>
 
-                    <div class="form-floating mb-3 me-3 ms-sm-3 ms-md-0">
+                    <div class="form-floating mb-3 me-3 ms-3 ms-md-0">
                         <input type="password" class="form-control" id="password" name="password" autocomplete="new-password"
                                placeholder="password" value="{{old('password')}}">
                         <label for="password">Password</label>

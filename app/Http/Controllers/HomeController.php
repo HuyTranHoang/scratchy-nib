@@ -80,7 +80,11 @@ class HomeController extends Controller
     }
 
     public function updateFeedback(FeedbackPutRequest $request, Feedback $feedback)
-    {;
+    {
+        if ($feedback->user_id != auth()->user()->user_id) {
+            Alert::toast("Looks like you're trying to edit someone else's feedback!!", 'error')->autoClose(1500);
+            return redirect(route('home.detail',request()->calligraphy_id));
+        }
         $validated = $request->validated();
         $feedback->update($validated);
         Alert::toast('Update feedback succesfully!', 'success')->autoClose(1500);
@@ -91,6 +95,10 @@ class HomeController extends Controller
     {
         $FeedbackID = $request->feedback_id;
         $feedback = Feedback::findOrFail($FeedbackID);
+        if ($feedback->user_id != auth()->user()->user_id && auth()->user()->role_id != 1) {
+            Alert::toast("Looks like you're trying to delete someone else's feedback!!", 'error')->autoClose(1500);
+            return redirect(route('home.detail',request()->calligraphy_id));
+        }
         $feedback->delete();
         Alert::toast('Delete feedback succesfully!', 'success')->autoClose(1500);
         return redirect()->back();

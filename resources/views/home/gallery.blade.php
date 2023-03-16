@@ -11,7 +11,7 @@
                 <div class="d-sm-block col-md-6 d-md-flex">
                     <form action="" class="me-sm-0 me-md-3">
                         <div class="field me-4">
-                            <label for="cateID" class="label">Filter by Category</label>
+                            <label for="cateID" class="gallery-label">Filter by Category</label>
                             <input type="hidden" name="sort" value="{{ request()->sort }}">
                             <select class="select mt-2" id="cateID" name="cateID" onchange='this.form.submit()'>
                                 <option value="">All</option>
@@ -26,7 +26,7 @@
                         <div class="field">
                             <input type="hidden" name="cateID" value="{{ request()->cateID }}">
                             <input type="hidden" name="sort" value="{{ request()->sort }}">
-                            <label for="styleID" class="label">Filter by Style</label>
+                            <label for="styleID" class="gallery-label">Filter by Style</label>
                             <select class="select mt-2" id="styleID" name="styleID" onchange='this.form.submit()'>
                                 <option value="">All</option>
                                 @foreach($styles as $style)
@@ -40,7 +40,7 @@
                         <div class="field">
                             <input type="hidden" name="cateID" value="{{ request()->cateID }}">
                             <input type="hidden" name="styleID" value="{{ request()->styleID }}">
-                            <label for="sort" class="label">Sort</label>
+                            <label for="sort" class="gallery-label">Sort</label>
                             <select class="select mt-2" id="sort" name="sort" onchange='this.form.submit()'>
                                 <option {{ request()->sort == 'ASC' ? 'selected' : '' }} value="ASC">Oldest</option>
                                 <option {{ request()->sort == 'DESC' ? 'selected' : '' }} value="DESC">Latest</option>
@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="d-sm-block col-md-6 d-md-flex justify-content-md-end mt-2">
-                    <a class="btn btn-primary-color me-3 rounded" href="{{ route('home.gallery') }}">Clear all filter</a>
+                    <a class="btn btn-primary-color me-3 mb-2 mb-md-0 rounded" href="{{ route('home.gallery') }}">Clear all filter</a>
                     <form action="" class="d-flex form-outline">
                         <input type="hidden" name="cateID" value="{{ request()->cateID }}">
                         <input type="hidden" name="styleID" value="{{ request()->styleID }}">
@@ -65,7 +65,7 @@
             </div>
 
             <div class="row mb-3">
-                <div class="col-sm-4 col-md-4 col-lg-2">
+                <div class="col-6 col-md-4 col-lg-2">
                     <img class="img-fluid" src="{{asset('storage/images/divider-gold.png')}}" alt="divider">
                 </div>
             </div>

@@ -279,5 +279,8 @@
 }
 .field-cate {
     position: relative;
-    width: 100%;
+    width: 50%;
+    @include mixins.mobile {
+        width: 100%;
+    }
 }

@@ -74,11 +74,9 @@
                         </div>
                         <div class="row mt-4">
                             <h5 class="text-primary">Scratchy Nib</h5>
-                            <span>
-                                Ho Chi Minh <br>
-                                Viet Nam
-                            </span>
-
+                            <span>Ho Chi Minh, Viet Nam</span>
+                            <span><a class="link-secondary text-decoration-none" href="mailto: scratchynib@gmail.com">scratchynib@gmail.com</a></span>
+                            <span><a class="link-secondary text-decoration-none" href="tel:+8499999999">+84 999 999 99</a></span>
                         </div>
                     </div>
                 </div>

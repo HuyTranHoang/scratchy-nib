@@ -21,7 +21,7 @@
 
                     <form action="{{ route('subscribe') }}" method="post" class="row">
                         @csrf
-                        <div class="col-4">
+                        <div class="col-md-4">
                             <div class="mb-3">
                                 <input type="text" class="form-control" name="name" placeholder="Your name">
                                 @error('name')
@@ -29,7 +29,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-md-4">
                             <div class="mb-3">
                                 <input type="email" class="form-control" name="email" placeholder="Your email address">
                                 @error('email')
@@ -37,7 +37,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-md-4">
                             <button type="submit" class="btn btn-primary-color">SUBSCRIBE</button>
                         </div>
                     </form>
@@ -53,11 +53,12 @@
     </div>
 
     <section class="bg-primary-color">
-        <div class="container text-primary-color">
+        <div class="container">
             <h1 class="py-3 text-center text-primary">Calligraphy</h1>
             <p>
                 Calligraphy is an ancient art form that originated in China over 2000 years ago.
                 It involves the creation of beautiful and intricate writing, using a variety of techniques and tools.
+
                 Calligraphy has been used throughout history for a wide range of purposes, from religious texts to
                 decorative artwork, and it has evolved into a diverse and vibrant art form with many different styles
                 and techniques.
@@ -92,7 +93,7 @@
                 <div class="container text-primary">
                     <h1 id="Traditional" class="my-3 text-center text-primary">{{ $category->category_name }}</h1>
                     <div class="row mb-3">
-                        <div class="col-sm-4 col-md-4 col-lg-2 offset-lg-1">
+                        <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
                             <img class="img-fluid" src="{{asset('storage/images/divider-pink.png')}}" alt="divider">
                         </div>
                     </div>
@@ -122,7 +123,7 @@
                     <div data-aos="fade-left">
                         <h1 id="Contemporary" class="mb-3 text-center">{{$category->category_name}}</h1>
                         <div class="row mb-3">
-                            <div class="col-sm-4 col-md-4 col-lg-2 offset-lg-1">
+                            <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
                                 <img class="img-fluid" src="{{asset('storage/images/divider-pink.png')}}" alt="divider">
                             </div>
                         </div>
@@ -148,5 +149,9 @@
             </section>
         @endif
     @endforeach
+
+    <div class="container d-flex justify-content-center align-items-center">
+        <img class="img-fluid" src="{{ asset('storage/images/brush-pen.png') }}" alt="">
+    </div>
 
 </x-home-layout>
