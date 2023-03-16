@@ -28,14 +28,26 @@ class HomeController extends Controller
         ]);
     }
 
-    public function category()
+    public function category(Request $request)
     {
+        if ($request->cateID){
+            $currentCategory = CalligraphyCategory::findOrFail(request()->cateID);
+        }
+
+        if ($request->styleID){
+            $currentStyle = CalligraphyStyle::findOrFail(request()->styleID);
+
+            if ($request->cateID && $currentStyle->category_id != CalligraphyCategory::findOrFail(request()->cateID)->category_id) {
+                abort('404');
+            }
+        }
+
         return view('home.category', [
             'categories' => CalligraphyCategory::all(),
             'styles' => CalligraphyStyle::filter(request(['cateID']))->get(),
-            'currentCategory' => CalligraphyCategory::find(request()->cateID),
-            'currentStyle' => CalligraphyStyle::find(request()->styleID),
-            'calligraphies' => Calligraphy::filter(request(['calligraphyName','cateID','styleID']))->paginate(16)->appends(request()->query()),
+            'currentCategory' => $currentCategory ?? '',
+            'currentStyle' => $currentStyle ?? '',
+            'calligraphies' => Calligraphy::filter(request(['calligraphyName','cateID','styleID']))->paginate(16)->appends($request->query()),
             'randomImage' => CalligraphyStyle::inRandomOrder()->first()->style_image
         ]);
     }

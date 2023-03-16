@@ -16,7 +16,7 @@
                     </a>
                     <ul class="dropdown-menu animate slideIn m-0">
                         @foreach( $categories as $category )
-                            <li><a class="dropdown-item" href="{{ route('home.category', ['cateID' => $category->category_id]) }}">{{ $category->category_name }}</a></li>
+                            <li><a class="dropdown-item" href="{{ route('home.category', ['cateID' => $category -> category_id ]).'-'.Str::slug($category->category_name) }}">{{ $category->category_name }}</a></li>
                         @endforeach
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="{{ route('home.category') }}">All calligraphy</a></li>
