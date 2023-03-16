@@ -31,13 +31,13 @@ class HomeController extends Controller
     public function category(Request $request)
     {
         if ($request->cateID){
-            $currentCategory = CalligraphyCategory::findOrFail(request()->cateID);
+            $currentCategory = CalligraphyCategory::findOrFail($request->cateID);
         }
 
         if ($request->styleID){
-            $currentStyle = CalligraphyStyle::findOrFail(request()->styleID);
+            $currentStyle = CalligraphyStyle::findOrFail($request->styleID);
 
-            if ($request->cateID && $currentStyle->category_id != CalligraphyCategory::findOrFail(request()->cateID)->category_id) {
+            if ($request->cateID && $currentStyle->category_id != CalligraphyCategory::find($request->cateID)->category_id) {
                 abort('404');
             }
         }
@@ -52,14 +52,25 @@ class HomeController extends Controller
         ]);
     }
 
-    public function gallery()
+    public function gallery(Request $request)
     {
+        if ($request->cateID){
+            $currentCategory = CalligraphyCategory::findOrFail($request->cateID);
+        }
+
+        if ($request->styleID){
+            $currentStyle = CalligraphyStyle::findOrFail($request->styleID);
+            if ($request->cateID && $currentStyle->category_id != CalligraphyCategory::find($request->cateID)->category_id) {
+                abort('404');
+            }
+        }
+
         return view('home.gallery', [
-            'images' => GalleryImage::filter(request(['cateID','styleID','calliName','sort']))->paginate(30)->appends(request()->query()),
+            'images' => GalleryImage::filter(request(['cateID','styleID','calliName','sort']))->paginate(30)->appends($request->query()),
             'categories' => CalligraphyCategory::all(),
             'styles' => CalligraphyStyle::filter(request(['cateID']))->get(),
-            'currentStyle' => CalligraphyStyle::find(request()->styleID)->style_name ?? '',
-            'currentCategory' => CalligraphyCategory::find(request()->cateID)->category_name ?? ''
+            'currentStyle' => $currentStyle->style_name ?? '',
+            'currentCategory' => $currentCategory->category_name ?? ''
         ]);
     }
 
