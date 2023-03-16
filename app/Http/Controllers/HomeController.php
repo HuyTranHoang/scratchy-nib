@@ -36,10 +36,16 @@ class HomeController extends Controller
 
         if ($request->styleID){
             $currentStyle = CalligraphyStyle::findOrFail($request->styleID);
+        }
 
-            if ($request->cateID && $currentStyle->category_id != CalligraphyCategory::find($request->cateID)->category_id) {
-                abort('404');
-            }
+        $perPage = 16;
+        $page = request()->input('page', 1);
+        $totalItems = Calligraphy::filter(request(['calligraphyName','cateID','styleID']))->count();
+        $totalPages = ceil($totalItems / $perPage);
+
+        if ($page > $totalPages && !request()->calligraphyName) {
+            Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(2500);
+            return redirect(route('home.category',['cateID'=> $currentCategory ?? false,'page'=> 1]));
         }
 
         return view('home.category', [
@@ -47,7 +53,7 @@ class HomeController extends Controller
             'styles' => CalligraphyStyle::filter(request(['cateID']))->get(),
             'currentCategory' => $currentCategory ?? '',
             'currentStyle' => $currentStyle ?? '',
-            'calligraphies' => Calligraphy::filter(request(['calligraphyName','cateID','styleID']))->paginate(16)->appends($request->query()),
+            'calligraphies' => Calligraphy::filter(request(['calligraphyName','cateID','styleID']))->paginate($perPage)->appends($request->query()),
             'randomImage' => CalligraphyStyle::inRandomOrder()->first()->style_image
         ]);
     }
@@ -60,13 +66,20 @@ class HomeController extends Controller
 
         if ($request->styleID){
             $currentStyle = CalligraphyStyle::findOrFail($request->styleID);
-            if ($request->cateID && $currentStyle->category_id != CalligraphyCategory::find($request->cateID)->category_id) {
-                abort('404');
-            }
+        }
+
+        $perPage = 30;
+        $page = request()->input('page', 1);
+        $totalItems = GalleryImage::filter(request(['cateID','styleID','calliName']))->count();
+        $totalPages = ceil($totalItems / $perPage);
+
+        if ($page > $totalPages && !request()->calliName) {
+            Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(2500);
+            return redirect(route('home.gallery',['cateID'=> $currentCategory ?? false,'page'=> 1]));
         }
 
         return view('home.gallery', [
-            'images' => GalleryImage::filter(request(['cateID','styleID','calliName','sort']))->paginate(30)->appends($request->query()),
+            'images' => GalleryImage::filter(request(['cateID','styleID','calliName','sort']))->paginate($perPage)->appends($request->query()),
             'categories' => CalligraphyCategory::all(),
             'styles' => CalligraphyStyle::filter(request(['cateID']))->get(),
             'currentStyle' => $currentStyle->style_name ?? '',
