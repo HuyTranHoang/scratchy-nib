@@ -38,7 +38,7 @@ if (grid ?? false) {
 
 $(function() {
     // Handle GeoLocation
-    // InitLocationTime();
+    InitLocationTime();
 
     const btn = $('#btt-button');
 

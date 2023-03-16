@@ -106,12 +106,9 @@ class HomeController extends Controller
 
     public function sendEmail(EmailPostRequest $request)
     {
+        $contactEmail = ENV('MAIL_FROM_ADDRESS');
         $validated = $request->validated();
-        Mail::to('huy.th878@aptechlearning.edu.vn')->send(new Contact($validated));
-//        Mail::send(new Contact(), compact('validated'), function ($email) use ($validated) {
-//            $email->subject($validated['subject']);
-//            $email->to('huy.th878@aptechlearning.edu.vn', $validated['name']);
-//        });
+        Mail::to($contactEmail)->send(new Contact($validated));
         Alert::toast('Your email has been sent successfully!', 'success')->buttonsStyling(false)->autoClose(1500);
 
         return redirect()->back();

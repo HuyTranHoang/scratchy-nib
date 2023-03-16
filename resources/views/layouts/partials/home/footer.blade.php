@@ -66,7 +66,7 @@
                         <div class="position-relative" style="width: 375px;">
                             <div class="ticker-text p-0">
                                 <p class="msg"><span class="ticker"></span></p>
-                                <p class="msg msg--two"><span class="ticker"></span></p>
+                                <p class="msg msg--two d-none d-md-block"><span class="ticker"></span></p>
                             </div>
                         </div>
                     </div>
