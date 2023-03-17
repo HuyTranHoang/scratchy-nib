@@ -98,12 +98,17 @@ class HomeController extends Controller
     }
 
     public function detail(Calligraphy $calligraphy){
+
+        if (request()->feedback) {
+            $editfeedback = Feedback::findOrFail(request()->feedback);
+        }
+
         return view('home.detail', [
             'calligraphy' => $calligraphy,
             'calligraphies' => Calligraphy::where('style_id',$calligraphy->style_id)->inRandomOrder()->limit(6)->get(),
             'feedback' => Feedback::where('calligraphy_id',$calligraphy->calligraphy_id)
                 ->orderBy('created_at','DESC')->paginate(4),
-            'editfeedback' => Feedback::find(request()->feedback),
+            'editfeedback' => $editfeedback ?? ''
         ]);
     }
 
