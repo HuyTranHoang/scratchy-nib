@@ -340,21 +340,34 @@ class CalligraphySeeder extends Seeder
             ],
             [
                 'calligraphy_name' => "We lightup the world",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"We light up the world" is a phrase that conveys a powerful message of positivity,
+                hope, and inspiration. The phrase is often associated with ideas of progress, innovation, and creativity,
+                and it encourages individuals to strive for excellence and make a positive impact in the world around them.
+                In calligraphy, the phrase is typically written in a flowing, brush-style script that emphasizes the energy and
+                movement of the words. The thick and thin strokes of the brush create a dynamic and expressive effect,
+                adding depth and personality to the piece.',
                 'style_id' => '8',
                 'created_at' => Carbon::now()->subMinutes(142),
                 'updated_at' => Carbon::now()->subMinutes(142),
             ],
             [
                 'calligraphy_name' => "Pin on lettering",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Pin on lettering" refers to a style of lettering that is often used in
+                handcrafted or DIY projects, where individual letters or words are cut out of a material such
+                as paper or fabric and then "pinned on" to a surface, such as a bulletin board or wall.
+                This style of lettering is often associated with a rustic or vintage aesthetic, and is a popular
+                choice for home decor, party decorations, and other creative projects. The letters are typically cut
+                out by hand or with a die-cutting machine, and can be customized with different fonts, colors,
+                and textures to create a unique and personalized look.',
                 'style_id' => '8',
                 'created_at' => Carbon::now()->subMinutes(141),
                 'updated_at' => Carbon::now()->subMinutes(141),
             ],
             [
                 'calligraphy_name' => "Guardian of galaxy",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'Guardians of the Galaxy is a superhero team from Marvel Comics that has
+                gained popularity through comic books, movies, and television shows. The team is made up of various
+                alien and human members who work together to protect the galaxy from threats, both internal and external.',
                 'style_id' => '8',
                 'created_at' => Carbon::now()->subMinutes(140),
                 'updated_at' => Carbon::now()->subMinutes(140),
@@ -364,21 +377,31 @@ class CalligraphySeeder extends Seeder
         Calligraphy::factory()->createMany([
             [
                 'calligraphy_name' => "Visually",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Visually" in modern script could be written in a variety of ways,
+                but typically it would involve a contemporary style of calligraphy that emphasizes legibility, clarity, and elegance.
+                When writing "visually" in modern script, a calligrapher might use a pointed pen or brush to create
+                thick and thin strokes, and add decorative touches such as swashes, loops, or serifs to enhance the visual
+                appeal of the letters. The overall effect would be a sleek and sophisticated design that emphasizes the
+                word\'s meaning and importance.',
                 'style_id' => '9',
                 'created_at' => Carbon::now()->subMinutes(139),
                 'updated_at' => Carbon::now()->subMinutes(139),
             ],
             [
                 'calligraphy_name' => "Bellany",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Bellany" in modern script would be a beautiful and elegant representation of the name,
+                suitable for use in various creative projects such as invitations, greeting cards, or branding materials.
+                When writing "Bellany" in modern script, the calligrapher may choose to add decorative flourishes or
+                serifs to the letters, giving them a unique and personalized touch. The overall effect would be a
+                stylish and sophisticated design that emphasizes the name\'s beauty and importance.',
                 'style_id' => '9',
                 'created_at' => Carbon::now()->subMinutes(138),
                 'updated_at' => Carbon::now()->subMinutes(138),
             ],
             [
                 'calligraphy_name' => "Delightful",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Delightful" in modern script would be a beautiful and stylish representation of the word,
+                 perfect for use in a variety of creative projects such as branding, invitations, or greeting cards.',
                 'style_id' => '9',
                 'created_at' => Carbon::now()->subMinutes(137),
                 'updated_at' => Carbon::now()->subMinutes(137),
@@ -388,28 +411,39 @@ class CalligraphySeeder extends Seeder
         Calligraphy::factory()->createMany([
             [
                 'calligraphy_name' => "Freedom",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Freedom" in Gothic calligraphy would be a powerful and impactful
+                representation of the word, perfect for use in projects that require a bold and dramatic style.
+                Gothic calligraphy, also known as blackletter or Old English calligraphy, is a style of writing that
+                originated in the Middle Ages and is characterized by its sharp, angular shapes and bold, heavy strokes.
+                When writing "Freedom" in Gothic calligraphy, the calligrapher would use a pointed pen or a
+                broad-edged pen to create the sharp and angular shapes of the letters. The overall effect would be a
+                striking and bold design that emphasizes the word\'s meaning and strength.',
                 'style_id' => '10',
                 'created_at' => Carbon::now()->subMinutes(136),
                 'updated_at' => Carbon::now()->subMinutes(136),
             ],
             [
                 'calligraphy_name' => "Born to be free",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Born to be free" is a short phrase in English that carries a powerful message.
+                It means that every person has the innate right to be free, to live their life without being constrained
+                or restricted by external forces.',
                 'style_id' => '10',
                 'created_at' => Carbon::now()->subMinutes(135),
                 'updated_at' => Carbon::now()->subMinutes(135),
             ],
             [
                 'calligraphy_name' => "Never give up",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Never give up" is a short phrase in English that is often used as a motivational message.
+                It means to persist and persevere in the face of challenges, and to not give up on one\'s goals and dreams.',
                 'style_id' => '10',
                 'created_at' => Carbon::now()->subMinutes(134),
                 'updated_at' => Carbon::now()->subMinutes(134),
             ],
             [
-                'calligraphy_name' => "You are the one ",
-                'calligraphy_description' => '',
+                'calligraphy_name' => "You are the one",
+                'calligraphy_description' => '"You are the one" is a phrase in English that typically conveys a strong sense of affection,
+                admiration, or love towards another person. It suggests that the person being addressed is very
+                special or significant to the speaker, and may even be their soulmate or the most important person in their life.',
                 'style_id' => '10',
                 'created_at' => Carbon::now()->subMinutes(133),
                 'updated_at' => Carbon::now()->subMinutes(133),
@@ -419,28 +453,33 @@ class CalligraphySeeder extends Seeder
         Calligraphy::factory()->createMany([
             [
                 'calligraphy_name' => "Hey jude",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Hey Jude" is the title of a classic Beatles song, written by Paul McCartney and released in 1968.
+                The song is known for its emotional lyrics and catchy melody, and has become a beloved classic of rock music.',
                 'style_id' => '11',
                 'created_at' => Carbon::now()->subMinutes(132),
                 'updated_at' => Carbon::now()->subMinutes(132),
             ],
             [
                 'calligraphy_name' => "Sasan Nasernia Ink Calligraphy, on Art Paper",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'Sasan Nasernia is an Iranian calligrapher who specializes in traditional Persian calligraphy,
+                particularly the Nastaliq script. His work is known for its fluidity, elegance, and intricate details.',
                 'style_id' => '11',
                 'created_at' => Carbon::now()->subMinutes(131),
                 'updated_at' => Carbon::now()->subMinutes(131),
             ],
             [
                 'calligraphy_name' => "Sweet Calligraphy",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Sweet" used to describe the lettering as playful, charming, or whimsical,
+                while "Calligraphy" indicates that the lettering is based on a traditional or formal calligraphic script.',
                 'style_id' => '11',
                 'created_at' => Carbon::now()->subMinutes(130),
                 'updated_at' => Carbon::now()->subMinutes(130),
             ],
             [
                 'calligraphy_name' => "Give more than you receive",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Give more than you receive" is an English phrase that emphasizes the importance of
+                generosity and selflessness. It suggests that in order to lead a fulfilling and meaningful life,
+                it is important to focus on giving and contributing to others, rather than solely on receiving and taking for oneself.',
                 'style_id' => '11',
                 'created_at' => Carbon::now()->subMinutes(129),
                 'updated_at' => Carbon::now()->subMinutes(129),
@@ -450,7 +489,8 @@ class CalligraphySeeder extends Seeder
         Calligraphy::factory()->createMany([
             [
                 'calligraphy_name' => "Alphabet",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'An alphabet is a collection of letters or symbols used to represent the sounds of a language. The English alphabet, for example, consists of 26 letters, ranging from A to Z.
+                Each letter represents a unique sound or combination of sounds, which can be used to form words and sentences.',
                 'style_id' => '12',
                 'created_at' => Carbon::now()->subMinutes(128),
                 'updated_at' => Carbon::now()->subMinutes(128),
@@ -464,7 +504,12 @@ class CalligraphySeeder extends Seeder
             ],
             [
                 'calligraphy_name' => "Calligraffiti",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'Calligraffiti is a contemporary art form that combines elements of traditional
+                calligraphy with modern graffiti techniques. It involves using various tools such as markers, spray paint,
+                and brushes to create elaborate lettering designs on walls, buildings, and other urban surfaces.
+                Calligraffiti artists often blend different styles of calligraphy, such as Arabic, Chinese, or Japanese scripts,
+                with graffiti lettering to create unique and dynamic compositions. The lettering can be highly stylized,
+                abstract, or incorporate elements of illustration or graphic design.',
                 'style_id' => '12',
                 'created_at' => Carbon::now()->subMinutes(126),
                 'updated_at' => Carbon::now()->subMinutes(126),
@@ -481,14 +526,29 @@ class CalligraphySeeder extends Seeder
             ],
             [
                 'calligraphy_name' => "Alphabet",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'Experimental calligraphy is a broad term that encompasses a wide range of artistic
+                styles and techniques. As such, an alphabet in experimental calligraphy might look very different depending on
+                the artist\'s vision and approach.
+                In general, experimental calligraphy involves breaking with traditional rules and conventions of calligraphy,
+                and exploring new forms, materials, and methods of expression. This could involve experimenting with new tools,
+                such as unconventional writing implements or digital technologies, or pushing the boundaries of traditional
+                calligraphic scripts, such as by distorting or abstracting the shapes of letters.',
                 'style_id' => '13',
                 'created_at' => Carbon::now()->subMinutes(124),
                 'updated_at' => Carbon::now()->subMinutes(124),
             ],
             [
                 'calligraphy_name' => "Weisheit",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Weisheit" is a German word that translates to "wisdom" in English.
+                Wisdom is the ability to discern what is right and true, and to make sound judgments based on knowledge
+                and experience. It involves a combination of cognitive and intuitive abilities, including critical thinking,
+                empathy, and self-awareness.
+                Wisdom is often associated with age and experience, but it can also be cultivated through deliberate practice and
+                reflection. It is valued in many cultures and traditions as a guiding principle for living a meaningful and fulfilling life.
+                In the context of German language and culture, "Weisheit" might refer to the wisdom of ancient philosophers,
+                such as the Greek philosopher Aristotle, or to the practical wisdom of everyday life, such as the advice and
+                guidance of parents and elders. The concept of "Weisheit" also has spiritual and philosophical dimensions,
+                relating to the search for truth and the pursuit of ultimate meaning and purpose in life.',
                 'style_id' => '13',
                 'created_at' => Carbon::now()->subMinutes(123),
                 'updated_at' => Carbon::now()->subMinutes(123),
@@ -500,35 +560,66 @@ class CalligraphySeeder extends Seeder
         Calligraphy::factory()->createMany([
             [
                 'calligraphy_name' => "Aloha vibes",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'Aloha vibes in 3D lettering would be a visually striking and
+                dynamic design that combines the Hawaiian spirit of "Aloha" with the three-dimensional depth
+                and texture of 3D lettering.
+                The word "Aloha" is a Hawaiian greeting and expression of love, peace, and gratitude,
+                and is often associated with the laid-back, tropical lifestyle of Hawaii. 3D lettering, on the other hand,
+                creates the illusion of depth and dimensionality, giving the design a sense of physical presence and vibrancy.
+                In an Aloha vibes 3D lettering design, the letters might be bold and playful, with vibrant colors and
+                tropical motifs such as palm trees or waves. The use of shadows and shading can help create the illusion
+                of three-dimensional space, making the letters seem to pop off the page.',
                 'style_id' => '14',
                 'created_at' => Carbon::now()->subMinutes(122),
                 'updated_at' => Carbon::now()->subMinutes(122),
             ],
             [
                 'calligraphy_name' => "Art Schools",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'Art Schools in 3D lettering would be a striking and dynamic design that
+                incorporates the three-dimensional depth and texture of 3D lettering to create a visually engaging
+                composition that celebrates the creativity and passion of art schools.
+                The design might feature the name of the school spelled out in bold, three-dimensional letters that are
+                illuminated or set against a dramatic backdrop, such as an abstract rendering of an art studio or a vibrant
+                splash of color. The use of shading and perspective can create the illusion of depth and space,
+                making the letters appear to leap off the page.',
                 'style_id' => '14',
                 'created_at' => Carbon::now()->subMinutes(121),
                 'updated_at' => Carbon::now()->subMinutes(121),
             ],
             [
                 'calligraphy_name' => "Handlettering 3D style",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'Handlettering in 3D style is a visually striking design that incorporates
+                the depth and dimensionality of 3D lettering into the artistic and organic forms of handlettering.
+                The design might feature a word or phrase spelled out in bold, hand-drawn letters that are given depth
+                and texture through the use of shading, perspective, and visual effects such as shadows or reflections.
+                The hand-drawn quality of the lettering can create a sense of warmth and intimacy, while the 3D elements
+                add a dynamic and contemporary feel.',
                 'style_id' => '14',
                 'created_at' => Carbon::now()->subMinutes(120),
                 'updated_at' => Carbon::now()->subMinutes(120),
             ],
             [
                 'calligraphy_name' => "Let your light shine",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Let your light shine" is an inspirational phrase that encourages individuals
+                to be confident, authentic, and true to themselves, and to share their unique gifts and talents with the world.
+                In calligraphy or hand lettering, "Let your light shine" might be written in bold, flowing script or
+                decorative lettering, with flourishes or embellishments that reflect the uplifting and empowering
+                message of the phrase. The use of contrasting colors or textures, such as a gradient effect or metallic
+                inks, can add further visual interest and depth to the design.
+                The phrase might also be accompanied by other visual elements, such as an illustration of a shining
+                light or a glowing sun, to further emphasize the idea of radiance and illumination. The use of shadows
+                or other visual effects can help create a three-dimensional effect and enhance the sense of movement and energy.',
                 'style_id' => '14',
                 'created_at' => Carbon::now()->subMinutes(119),
                 'updated_at' => Carbon::now()->subMinutes(119),
             ],
             [
                 'calligraphy_name' => "South",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"South" is a simple but evocative word that can be interpreted in many ways
+                in calligraphy or hand lettering.
+                In a minimalist design, the word might be written in clean, bold lettering that emphasizes the stark
+                simplicity of the word itself. The use of color or texture, such as a faded or distressed effect,
+                can add a sense of age or history to the design.',
                 'style_id' => '14',
                 'created_at' => Carbon::now()->subMinutes(118),
                 'updated_at' => Carbon::now()->subMinutes(118),
@@ -538,49 +629,76 @@ class CalligraphySeeder extends Seeder
         Calligraphy::factory()->createMany([
             [
                 'calligraphy_name' => "We have recorded everything in a book",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"We have recorded everything in a book" is a statement that can be portrayed
+                in many ways in vintage lettering. Vintage lettering often has a classic, timeless look and feel,
+                using techniques such as serifs, ornate flourishes, and distressed textures to create an aged or antique aesthetic.
+                The use of vintage lettering techniques can also create a sense of history or nostalgia, emphasizing the
+                idea that the information being recorded is significant and worthy of preservation. Distressed textures,
+                such as faded or yellowed paper, can add a sense of age and authenticity to the design, suggesting that the
+                information being recorded has been accumulated over time.',
                 'style_id' => '15',
                 'created_at' => Carbon::now()->subMinutes(117),
                 'updated_at' => Carbon::now()->subMinutes(117),
             ],
             [
                 'calligraphy_name' => "Salida wine fest",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Salida Wine Fest" in vintage lettering might feature classic,
+                timeless elements such as serifs, distressed textures, and ornate flourishes that create an aged or antique look and feel.
+                The phrase might be written in a script or cursive style, with flowing, elegant lettering that suggests the
+                refinement and sophistication of the wines being celebrated. The use of serifs, ligatures, and other decorative
+                elements can add a sense of history and authenticity to the design, emphasizing the idea that wine has been
+                enjoyed for centuries and is a timeless symbol of culture and refinement.',
                 'style_id' => '15',
                 'created_at' => Carbon::now()->subMinutes(116),
                 'updated_at' => Carbon::now()->subMinutes(116),
             ],
             [
                 'calligraphy_name' => "Roll with it & gain momentum",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Roll with it & gain momentum" in vintage lettering might feature classic,
+                timeless elements such as serifs, distressed textures, and ornate flourishes that create an aged or antique look and feel.',
                 'style_id' => '15',
                 'created_at' => Carbon::now()->subMinutes(115),
                 'updated_at' => Carbon::now()->subMinutes(115),
             ],
             [
                 'calligraphy_name' => "Autumn and spring",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Autumn" and "spring" are two seasons in English.
+                Autumn is the season that comes after summer and before winter. It is also known as fall, as this is the time of
+                year when leaves on trees change color and fall to the ground. The weather during autumn is typically cooler
+                than in summer, but still relatively mild. In many parts of the world, autumn is associated with harvest time,
+                and it is a popular season for outdoor activities such as hiking, apple-picking, and pumpkin-carving.
+                Spring is the season that comes after winter and before summer. It is a time of year when plants and trees
+                begin to bloom and the weather starts to warm up. Spring is often associated with new beginnings, as it is a
+                time of year when people start to emerge from the indoor hibernation of winter and engage in outdoor activities.
+                In many cultures, spring is also associated with religious holidays such as Easter and Passover.',
                 'style_id' => '15',
                 'created_at' => Carbon::now()->subMinutes(114),
                 'updated_at' => Carbon::now()->subMinutes(114),
             ],
             [
                 'calligraphy_name' => "Work hard so you can shop harder",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The phrase "Work hard so you can shop harder" is often used in a humorous
+                or tongue-in-cheek way to suggest that people should work hard in order to earn money to spend on shopping or other leisure activities.
+                From a design perspective, this phrase might be written in bold, playful lettering that emphasizes the
+                humor and lightheartedness of the message. The use of contrasting colors, bold outlines, or other visual
+                effects can help create a dynamic and attention-grabbing design that effectively communicates the fun and irreverent tone of the message.',
                 'style_id' => '15',
                 'created_at' => Carbon::now()->subMinutes(113),
                 'updated_at' => Carbon::now()->subMinutes(113),
             ],
             [
                 'calligraphy_name' => "Coffee Tin Signs",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'Coffee tin signs are a popular type of vintage signage that feature coffee-related imagery and messages.
+                These signs are often made of metal and are designed to look weathered and aged, giving them a nostalgic and rustic feel.',
                 'style_id' => '15',
                 'created_at' => Carbon::now()->subMinutes(112),
                 'updated_at' => Carbon::now()->subMinutes(112),
             ],
             [
                 'calligraphy_name' => "I’m in love",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"I\'m in love" is a simple yet powerful statement that expresses a feeling
+                of strong affection or attachment towards someone or something. It can refer to romantic love, platonic
+                love, or even a love for an activity, hobby, or place.',
                 'style_id' => '15',
                 'created_at' => Carbon::now()->subMinutes(111),
                 'updated_at' => Carbon::now()->subMinutes(111),
@@ -590,70 +708,105 @@ class CalligraphySeeder extends Seeder
         Calligraphy::factory()->createMany([
             [
                 'calligraphy_name' => "Just visit this plane ",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Just visit this place" is a simple statement that can be expressed in a variety of
+                ways using modern lettering. From a design perspective, the phrase might be written in sleek,
+                minimalist lettering that conveys a sense of sophistication and elegance. The use of clean,
+                straight lines and a monochromatic color scheme can help create a sense of modernity and simplicity.',
                 'style_id' => '16',
                 'created_at' => Carbon::now()->subMinutes(110),
                 'updated_at' => Carbon::now()->subMinutes(110),
             ],
             [
                 'calligraphy_name' => "Clubnotes",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Clubnotes" could refer to various things, such as a music event, a nightclub, or a newsletter for a club or organization.',
                 'style_id' => '16',
                 'created_at' => Carbon::now()->subMinutes(109),
                 'updated_at' => Carbon::now()->subMinutes(109),
             ],
             [
                 'calligraphy_name' => "Tiếng nói của vạn vật",
-                'calligraphy_description' => 'Voice of all things',
+                'calligraphy_description' => '"Tiếng nói của vạn vật" is a Vietnamese phrase that can be translated to "
+                the voice of all things" in English. It is a poetic expression that suggests that every object,
+                living or non-living, has its own unique voice or energy that contributes to the greater harmony of the universe.',
                 'style_id' => '16',
                 'created_at' => Carbon::now()->subMinutes(109),
                 'updated_at' => Carbon::now()->subMinutes(109),
             ],
             [
                 'calligraphy_name' => "Tràng Giang",
-                'calligraphy_description' => 'Vietnamese literature',
+                'calligraphy_description' => '"Tràng Giang" is a Vietnamese term that refers to the River Market,
+                a floating market located on the Mekong Delta in southern Vietnam. The market is a bustling hub of activity,
+                with vendors selling a wide variety of goods from boats on the river.',
                 'style_id' => '16',
                 'created_at' => Carbon::now()->subMinutes(108),
                 'updated_at' => Carbon::now()->subMinutes(108),
             ],
             [
                 'calligraphy_name' => "Người lái đò sông đà",
-                'calligraphy_description' => 'Vietnamese literature',
+                'calligraphy_description' => 'In literature, "Người lái đò sông Đà" might be used as a metaphor to symbolize a person who
+                navigates through the challenges and complexities of life. The boatman represents a resilient and skilled individual
+                who is able to overcome obstacles and guide themselves and others to safety.
+                This metaphor could be explored in various literary genres, such as poetry, fiction, and memoirs. For example,
+                a poem could describe the boatman\'s journey down the river as a metaphor for the human experience of navigating through the
+                ups and downs of life. A novel could feature a character who is a boatman on the Da River, using their experiences
+                and interactions with others to explore themes of resilience, adaptability, and perseverance. A memoir could be written
+                by a real-life boatman, detailing their experiences and insights gained from a lifetime of navigating the river.',
                 'style_id' => '16',
                 'created_at' => Carbon::now()->subMinutes(107),
                 'updated_at' => Carbon::now()->subMinutes(107),
             ],
             [
                 'calligraphy_name' => "Rừng xà nu",
-                'calligraphy_description' => 'Vietnamese literature',
+                'calligraphy_description' => 'In Vietnamese literature, "Rừng xà nu" might be used as a symbol to represent the
+                beauty and richness of the natural environment, as well as the cultural traditions and history of the ethnic minority groups who live in the region.
+                In poetry, "Rừng xà nu" could be used as a metaphor to explore themes such as freedom, isolation, and the power of nature.
+                The forest might be depicted as a place of refuge or escape, or as a source of inspiration for artists and poets.',
                 'style_id' => '16',
                 'created_at' => Carbon::now()->subMinutes(106),
                 'updated_at' => Carbon::now()->subMinutes(106),
             ],
             [
                 'calligraphy_name' => "Chuyện người con gái nam xương",
-                'calligraphy_description' => 'Vietnamese literature',
+                'calligraphy_description' => '"Chuyện người con gái nam xương" is a novel by the Vietnamese author Đoàn Giỏi, first published in 1936.
+                The novel tells the story of a young woman named Nam Xương who disguises herself as a man in order to take care of her
+                sick father and work as a boatman on the river. The novel explores themes of gender identity, social norms, and the struggle for
+                survival in a difficult time and place.
+                In Vietnamese literature, "Chuyện người con gái nam xương" is considered a classic work that helped to pave the way for modern Vietnamese literature.
+                The novel is noted for its vivid descriptions of the natural environment and the riverine way of life, as well as its
+                sympathetic portrayal of the struggles and aspirations of working-class people.
+                The character of Nam Xương has become an enduring symbol of female strength and resilience in Vietnamese culture,
+                and the novel continues to be read and studied in Vietnam today.',
                 'style_id' => '16',
                 'created_at' => Carbon::now()->subMinutes(105),
                 'updated_at' => Carbon::now()->subMinutes(105),
             ],
             [
                 'calligraphy_name' => "Vào phủ chúa trịnh",
-                'calligraphy_description' => 'Vietnamese literature',
+                'calligraphy_description' => '"Vào phủ chúa Trịnh" (Entering the Trịnh Lord\'s Palace) is a Vietnamese classical opera play
+                (called "tuồng" in Vietnamese) that has been performed for many centuries. The play is set in the feudal period of
+                Vietnam and centers around the rivalry between the Trịnh and Nguyễn Lords, who were powerful families that held
+                control over different parts of Vietnam at the time.',
                 'style_id' => '16',
                 'created_at' => Carbon::now()->subMinutes(104),
                 'updated_at' => Carbon::now()->subMinutes(104),
             ],
             [
                 'calligraphy_name' => "Hoàng lê nhất thống chí",
-                'calligraphy_description' => 'Vietnamese literature',
+                'calligraphy_description' => '"Hoàng Lê Nhất Thống Chí" is a historical document written in classical Chinese that
+                chronicles the history of the Lê Dynasty of Vietnam. The Lê Dynasty ruled Vietnam from 1428 to 1788, and the
+                "Hoàng Lê Nhất Thống Chí" covers the period from the founding of the dynasty until the mid-16th century.',
                 'style_id' => '16',
                 'created_at' => Carbon::now()->subMinutes(103),
                 'updated_at' => Carbon::now()->subMinutes(103),
             ],
             [
                 'calligraphy_name' => "September",
-                'calligraphy_description' => 'Is a month of the year written in different ways',
+                'calligraphy_description' => 'September is the ninth month of the Gregorian calendar and has 30 days.
+                The name September comes from the Latin word "septem," which means "seven," as it was originally the seventh
+                month in the ancient Roman calendar before January and February were added.
+                In the Northern Hemisphere, September marks the beginning of the fall or autumn season, while in the Southern Hemisphere,
+                it is the start of spring. September is also known for the equinox, which occurs around September 22nd or 23rd,
+                and marks the official start of autumn in the Northern Hemisphere and spring in the Southern Hemisphere.',
                 'style_id' => '16',
                 'created_at' => Carbon::now()->subMinutes(102),
                 'updated_at' => Carbon::now()->subMinutes(102),
@@ -663,35 +816,42 @@ class CalligraphySeeder extends Seeder
         Calligraphy::factory()->createMany([
             [
                 'calligraphy_name' => "R letter",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'R letter in Illustrated lettering',
                 'style_id' => '17',
                 'created_at' => Carbon::now()->subMinutes(101),
                 'updated_at' => Carbon::now()->subMinutes(101),
             ],
             [
                 'calligraphy_name' => "S letter",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'S letter in Illustrated lettering',
                 'style_id' => '17',
                 'created_at' => Carbon::now()->subMinutes(100),
                 'updated_at' => Carbon::now()->subMinutes(100),
             ],
             [
                 'calligraphy_name' => "Summer",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'Summer is a season that typically occurs between late May and early September
+                in the Northern Hemisphere, and between late November and early March in the Southern Hemisphere.
+                It is the warmest season of the year, characterized by longer days and shorter nights,
+                higher temperatures, and a more vibrant natural environment.',
                 'style_id' => '17',
                 'created_at' => Carbon::now()->subMinutes(99),
                 'updated_at' => Carbon::now()->subMinutes(99),
             ],
             [
                 'calligraphy_name' => "Summver Vacation",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'Summer vacation is a period of time during the summer season when schools
+                and universities are closed and students and teachers have a break from their regular academic schedules.
+                In the United States, summer vacation typically lasts for 2-3 months, starting in late May or early
+                June and ending in August or early September.',
                 'style_id' => '17',
                 'created_at' => Carbon::now()->subMinutes(98),
                 'updated_at' => Carbon::now()->subMinutes(98),
             ],
             [
                 'calligraphy_name' => "The World",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The world is a term commonly used to refer to the planet Earth and all of its inhabitants.
+                It is a complex and diverse place, with a wide variety of cultures, languages, religions, and ecosystems.',
                 'style_id' => '17',
                 'created_at' => Carbon::now()->subMinutes(97),
                 'updated_at' => Carbon::now()->subMinutes(97),
@@ -701,56 +861,88 @@ class CalligraphySeeder extends Seeder
         Calligraphy::factory()->createMany([
             [
                 'calligraphy_name' => "Pink",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The word "Pink" in brush lettering can be created using thick and thin strokes with a brush pen or paintbrush.
+                The letters can be slightly slanted or curved to create a flowing and dynamic look. The word can be filled in
+                with a solid pink color or a gradient effect, with lighter shades of pink towards the top of the
+                letters and darker shades towards the bottom. Some artists may also add small decorative elements,
+                such as floral or swirl designs, to enhance the overall look of the word.',
                 'style_id' => '18',
                 'created_at' => Carbon::now()->subMinutes(96),
                 'updated_at' => Carbon::now()->subMinutes(96),
             ],
             [
                 'calligraphy_name' => "Back in black",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The phrase "Back in Black" in brush lettering can be created using thick and bold strokes with
+                a brush pen or paintbrush. The letters can be slightly angled or curved to create a sense of movement and energy.
+                The word "Back" can be written in a slightly smaller size compared to "in Black", and the letters in "Black"
+                can be filled in with solid black ink or paint. The overall effect is a bold and powerful design that conveys a sense of confidence and strength.',
                 'style_id' => '18',
                 'created_at' => Carbon::now()->subMinutes(95),
                 'updated_at' => Carbon::now()->subMinutes(95),
             ],
             [
                 'calligraphy_name' => "I have found the one whom my soul loves",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The phrase "I have found the one whom my soul loves" is a quote from the biblical
+                book Song of Solomon (also known as Song of Songs). It expresses a deep and passionate love between two individuals,
+                where one person has found their soulmate and expresses their love for them. The phrase can be interpreted as a
+                celebration of the love that exists between two people who are truly meant to be together. It is often used as a
+                romantic quote in weddings, anniversaries, or other occasions where love is celebrated.',
                 'style_id' => '18',
                 'created_at' => Carbon::now()->subMinutes(94),
                 'updated_at' => Carbon::now()->subMinutes(94),
             ],
             [
                 'calligraphy_name' => "Brave",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The word "Brave" means to be courageous, strong, and fearless in the face of danger or difficulty.
+                It can refer to a person who shows bravery or courage in challenging situations, or to an action that requires courage and determination.
+                Being brave is often associated with taking risks, standing up for what you believe in, and facing your fears.
+                It can also mean having the mental and emotional strength to overcome adversity and achieve your goals, despite
+                obstacles or setbacks. In general, being brave is seen as a positive and admirable trait, and is often celebrated in literature, art, and popular culture.',
                 'style_id' => '18',
                 'created_at' => Carbon::now()->subMinutes(93),
                 'updated_at' => Carbon::now()->subMinutes(93),
             ],
             [
                 'calligraphy_name' => "Hold back the river let me look in your eyes",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Hold back the river let me look in your eyes" is a phrase from a popular song by James Bay called "Hold Back the River".
+                The meaning of this phrase in the context of the song is that the singer is asking his lover to let him see her true
+                emotions and feelings by holding back her tears or emotions. The river in this case can be seen as a metaphor for
+                the overwhelming emotions that can sometimes flood a person\'s heart and mind. By holding back the river, the singer is asking his lover
+                to let him in and see her vulnerability, so that he can better understand her and be there for her. Overall,
+                the phrase expresses a desire for emotional intimacy and connection between two people.',
                 'style_id' => '18',
                 'created_at' => Carbon::now()->subMinutes(92),
                 'updated_at' => Carbon::now()->subMinutes(92),
             ],
             [
                 'calligraphy_name' => "Smells like mint",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Smells like mint" is a phrase that simply describes a scent similar to that of mint.
+                Mint has a cool and refreshing aroma that is often associated with cleanliness, freshness, and relaxation.
+                Therefore, when someone says "smells like mint", it may suggest that there is a refreshing or invigorating scent in the air, similar to that of mint.',
                 'style_id' => '18',
                 'created_at' => Carbon::now()->subMinutes(91),
                 'updated_at' => Carbon::now()->subMinutes(91),
             ],
             [
                 'calligraphy_name' => "Never forget who you are",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The phrase "Never forget who you are" means to always remember your true identity, values, and beliefs,
+                regardless of what is happening around you or what others may say or do. It is a reminder to stay true to yourself
+                and not to compromise your integrity or authenticity for anyone or anything. It emphasizes the importance of self-awareness,
+                self-acceptance, and self-respect, as well as the need to maintain a strong sense of identity and purpose in life.
+                This phrase encourages people to stay grounded and true to their principles, even in difficult times.',
                 'style_id' => '18',
                 'created_at' => Carbon::now()->subMinutes(90),
                 'updated_at' => Carbon::now()->subMinutes(90),
             ],
             [
                 'calligraphy_name' => "Slow progress is better than no progress",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The phrase "slow progress is better than no progress" means that even if
+                you are moving forward at a slow pace, it is still better than not making any progress at all.
+                This phrase encourages people to keep moving forward, even if the progress is small, because every
+                little step counts and can eventually lead to achieving their goals. It emphasizes the importance of
+                consistency, patience, and perseverance, and encourages people to not give up on their dreams just
+                because they are not making progress as quickly as they would like. This phrase reminds us that progress,
+                no matter how small, is still progress, and that it is better to keep moving forward than to give up completely.',
                 'style_id' => '18',
                 'created_at' => Carbon::now()->subMinutes(89),
                 'updated_at' => Carbon::now()->subMinutes(89),
@@ -760,63 +952,74 @@ class CalligraphySeeder extends Seeder
         Calligraphy::factory()->createMany([
             [
                 'calligraphy_name' => "It always seem impossible until it's done",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'This quote is attributed to Nelson Mandela, and it means that when faced with a
+                daunting task or goal, it can seem overwhelming and impossible. However, with perseverance and determination, even the most
+                difficult things can be achieved. It encourages people to keep pushing themselves and not give up, even when the task seems impossible.',
                 'style_id' => '19',
                 'created_at' => Carbon::now()->subMinutes(88),
                 'updated_at' => Carbon::now()->subMinutes(88),
             ],
             [
                 'calligraphy_name' => "Don’t give up",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Don\'t give up" is a simple yet powerful phrase that encourages someone
+                to keep going despite difficulties, challenges, or setbacks they may face. It means to persevere, keep pushing forward
+                and not give in to feelings of defeat or hopelessness. The phrase is often used as a source of motivation or inspiration
+                to help people stay focused on their goals and to keep striving towards success.',
                 'style_id' => '19',
                 'created_at' => Carbon::now()->subMinutes(87),
                 'updated_at' => Carbon::now()->subMinutes(87),
             ],
             [
                 'calligraphy_name' => "Get better, don’t try to be just good",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Get better, don’t try to be just good" is an inspiring quote that encourages continuous improvement.
+                It suggests that instead of being satisfied with just being good at something, we should strive to get better every day.
+                This mindset of constantly seeking growth and development can lead to great achievements and success. It also implies that we
+                should not settle for mediocrity and should always aim to exceed our own expectations. By consistently pushing ourselves to improve,
+                we can reach our full potential and become the best version of ourselves.',
                 'style_id' => '19',
                 'created_at' => Carbon::now()->subMinutes(86),
                 'updated_at' => Carbon::now()->subMinutes(86),
             ],
             [
                 'calligraphy_name' => "Happy",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'Happy refers to a feeling of pleasure, contentment, or joy. It is a positive emotion that is typically accompanied by a sense of well-being, satisfaction, and optimism. Happiness can be experienced in many different ways, such as through meaningful relationships, fulfilling work, hobbies, travel, and other experiences that bring joy and satisfaction to our lives.',
                 'style_id' => '19',
                 'created_at' => Carbon::now()->subMinutes(85),
                 'updated_at' => Carbon::now()->subMinutes(85),
             ],
             [
                 'calligraphy_name' => "Be friendly",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'Being friendly means to behave in a kind, welcoming, and sociable way towards others. It involves showing genuine interest, concern, and empathy towards people, and treating them with respect and consideration. Being friendly helps to create a positive environment and fosters good relationships with others. It can also lead to new friendships and opportunities.',
                 'style_id' => '19',
                 'created_at' => Carbon::now()->subMinutes(84),
                 'updated_at' => Carbon::now()->subMinutes(84),
             ],
             [
                 'calligraphy_name' => "Live your life joyfully",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'Living your life joyfully means embracing happiness and finding joy in everyday experiences. It means having a positive outlook on life and focusing on the good things, even in challenging situations. It involves pursuing your passions and doing things that make you happy, while also being kind to others and spreading joy to those around you. Ultimately, living your life joyfully is about finding contentment and fulfillment in every moment, and making the most of the time you have.',
                 'style_id' => '19',
                 'created_at' => Carbon::now()->subMinutes(83),
                 'updated_at' => Carbon::now()->subMinutes(83),
             ],
             [
                 'calligraphy_name' => "Happiness never grow olds",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The correct phrase is "Happiness never grows old." This means that happiness is timeless and eternal, and that it does not diminish with age or time. It suggests that happiness is something that can be experienced at any stage of life, and that it is not limited by external factors such as age, wealth, or status.',
                 'style_id' => '19',
                 'created_at' => Carbon::now()->subMinutes(82),
                 'updated_at' => Carbon::now()->subMinutes(82),
             ],
             [
                 'calligraphy_name' => "Hey you’re so great",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'Hey, you\'re so great is an expression of admiration or compliment towards someone. It could be used to acknowledge someone\'s talents, abilities, or personality traits that one finds impressive or admirable. It is a positive and encouraging statement that can help boost someone\'s confidence and self-esteem.',
                 'style_id' => '19',
                 'created_at' => Carbon::now()->subMinutes(81),
                 'updated_at' => Carbon::now()->subMinutes(81),
             ],
             [
                 'calligraphy_name' => "Make - Love - Give",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Make - Love - Give" is a phrase that encourages individuals to engage in creative and loving pursuits while
+                also being generous and giving to others. It promotes the idea of using one\'s talents and passions to make a positive
+                impact on the world and to spread love and kindness to others through acts of giving.',
                 'style_id' => '19',
                 'created_at' => Carbon::now()->subMinutes(80),
                 'updated_at' => Carbon::now()->subMinutes(80),
@@ -828,7 +1031,9 @@ class CalligraphySeeder extends Seeder
         Calligraphy::factory()->createMany([
             [
                 'calligraphy_name' => "Make things happen",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Make things happen" is a motivational phrase that encourages people to take
+                action and work towards achieving their goals. It implies that success doesn\'t come to those who wait, but to those who actively
+                pursue their dreams and make things happen through hard work, dedication, and perseverance.',
                 'style_id' => '20',
                 'created_at' => Carbon::now()->subMinutes(79),
                 'updated_at' => Carbon::now()->subMinutes(79),

@@ -23,7 +23,7 @@ class CalligraphyStylesController extends Controller
         $totalPages = ceil($totalItems / $perPage);
 
         if ($page > $totalPages && !request()->styleName) {
-            Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(1500);
+            Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(2500);
             return redirect(route('styles.index',['page'=> 1]));
         }
 
@@ -48,7 +48,7 @@ class CalligraphyStylesController extends Controller
         }
 
         CalligraphyStyle::create($validated);
-        Alert::success('Success', 'New calligraphy style successfully added!')->buttonsStyling(false)->autoClose(1500);
+        Alert::success('Success', 'New calligraphy style successfully added!')->buttonsStyling(false)->autoClose(2500);
         return redirect(route('styles.index'));
     }
 
@@ -71,7 +71,7 @@ class CalligraphyStylesController extends Controller
             $validated['style_image'] = $request->file('style_image')->store('uploads/cateImages', 'public');
         }
         $style->update($validated);
-        Alert::success('Success', 'Calligraphy style successfully updated!')->buttonsStyling(false)->autoClose(1500);
+        Alert::success('Success', 'Calligraphy style successfully updated!')->buttonsStyling(false)->autoClose(2500);
         return redirect(route('styles.index'));
     }
 
@@ -85,7 +85,7 @@ class CalligraphyStylesController extends Controller
             File::delete($oldImageName);
         }
         $style->delete();
-        Alert::success('Success', 'Calligraphy style succesfully deleted!')->buttonsStyling(false)->autoClose(1500);
+        Alert::success('Success', 'Calligraphy style succesfully deleted!')->buttonsStyling(false)->autoClose(2500);
         return redirect($redrectTo);
     }
 }

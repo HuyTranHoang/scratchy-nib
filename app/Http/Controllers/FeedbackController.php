@@ -21,7 +21,7 @@ class FeedbackController extends Controller
         $totalPages = ceil($totalItems / $perPage);
 
         if ($page > $totalPages && !request()->userName) {
-            Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(1500);
+            Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(2500);
             return redirect(route('feedback.index',['page'=> 1]));
         }
 
@@ -42,7 +42,7 @@ class FeedbackController extends Controller
     {
         $validated = $request->validated();
         Feedback::create($validated);
-        Alert::success('Success', 'New feedback succesfully added!')->buttonsStyling(false)->autoClose(1500);
+        Alert::success('Success', 'New feedback succesfully added!')->buttonsStyling(false)->autoClose(2500);
         return redirect(route('feedback.index'));
     }
 
@@ -59,7 +59,7 @@ class FeedbackController extends Controller
     {
         $validated = $request->validated();
         $feedback->update($validated);
-        Alert::success('Success', 'Feedback succesfully updated!')->buttonsStyling(false)->autoClose(1500);
+        Alert::success('Success', 'Feedback succesfully updated!')->buttonsStyling(false)->autoClose(2500);
         return redirect(route('feedback.index'));
     }
 
@@ -69,7 +69,7 @@ class FeedbackController extends Controller
         $FeedbackID = $request->feedback_id;
         $feedback = Feedback::findOrFail($FeedbackID);
         $feedback->delete();
-        Alert::success('Success', 'Feedback succesfully deleted!')->buttonsStyling(false)->autoClose(1500);
+        Alert::success('Success', 'Feedback succesfully deleted!')->buttonsStyling(false)->autoClose(2500);
         return redirect($redrectTo);
     }
 }

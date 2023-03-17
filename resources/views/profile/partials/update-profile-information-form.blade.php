@@ -3,15 +3,6 @@
     <p class="text-primary-color">
         Update your account's profile information and email address.
     </p>
-    @if (session('status') === 'profile-updated')
-        <p
-            x-data="{ show: true }"
-            x-show="show"
-            x-transition
-            x-init="setTimeout(() => show = false, 2000)"
-            class="my-3 text-success fw-semibold"
-        >Your profile information is saved</p>
-    @endif
 </header>
 
 <form id="send-verification" method="post" action="{{ route('verification.send') }}">
@@ -92,7 +83,7 @@
             <img src="{{ asset('storage/'.$user -> avatar) }}" alt="{{ $user -> avatar }}"
                  class="card-img-top avatar" id="ImgOutput">
             <div class="card-body">
-                Image preview
+                Avatar preview
             </div>
         </div>
     </div>

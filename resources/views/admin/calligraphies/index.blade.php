@@ -66,7 +66,7 @@
                         @endif
                     </th>
                     <th scope="col" style="max-width: 200px">Image</th>
-                    <th scope="col">Calligraphy Description</th>
+                    <th scope="col" style="min-width: 400px">Calligraphy Description</th>
                     <th scope="col">Style</th>
                     <th scope="col" colspan="2" class="text-center">Action</th>
                     <th scope="col" style="width: 10%">

@@ -32,8 +32,8 @@
             <thead class="table-success">
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Message</th>
-                <th scope="col" style="width: 10%">
+                <th scope="col" style="min-width: 400px">Message</th>
+                <th scope="col" style="min-width: 200px;">
                     @if(request()->orderby=='userid' && request()->sort=='desc')
                         <a class="text-decoration-none text-success" href="?orderby=userid&sort=asc&feedbackFilter={{request()->feedbackFilter}}">User Name <i class="fa-solid fa-caret-down"></i></a>
                     @else

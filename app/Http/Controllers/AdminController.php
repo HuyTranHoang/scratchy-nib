@@ -16,7 +16,8 @@ class AdminController extends Controller
             'totalVisitors' => Visitor::sum('view'),
             'totalCalligraphy' => Calligraphy::count(),
             'totalFeedback' => Feedback::count(),
-            'feedback' => Feedback::latest()->limit(4)->get()
+            'feedback' => Feedback::latest()->limit(4)->get(),
+            'users' => User::latest()->limit(6)->get()
         ]);
     }
 }

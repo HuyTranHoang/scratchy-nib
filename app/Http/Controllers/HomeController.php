@@ -111,20 +111,23 @@ class HomeController extends Controller
     {
         $validated = $request->validated();
         Feedback::create($validated);
-        Alert::toast('Submit feedback succesfully!', 'success')->autoClose(1500);
+        Alert::toast('Submit feedback succesfully!', 'success')->autoClose(2500);
         return redirect()->back();
     }
 
     public function updateFeedback(FeedbackPutRequest $request, Feedback $feedback)
     {
-        if ($feedback->user_id != auth()->user()->user_id) {
-            Alert::toast("Looks like you're trying to edit someone else's feedback!!", 'error')->autoClose(1500);
+        if ($feedback->user_id == auth()->user()->user_id || auth()->user()->role_id == 1) {
+            $validated = $request->validated();
+            $validated['user_id'] = $feedback->user_id;
+            $feedback->update($validated);
+            Alert::toast('Update feedback succesfully!', 'success')->autoClose(2500);
             return redirect(route('home.detail',request()->calligraphy_id));
         }
-        $validated = $request->validated();
-        $feedback->update($validated);
-        Alert::toast('Update feedback succesfully!', 'success')->autoClose(1500);
+
+        Alert::toast("Looks like you're trying to edit someone else's feedback!!", 'error')->autoClose(2500);
         return redirect(route('home.detail',request()->calligraphy_id));
+
     }
 
     public function deleteFeedback(Request $request)
@@ -132,11 +135,11 @@ class HomeController extends Controller
         $FeedbackID = $request->feedback_id;
         $feedback = Feedback::findOrFail($FeedbackID);
         if ($feedback->user_id != auth()->user()->user_id && auth()->user()->role_id != 1) {
-            Alert::toast("Looks like you're trying to delete someone else's feedback!!", 'error')->autoClose(1500);
+            Alert::toast("Looks like you're trying to delete someone else's feedback!!", 'error')->autoClose(2500);
             return redirect(route('home.detail',request()->calligraphy_id));
         }
         $feedback->delete();
-        Alert::toast('Delete feedback succesfully!', 'success')->autoClose(1500);
+        Alert::toast('Delete feedback succesfully!', 'success')->autoClose(2500);
         return redirect()->back();
     }
 
@@ -145,7 +148,7 @@ class HomeController extends Controller
         $contactEmail = ENV('MAIL_FROM_ADDRESS');
         $validated = $request->validated();
         Mail::to($contactEmail)->send(new Contact($validated));
-        Alert::toast('Your email has been sent successfully!', 'success')->buttonsStyling(false)->autoClose(1500);
+        Alert::toast('Your email has been sent successfully!', 'success')->buttonsStyling(false)->autoClose(2500);
 
         return redirect()->back();
     }
@@ -161,7 +164,7 @@ class HomeController extends Controller
 
         DB::table('newsletter_subscribers')->insert($validated);
 
-        Alert::toast('Your email has been subscribed to our new newsletter!', 'success')->buttonsStyling(false)->autoClose(1500);
+        Alert::toast('Your email has been subscribed to our new newsletter!', 'success')->buttonsStyling(false)->autoClose(2500);
         return redirect()->back();
 
     }

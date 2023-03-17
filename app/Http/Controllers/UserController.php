@@ -23,7 +23,7 @@ class UserController extends Controller
         $totalPages = ceil($totalItems / $perPage);
 
         if ($page > $totalPages && !request()->userFilter) {
-            Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(1500);
+            Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(2500);
             return redirect(route('users.index',['page'=> 1]));
         }
 
@@ -45,7 +45,7 @@ class UserController extends Controller
         $validated = $request->validated();
         $validated['password'] = Hash::make($request -> password);
         User::create($validated);
-        Alert::success('Success', 'New user succesfully added!')->buttonsStyling(false)->autoClose(1500);
+        Alert::success('Success', 'New user succesfully added!')->buttonsStyling(false)->autoClose(2500);
         return redirect(route('users.index'));
     }
 
@@ -79,7 +79,7 @@ class UserController extends Controller
         }
 
         $user->update($validated);
-        Alert::success('Success', 'Update user succesfully added!')->buttonsStyling(false)->autoClose(1500);
+        Alert::success('Success', 'Update user succesfully added!')->buttonsStyling(false)->autoClose(2500);
         return redirect(route('users.index'));
     }
 
@@ -89,7 +89,7 @@ class UserController extends Controller
         $userID = $request->user_id;
         $user = User::findOrFail($userID);
         $user->delete();
-        Alert::success('Success', 'Delete succesfully deleted!')->buttonsStyling(false)->autoClose(1500);
+        Alert::success('Success', 'Delete succesfully deleted!')->buttonsStyling(false)->autoClose(2500);
         return redirect($redrectTo);
 
     }

@@ -1,7 +1,7 @@
 <section class="container">
     <h3 id="feedback" class="mb-3">Feedback</h3>
     <div class="row mb-2">
-        <div class="col-md-6">
+        <div class="col-12 col-lg-6">
             @guest
                 <div class="row mb-2">
                     <div class="col-md-6">
@@ -20,17 +20,17 @@
                     @enderror
                     <div class="row">
                         <div class="col">
-                            <button type="submit" class="btn btn-primary float-end mt-3">Submit</button>
+                            <button type="submit" class="btn btn-primary float-end my-3">Submit</button>
                         </div>
                     </div>
                 </form>
             @endauth
         </div>
-        <div class="col-md-6">
+        <div class="col-12 col-lg-6">
             @forelse($feedback as $feb)
                 <div class="card text-dark mb-2">
                     <div class="card-body d-flex">
-                        <img class="rounded shadow-1-strong me-3"
+                        <img class="rounded shadow-1-strong me-3 avatar"
                              src="{{ asset('storage/' . $feb->user->avatar) }}" alt="avatar" width="80" height="80" />
                         <div class="w-100">
                             <div class="row">

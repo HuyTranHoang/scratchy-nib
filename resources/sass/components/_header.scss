@@ -57,3 +57,8 @@
 .nav-active {
     border-bottom: 1px solid variables.$primary-color;
 }
+
+.nav-item:hover > a {
+    color: variables.$primary-color !important;
+}
+

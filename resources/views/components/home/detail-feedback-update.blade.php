@@ -15,7 +15,7 @@
                     <input type="hidden" name="user_id" value="{{ Auth::user()->user_id }}">
                     <input type="hidden" name="calligraphy_id" value="{{ $calligraphy->calligraphy_id }}">
                     <textarea name="feedback_message">
-                        @if($editfeedback->user_id == auth()->user()->user_id)
+                        @if($editfeedback->user_id == auth()->user()->user_id || Auth::user()->role_id==1)
                             {{$editfeedback->feedback_message}}
                         @endif
                     </textarea>

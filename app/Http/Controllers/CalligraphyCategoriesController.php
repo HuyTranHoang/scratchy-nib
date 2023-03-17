@@ -20,7 +20,7 @@ class CalligraphyCategoriesController extends Controller
         $totalPages = ceil($totalItems / $perPage);
 
         if ($page > $totalPages && !request()->cateName) {
-            Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(1500);
+            Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(2500);
             return redirect(route('categories.index',['page'=> 1]));
         }
 
@@ -43,7 +43,7 @@ class CalligraphyCategoriesController extends Controller
         }
 
         CalligraphyCategory::create($validated);
-        Alert::success('Success', 'New calligraphy category succesfully added!')->buttonsStyling(false)->autoClose(1500);
+        Alert::success('Success', 'New calligraphy category succesfully added!')->buttonsStyling(false)->autoClose(2500);
         return redirect(route('categories.index'));
     }
 
@@ -71,7 +71,7 @@ class CalligraphyCategoriesController extends Controller
         }
 
         $category->update($validated);
-        Alert::success('Success', 'Calligraphy category succesfully updated!')->buttonsStyling(false)->autoClose(1500);
+        Alert::success('Success', 'Calligraphy category succesfully updated!')->buttonsStyling(false)->autoClose(2500);
 
         return redirect(route('categories.index'));
     }
@@ -86,7 +86,7 @@ class CalligraphyCategoriesController extends Controller
             File::delete($oldImageName);
         }
         $category->delete();
-        Alert::success('Success', 'Calligraphy category succesfully deleted!')->buttonsStyling(false)->autoClose(1500);
+        Alert::success('Success', 'Calligraphy category succesfully deleted!')->buttonsStyling(false)->autoClose(2500);
 
         return redirect($redrectTo);
     }

@@ -20,6 +20,7 @@ class ProfileUpdateRequest extends FormRequest
             'bio' => ['max:255'],
             'facebook' => ['max:50'],
             'twitter' => ['max:50'],
+            'avatar' => ['max:2048'],
             'email' => ['email', 'max:50', Rule::unique(User::class)->ignore($this->user()->user_id,'user_id')],
         ];
     }

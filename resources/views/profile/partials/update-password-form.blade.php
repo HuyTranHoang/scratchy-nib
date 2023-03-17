@@ -56,16 +56,6 @@
     <div class="row mt-3">
         <div class="d-flex align-items-center justify-content-between col-sm-12 col-md-8 col-lg-5">
             <button type="submit" class="btn btn-primary">Save</button>
-
-            @if (session('status') === 'password-updated')
-                <p
-                    x-data="{ show: true }"
-                    x-show="show"
-                    x-transition
-                    x-init="setTimeout(() => show = false, 2000)"
-                    class="my-0 text-primary"
-                >Your password is saved</p>
-            @endif
         </div>
     </div>
 </form>

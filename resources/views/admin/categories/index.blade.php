@@ -40,7 +40,7 @@
                     @endif
                 </th>
                 <th scope="col" style="max-width: 200px">Categories Image</th>
-                <th scope="col">Categories Description</th>
+                <th scope="col" style="min-width: 400px">Categories Description</th>
                 <th scope="col" colspan="2" class="text-center">Action</th>
                 <th scope="col" style="width: 10%">
                     @if(request()->orderby=='date' && request()->sort=='desc')

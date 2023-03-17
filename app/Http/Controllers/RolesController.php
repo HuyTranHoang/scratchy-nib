@@ -26,7 +26,7 @@ class RolesController extends Controller
     {
         $validated = $request->validated();
         Role::create($validated);
-        Alert::success('Success', 'New role succesfully added!')->buttonsStyling(false)->autoClose(1500);
+        Alert::success('Success', 'New role succesfully added!')->buttonsStyling(false)->autoClose(2500);
         return redirect(route('roles.index'));
     }
 
@@ -45,7 +45,7 @@ class RolesController extends Controller
     {
         $validated = $request->validated();
         $role->update($validated);
-        Alert::success('Success', 'Role succesfully updated!')->buttonsStyling(false)->autoClose(1500);
+        Alert::success('Success', 'Role succesfully updated!')->buttonsStyling(false)->autoClose(2500);
         return redirect(route('roles.index'));
     }
 
@@ -55,7 +55,7 @@ class RolesController extends Controller
         $RoleID = $request->role_id;
         $role = Role::findOrFail($RoleID);
         $role->delete();
-        Alert::success('Success', 'Calligraphy category succesfully deleted!')->buttonsStyling(false)->autoClose(1500);
+        Alert::success('Success', 'Calligraphy category succesfully deleted!')->buttonsStyling(false)->autoClose(2500);
         return redirect($redrectTo);
     }
 }

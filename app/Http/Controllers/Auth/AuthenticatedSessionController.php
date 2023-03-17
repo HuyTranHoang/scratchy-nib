@@ -44,7 +44,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        Alert::toast('You have successfully logged out!', 'success')->buttonsStyling(false)->autoClose(1500);
+        Alert::toast('You have successfully logged out!', 'success')->buttonsStyling(false)->autoClose(2500);
 
         return redirect('/');
     }

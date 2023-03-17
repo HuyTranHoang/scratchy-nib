@@ -23,7 +23,7 @@ class CalligraphiesController extends Controller
         $totalPages = ceil($totalItems / $perPage);
 
         if ($page > $totalPages && !request()->calligraphyName) {
-            Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(1500);
+            Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(2500);
             return redirect(route('calligraphies.index',['page'=> 1]));
         }
 
@@ -51,7 +51,7 @@ class CalligraphiesController extends Controller
             $image['calligraphy_id'] = $calligraphy->calligraphy_id;
             GalleryImage::create($image);
         }
-        Alert::success('Success', 'New calligraphy succesfully added!')->buttonsStyling(false)->autoClose(1500);
+        Alert::success('Success', 'New calligraphy succesfully added!')->buttonsStyling(false)->autoClose(2500);
         return redirect(route('calligraphies.index'));
     }
 
@@ -90,7 +90,7 @@ class CalligraphiesController extends Controller
             GalleryImage::create($image);
         }
 
-        Alert::success('Success', 'Calligraphy succesfully updated!')->buttonsStyling(false)->autoClose(1500);
+        Alert::success('Success', 'Calligraphy succesfully updated!')->buttonsStyling(false)->autoClose(2500);
         return redirect(route('calligraphies.index'));
     }
 
@@ -100,7 +100,7 @@ class CalligraphiesController extends Controller
         $CalligraphyID = $request->calligraphy_id;
         $calligraphy = Calligraphy::findOrFail($CalligraphyID);
         $calligraphy->delete();
-        Alert::success('Success', 'Calligraphy category succesfully deleted!')->buttonsStyling(false)->autoClose(1500);
+        Alert::success('Success', 'Calligraphy category succesfully deleted!')->buttonsStyling(false)->autoClose(2500);
         return redirect($redrectTo);
     }
 }
