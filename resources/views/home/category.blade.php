@@ -112,6 +112,16 @@
                 </div>
             </div>
 
+            @if($currentCategory)
+                <h4 class="text-primary my-2">{{$currentCategory->category_name}}</h4>
+            @endif
+
+            @if($currentStyle && $currentCategory)
+                <h5 class="text-primary-color my-2"><i class="fa-solid fa-arrow-right"></i> {{$currentStyle->style_name}}</h5>
+            @elseif($currentStyle)
+                <h5 class="text-primary-color my-2">{{$currentStyle->style_name}}</h5>
+            @endif
+
             <div class="row row-cols-1 row-cols-md-4 g-4 mb-3">
                 @foreach($calligraphies as $calligraphy)
                     <div class="col">
