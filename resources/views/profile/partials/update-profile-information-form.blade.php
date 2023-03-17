@@ -56,9 +56,13 @@
         <label for="facebook" class="form-label">Facebook</label>
         <div class="row">
             <div class="col-sm-12 col-md-8 col-lg-5">
-                <input id="facebook" type="text" name="facebook" value="{{ old('facebook', $user->facebook) }}"
-                       class="form-control" placeholder="Profile link">
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa-solid fa-link"></i></span>
+                    <input id="facebook" type="text" name="facebook" value="{{ old('facebook', $user->facebook) }}"
+                           class="form-control" placeholder="Facebook profile link">
+                </div>
             </div>
+
         </div>
         @error('facebook')
         <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
@@ -69,8 +73,11 @@
         <label for="twitter" class="form-label">Twitter</label>
         <div class="row">
             <div class="col-sm-12 col-md-8 col-lg-5">
-                <input id="twitter" type="text" name="twitter" value="{{ old('twitter', $user->twitter) }}"
-                       class="form-control" placeholder="Profile link">
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa-solid fa-link"></i></span>
+                    <input id="twitter" type="text" name="twitter" value="{{ old('twitter', $user->twitter) }}"
+                           class="form-control me-3" placeholder="Twitter profile link">
+                </div>
             </div>
         </div>
         @error('twitter')
