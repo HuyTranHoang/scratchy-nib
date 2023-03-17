@@ -73,7 +73,7 @@
     <!-- Modal -->
     <x-delete-modal>
         <x-slot:action>
-            {{route('roles.destroy','id')}}
+            {{route('roles.destroy',['id','redirect_to' => $redirectTo])}}
         </x-slot:action>
 
         <x-slot:body>

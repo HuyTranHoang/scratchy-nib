@@ -129,7 +129,7 @@
     <!-- Modal -->
     <x-delete-modal>
         <x-slot:action>
-            {{route('calligraphies.destroy','id')}}
+            {{route('calligraphies.destroy',['id','redirect_to' => $redirectTo])}}
         </x-slot:action>
 
         <x-slot:body>

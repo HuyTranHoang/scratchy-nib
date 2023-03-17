@@ -80,7 +80,7 @@
                         <img src="{{ asset('storage/'.$style -> style_image) }}" alt="{{ $style -> style_image }}"
                              style="max-width: 200px">
                     </td>
-                    <td>{{$style -> style_description}}</td>
+                    <td>{!! $style -> style_description !!}</td>
                     <td>{{$style -> calligraphyCategory -> category_name}}</td>
                     <td class="text-center px-0">
                         <a href="{{route('styles.edit', $style -> style_id)}}"><i class="fa-solid fa-pen"></i></a></td>

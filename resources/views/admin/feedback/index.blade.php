@@ -89,7 +89,7 @@
     <!-- Modal -->
     <x-delete-modal>
         <x-slot:action>
-            {{route('feedback.destroy','id')}}
+            {{route('feedback.destroy',['id','redirect_to' => $redirectTo])}}
         </x-slot:action>
 
         <x-slot:body>

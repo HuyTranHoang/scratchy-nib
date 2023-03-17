@@ -77,7 +77,7 @@ class CalligraphyStylesController extends Controller
 
     public function destroy(Request $request)
     {
-        $redrectTo = $request->query('redirect_to',route('styles.index'));
+        $redirectTo = $request->query('redirect_to',route('styles.index'));
         $StyleID = $request->style_id;
         $style = CalligraphyStyle::findOrFail($StyleID);
         $oldImageName = 'storage/' . $style->style_image;
@@ -86,6 +86,6 @@ class CalligraphyStylesController extends Controller
         }
         $style->delete();
         Alert::success('Success', 'Calligraphy style succesfully deleted!')->buttonsStyling(false)->autoClose(2500);
-        return redirect($redrectTo);
+        return redirect($redirectTo);
     }
 }

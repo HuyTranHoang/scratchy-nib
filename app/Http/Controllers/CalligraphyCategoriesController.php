@@ -78,7 +78,7 @@ class CalligraphyCategoriesController extends Controller
 
     public function destroy(Request $request)
     {
-        $redrectTo = $request->query('redirect_to',route('categories.index'));
+        $redirectTo = $request->query('redirect_to',route('categories.index'));
         $CateID = $request->category_id;
         $category = CalligraphyCategory::findOrFail($CateID);
         $oldImageName = 'storage/' . $category->category_image;
@@ -88,6 +88,6 @@ class CalligraphyCategoriesController extends Controller
         $category->delete();
         Alert::success('Success', 'Calligraphy category succesfully deleted!')->buttonsStyling(false)->autoClose(2500);
 
-        return redirect($redrectTo);
+        return redirect($redirectTo);
     }
 }

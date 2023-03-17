@@ -51,11 +51,11 @@ class RolesController extends Controller
 
     public function destroy(Request $request)
     {
-        $redrectTo = $request->query('redirect_to',route('roles.index'));
+        $redirectTo = $request->query('redirect_to',route('roles.index'));
         $RoleID = $request->role_id;
         $role = Role::findOrFail($RoleID);
         $role->delete();
         Alert::success('Success', 'Calligraphy category succesfully deleted!')->buttonsStyling(false)->autoClose(2500);
-        return redirect($redrectTo);
+        return redirect($redirectTo);
     }
 }

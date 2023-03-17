@@ -85,12 +85,12 @@ class UserController extends Controller
 
     public function destroy(Request $request)
     {
-        $redrectTo = $request->query('redirect_to',route('users.index'));
+        $redirectTo = $request->query('redirect_to',route('users.index'));
         $userID = $request->user_id;
         $user = User::findOrFail($userID);
         $user->delete();
         Alert::success('Success', 'Delete succesfully deleted!')->buttonsStyling(false)->autoClose(2500);
-        return redirect($redrectTo);
+        return redirect($redirectTo);
 
     }
 }
