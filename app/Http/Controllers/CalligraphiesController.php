@@ -64,7 +64,8 @@ class CalligraphiesController extends Controller
     {
         return view('admin.calligraphies.edit', [
             'calligraphy' => $calligraphy,
-            'styles' => CalligraphyStyle::all()
+            'styles' => CalligraphyStyle::all(),
+            'categories' => CalligraphyCategory::all()
         ]);
     }
 

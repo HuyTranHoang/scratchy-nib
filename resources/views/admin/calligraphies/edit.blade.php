@@ -36,6 +36,19 @@
                 </div>
 
                 <div class="mb-3">
+                    <label for="style_id" class="form-label">Filter Style by Category (optional)</label>
+                    <select class="form-select" name="category_id" id="category_id" aria-label="Calligraphy style select">
+                        <option value="" hidden="">-- Select One --</option>
+                        @foreach($categories as $category)
+                            <option {{ $calligraphy->calligraphyStyle->calligraphyCategory->category_id == $category->category_id ? 'selected' : '' }} value="{{ $category -> category_id }}">{{ $category -> category_name }}</option>
+                        @endforeach
+                    </select>
+                    @error('style_id')
+                    <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
+                    @enderror
+                </div>
+
+                <div class="mb-3">
                     <label for="style_id" class="form-label">Calligraphy Style</label>
                     <select class="form-select" name="style_id" id="style_id" aria-label="Calligraphy style select">
                         @foreach($styles as $style)
@@ -75,7 +88,20 @@
         </div>
     </form>
 
-
+    <script type="module">
+        $('#category_id').on('change', function() {
+            let cateID = $('#category_id').val();
+            $.post('{{ route('api.styles') }}', {
+                category_id: cateID
+            },function(data) {
+                let _html = '';
+                for (const style of data) {
+                    _html += `<option value="${style['style_id']}">${style['style_name']}</option>`;
+                }
+                $('#style_id').html(_html);
+            });
+        });
+    </script>
 </x-admin-layout>
 
 

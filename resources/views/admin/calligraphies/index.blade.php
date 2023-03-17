@@ -101,7 +101,7 @@
 {{--                                 style="max-width: 120px">--}}
 {{--                        @endforeach--}}
                     </td>
-                    <td>{{$calligraphy -> calligraphy_description}}</td>
+                    <td>{!! $calligraphy -> calligraphy_description !!}</td>
                     <td>{{$calligraphy-> calligraphyStyle -> style_name}}</td>
                     <td class="text-center px-0">
                         <a href="{{route('calligraphies.edit', $calligraphy -> calligraphy_id)}}"><i class="px-1 fa-solid fa-pen"></i></a></td>
