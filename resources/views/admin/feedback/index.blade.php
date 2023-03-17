@@ -61,7 +61,7 @@
             @forelse($feedback as $index => $feb)
                 <tr>
                     <td>{{$feb -> feedback_id}}</td>
-                    <td>{{$feb -> feedback_message}}</td>
+                    <td>{!! $feb -> feedback_message !!}</td>
                     <td>{{$feb -> user -> name}}</td>
                     <td>{{$feb -> calligraphy -> calligraphy_name}}</td>
                     <td class="text-center px-0">
