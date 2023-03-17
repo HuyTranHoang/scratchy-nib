@@ -61,7 +61,7 @@ class Contact extends Mailable
      */
     public function build()
     {
-        return $this->from('example@example.com')
+        return $this->from( ENV('MAIL_FROM_ADDRESS'))
             ->markdown('emails.contact');
     }
 }
