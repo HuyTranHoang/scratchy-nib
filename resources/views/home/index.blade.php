@@ -23,7 +23,7 @@
                         @csrf
                         <div class="col-md-4">
                             <div class="mb-3">
-                                <input type="text" class="form-control" name="name" placeholder="Your name">
+                                <input type="text" class="form-control" name="name" placeholder="Your name" value="{{ old('name') }}">
                                 @error('name')
                                 <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                                 @enderror
@@ -31,7 +31,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="mb-3">
-                                <input type="email" class="form-control" name="email" placeholder="Your email address">
+                                <input type="email" class="form-control" name="email" placeholder="Your email address" value="{{ old('email') }}">
                                 @error('email')
                                 <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                                 @enderror

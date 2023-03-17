@@ -152,7 +152,7 @@ class HomeController extends Controller
 
     public function subscribe(Request $request) {
         $validated = $request->validate([
-            'name' => 'string|max:50|alpha:ascii|required',
+            'name' => 'string|max:50|required',
             'email' => 'email|max:50|unique:newsletter_subscribers,email|required'
         ]);
 
