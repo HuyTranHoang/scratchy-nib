@@ -141,7 +141,7 @@
                 <div style="min-height: 200px">
                     <hr>
                     <h4 class="text-primary-color">There seem to be no search results matching your request, or this category don't have any calligraphy</h4>
-                    <a class="btn btn-primary-color mt-3" href="{{ route('home.category') }}">Reset all filter and search</a>
+                    <a class="btn btn-primary-color mt-3" href="{{ route('home.category') }}">Clear all filter and search key</a>
                 </div>
             @endif
         </section>
