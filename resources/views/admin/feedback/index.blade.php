@@ -18,7 +18,7 @@
             <a class="btn btn-primary-color rounded me-3 mb-3 mb-md-0" href="{{ route('feedback.index') }}">Reset</a>
             <form action="" class="d-flex form-outline admin-searchform">
                 <input class="form-control rounded-start rounded-0" value="{{ request()->feedbackFilter }}"
-                       name="feedbackFilter" type="text" placeholder="Search by user name, message.." aria-label="search">
+                       name="feedbackFilter" type="text" placeholder="Search by user name, message, calligraphy name.." aria-label="search">
                 <button class="btn rounded-end rounded-0 btn-primary-color" type="submit">
                     <i class="fas fa-search"></i>
                 </button>
@@ -35,18 +35,38 @@
                 <th scope="col" style="min-width: 400px">Message</th>
                 <th scope="col" style="min-width: 200px;">
                     @if(request()->orderby=='userid' && request()->sort=='desc')
-                        <a class="text-decoration-none text-success" href="?orderby=userid&sort=asc&feedbackFilter={{request()->feedbackFilter}}">User Name <i class="fa-solid fa-caret-down"></i></a>
+                        <a class="text-decoration-none text-success" ?orderby=userid&sort=asc&feedbackFilter={{request()->feedbackFilter}}
+                           href="{{ route('admin.remove-empty-parameters', [
+                                    'orderby' => 'userid',
+                                    'sort' => 'asc',
+                                    'feedbackFilter' => request()->feedbackFilter]) }}"
+                        >User Name <i class="fa-solid fa-caret-down"></i></a>
                     @else
-                        <a class="text-decoration-none {{request()->orderby=='userid' && request()->sort=='asc' ? 'text-success' : ''}}" href="?orderby=userid&sort=desc&feedbackFilter={{request()->feedbackFilter}}">User Name <i class="fa-solid fa-caret-up"></i></a>
+                        <a class="text-decoration-none {{request()->orderby=='userid' && request()->sort=='asc' ? 'text-success' : ''}}"
+                           href="{{ route('admin.remove-empty-parameters', [
+                                    'orderby' => 'userid',
+                                    'sort' => 'desc',
+                                    'feedbackFilter' => request()->feedbackFilter]) }}"
+                        >User Name <i class="fa-solid fa-caret-up"></i></a>
                     @endif
                 </th>
                 <th scope="col">Calligraphy Name</th>
                 <th scope="col" colspan="2" class="text-center">Action</th>
                 <th scope="col" style="width: 10%;">
                     @if(request()->orderby=='date' && request()->sort=='desc')
-                        <a class="text-decoration-none text-success" href="?orderby=date&sort=asc&feedbackFilter={{request()->feedbackFilter}}">Created At <i class="fa-solid fa-caret-down"></i></a>
+                        <a class="text-decoration-none text-success"
+                           href="{{ route('admin.remove-empty-parameters', [
+                                    'orderby' => 'date',
+                                    'sort' => 'asc',
+                                    'feedbackFilter' => request()->feedbackFilter]) }}"
+                        >Created At <i class="fa-solid fa-caret-down"></i></a>
                     @else
-                        <a class="text-decoration-none {{request()->orderby=='date' && request()->sort=='asc' ? 'text-success' : ''}}" href="?orderby=date&sort=desc&feedbackFilter={{request()->feedbackFilter}}">Created At <i class="fa-solid fa-caret-up"></i></a>
+                        <a class="text-decoration-none {{request()->orderby=='date' && request()->sort=='asc' ? 'text-success' : ''}}"
+                           href="{{ route('admin.remove-empty-parameters', [
+                                    'orderby' => 'date',
+                                    'sort' => 'desc',
+                                    'feedbackFilter' => request()->feedbackFilter]) }}"
+                        >Created At <i class="fa-solid fa-caret-up"></i></a>
                     @endif
                 </th>
             </tr>

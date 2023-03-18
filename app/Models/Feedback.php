@@ -28,10 +28,15 @@ class Feedback extends Model
 
     public function scopeFilter($query, array $filters) {
         if($filters['feedbackFilter'] ?? false) {
-            $query->whereIn('user_id',function ($query) use ($filters) {
-                $query->select('user_id')->from('users')
-                    ->where('name','like','%'.$filters['feedbackFilter'].'%');
-            })
+            $query
+                ->whereIn('user_id',function ($query) use ($filters) {
+                    $query->select('user_id')->from('users')
+                        ->where('name','like','%'.$filters['feedbackFilter'].'%');
+                })
+                ->orWhereIn('calligraphy_id',function ($query) use ($filters) {
+                    $query->select('calligraphy_id')->from('calligraphies')
+                        ->where('calligraphy_name','like','%'.$filters['feedbackFilter'].'%');
+                })
                 ->orWhere('feedback_message','like','%'.$filters['feedbackFilter'].'%');
         }
 

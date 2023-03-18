@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row mb-2 rounded">
                 <div class="d-sm-block col-md-6 d-md-flex">
-                    <form action="" class="me-sm-0 me-md-3">
+                    <form action="{{ route('home.remove-empty-parameters') }}" class="me-sm-0 me-md-3">
                         <div class="field me-4">
                             <label for="cateID" class="gallery-label">Filter by Category</label>
                             <input type="hidden" name="sort" value="{{ request()->sort }}">
@@ -22,7 +22,7 @@
                         </div>
                     </form>
 
-                    <form action="" class="me-sm-0 me-md-3">
+                    <form action="{{ route('home.remove-empty-parameters') }}" class="me-sm-0 me-md-3">
                         <div class="field">
                             <input type="hidden" name="cateID" value="{{ request()->cateID }}">
                             <input type="hidden" name="sort" value="{{ request()->sort }}">
@@ -36,7 +36,7 @@
                         </div>
                     </form>
 
-                    <form action="">
+                    <form action="{{ route('home.remove-empty-parameters') }}">
                         <div class="field">
                             <input type="hidden" name="cateID" value="{{ request()->cateID }}">
                             <input type="hidden" name="styleID" value="{{ request()->styleID }}">
@@ -52,7 +52,7 @@
 
                 <div class="d-sm-block col-md-6 d-md-flex justify-content-md-end mt-2">
                     <a class="btn btn-primary-color me-3 mb-2 mb-md-0 rounded" href="{{ route('home.gallery') }}">Clear all filter</a>
-                    <form action="" class="d-flex form-outline">
+                    <form action="{{ route('home.remove-empty-parameters') }}" class="d-flex form-outline">
                         <input type="hidden" name="cateID" value="{{ request()->cateID }}">
                         <input type="hidden" name="styleID" value="{{ request()->styleID }}">
                         <input class="form-control rounded-start rounded-0" value="{{ request()->calliName }}"
@@ -99,7 +99,7 @@
             {{ $images->links() }}
             @if($images->count() == 0)
                 <div style="min-height: 200px">
-                    <h4 class="text-primary-color">There seem to be no search results matching your request</h4>
+                    <h4 class="text-primary-color">There seem to be no search results matching your request, or this category don't have any calligraphy</h4>
                     <a class="btn btn-primary-color mt-3" href="{{ route('home.gallery') }}">Reset all filter and search</a>
                 </div>
             @endif

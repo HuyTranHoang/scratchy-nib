@@ -61,9 +61,9 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasMany(Feedback::class, 'user_id');
     }
-    public function user(): BelongsTo
+    public function role(): BelongsTo
     {
-        return $this->belongsTo(Role::class, 'user_id');
+        return $this->belongsTo(Role::class, 'role_id');
     }
 
     public function scopeFilter($query, array $filters) {
@@ -80,5 +80,8 @@ class User extends Authenticatable implements MustVerifyEmail
             }
         }
 
+        if($filters['roleID'] ?? false) {
+            $query->where('role_id',$filters['roleID']);
+        }
     }
 }

@@ -12,13 +12,14 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class FeedbackController extends Controller
 {
+
+    private int $perPage = 10;
     public function index()
     {
 
-        $perPage = 10;
         $page = request()->input('page', 1);
         $totalItems = Feedback::filter(request(['userName']))->count();
-        $totalPages = ceil($totalItems / $perPage);
+        $totalPages = ceil($totalItems / $this->perPage);
 
         if ($page > $totalPages && !request()->userName) {
             Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(2500);
@@ -26,7 +27,7 @@ class FeedbackController extends Controller
         }
 
         return view('admin.feedback.index', [
-            'feedback' => Feedback::filter(request(['feedbackFilter','orderby','sort']))->paginate($perPage)->appends(request()->query())
+            'feedback' => Feedback::filter(request(['feedbackFilter','orderby','sort']))->paginate($this->perPage)->appends(request()->query())
         ]);
     }
 
@@ -42,8 +43,9 @@ class FeedbackController extends Controller
     {
         $validated = $request->validated();
         Feedback::create($validated);
+        $lastPage = Feedback::paginate($this->perPage)->lastPage();
         Alert::success('Success', 'New feedback succesfully added!')->buttonsStyling(false)->autoClose(2500);
-        return redirect(route('feedback.index'));
+        return redirect(route('feedback.index', ['page' => $lastPage]));
     }
 
     public function edit(Feedback $feedback)

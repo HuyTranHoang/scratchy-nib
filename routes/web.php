@@ -39,7 +39,6 @@ Route::middleware(['web', 'VisitorCounter'])->group(function () {
     Route::post('/store-feedback', [HomeController::class, 'storeFeedback'])->name('home.store-feedback');
     Route::post('/update-feedback/{feedback}', [HomeController::class, 'updateFeedback'])->name('home.update-feedback');
     Route::delete('/delete-feedback', [HomeController::class, 'deleteFeedback'])->name('home.delete-feedback');
-
     // View other user profile ( Guest can see too )
     Route::get('profile/{user}', [ProfileController::class, 'showUser'])->name('home.show-user');
 });
@@ -56,11 +55,13 @@ Route::post('/get-location-data', [LocationController::class,'getLocationData'])
 Route::post('/send-email', [HomeController::class, 'sendEmail'])->name('send-email');
 // Newsleter Subscriber
 Route::post('/subscribe', [HomeController::class, 'subscribe'])->name('subscribe');
+// Remove empty query string
+Route::get('/removeEmptyParameters', [HomeController::class,'removeEmptyParameters'])->name('home.remove-empty-parameters');
 
 // Admin Page
-
 Route::middleware(['web','CheckIsAdmin'])->prefix('admin')->group(function () {
     Route::get('/', [AdminController::class,'index'])->name('admin.index');
+    Route::get('/removeEmptyParameters', [AdminController::class,'removeEmptyParameters'])->name('admin.remove-empty-parameters');
 
     Route::resource('categories', CalligraphyCategoriesController::class);
     Route::resource('styles', CalligraphyStylesController::class);

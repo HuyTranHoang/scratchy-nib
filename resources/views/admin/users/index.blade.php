@@ -16,7 +16,21 @@
 
         <div class="d-sm-block col-md-6 d-md-flex justify-content-md-end">
             <a class="btn btn-primary-color rounded me-3 mb-3 mb-md-0" href="{{ route('users.index') }}">Reset</a>
-            <form action="" class="d-flex form-outline">
+
+            <form action="{{ route('admin.remove-empty-parameters') }}" class="d-flex form-outline">
+                <div class="field me-3" style="min-width: 200px">
+                    <label for="roleID" class="label">Filter by Role</label>
+                    <select class="select" id="roleID" name="roleID" onchange='this.form.submit()'>
+                        <option value="">All</option>
+                        @foreach($roles as $role)
+                            <option {{ $role->role_id == request()->roleID ? 'selected' : '' }} value="{{ $role->role_id }}">{{ $role->role_name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </form>
+
+            <form action="{{ route('admin.remove-empty-parameters') }}" class="d-flex form-outline">
+                <input type="hidden" value="{{ request()->roleID }}" name="roleID">
                 <input class="form-control rounded-start rounded-0" value="{{ request()->userFilter }}"
                        name="userFilter" type="text" placeholder="Search by name, email.." aria-label="search">
                 <button class="btn rounded-end rounded-0 btn-primary-color" type="submit">
@@ -33,19 +47,40 @@
                 <th scope="col">#</th>
                 <th scope="col">
                     @if(request()->orderby=='name' && request()->sort=='desc')
-                        <a class="text-decoration-none text-success" href="?orderby=name&sort=asc&userFilter={{request()->userFilter}}">Created At <i class="fa-solid fa-caret-down"></i></a>
+                        <a class="text-decoration-none text-success"
+                           href="{{ route('admin.remove-empty-parameters', [
+                                    'orderby' => 'name',
+                                    'sort' => 'asc',
+                                    'userFilter' => request()->userFilter]) }}"
+                        >Name <i class="fa-solid fa-caret-down"></i></a>
                     @else
-                        <a class="text-decoration-none {{request()->orderby=='name' && request()->sort=='asc' ? 'text-success' : ''}}" href="?orderby=name&sort=desc&userFilter={{request()->userFilter}}">Name <i class="fa-solid fa-caret-up"></i></a>
+                        <a class="text-decoration-none {{request()->orderby=='name' && request()->sort=='asc' ? 'text-success' : ''}}"
+                           href="{{ route('admin.remove-empty-parameters', [
+                                    'orderby' => 'name',
+                                    'sort' => 'desc',
+                                    'userFilter' => request()->userFilter]) }}"
+                        >Name <i class="fa-solid fa-caret-up"></i></a>
                     @endif
                 </th>
                 <th scope="col">Email</th>
                 <th scope="col">Password</th>
+                <th scope="col">Role</th>
                 <th scope="col" colspan="2" class="text-center">Action</th>
                 <th style="width: 10%">
                     @if(request()->orderby=='date' && request()->sort=='desc')
-                        <a class="text-decoration-none text-success" href="?orderby=date&sort=asc&userFilter={{request()->userFilter}}">Created At <i class="fa-solid fa-caret-down"></i></a>
+                        <a class="text-decoration-none text-success"
+                           href="{{ route('admin.remove-empty-parameters', [
+                                    'orderby' => 'date',
+                                    'sort' => 'asc',
+                                    'userFilter' => request()->userFilter]) }}"
+                        >Created At <i class="fa-solid fa-caret-down"></i></a>
                     @else
-                        <a class="text-decoration-none {{request()->orderby=='date' && request()->sort=='asc' ? 'text-success' : ''}}" href="?orderby=date&sort=desc&userFilter={{request()->userFilter}}">Created At <i class="fa-solid fa-caret-up"></i></a>
+                        <a class="text-decoration-none {{request()->orderby=='date' && request()->sort=='asc' ? 'text-success' : ''}}"
+                           href="{{ route('admin.remove-empty-parameters', [
+                                    'orderby' => 'date',
+                                    'sort' => 'desc',
+                                    'userFilter' => request()->userFilter]) }}"
+                        >Created At <i class="fa-solid fa-caret-up"></i></a>
                     @endif
                 </th>
             </tr>
@@ -63,6 +98,7 @@
                     <td>{{$user -> name}}</td>
                     <td>{{$user -> email}}</td>
                     <td>{{$user -> password}}</td>
+                    <td>{{$user -> role -> role_name}}</td>
                     <td class="text-center px-0">
                         <a href="{{route('users.edit', $user -> user_id)}}"><i class="fa-solid fa-pen"></i></a></td>
                     <td class="text-center px-0">
@@ -77,7 +113,7 @@
             @empty
                 <tr>
                     <td></td>
-                    <td colspan="6" class="">No search results found</td>
+                    <td colspan="7" class="">No search results found</td>
                 </tr>
             @endforelse
             </tbody>

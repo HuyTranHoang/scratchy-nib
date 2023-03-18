@@ -15,12 +15,13 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class UserController extends Controller
 {
+
+    private int $perPage = 10;
     public function index()
     {
-        $perPage = 10;
         $page = request()->input('page', 1);
         $totalItems = User::filter(request(['userFilter']))->count();
-        $totalPages = ceil($totalItems / $perPage);
+        $totalPages = ceil($totalItems / $this->perPage);
 
         if ($page > $totalPages && !request()->userFilter) {
             Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(2500);
@@ -28,7 +29,8 @@ class UserController extends Controller
         }
 
         return view('admin.users.index', [
-            'users' => User::filter(request(['userFilter','orderby','sort']))->paginate($perPage)->appends(request()->query())
+            'users' => User::filter(request(['userFilter','roleID','orderby','sort']))->paginate($this->perPage)->appends(request()->query()),
+            'roles' => Role::all()
         ]);
     }
 
@@ -45,8 +47,9 @@ class UserController extends Controller
         $validated = $request->validated();
         $validated['password'] = Hash::make($request -> password);
         User::create($validated);
+        $lastPage = User::paginate($this->perPage)->lastPage();
         Alert::success('Success', 'New user succesfully added!')->buttonsStyling(false)->autoClose(2500);
-        return redirect(route('users.index'));
+        return redirect(route('users.index' ,['page' => $lastPage]));
     }
 
     public function show(User $user)

@@ -7,7 +7,7 @@
         <div class="container">
             <div class="row mb-4">
                 <div class="col d-flex justify-content-center">
-                    <form action="" class="d-flex field-cate">
+                    <form action="{{ route('home.remove-empty-parameters') }}" class="d-flex field-cate">
                        <label class="label-cate" for="calligraphyName">Search by name</label>
                         <input type="hidden" name="cateID" value="{{ request()->cateID }}">
                         <input type="hidden" name="styleID" value="{{ request()->styleID }}">
@@ -99,7 +99,7 @@
                             </div>
                             <div class="postcard__bar"></div>
                             <div class="postcard__preview-txt">
-                                {{ $currentStyle->style_description }}
+                                {!! $currentStyle->style_description !!}
                             </div>
 
                         </div>

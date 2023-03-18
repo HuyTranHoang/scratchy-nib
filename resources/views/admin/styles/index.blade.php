@@ -29,7 +29,7 @@
 
             </form>
 
-            <form action="" class="d-flex form-outline">
+            <form action="{{ route('admin.remove-empty-parameters') }}" class="d-flex form-outline">
                 <input type="hidden" name="cateID" value="{{request()->cateID}}">
                 <input class="form-control rounded-start rounded-0" style="width: 200px" value="{{ request()->styleName }}"
                        name="styleName" type="text" placeholder="Search by name.." aria-label="search">
@@ -47,9 +47,13 @@
                 <th scope="col">#</th>
                 <th scope="col" style="width: 10%">
                     @if(request()->orderby=='name' && request()->sort=='desc')
-                        <a class="text-decoration-none text-success" href="?orderby=name&sort=asc&cateID={{request()->cateID}}&styleName={{request()->styleName}}">Styles Name <i class="fa-solid fa-caret-down"></i></a>
+                        <a class="text-decoration-none text-success"
+                           href="{{ route('admin.remove-empty-parameters', ['orderby' => 'name', 'sort' => 'asc', 'cateID' => request()->cateID, 'styleName' => request()->styleName]) }}"
+                        >Styles Name <i class="fa-solid fa-caret-down"></i></a>
                     @else
-                        <a class="text-decoration-none {{request()->orderby=='name' && request()->sort=='asc' ? 'text-success' : ''}}" href="?orderby=name&sort=desc&cateID={{request()->cateID}}&styleName={{request()->styleName}}">Styles Name <i class="fa-solid fa-caret-up"></i></a>
+                        <a class="text-decoration-none {{request()->orderby=='name' && request()->sort=='asc' ? 'text-success' : ''}}"
+                           href="{{ route('admin.remove-empty-parameters', ['orderby' => 'name', 'sort' => 'desc', 'cateID' => request()->cateID, 'styleName' => request()->styleName]) }}"
+                        >Styles Name <i class="fa-solid fa-caret-up"></i></a>
                     @endif
                 </th>
                 <th scope="col" style="max-width: 200px">Styles Image</th>
@@ -58,9 +62,13 @@
                 <th scope="col" colspan="2" class="text-center">Action</th>
                 <th scope="col" style="width: 10%;">
                     @if(request()->orderby=='date' && request()->sort=='desc')
-                        <a class="text-decoration-none text-success" href="?orderby=date&sort=asc&cateID={{request()->cateID}}&styleName={{request()->styleName}}">Created At <i class="fa-solid fa-caret-down"></i></a>
+                        <a class="text-decoration-none text-success"
+                           href="{{ route('admin.remove-empty-parameters', ['orderby' => 'date', 'sort' => 'asc', 'cateID' => request()->cateID, 'styleName' => request()->styleName]) }}"
+                        >Created At <i class="fa-solid fa-caret-down"></i></a>
                     @else
-                        <a class="text-decoration-none {{request()->orderby=='date' && request()->sort=='asc' ? 'text-success' : ''}}" href="?orderby=date&sort=desc&cateID={{request()->cateID}}&styleName={{request()->styleName}}">Created At <i class="fa-solid fa-caret-up"></i></a>
+                        <a class="text-decoration-none {{request()->orderby=='date' && request()->sort=='asc' ? 'text-success' : ''}}"
+                           href="{{ route('admin.remove-empty-parameters', ['orderby' => 'date', 'sort' => 'desc', 'cateID' => request()->cateID, 'styleName' => request()->styleName]) }}"
+                        >Created At <i class="fa-solid fa-caret-up"></i></a>
                     @endif
                 </th>
             </tr>

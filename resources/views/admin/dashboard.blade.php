@@ -58,9 +58,9 @@
                                         <img src="{{ asset('storage/' . $feb->user->avatar) }}" alt="{{ $feb->user->avatar }}" style="width: 25px; border-radius: 25%">
                                         <h5 class="mb-1 ms-2">{{ $feb->user->name }}</h5>
                                     </div>
-                                    <small class="text-muted">{{ $feb->created_at->diffForHumans() }}</small>
+                                    <small class="text-muted"><i class="fa-regular fa-clock"></i> {{ $feb->created_at->diffForHumans() }}</small>
                                 </div>
-                                <p class="mb-1">{{ $feb->feedback_message }}</p>
+                                <div class="mt-1">{!! $feb->feedback_message !!}</div>
                                 <small><i class="fa-regular fa-arrow-right"></i> {{ $feb->calligraphy->calligraphy_name }}</small>
                             </a>
                         @empty
@@ -79,7 +79,7 @@
                                     <img src="{{ asset('storage/' . $user->avatar) }}" alt="{{ $feb->user->avatar }}" style="width: 25px; border-radius: 25%">
                                     <h5 class="mb-1">{{ $user->name }}</h5>
                                 </div>
-                                <small class="text-muted">{{ $user->created_at->diffForHumans() }}</small>
+                                <small class="text-muted"><i class="fa-regular fa-clock"></i> {{ $user->created_at->diffForHumans() }}</small>
                             </div>
                             <p class="mb-1">{{ $user->email }}</p>
                         </a>

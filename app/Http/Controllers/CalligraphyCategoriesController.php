@@ -11,13 +11,14 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class CalligraphyCategoriesController extends Controller
 {
+    private int $perPage = 5;
+
     public function index()
     {
 
-        $perPage = 5;
         $page = request()->input('page', 1);
         $totalItems = CalligraphyCategory::filter(request(['cateName']))->count();
-        $totalPages = ceil($totalItems / $perPage);
+        $totalPages = ceil($totalItems / $this->perPage);
 
         if ($page > $totalPages && !request()->cateName) {
             Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(2500);
@@ -25,7 +26,7 @@ class CalligraphyCategoriesController extends Controller
         }
 
         return view('admin.categories.index', [
-            'categories' => CalligraphyCategory::filter(request(['cateName','orderby','sort']))->paginate($perPage)->appends(request()->query())
+            'categories' => CalligraphyCategory::filter(request(['cateName','orderby','sort']))->paginate($this->perPage)->appends(request()->query())
         ]);
     }
 
@@ -43,8 +44,9 @@ class CalligraphyCategoriesController extends Controller
         }
 
         CalligraphyCategory::create($validated);
+        $lastPage = CalligraphyCategory::paginate($this->perPage)->lastPage();
         Alert::success('Success', 'New calligraphy category succesfully added!')->buttonsStyling(false)->autoClose(2500);
-        return redirect(route('categories.index'));
+        return redirect(route('categories.index', ['page' => $lastPage]));
     }
 
     public function show() {

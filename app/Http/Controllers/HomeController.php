@@ -17,6 +17,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\URL;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class HomeController extends Controller
@@ -43,7 +44,7 @@ class HomeController extends Controller
         $totalItems = Calligraphy::filter(request(['calligraphyName','cateID','styleID']))->count();
         $totalPages = ceil($totalItems / $perPage);
 
-        if ($page > $totalPages && !request()->calligraphyName) {
+        if ($page > $totalPages && !$request->calligraphyName && !$request->cateID && !$request->styleID) {
             Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(2500);
             return redirect(route('home.category',['cateID'=> $currentCategory ?? false,'page'=> 1]));
         }
@@ -73,7 +74,7 @@ class HomeController extends Controller
         $totalItems = GalleryImage::filter(request(['cateID','styleID','calliName']))->count();
         $totalPages = ceil($totalItems / $perPage);
 
-        if ($page > $totalPages && !request()->calliName) {
+        if ($page > $totalPages && !request()->calliName && !request()->cateID && !request()->styleID) {
             Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(2500);
             return redirect(route('home.gallery',['cateID'=> $currentCategory ?? false,'page'=> 1]));
         }
@@ -176,6 +177,21 @@ class HomeController extends Controller
 
     public function sitemap() {
         return view('home.sitemap');
+    }
+
+    public function removeEmptyParameters(Request $request)
+    {
+        $queryString = $request->getQueryString();
+        parse_str($queryString, $params);
+
+        foreach ($params as $key => $value) {
+            if (empty($value)) {
+                unset($params[$key]);
+            }
+        }
+        $newQueryString = http_build_query($params);
+
+        return redirect()->to(URL::previousPath() . '?' . $newQueryString);
     }
 
 }

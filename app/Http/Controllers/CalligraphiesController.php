@@ -14,21 +14,22 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class CalligraphiesController extends Controller
 {
+
+    private int $perPage = 5;
+
     public function index()
     {
-
-        $perPage = 5;
         $page = request()->input('page', 1);
         $totalItems = Calligraphy::filter(request(['calligraphyName','styleID','cateID']))->count();
-        $totalPages = ceil($totalItems / $perPage);
+        $totalPages = ceil($totalItems / $this->perPage);
 
-        if ($page > $totalPages && !request()->calligraphyName) {
+        if ($page > $totalPages && !request()->calligraphyName && !request()->cateID && !request()->styleID) {
             Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(2500);
             return redirect(route('calligraphies.index',['page'=> 1]));
         }
 
         return view('admin.calligraphies.index', [
-            'calligraphies' => Calligraphy::filter(request(['calligraphyName','styleID','cateID','orderby','sort']))->paginate($perPage)->appends(request()->query()),
+            'calligraphies' => Calligraphy::filter(request(['calligraphyName','styleID','cateID','orderby','sort']))->paginate($this->perPage)->appends(request()->query()),
             'styles' => CalligraphyStyle::filter(request(['cateID']))->get(),
             'categories' => CalligraphyCategory::all()
         ]);
@@ -50,9 +51,14 @@ class CalligraphiesController extends Controller
             $image['image_name'] = $request->file('image')->store('uploads', 'public');
             $image['calligraphy_id'] = $calligraphy->calligraphy_id;
             GalleryImage::create($image);
+        } else {
+            $image['image_name'] = 'uploads/calligraphies/noimage.jpg';
+            $image['calligraphy_id'] = $calligraphy->calligraphy_id;
+            GalleryImage::create($image);
         }
+        $lastPage = Calligraphy::paginate($this->perPage)->lastPage();
         Alert::success('Success', 'New calligraphy succesfully added!')->buttonsStyling(false)->autoClose(2500);
-        return redirect(route('calligraphies.index'));
+        return redirect(route('calligraphies.index', ['page' => $lastPage]));
     }
 
     public function show(Calligraphy $calligraphy)
