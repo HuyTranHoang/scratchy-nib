@@ -27,7 +27,7 @@
                             <input type="hidden" name="cateID" value="{{ request()->cateID }}">
                             <input type="hidden" name="sort" value="{{ request()->sort }}">
                             <label for="styleID" class="gallery-label">Filter by Style</label>
-                            <select class="select mt-2" id="styleID" name="styleID" onchange='this.form.submit()'>
+                            <select class="select mt-2" id="styleID" name="styleID" onchange='this.form.submit()' style="min-width: 120px;">
                                 <option value="">All</option>
                                 @foreach($styles as $style)
                                     <option {{ $style->style_id == request()->styleID ? 'selected' : '' }} value="{{ $style -> style_id }}">{{ $style -> style_name }}</option>
