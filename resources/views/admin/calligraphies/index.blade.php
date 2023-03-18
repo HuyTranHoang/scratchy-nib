@@ -18,8 +18,8 @@
 
             <form action="{{ route('admin.remove-empty-parameters') }}" class="d-flex mt-3 mt-lg-0">
                 <a class="btn btn-primary-color rounded me-3 mb-3 mb-md-0" href="{{ route('calligraphies.index') }}" style="line-height: 30px">Reset</a>
-
                 <div class="field me-md-0 me-lg-3" style="min-width: 200px">
+                    <input name="perPage" type="hidden" value="{{ request()->perPage }}">
                     <label for="cateID" class="label">Filter by Category</label>
                     <select class="select" id="cateID" name="cateID" onchange='this.form.submit()'>
                         <option value="">All</option>
@@ -34,6 +34,7 @@
                 <div class="field me-md-0 me-lg-3 mb-3 mb-lg-0" style="min-width: 200px">
                     <input type="hidden" name="cateID" value="{{request()->cateID}}">
                     <label for="styleID" class="label">Filter by Style</label>
+                    <input name="perPage" type="hidden" value="{{ request()->perPage }}">
                     <select class="select" id="styleID" name="styleID" onchange='this.form.submit()'>
                         <option value="">All</option>
                         @foreach($styles as $style)
@@ -46,6 +47,7 @@
             <form action="{{ route('admin.remove-empty-parameters') }}" class="d-flex mt-3 mt-lg-0 admin-form-group">
                 <input type="hidden" name="cateID" value="{{request()->cateID}}">
                 <input type="hidden" name="styleID" value="{{request()->styleID}}">
+                <input name="perPage" type="hidden" value="{{ request()->perPage }}">
                 <div class="d-flex w-100">
                     <input class="form-control rounded-start rounded-0" style="min-width: 200px" value="{{ request()->calligraphyName }}"
                            name="calligraphyName" type="text" placeholder="Search by name.." aria-label="search">
@@ -68,6 +70,7 @@
                                href="{{ route('admin.remove-empty-parameters', [
                                     'orderby' => 'name',
                                     'sort' => 'asc',
+                                    'perPage' => request()->perPage,
                                     'cateID' => request()->cateID,
                                     'styleID' => request()->styleID,
                                     'calligraphyName' => request()->calligraphyName]) }}"
@@ -77,6 +80,7 @@
                                href="{{ route('admin.remove-empty-parameters', [
                                     'orderby' => 'name',
                                     'sort' => 'desc',
+                                    'perPage' => request()->perPage,
                                     'cateID' => request()->cateID,
                                     'styleID' => request()->styleID,
                                     'calligraphyName' => request()->calligraphyName]) }}"
@@ -93,6 +97,7 @@
                                href="{{ route('admin.remove-empty-parameters', [
                                     'orderby' => 'date',
                                     'sort' => 'asc',
+                                    'perPage' => request()->perPage,
                                     'cateID' => request()->cateID,
                                     'styleID' => request()->styleID,
                                     'calligraphyName' => request()->calligraphyName]) }}"
@@ -102,6 +107,7 @@
                                href="{{ route('admin.remove-empty-parameters', [
                                     'orderby' => 'date',
                                     'sort' => 'desc',
+                                    'perPage' => request()->perPage,
                                     'cateID' => request()->cateID,
                                     'styleID' => request()->styleID,
                                     'calligraphyName' => request()->calligraphyName]) }}"
@@ -155,6 +161,17 @@
             @endforelse
             </tbody>
         </table>
+        <form action="{{ route('admin.remove-empty-parameters') }}" class="small text-muted @if(!$calligraphies->hasMorePages()) mb-3 @endif">
+            Users per page:
+            <input name="calligraphyName" type="hidden" value="{{ request()->calligraphyName }}">
+            <input name="cateID" type="hidden" value="{{ request()->cateID }}">
+            <input name="styleID" type="hidden" value="{{ request()->styleID }}">
+            <select class="form-select-sm border border-1" name="perPage" onchange="this.form.submit()">
+                <option {{request()->perPage == 10 ? 'selected' : ''}} value="10">10</option>
+                <option {{request()->perPage == 15 ? 'selected' : ''}} value="15">15</option>
+                <option {{request()->perPage == 20 ? 'selected' : ''}} value="20">20</option>
+            </select>
+        </form>
         {{ $calligraphies->links() }}
     </div>
 

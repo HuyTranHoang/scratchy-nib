@@ -17,6 +17,9 @@
         <div class="d-sm-block col-md-8 d-md-flex justify-content-md-end">
             <a class="btn btn-primary-color rounded me-3 mb-3 mb-md-0" href="{{ route('feedback.index') }}">Reset</a>
             <form action="" class="d-flex form-outline admin-searchform">
+                @if(request()->perPage)
+                    <input name="perPage" type="hidden" value="{{ request()->perPage }}">
+                @endif
                 <input class="form-control rounded-start rounded-0" value="{{ request()->feedbackFilter }}"
                        name="feedbackFilter" type="text" placeholder="Search by user name, message, calligraphy name.." aria-label="search">
                 <button class="btn rounded-end rounded-0 btn-primary-color" type="submit">
@@ -35,10 +38,11 @@
                 <th scope="col" style="min-width: 400px">Message</th>
                 <th scope="col" style="min-width: 200px;">
                     @if(request()->orderby=='userid' && request()->sort=='desc')
-                        <a class="text-decoration-none text-success" ?orderby=userid&sort=asc&feedbackFilter={{request()->feedbackFilter}}
+                        <a class="text-decoration-none text-success"
                            href="{{ route('admin.remove-empty-parameters', [
                                     'orderby' => 'userid',
                                     'sort' => 'asc',
+                                    'perPage' => request()->perPage,
                                     'feedbackFilter' => request()->feedbackFilter]) }}"
                         >User Name <i class="fa-solid fa-caret-down"></i></a>
                     @else
@@ -46,6 +50,7 @@
                            href="{{ route('admin.remove-empty-parameters', [
                                     'orderby' => 'userid',
                                     'sort' => 'desc',
+                                    'perPage' => request()->perPage,
                                     'feedbackFilter' => request()->feedbackFilter]) }}"
                         >User Name <i class="fa-solid fa-caret-up"></i></a>
                     @endif
@@ -58,6 +63,7 @@
                            href="{{ route('admin.remove-empty-parameters', [
                                     'orderby' => 'date',
                                     'sort' => 'asc',
+                                    'perPage' => request()->perPage,
                                     'feedbackFilter' => request()->feedbackFilter]) }}"
                         >Created At <i class="fa-solid fa-caret-down"></i></a>
                     @else
@@ -65,6 +71,7 @@
                            href="{{ route('admin.remove-empty-parameters', [
                                     'orderby' => 'date',
                                     'sort' => 'desc',
+                                    'perPage' => request()->perPage,
                                     'feedbackFilter' => request()->feedbackFilter]) }}"
                         >Created At <i class="fa-solid fa-caret-up"></i></a>
                     @endif
@@ -103,6 +110,17 @@
             @endforelse
             </tbody>
         </table>
+        <form class="small text-muted @if(!$feedback->hasMorePages()) mb-3 @endif">
+            Feedback per page:
+            @if(request()->feedbackFilter)
+                <input name="feedbackFilter" type="hidden" value="{{ request()->feedbackFilter }}">
+            @endif
+            <select class="form-select-sm border border-1" name="perPage" onchange="this.form.submit()">
+                <option {{request()->perPage == 10 ? 'selected' : ''}} value="10">10</option>
+                <option {{request()->perPage == 15 ? 'selected' : ''}} value="15">15</option>
+                <option {{request()->perPage == 20 ? 'selected' : ''}} value="20">20</option>
+            </select>
+        </form>
         {{ $feedback->links() }}
     </div>
 

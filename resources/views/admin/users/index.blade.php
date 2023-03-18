@@ -20,6 +20,7 @@
             <form action="{{ route('admin.remove-empty-parameters') }}" class="d-flex form-outline">
                 <div class="field me-3" style="min-width: 200px">
                     <label for="roleID" class="label">Filter by Role</label>
+                    <input name="perPage" type="hidden" value="{{ request()->perPage }}">
                     <select class="select" id="roleID" name="roleID" onchange='this.form.submit()'>
                         <option value="">All</option>
                         @foreach($roles as $role)
@@ -30,7 +31,8 @@
             </form>
 
             <form action="{{ route('admin.remove-empty-parameters') }}" class="d-flex form-outline">
-                <input type="hidden" value="{{ request()->roleID }}" name="roleID">
+                <input name="roleID" type="hidden" value="{{ request()->roleID }}">
+                <input name="perPage" type="hidden" value="{{ request()->perPage }}">
                 <input class="form-control rounded-start rounded-0" value="{{ request()->userFilter }}"
                        name="userFilter" type="text" placeholder="Search by name, email.." aria-label="search">
                 <button class="btn rounded-end rounded-0 btn-primary-color" type="submit">
@@ -51,6 +53,7 @@
                            href="{{ route('admin.remove-empty-parameters', [
                                     'orderby' => 'name',
                                     'sort' => 'asc',
+                                    'perPage' => request()->perPage,
                                     'userFilter' => request()->userFilter]) }}"
                         >Name <i class="fa-solid fa-caret-down"></i></a>
                     @else
@@ -58,6 +61,7 @@
                            href="{{ route('admin.remove-empty-parameters', [
                                     'orderby' => 'name',
                                     'sort' => 'desc',
+                                    'perPage' => request()->perPage,
                                     'userFilter' => request()->userFilter]) }}"
                         >Name <i class="fa-solid fa-caret-up"></i></a>
                     @endif
@@ -72,6 +76,7 @@
                            href="{{ route('admin.remove-empty-parameters', [
                                     'orderby' => 'date',
                                     'sort' => 'asc',
+                                    'perPage' => request()->perPage,
                                     'userFilter' => request()->userFilter]) }}"
                         >Created At <i class="fa-solid fa-caret-down"></i></a>
                     @else
@@ -79,6 +84,7 @@
                            href="{{ route('admin.remove-empty-parameters', [
                                     'orderby' => 'date',
                                     'sort' => 'desc',
+                                    'perPage' => request()->perPage,
                                     'userFilter' => request()->userFilter]) }}"
                         >Created At <i class="fa-solid fa-caret-up"></i></a>
                     @endif
@@ -118,6 +124,16 @@
             @endforelse
             </tbody>
         </table>
+        <form action="{{ route('admin.remove-empty-parameters') }}" class="small text-muted @if(!$users->hasMorePages()) mb-3 @endif">
+            Users per page:
+            <input name="userFilter" type="hidden" value="{{ request()->userFilter }}">
+            <input type="hidden" value="{{ request()->roleID }}" name="roleID">
+            <select class="form-select-sm border border-1" name="perPage" onchange="this.form.submit()">
+                <option {{request()->perPage == 10 ? 'selected' : ''}} value="10">10</option>
+                <option {{request()->perPage == 15 ? 'selected' : ''}} value="15">15</option>
+                <option {{request()->perPage == 20 ? 'selected' : ''}} value="20">20</option>
+            </select>
+        </form>
         {{ $users->links() }}
     </div>
 

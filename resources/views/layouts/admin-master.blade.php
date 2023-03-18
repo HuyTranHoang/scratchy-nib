@@ -19,6 +19,9 @@
 
 @include('sweetalert::alert')
 
+<!-- Back to top button -->
+<a class="text-decoration-none" id="btt-button" style="bottom: 100px"></a>
+
 <header class="navbar navbar-dark sticky-top bg-primary flex-md-nowrap py-2 shadow">
     <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="{{route('admin.index')}}">Scratchy<b>Nib</b></a>
     <button class="navbar-toggler d-md-none me-3" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="true" aria-label="Toggle navigation">
@@ -26,14 +29,24 @@
     </button>
 </header>
 
-<div class="container-fluid">
-    <div class="row">
-        @include('layouts.partials.admin.sidebar')
+<div class="d-flex flex-column min-vh-100">
+    <div class="container-fluid">
+        <div class="row">
+            @include('layouts.partials.admin.sidebar')
 
-        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-           {{$slot}}
-        </main>
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                {{$slot}}
+            </main>
+        </div>
     </div>
+
+    <footer class="container-fluid mt-auto">
+        <div class="row">
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-primary text-white">
+                ©2023 Scratchy Nib
+            </main>
+        </div>
+    </footer>
 </div>
 
 {{--    Tinymce Script  --}}

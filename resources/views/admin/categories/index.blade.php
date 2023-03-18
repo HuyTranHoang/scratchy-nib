@@ -17,7 +17,8 @@
 
         <div class="d-sm-block col-md-6 d-md-flex justify-content-md-end">
             <a class="btn btn-primary-color rounded me-3 mb-3 mb-md-0" href="{{ route('categories.index') }}">Reset</a>
-            <form action="" class="d-flex form-outline">
+            <form action="{{ route('admin.remove-empty-parameters') }}" class="d-flex form-outline">
+                <input name="perPage" type="hidden" value="{{ request()->perPage }}">
                 <input class="form-control rounded-start rounded-0" value="{{ request()->cateName }}"
                        name="cateName" type="text" placeholder="Search by name.." aria-label="search">
                 <button class="btn rounded-end rounded-0 btn-primary-color" type="submit">
@@ -35,11 +36,17 @@
                 <th scope="col" style="width: 15%">
                     @if(request()->orderby=='name' && request()->sort=='desc')
                     <a class="text-decoration-none text-success"
-                       href="{{ route('admin.remove-empty-parameters', ['orderby' => 'name', 'sort' => 'asc', 'cateName' => request()->cateName]) }}"
+                       href="{{ route('admin.remove-empty-parameters', ['orderby' => 'name',
+                                        'sort' => 'asc',
+                                        'perPage' => request()->perPage,
+                                        'cateName' => request()->cateName]) }}"
                     >Categories Name <i class="fa-solid fa-caret-down"></i></a>
                     @else
                     <a class="text-decoration-none {{request()->orderby=='name' && request()->sort=='asc' ? 'text-success' : ''}}"
-                       href="{{ route('admin.remove-empty-parameters', ['orderby' => 'name', 'sort' => 'desc', 'cateName' => request()->cateName]) }}"
+                       href="{{ route('admin.remove-empty-parameters', ['orderby' => 'name',
+                                        'sort' => 'desc',
+                                        'perPage' => request()->perPage,
+                                        'cateName' => request()->cateName]) }}"
                     >Categories Name <i class="fa-solid fa-caret-up"></i></a>
                     @endif
                 </th>
@@ -48,9 +55,17 @@
                 <th scope="col" colspan="2" class="text-center">Action</th>
                 <th scope="col" style="width: 10%">
                     @if(request()->orderby=='date' && request()->sort=='desc')
-                        <a class="text-decoration-none text-success" href="{{ route('admin.remove-empty-parameters', ['orderby' => 'date', 'sort' => 'asc', 'cateName' => request()->cateName]) }}">Created At <i class="fa-solid fa-caret-down"></i></a>
+                        <a class="text-decoration-none text-success"
+                           href="{{ route('admin.remove-empty-parameters', ['orderby' => 'date',
+                                        'sort' => 'asc',
+                                        'perPage' => request()->perPage,
+                                        'cateName' => request()->cateName]) }}">Created At <i class="fa-solid fa-caret-down"></i></a>
                     @else
-                        <a class="text-decoration-none {{request()->orderby=='date' && request()->sort=='asc' ? 'text-success' : ''}}" href="{{ route('admin.remove-empty-parameters', ['orderby' => 'date', 'sort' => 'desc', 'cateName' => request()->cateName]) }}">Created At <i class="fa-solid fa-caret-up"></i></a>
+                        <a class="text-decoration-none {{request()->orderby=='date' && request()->sort=='asc' ? 'text-success' : ''}}"
+                           href="{{ route('admin.remove-empty-parameters', ['orderby' => 'date',
+                                        'sort' => 'desc',
+                                        'perPage' => request()->perPage,
+                                        'cateName' => request()->cateName]) }}">Created At <i class="fa-solid fa-caret-up"></i></a>
                     @endif
                 </th>
             </tr>
@@ -90,6 +105,15 @@
             @endforelse
             </tbody>
         </table>
+        <form action="{{ route('admin.remove-empty-parameters') }}" class="small text-muted @if(!$categories->hasMorePages()) mb-3 @endif">
+            Categories per page:
+            <input name="cateName" type="hidden" value="{{ request()->cateName }}">
+            <select class="form-select-sm border border-1" name="perPage" onchange="this.form.submit()">
+                <option {{request()->perPage == 5 ? 'selected' : ''}} value="5">5</option>
+                <option {{request()->perPage == 10 ? 'selected' : ''}} value="10">10</option>
+                <option {{request()->perPage == 15 ? 'selected' : ''}} value="15">15</option>
+            </select>
+        </form>
         {{ $categories->links() }}
     </div>
 

@@ -16,6 +16,12 @@ class CalligraphyCategoriesController extends Controller
     public function index()
     {
 
+        if (request()->perPage) {
+            $this->perPage = request()->perPage;
+            if ($this->perPage != 5 && $this->perPage != 10 && $this->perPage != 15){
+                $this->perPage = 5;
+            }
+        }
         $page = request()->input('page', 1);
         $totalItems = CalligraphyCategory::filter(request(['cateName']))->count();
         $totalPages = ceil($totalItems / $this->perPage);

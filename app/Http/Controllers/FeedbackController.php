@@ -17,6 +17,12 @@ class FeedbackController extends Controller
     public function index()
     {
 
+        if (request()->perPage) {
+            $this->perPage = request()->perPage;
+            if ($this->perPage != 10 && $this->perPage != 15 && $this->perPage != 20){
+                $this->perPage = 10;
+            }
+        }
         $page = request()->input('page', 1);
         $totalItems = Feedback::filter(request(['feedbackFilter']))->count();
         $totalPages = ceil($totalItems / $this->perPage);

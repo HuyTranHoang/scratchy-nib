@@ -19,6 +19,12 @@ class UserController extends Controller
     private int $perPage = 10;
     public function index()
     {
+        if (request()->perPage) {
+            $this->perPage = request()->perPage;
+            if ($this->perPage != 10 && $this->perPage != 15 && $this->perPage != 20){
+                $this->perPage = 10;
+            }
+        }
         $page = request()->input('page', 1);
         $totalItems = User::filter(request(['userFilter','roleID']))->count();
         $totalPages = ceil($totalItems / $this->perPage);
