@@ -1040,14 +1040,14 @@ class CalligraphySeeder extends Seeder
             ],
             [
                 'calligraphy_name' => "Make more lime",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'It refers to creating additional strokes or lines in the lettering to add thickness or emphasis to certain parts of the letters. In Copperplate calligraphy, the thickness of the strokes can vary depending on the pressure applied to the nib, and adding more lines can create a more elaborate and decorative effect.',
                 'style_id' => '20',
                 'created_at' => Carbon::now()->subMinutes(78),
                 'updated_at' => Carbon::now()->subMinutes(78),
             ],
             [
                 'calligraphy_name' => "Problem are not stop signs they are guidelines",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The phrase "problems are not stop signs, they are guidelines" means that obstacles and challenges should not be seen as dead-ends or reasons to give up, but rather as opportunities to learn and grow. Problems are a natural part of life, and they can provide valuable lessons and insights that can help us overcome future challenges. Instead of viewing problems as roadblocks, we can choose to approach them with a positive and proactive mindset, seeking solutions and looking for ways to improve ourselves and our situations. This attitude can lead to personal and professional growth, resilience, and a greater sense of fulfillment and achievement.',
                 'style_id' => '20',
                 'created_at' => Carbon::now()->subMinutes(77),
                 'updated_at' => Carbon::now()->subMinutes(77),
@@ -1057,42 +1057,56 @@ class CalligraphySeeder extends Seeder
         Calligraphy::factory()->createMany([
             [
                 'calligraphy_name' => "Do more of what makes you happy",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The phrase "do more of what makes you happy" is a simple but powerful
+                reminder to prioritize activities and experiences that bring joy and fulfillment into our lives.
+                It suggests that when we focus on doing things that make us happy, we are more likely to feel
+                satisfied, energized, and motivated. This can lead to a greater sense of well-being and a
+                more positive outlook on life.
+                The phrase also implies that we should take ownership of our own happiness, rather than relying on
+                external factors or other people to bring us joy. By identifying and pursuing activities and
+                interests that align with our values and passions, we can cultivate a sense of purpose and
+                fulfillment in our lives.',
                 'style_id' => '21',
                 'created_at' => Carbon::now()->subMinutes(76),
                 'updated_at' => Carbon::now()->subMinutes(76),
             ],
             [
                 'calligraphy_name' => "Nothing great ever came that easy",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The phrase "nothing great ever came that easy" means that achieving
+                something truly significant or exceptional requires effort, dedication, and often,
+                overcoming obstacles or challenges. It suggests that the path to success is rarely straightforward
+                or easy, and that perseverance and hard work are key ingredients for achieving our goals.
+                This phrase can be applied to many areas of life, such as education, career, athletics, or creative
+                pursuits. It reminds us that the most rewarding accomplishments often require sustained effort
+                and a willingness to push through difficult times.',
                 'style_id' => '21',
                 'created_at' => Carbon::now()->subMinutes(75),
                 'updated_at' => Carbon::now()->subMinutes(75),
             ],
             [
                 'calligraphy_name' => "Happy fall y’all",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Happy fall y\'all" is a friendly greeting often used during the autumn season, particularly in parts of the United States where the phrase "y\'all" is commonly used. It\'s a simple way to express enthusiasm for the season and to spread some cheer and goodwill.',
                 'style_id' => '21',
                 'created_at' => Carbon::now()->subMinutes(74),
                 'updated_at' => Carbon::now()->subMinutes(74),
             ],
             [
                 'calligraphy_name' => "It is never too late",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The phrase "it is never too late" is a motivational and optimistic statement that suggests that there is always time and opportunity to make a positive change or pursue a goal, regardless of one\'s age or circumstances. It implies that it\'s never too late to start something new, make a significant change in \'s life, or achieve a dream.',
                 'style_id' => '21',
                 'created_at' => Carbon::now()->subMinutes(73),
                 'updated_at' => Carbon::now()->subMinutes(73),
             ],
             [
                 'calligraphy_name' => "Enjoy the little things",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The phrase "enjoy the little things" is a reminder to appreciate and savor the simple pleasures of life, rather than constantly striving for bigger, more extravagant experiences. It suggests that happiness can be found in the everyday moments and that we should take time to slow down and appreciate the small things in life.',
                 'style_id' => '21',
                 'created_at' => Carbon::now()->subMinutes(72),
                 'updated_at' => Carbon::now()->subMinutes(72),
             ],
             [
                 'calligraphy_name' => "Make today ridiculously amazing",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The phrase "make today ridiculously amazing" is an enthusiastic and motivational statement that encourages us to approach the day with energy, enthusiasm, and a positive attitude. It suggests that we have the power to create an exceptional and memorable day, no matter what challenges or obstacles we may face.',
                 'style_id' => '21',
                 'created_at' => Carbon::now()->subMinutes(70),
                 'updated_at' => Carbon::now()->subMinutes(70),
@@ -1102,70 +1116,72 @@ class CalligraphySeeder extends Seeder
         Calligraphy::factory()->createMany([
             [
                 'calligraphy_name' => "D letter",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The letter "D" in Blackletter, also known as Gothic script, is often depicted with sharp, angular strokes and elaborate flourishes. The top of the letter usually has a diagonal stroke that connects to a vertical stroke on the right side. The left side of the letter often has a diagonal stroke that curves downward, creating a sharp angle. The bottom of the letter is usually horizontal and may have a slight curve upwards on the right side.',
                 'style_id' => '22',
                 'created_at' => Carbon::now()->subMinutes(69),
                 'updated_at' => Carbon::now()->subMinutes(69),
             ],
             [
                 'calligraphy_name' => "C letter",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The letter "C" in Blackletter, also known as Gothic script, is often depicted with sharp, angular strokes and elaborate flourishes. The top of the letter usually has a diagonal stroke that connects to a vertical stroke on the right side. The left side of the letter often has a diagonal stroke that curves downward, creating a sharp angle. The bottom of the letter is usually horizontal and may have a slight curve upwards on the right side.',
                 'style_id' => '22',
                 'created_at' => Carbon::now()->subMinutes(68),
                 'updated_at' => Carbon::now()->subMinutes(68),
             ],
             [
                 'calligraphy_name' => "Color blended circular calligram",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'A color blended circular calligram is a type of art or design where a circular shape is created using words or letters that are arranged in a way that they form the shape of the circle. The words or letters can be arranged in various fonts, sizes, and colors to create a visually appealing and meaningful composition.',
                 'style_id' => '22',
                 'created_at' => Carbon::now()->subMinutes(67),
                 'updated_at' => Carbon::now()->subMinutes(67),
             ],
             [
                 'calligraphy_name' => "Blackletter alphabet by luca barcellona",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'Blackletter, also known as Gothic script, is a style of calligraphic writing that was commonly used in medieval Europe, particularly in Germany. The alphabet used in Blackletter has a distinctive, ornate appearance, with sharp, angular shapes and heavy use of serifs and flourishes. The letters are often densely packed together, creating a text that is difficult to read at first glance.',
                 'style_id' => '22',
                 'created_at' => Carbon::now()->subMinutes(66),
                 'updated_at' => Carbon::now()->subMinutes(66),
             ],
             [
                 'calligraphy_name' => "I’ll sleep when i’m dead",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The phrase "I\'ll sleep when I\'m dead" is a common expression used to describe someone who is willing to sacrifice their sleep in order to pursue their goals or live life to the fullest. It suggests that the speaker is willing to work hard and make the most of every moment, even if it means sacrificing their rest and relaxation.',
                 'style_id' => '22',
                 'created_at' => Carbon::now()->subMinutes(65),
                 'updated_at' => Carbon::now()->subMinutes(65),
             ],
             [
                 'calligraphy_name' => "You’ll never walk alone",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"You\'ll Never Walk Alone" is a song that has become an anthem for unity and solidarity in various contexts, such as in sports, social justice movements, and community building. The song was originally written by Richard Rodgers and Oscar Hammerstein II for the musical Carousel, and has since been covered by many artists and groups.',
                 'style_id' => '22',
                 'created_at' => Carbon::now()->subMinutes(64),
                 'updated_at' => Carbon::now()->subMinutes(64),
             ],
             [
                 'calligraphy_name' => "Awesome letter",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The term "awesome letter" is a bit vague, as it can refer to any letter that is impressive, inspiring, or significant in some way.',
                 'style_id' => '22',
                 'created_at' => Carbon::now()->subMinutes(63),
                 'updated_at' => Carbon::now()->subMinutes(63),
             ],
             [
                 'calligraphy_name' => "Hope is the fuel of progress",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The statement "Hope is the fuel of progress" suggests that hope is an important motivator in driving positive change and advancement in various aspects of life. It implies that having a positive outlook and belief in a better future can inspire individuals and communities to take action towards achieving their goals.
+                When we have hope, we are more likely to persevere through challenges and setbacks, and to maintain a sense of optimism even in the face of adversity. This can help us to stay motivated and focused on our goals, and to be more creative and innovative in finding solutions to problems.',
                 'style_id' => '22',
                 'created_at' => Carbon::now()->subMinutes(62),
                 'updated_at' => Carbon::now()->subMinutes(62),
             ],
             [
                 'calligraphy_name' => "In the beginning was the word",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The phrase "In the beginning was the Word" is a biblical quote from the Gospel of John, which is the fourth book of the New Testament in the Christian Bible. The full verse reads: "In the beginning was the Word, and the Word was with God, and the Word was God" (John 1:1).
+                This statement is often interpreted to mean that the Word, or logos in Greek, was present at the very beginning of creation and is synonymous with God. Some interpretations suggest that the Word refers to Jesus, who is seen as the embodiment of God\'s message and teachings.',
                 'style_id' => '22',
                 'created_at' => Carbon::now()->subMinutes(61),
                 'updated_at' => Carbon::now()->subMinutes(61),
             ],
             [
                 'calligraphy_name' => "100 years of the coca-cola contour bottle",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The Coca-Cola contour bottle, also known as the "hobble-skirt" bottle, is one of the most iconic and recognizable designs in the history of product packaging. The bottle was first introduced in 1915, and this year marks its 100th anniversary.',
                 'style_id' => '22',
                 'created_at' => Carbon::now()->subMinutes(60),
                 'updated_at' => Carbon::now()->subMinutes(60),
@@ -1175,49 +1191,52 @@ class CalligraphySeeder extends Seeder
         Calligraphy::factory()->createMany([
             [
                 'calligraphy_name' => "Live every moment",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Live every moment" is a phrase that encourages individuals to embrace the present and make the most of every experience in life. It suggests that we should try to live in the moment and enjoy the journey, rather than simply focusing on the destination.',
                 'style_id' => '23',
                 'created_at' => Carbon::now()->subMinutes(59),
                 'updated_at' => Carbon::now()->subMinutes(59),
             ],
             [
                 'calligraphy_name' => "Done is better than perfect",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Done is better than perfect" is a popular phrase that encourages individuals to prioritize completion over perfectionism. It suggests that it is better to complete a task or project to the best of your ability, rather than striving for perfection and never completing it.',
                 'style_id' => '23',
                 'created_at' => Carbon::now()->subMinutes(58),
                 'updated_at' => Carbon::now()->subMinutes(58),
             ],
             [
                 'calligraphy_name' => "Start each day with a grateful heart",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Start each day with a grateful heart" is a simple but powerful phrase that encourages individuals to approach each day with a positive and grateful attitude. It suggests that we should take a moment each morning to reflect on the things in our lives that we are grateful for, and to begin our day with a sense of appreciation and gratitude.',
                 'style_id' => '23',
                 'created_at' => Carbon::now()->subMinutes(57),
                 'updated_at' => Carbon::now()->subMinutes(57),
             ],
             [
                 'calligraphy_name' => "Stay positive",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Stay positive" is a phrase that encourages individuals to maintain a positive attitude and outlook, even in the face of challenges, setbacks, or difficulties. It suggests that by focusing on the good things in life and maintaining a positive mindset, we can improve our overall well-being and increase our chances of success.
+                Maintaining a positive attitude can have numerous benefits for our mental and emotional health. It can help us to cope with stress, reduce feelings of anxiety and depression, and improve our relationships with others. Positive thinking can also lead to increased motivation, resilience, and creativity, making it easier to overcome obstacles and achieve our goals.',
                 'style_id' => '23',
                 'created_at' => Carbon::now()->subMinutes(56),
                 'updated_at' => Carbon::now()->subMinutes(56),
             ],
             [
                 'calligraphy_name' => "My heart sleeps by the ocean",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"My heart sleeps by the ocean" is a poetic phrase that suggests a deep emotional connection to the sea. It implies a sense of calm and peace that comes from being near the ocean, and a feeling of being at home in that environment.',
                 'style_id' => '23',
                 'created_at' => Carbon::now()->subMinutes(55),
                 'updated_at' => Carbon::now()->subMinutes(55),
             ],
             [
                 'calligraphy_name' => "You have my whole heart for my whole life",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"You have my whole heart for my whole life" is a romantic and heartfelt phrase that expresses a deep and enduring commitment to another person. It suggests that the speaker is devoted to their partner and that they will love them with all their heart for the rest of their life.
+                The phrase is a beautiful way of expressing the depth of one\'s love and devotion to their significant other. It implies a sense of completeness and wholeness, as if the speaker\'s heart is fully given to their partner and will remain so for the rest of their life.',
                 'style_id' => '23',
                 'created_at' => Carbon::now()->subMinutes(54),
                 'updated_at' => Carbon::now()->subMinutes(54),
             ],
             [
                 'calligraphy_name' => "Do it all with love",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Do it all with love" is a simple but powerful phrase that suggests approaching every aspect of life with love, compassion, and kindness. It encourages individuals to infuse their actions, thoughts, and words with a sense of warmth and empathy, and to treat others with the same respect and consideration that they would want for themselves.
+                The phrase "do it all with love" suggests that love is not just an emotion, but a way of being in the world. It implies that when we approach our daily tasks, interactions, and challenges with a loving and compassionate mindset, we are more likely to create positive outcomes and build stronger connections with others.',
                 'style_id' => '23',
                 'created_at' => Carbon::now()->subMinutes(53),
                 'updated_at' => Carbon::now()->subMinutes(53),
@@ -1227,21 +1246,24 @@ class CalligraphySeeder extends Seeder
         Calligraphy::factory()->createMany([
             [
                 'calligraphy_name' => "Shrine like the stars",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Shine like the stars" is a phrase that suggests radiating brightness, positivity, and hopefulness, much like the stars in the night sky. It implies that we should strive to be a source of light and inspiration to others, even in the darkest of times.
+                The phrase "shine like the stars" encourages individuals to embrace their unique qualities, strengths, and talents, and to share them with the world. It suggests that each of us has the potential to shine brightly and make a positive impact on those around us.',
                 'style_id' => '24',
                 'created_at' => Carbon::now()->subMinutes(52),
                 'updated_at' => Carbon::now()->subMinutes(52),
             ],
             [
                 'calligraphy_name' => "Bloom",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Bloom" is a word that suggests growth, change, and transformation. It is often used to describe the process of a flower opening up and revealing its beauty to the world, but can also be applied to people, ideas, and projects.
+                To "bloom" implies that one is reaching their full potential, that they are thriving and flourishing in their environment. It suggests a sense of vitality and energy, as well as a willingness to embrace change and take risks.',
                 'style_id' => '24',
                 'created_at' => Carbon::now()->subMinutes(51),
                 'updated_at' => Carbon::now()->subMinutes(51),
             ],
             [
                 'calligraphy_name' => "Take time for yourself",
-                'calligraphy_description' => '',
+                'calligraphy_description' => '"Take time for yourself" is a phrase that emphasizes the importance of self-care and self-nurturing. It suggests that in order to be our best selves and function at our highest capacity, we must take time to focus on our own well-being and needs.
+                The phrase "take time for yourself" implies that self-care is not a luxury, but a necessity. It encourages individuals to prioritize their own physical, mental, and emotional health, and to make time for activities that promote relaxation, stress relief, and personal growth.',
                 'style_id' => '24',
                 'created_at' => Carbon::now()->subMinutes(50),
                 'updated_at' => Carbon::now()->subMinutes(50),
@@ -1251,28 +1273,32 @@ class CalligraphySeeder extends Seeder
         Calligraphy::factory()->createMany([
             [
                 'calligraphy_name' => "Alphabet",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The Gothic script, also known as Blackletter, is a style of writing that was popular in Western Europe from the 12th century until the 17th century. It is characterized by its angular, dense, and ornate appearance, and is often associated with medieval manuscripts, religious texts, and official documents.
+                The Gothic script has several sub-styles, including the Textura, Fraktur, and Schwabacher. These sub-styles differ in their level of ornamentation and the shape of their letters, but all share a similar Gothic aesthetic.',
                 'style_id' => '25',
                 'created_at' => Carbon::now()->subMinutes(49),
                 'updated_at' => Carbon::now()->subMinutes(49),
             ],
             [
                 'calligraphy_name' => "Alphabet",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The Gothic script, also known as Blackletter, is a style of writing that was popular in Western Europe from the 12th century until the 17th century. It is characterized by its angular, dense, and ornate appearance, and is often associated with medieval manuscripts, religious texts, and official documents.
+                The Gothic script has several sub-styles, including the Textura, Fraktur, and Schwabacher. These sub-styles differ in their level of ornamentation and the shape of their letters, but all share a similar Gothic aesthetic.',
                 'style_id' => '25',
                 'created_at' => Carbon::now()->subMinutes(49),
                 'updated_at' => Carbon::now()->subMinutes(49),
             ],
             [
                 'calligraphy_name' => "Alphabet",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The Gothic script, also known as Blackletter, is a style of writing that was popular in Western Europe from the 12th century until the 17th century. It is characterized by its angular, dense, and ornate appearance, and is often associated with medieval manuscripts, religious texts, and official documents.
+                The Gothic script has several sub-styles, including the Textura, Fraktur, and Schwabacher. These sub-styles differ in their level of ornamentation and the shape of their letters, but all share a similar Gothic aesthetic.',
                 'style_id' => '25',
                 'created_at' => Carbon::now()->subMinutes(48),
                 'updated_at' => Carbon::now()->subMinutes(48),
             ],
             [
                 'calligraphy_name' => "Gothic calligraphy",
-                'calligraphy_description' => '',
+                'calligraphy_description' => 'The Gothic script, also known as Blackletter, is a style of writing that was popular in Western Europe from the 12th century until the 17th century. It is characterized by its angular, dense, and ornate appearance, and is often associated with medieval manuscripts, religious texts, and official documents.
+                The Gothic script has several sub-styles, including the Textura, Fraktur, and Schwabacher. These sub-styles differ in their level of ornamentation and the shape of their letters, but all share a similar Gothic aesthetic.',
                 'style_id' => '25',
                 'created_at' => Carbon::now()->subMinutes(47),
                 'updated_at' => Carbon::now()->subMinutes(47),
