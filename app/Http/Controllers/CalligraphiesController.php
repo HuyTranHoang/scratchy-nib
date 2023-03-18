@@ -23,7 +23,7 @@ class CalligraphiesController extends Controller
         $totalItems = Calligraphy::filter(request(['calligraphyName','styleID','cateID']))->count();
         $totalPages = ceil($totalItems / $this->perPage);
 
-        if ($page > $totalPages && !request()->calligraphyName && !request()->cateID && !request()->styleID) {
+        if ($page > $totalPages && $totalItems != 0) {
             Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(2500);
             return redirect(route('calligraphies.index',['page'=> 1]));
         }

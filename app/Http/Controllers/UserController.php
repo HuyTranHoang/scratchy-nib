@@ -20,10 +20,10 @@ class UserController extends Controller
     public function index()
     {
         $page = request()->input('page', 1);
-        $totalItems = User::filter(request(['userFilter']))->count();
+        $totalItems = User::filter(request(['userFilter','roleID']))->count();
         $totalPages = ceil($totalItems / $this->perPage);
 
-        if ($page > $totalPages && !request()->userFilter) {
+        if ($page > $totalPages && $totalItems != 0) {
             Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(2500);
             return redirect(route('users.index',['page'=> 1]));
         }

@@ -20,7 +20,7 @@ class CalligraphyCategoriesController extends Controller
         $totalItems = CalligraphyCategory::filter(request(['cateName']))->count();
         $totalPages = ceil($totalItems / $this->perPage);
 
-        if ($page > $totalPages && !request()->cateName) {
+        if ($page > $totalPages && $totalItems != 0) {
             Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(2500);
             return redirect(route('categories.index',['page'=> 1]));
         }

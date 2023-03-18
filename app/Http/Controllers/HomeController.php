@@ -44,7 +44,7 @@ class HomeController extends Controller
         $totalItems = Calligraphy::filter(request(['calligraphyName','cateID','styleID']))->count();
         $totalPages = ceil($totalItems / $perPage);
 
-        if ($page > $totalPages && !$request->calligraphyName && !$request->cateID && !$request->styleID) {
+        if ($page > $totalPages && $totalItems != 0) {
             Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(2500);
             return redirect(route('home.category',['cateID'=> $currentCategory ?? false,'page'=> 1]));
         }
@@ -74,7 +74,7 @@ class HomeController extends Controller
         $totalItems = GalleryImage::filter(request(['cateID','styleID','calliName']))->count();
         $totalPages = ceil($totalItems / $perPage);
 
-        if ($page > $totalPages && !request()->calliName && !request()->cateID && !request()->styleID) {
+        if ($page > $totalPages && $totalItems != 0) {
             Alert::error('Oops', "Look like the page you try to enter don't exist anymore, redirect to first page")->buttonsStyling(false)->autoClose(2500);
             return redirect(route('home.gallery',['cateID'=> $currentCategory ?? false,'page'=> 1]));
         }
