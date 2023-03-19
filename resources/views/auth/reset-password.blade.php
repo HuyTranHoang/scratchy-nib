@@ -58,7 +58,7 @@
 
                 <div class="mx-3 d-flex flex-column text-center">
                     <p>Fill out the form on the left to reset your password.</p>
-                    <a class="auth-btn auth-btn-transparent text-decoration-none text-center w-75 mx-auto mt-5" href="{{route('home.index')}}">Back to home</a>
+                    <a href="{{ route('home.index') }}" class="text-white"><i class="fa-solid fa-right-from-bracket"></i> Back to homepage</a>
                 </div>
             </div>
         </div>
