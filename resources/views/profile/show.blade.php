@@ -14,8 +14,8 @@
 
             <div class="card mb-3" style="max-width: 840px;">
                 <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="{{ asset('storage/' . $user->avatar) }}" class="img-fluid rounded-start avatar" alt="...">
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <img src="{{ asset('storage/' . $user->avatar) }}" class="img-fluid rounded avatar" alt="...">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">

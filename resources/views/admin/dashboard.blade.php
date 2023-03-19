@@ -69,7 +69,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-8 col-lg-6 col-xl-4">
+                <div class="col-md-8 col-lg-6 col-xl-4 mt-3 mt-lg-0">
                     <h4 class="text-primary-color">Latest Users</h4>
                     <div class="list-group">
                     @forelse($users as $user)
