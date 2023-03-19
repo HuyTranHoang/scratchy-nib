@@ -23,7 +23,7 @@
                     <h4>Style: <small class="text-primary-color">{{ $calligraphy -> calligraphyStyle -> style_name  }}</small></h4>
                 </div>
                 <div class="fw-semibold mt-3">
-                    <h5>Upload date: <small class="text-primary-color">{{ date('d-m-Y', strtotime($calligraphy -> created_at)) }}</small> </h5>
+                    <h5>Upload date: <small class="text-primary-color">{{ date('d-m-Y', strtotime($calligraphy -> created_at)) }} </small> </h5>
                 </div>
                 <h5 class="mt-3">Description: </h5>
                 <p class="text-primary-color"> {!! $calligraphy -> calligraphy_description !!}</p>
