@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('feedback', function (Blueprint $table) {
             $table->id('feedback_id');
-            $table->text('feedback_message');
+            $table->string('feedback_message',512);
             $table->foreignId('user_id')->references('user_id')->on('users')
                 ->onDelete('cascade');
             $table->foreignId('calligraphy_id')->references('calligraphy_id')->on('calligraphies')

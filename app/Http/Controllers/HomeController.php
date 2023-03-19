@@ -106,7 +106,7 @@ class HomeController extends Controller
 
         return view('home.detail', [
             'calligraphy' => $calligraphy,
-            'calligraphies' => Calligraphy::where('style_id',$calligraphy->style_id)->inRandomOrder()->limit(6)->get(),
+            'calligraphies' => Calligraphy::where('style_id',$calligraphy->style_id)->inRandomOrder()->limit(5)->get(),
             'feedback' => Feedback::where('calligraphy_id',$calligraphy->calligraphy_id)
                 ->orderBy('created_at','DESC')->paginate(4),
             'editfeedback' => $editfeedback ?? ''

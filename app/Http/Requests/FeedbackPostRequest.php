@@ -24,7 +24,7 @@ class FeedbackPostRequest extends FormRequest
         return [
             'user_id' => 'required',
             'calligraphy_id' => 'required',
-            'feedback_message' => 'required|max:65535',
+            'feedback_message' => 'required|max:512',
         ];
     }
 }
