@@ -167,9 +167,9 @@
             <input name="cateID" type="hidden" value="{{ request()->cateID }}">
             <input name="styleID" type="hidden" value="{{ request()->styleID }}">
             <select class="form-select-sm border border-1" name="perPage" onchange="this.form.submit()">
+                <option {{request()->perPage == 5 ? 'selected' : ''}} value="5">5</option>
                 <option {{request()->perPage == 10 ? 'selected' : ''}} value="10">10</option>
                 <option {{request()->perPage == 15 ? 'selected' : ''}} value="15">15</option>
-                <option {{request()->perPage == 20 ? 'selected' : ''}} value="20">20</option>
             </select>
         </form>
         {{ $calligraphies->links() }}
