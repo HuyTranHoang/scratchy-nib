@@ -17,7 +17,7 @@
                                 <div class="row mt-3">
                                     <div class="col-md-12 col-lg-6">
                                         <label for="name" class="mb-2">Your name</label>
-                                        <input type="text" id="name" name="name" class="form-control">
+                                        <input type="text" id="name" name="name" class="form-control" value="{{ old('name') }}">
                                         @error('name')
                                         <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                                         @enderror
@@ -25,7 +25,7 @@
 
                                     <div class="col-md-12 col-lg-6 mt-md-3 mb-md-2 my-lg-0">
                                         <label for="email" class="mb-2">Your email</label>
-                                        <input type="text" id="email" name="email" class="form-control">
+                                        <input type="text" id="email" name="email" class="form-control" value="{{ old('email') }}">
                                         @error('email')
                                         <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                                         @enderror
@@ -35,7 +35,7 @@
                                 <div class="row mt-3">
                                     <div class="col-md-12">
                                         <label for="subject" class="mb-2">Subject</label>
-                                        <input type="text" id="subject" name="subject" class="form-control">
+                                        <input type="text" id="subject" name="subject" class="form-control" value="{{ old('subject') }}">
                                         @error('subject')
                                         <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                                         @enderror
@@ -45,7 +45,9 @@
                                 <div class="row mt-3">
                                     <div class="col-md-12">
                                         <label for="message" class="mb-2">Your message</label>
-                                        <textarea type="text" id="message" name="message" rows="2" class="form-control"></textarea>
+                                        <textarea type="text" id="message" name="message" rows="2" class="form-control">
+                                            {{ old('message') }}
+                                        </textarea>
                                         @error('message')
                                         <span class="text-danger mt-1 error-validate"><i class="fa-light fa-xmark"></i> {{$message}}</span>
                                         @enderror

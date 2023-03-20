@@ -5,17 +5,17 @@ namespace App\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
-use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class Contact extends Mailable
+class ContactInform extends Mailable
 {
-    use Queueable, SerializesModels;
 
     public $contactInfo;
 
+    use Queueable, SerializesModels;
 
     /**
      * Create a new message instance.
@@ -32,7 +32,7 @@ class Contact extends Mailable
     {
         return new Envelope(
             from: new Address('huy.th878@aptechlearning.edu.vn', 'Scratchy Nib'),
-            subject: $this->contactInfo['subject'],
+            subject: 'Contact Inform',
         );
     }
 
@@ -42,7 +42,7 @@ class Contact extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'emails.contact',
+            markdown: 'emails.contactInform',
         );
     }
 
@@ -56,14 +56,9 @@ class Contact extends Mailable
         return [];
     }
 
-    /**
-     * Build the message.
-     *
-     * @return $this
-     */
     public function build()
     {
         return $this->from( ENV('MAIL_FROM_ADDRESS'))
-            ->markdown('emails.contact');
+            ->markdown('emails.contactInform');
     }
 }

@@ -6,6 +6,7 @@ use App\Http\Requests\EmailPostRequest;
 use App\Http\Requests\FeedbackPostRequest;
 use App\Http\Requests\FeedbackPutRequest;
 use App\Mail\Contact;
+use App\Mail\ContactInform;
 use App\Models\Calligraphy;
 use App\Models\CalligraphyCategory;
 use App\Models\CalligraphyStyle;
@@ -154,6 +155,7 @@ class HomeController extends Controller
         $contactEmail = ENV('MAIL_FROM_ADDRESS');
         $validated = $request->validated();
         Mail::to($contactEmail)->send(new Contact($validated));
+        Mail::to($validated['email'])->send(new ContactInform($validated));
         Alert::toast('Your email has been sent successfully!', 'success')->buttonsStyling(false)->autoClose(2500);
 
         return redirect()->back();
