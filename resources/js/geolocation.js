@@ -29,7 +29,7 @@ export default function InitLocationTime() {
         .then(position => {
             const latitude = position.coords.latitude;
             const longitude = position.coords.longitude;
-            const apiKey = 'AIzaSyDAqlY9fnlRw9Yz0n-8vjtbmbki08u6oUA';
+            const apiKey = '';
             // Use Google Maps Geocoding API to convert the latitude and longitude into a location name
             const geocodingUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${apiKey}`;
             fetch(geocodingUrl)
