@@ -31,3 +31,29 @@ Scratchy Nib is one place, which brings together the art of Calligraphy along wi
 
 6. Run `php artisan serve`
 
+
+## Images
+
+### Home page
+![Home](https://github.com/HuyTranHoang/scratchy-nib/assets/20708669/4c406257-1b9e-48b5-896f-f187d57008aa)
+
+### Category of calligraphy
+![Details](https://github.com/HuyTranHoang/scratchy-nib/assets/20708669/76ab0466-b0a0-44c2-92d5-fb45cd4b31bf)
+
+### Gallery
+![Gallery](https://github.com/HuyTranHoang/scratchy-nib/assets/20708669/8ebfce37-5cb4-4b5c-a100-88e34e19c564)
+
+### Login & Register
+![Login](https://github.com/HuyTranHoang/scratchy-nib/assets/20708669/299cfa48-eede-4162-9ef8-5832b8e555e9)
+![Register](https://github.com/HuyTranHoang/scratchy-nib/assets/20708669/bb3eab95-2ea3-4d4d-a143-984936cb30dc)
+
+### Comment
+![Comment](https://github.com/HuyTranHoang/scratchy-nib/assets/20708669/fbd6f9fb-7715-491c-856f-23021c299516)
+
+### Admin
+![Admin](https://github.com/HuyTranHoang/scratchy-nib/assets/20708669/f55996c4-d323-4dd0-8d65-ac04705d6d33)
+
+
+
+
+
